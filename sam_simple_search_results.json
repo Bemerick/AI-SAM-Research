@@ -1,0 +1,290 @@
+{
+  "totalRecords": 9516,
+  "limit": 5,
+  "offset": 0,
+  "opportunitiesData": [
+    {
+      "noticeId": "ff9624cb46b64ad68f639bb05e7eec2c",
+      "title": "59--SWITCH,PUSH",
+      "solicitationNumber": "SPE7M225Q0736",
+      "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA MARITIME.DLA MARITIME COLUMBUS.DLA LAND AND MARITIME",
+      "fullParentPathCode": "097.97AS.DLA MARITIME.DLA MARITIME COLUMBS.SPE7M2",
+      "postedDate": "2025-05-21",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-07-05",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-06-05",
+      "naicsCode": "334419",
+      "naicsCodes": [
+        "334419"
+      ],
+      "classificationCode": "59",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "DibbsBSM@dla.mil",
+          "phone": null,
+          "title": null,
+          "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=ff9624cb46b64ad68f639bb05e7eec2c",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "43218-3990",
+        "city": "COLUMBUS",
+        "countryCode": "USA",
+        "state": "OH"
+      },
+      "placeOfPerformance": null,
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/opp/ff9624cb46b64ad68f639bb05e7eec2c/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=ff9624cb46b64ad68f639bb05e7eec2c&limit=1"
+        }
+      ],
+      "resourceLinks": null
+    },
+    {
+      "noticeId": "ff26380db95a4343b1897f96d18e2c6e",
+      "title": "39--HOIST,CHAIN",
+      "solicitationNumber": "SPE8EE25T1951",
+      "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.TROOP SUPPORT CONSTRUCTION & EQUIPMENT.DLA TROOP SUPPORT",
+      "fullParentPathCode": "097.97AS.DLA TRP SUPT C&E.SPE8EE",
+      "postedDate": "2025-05-21",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-07-02",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-06-02",
+      "naicsCode": "333248",
+      "naicsCodes": [
+        "333248"
+      ],
+      "classificationCode": "39",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "DibbsBSM@dla.mil",
+          "phone": null,
+          "title": null,
+          "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=ff26380db95a4343b1897f96d18e2c6e",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "19111-5096",
+        "city": "PHILADELPHIA",
+        "countryCode": "USA",
+        "state": "PA"
+      },
+      "placeOfPerformance": null,
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/opp/ff26380db95a4343b1897f96d18e2c6e/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=ff26380db95a4343b1897f96d18e2c6e&limit=1"
+        }
+      ],
+      "resourceLinks": null
+    },
+    {
+      "noticeId": "fef24d1ecb0647abaf6504ec17b394ad",
+      "title": "53--SEAL,PLAIN ENCASED",
+      "solicitationNumber": "SPE7L325T148Q",
+      "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA LAND.DLA LAND COLUMBUS.DLA LAND AND MARITIME",
+      "fullParentPathCode": "097.97AS.DLA LAND.DLA LAND COLUMBUS.SPE7L3",
+      "postedDate": "2025-05-21",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-07-02",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-06-02",
+      "naicsCode": "339991",
+      "naicsCodes": [
+        "339991"
+      ],
+      "classificationCode": "53",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "DibbsBSM@dla.mil",
+          "phone": null,
+          "title": null,
+          "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fef24d1ecb0647abaf6504ec17b394ad",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "43218-3990",
+        "city": "COLUMBUS",
+        "countryCode": "USA",
+        "state": "OH"
+      },
+      "placeOfPerformance": null,
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/opp/fef24d1ecb0647abaf6504ec17b394ad/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fef24d1ecb0647abaf6504ec17b394ad&limit=1"
+        }
+      ],
+      "resourceLinks": null
+    },
+    {
+      "noticeId": "fe049f52624844848b302f3c9870f7f6",
+      "title": "Portable Office Spaces - Antonio B. Won Pat Airport, Guam",
+      "solicitationNumber": "FA524025QM122",
+      "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE AIR FORCE.PACIFIC AIR FORCES.FA5240  36 CONS LGC",
+      "fullParentPathCode": "057.5700.PACAF.FA5240",
+      "postedDate": "2025-05-21",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-06-10",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-05-26T17:00:00+10:00",
+      "naicsCode": "531120",
+      "naicsCodes": [
+        "531120"
+      ],
+      "classificationCode": "W099",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "shelby.benko.1@us.af.mil",
+          "phone": "6713666627",
+          "title": null,
+          "fullName": "Shelby Benko"
+        },
+        {
+          "fax": null,
+          "type": "secondary",
+          "email": "tate.elie.1@us.af.mil",
+          "phone": "6713664948",
+          "title": null,
+          "fullName": "Tate Elie"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fe049f52624844848b302f3c9870f7f6",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "96543-4040",
+        "city": "APO",
+        "countryCode": "USA",
+        "state": "AP"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "82650",
+          "name": "Yigo"
+        },
+        "state": {
+          "code": "GU",
+          "name": "Guam"
+        },
+        "zip": "96929",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/opp/fe049f52624844848b302f3c9870f7f6/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fe049f52624844848b302f3c9870f7f6&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2ce88682e7734919af2be728495a0d20/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/34f13552b8ab4b6d8b17958ace71d4c7/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/56044e195d5c444ba925665588d3e732/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/db0a06173e1140399e78b055d2ac09a5/download"
+      ]
+    },
+    {
+      "noticeId": "fcd8e0a9d31540d5a612fa65d0adefaa",
+      "title": "59--CONNECTOR BODY,RECE",
+      "solicitationNumber": "SPE7M525T266L",
+      "fullParentPathName": "DEPT OF DEFENSE.DEFENSE LOGISTICS AGENCY.DLA MARITIME.DLA MARITIME COLUMBUS.DLA LAND AND MARITIME",
+      "fullParentPathCode": "097.97AS.DLA MARITIME.DLA MARITIME COLUMBS.SPE7M5",
+      "postedDate": "2025-05-21",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-07-02",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-06-02",
+      "naicsCode": "334417",
+      "naicsCodes": [
+        "334417"
+      ],
+      "classificationCode": "59",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "DibbsBSM@dla.mil",
+          "phone": null,
+          "title": null,
+          "fullName": "Questions regarding this solicitation should be emailed to the buyer listed in block 5 of the solicitation document which can be found under the Additional Information link.\nIf the Additional Information link does not work, please go to https://www.dibbs.bsm.dla.mil/Solicitations/ and type the solicitation number in the Global Search box.\n"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fcd8e0a9d31540d5a612fa65d0adefaa",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "43218-3990",
+        "city": "COLUMBUS",
+        "countryCode": "USA",
+        "state": "OH"
+      },
+      "placeOfPerformance": null,
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/opp/fcd8e0a9d31540d5a612fa65d0adefaa/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fcd8e0a9d31540d5a612fa65d0adefaa&limit=1"
+        }
+      ],
+      "resourceLinks": null
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.sam.gov/prod/opportunities/v2/search?limit=5&offset=0&ptype=k&postedFrom=04%2F21%2F2025&postedTo=05%2F21%2F2025"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend build
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/frontend-dist.zip
+
+# Azure Function
+azure-function/.venv/
+azure-function/.python_packages/
+azure-function/__blobstorage__/
+azure-function/__queuestorage__/
+azure-function/__azurite_db*__.json
+azure-function/.python_packages/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Azure deployment info (contains sensitive data)
+azure_deployment_info.txt
+
+# Storage account name
+storage_name.txt

@@ -1,0 +1,145 @@
+{
+  "totalRecords": 22,
+  "limit": 2,
+  "offset": 0,
+  "opportunitiesData": [
+    {
+      "noticeId": "fb7f1cdc3d4e49018fa8268b5141f575",
+      "title": "NWS CRH HVAC Technical Support Services",
+      "solicitationNumber": "1305M325Q0087",
+      "fullParentPathName": "COMMERCE, DEPARTMENT OF.NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION.DEPT OF COMMERCE NOAA",
+      "fullParentPathCode": "013.1330.1305M3",
+      "postedDate": "2025-05-20",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-06-19",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": null,
+      "responseDeadLine": "2025-06-04T14:00:00-07:00",
+      "naicsCode": "541330",
+      "naicsCodes": [
+        "541330"
+      ],
+      "classificationCode": "Z1JZ",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "DANYELL.HERTEL@NOAA.GOV",
+          "phone": "206-526-4423",
+          "title": null,
+          "fullName": "HERTEL, DANYELL"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=fb7f1cdc3d4e49018fa8268b5141f575",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "98115",
+        "city": "SEATTLE",
+        "countryCode": "USA",
+        "state": "WA"
+      },
+      "placeOfPerformance": {
+        "city": {},
+        "state": {},
+        "country": {}
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/opp/fb7f1cdc3d4e49018fa8268b5141f575/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=fb7f1cdc3d4e49018fa8268b5141f575&limit=1"
+        }
+      ],
+      "resourceLinks": null,
+      "descriptionText": "This requirement is to provide heating, ventilation, and air-conditioning (HVAC) technical support services for 32 Central Region Headquarters Weather Forecast Office (CRH WFO) locations, in accordance with the attached Performance Work Statement (PWS)."
+    },
+    {
+      "noticeId": "f17254d64456464bb393771d9126934b",
+      "title": "Indefinite-Delivery Architect-Engineer Services Contract (Construction Management Services) Not-To-Exceed $9.9M for the Design of Miscellaneous Projects in the USACE Honolulu District Area of Responsibility",
+      "solicitationNumber": "W9128A25R0006",
+      "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.US ARMY CORPS OF ENGINEERS.ENGINEER DIVISION PACIFIC OCEAN.W2SN ENDIST HONOLULU",
+      "fullParentPathCode": "021.2100.USACE.POD.W9128A",
+      "postedDate": "2025-05-19",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-06-12",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-05-28T14:00:00-10:00",
+      "naicsCode": "541330",
+      "naicsCodes": [
+        "541330"
+      ],
+      "classificationCode": "C214",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "kriztofer.r.laborete@usace.army.mil",
+          "phone": "8088354379",
+          "title": null,
+          "fullName": "Kriztofer Laborete"
+        },
+        {
+          "fax": "8088354396",
+          "type": "secondary",
+          "email": "colin.k.waki@usace.army.mil",
+          "phone": "8088354393",
+          "title": null,
+          "fullName": "Colin Waki"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f17254d64456464bb393771d9126934b",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "96858-5440",
+        "city": "FORT SHAFTER",
+        "countryCode": "USA",
+        "state": "HI"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "16999",
+          "name": "Honolulu"
+        },
+        "state": {
+          "code": "HI",
+          "name": "Hawaii"
+        },
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/opp/f17254d64456464bb393771d9126934b/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f17254d64456464bb393771d9126934b&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6d4f67d4ebc94320996d5a354abccbb2/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/9c306101e5d64c9f8dd10f0460732c23/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ad23098e3e7b49ecaa93a6742731e8d6/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/bf9338fa256d4201b7a06d196d35a8be/download"
+      ],
+      "descriptionText": "<p><strong>1. &nbsp;CONTRACT INFORMATION:</strong> &nbsp;Architect-Engineer (A-E) services procured in accordance with PL 92-582 (Brooks A-E Act) and FAR Part 36, are required for construction management and other various services within the U.S. Army Corps of Engineers (USACE), Honolulu District (POH) Area of Responsibility (AOR). &nbsp;The POH AOR includes State of Hawaii, territories of Guam, Commonwealth of the Northern Mariana Islands (CNMI), Federal States of Micronesia (FSM), American Samoa, and Kwajalein Atoll, and Republic of the Marshall Islands.</p>\n\n<p>Indefinite Delivery Contracts (IDCs) will be negotiated and awarded with a base period of five (5) years with an option to extend services for six (6) months. It is the Government&rsquo;s intent to award at least three small business (SB) A_E IDCs with a not-to-exceed shared capacity of $9,900,000. The Government obligates itself to obtain no less than $1,000.00 in services.&nbsp;The criteria set forth in FAR 36.602-1 will be utilized for the selection of A-E Offerors rather than competitive bidding procedures, with the contracts anticipated to be awarded in November 2025. Labor and Overhead rates will be negotiated for each 12-month period of the contract.</p>\n\n<p>After contracts are awarded, work will be issued by negotiated firm-fixed-price task orders. Task order selection procedures will be in accordance with applicable regulations.&nbsp; When the Government awards a task order under this MATOC, the Contracting Officer will notify all A-E Offerors within the MATOC pool of the task order requirement. The Task Order Requirement Notice (TORN) will include a short summary of the scope of work, selection criteria, and may include a request for supplemental information tailored to the specific task order requirement. Alternatively, the Government may feel that they have enough information to make the selection, in which case, no request for supplemental information will be made. Using the selection criteria specified in the TORN, the selection board will evaluate the SF-330s on file and responses to the Task Order Questionnaire to determine the most highly qualified Offeror for the specific task order requirement. The board will submit a report to the Selection Board Authority who will then make the selection in accordance with AFARS 5136.602-4 and 5136.602-5 and USACE implementation guidance.</p>\n\n<p>Each A-E Offeror selected under this announcement will be asked if they would like to update their SF330s on an annual basis in accordance with FAR 36.603(d).</p>\n\n<p>To be eligible for contract award, a firm must be registered with the System for Award Management (SAM) database. For instruction on registering with SAM see the SAM website at https://www.sam.gov/.</p>\n\n<p></p>\n\n<p><strong>2. </strong>&nbsp;<strong>PROJECT INFORMATION:</strong> &nbsp;Work primarily includes, but is not limited to, construction management services for pre-construction award, construction administration, and quality assurance functions and provide Construction Managers, Project Engineers, Project Schedulers, and Quality Assurance Representatives/ Inspectors. Work includes but is not limited to maintaining and updating Resident</p>\n\n<p>Management System (RMS) database for projects. Data entry of documents including correspondence, Requests for Information (RFI), submittal of Contractor&#39;s Quality Control (CQC) Plans, Safety Plans, Activity Hazard Analysis, construction schedules, technical submittals, and insurances. Download construction contractor&#39;s database in Quality Control System (QCS) to RMS and evaluate the data accuracy. Proficient in Primavera scheduling software, analyze and provide recommendations for baseline construction schedules, review/monitor and update project schedules, evaluate schedule impacts due to changes in work progress, review construction contractor&#39;s proposed cost and change order proposals. Needed specialized experience includes, but is not limited to:</p>\n\n<p>-Personnel with experience with Airfield Portland Cement Concrete (PCC) construction. Specifically, experience overseeing construction under Unified Facilities Guide Specifications (UFGS) 32 13 11 or 32 13 14.13;</p>\n\n<p>-Personnel with experience managing DoD medical construction projects. Projects include hospitals, medical clinics, dental clinics, hospital renovations, and medical facility commissioning;</p>\n\n<p>-Personnel with experience evaluating construction schedules to check for compliance with Unified Facilities Guide Specifications (UFGS) 01 32 01.00 10. Capability to evaluate Time Impact Analysis (TIAs) for critical path delays; and</p>\n\n<p>-Personnel with experience and familiarity with working in and/or managing projects in remote areas with logistical constraints, such as Pacific Island locations with secure operations, Pohakuloa Training Area, Diego Garcia, Johnston Atoll, Wake Island, Midway Island, and the Republic of the Marshall Islands.</p>\n\n<p></p>\n\n<p><strong>3.</strong> &nbsp;<strong>SELECTION CRITERIA: </strong>&nbsp;The primary selection criteria are listed in descending order of importance. Criteria &ldquo;a.&rdquo; through &ldquo;e.&rdquo; are considered primary. Criteria &ldquo;f.&rdquo; through &ldquo;g.&rdquo; are considered secondary and will only be used as tiebreakers among highly qualified Offerors that are ranked technically equal using the primary criteria. Content provided by the Offeror beyond the stated maximums will not be evaluated.</p>\n\n<p><u>a. Specialized Experience and Technical Qualifications:</u></p>\n\n<p>(1)&nbsp;&nbsp; &nbsp;The evaluation will consider the extent of the Offeror&rsquo;s experience of the prime firm and sub-consultants for the services described in paragraph 2 &quot;Project Information.&quot;</p>\n\n<p>SF330 requirement(s): &nbsp;A maximum of five (5) example projects may be submitted for consideration under SF330, Part I, Section F. &nbsp;Example projects shall be within seven (7) years of the pre-solicitation closing date specified in Paragraph 5. &nbsp;All projects shall clearly state the start and completion dates as well a clear project scope.&nbsp; Additional information demonstrating an Offeror&#39;s qualifications may be presented under SF330, Part I, Section H (Additional Information).&nbsp;</p>\n\n<p>(2)&nbsp;&nbsp; &nbsp;Experience. Demonstrate experience in accomplishing relevant projects as described in section 2 (Project Information) of this solicitation. Projects of greater relevance/scope/complexity, will be evaluated more favorably. The basis of evaluation will be the example project(s) presented in SF330, Part I, Section F.</p>\n\n<p>(3)&nbsp;&nbsp; &nbsp;Management Plan/Structure.&nbsp;&nbsp;&nbsp; Provide specific details on management plan and organizational structure along with how task orders will be managed, within SF330, Part I, Section H (Additional Information).&nbsp;</p>\n\n<p>(4)&nbsp;&nbsp; &nbsp;Quality Management. &nbsp;Clearly describe the Offeror&rsquo;s quality control procedures and their approach to resolve issues of quality, and ensure technical quality and accuracy of work products. Describe and define the processes of the Offeror&#39;s quality control plan and list, by name and position, all key personnel responsible for its execution. &nbsp;Information shall be presented in SF330, Part I, Section H (Additional Information).</p>\n\n<p><u>b. Professional qualifications:</u></p>\n\n<p>The evaluation will consider the education, training, registration and overall relevant experience of the Offeror&#39;s key personnel.</p>\n\n<p>Provide a minimum of one (1) individual / up to a maximum of two (2) individuals per discipline for each of the key personnel disciplines identified below.&nbsp; Identified key personnel will be more highly evaluated if the individual demonstrates longevity with the firm and participated in the example projects submitted in SF 330 Section F. &nbsp;Provide a separate Section E for each key personnel. &nbsp;Do not generalize professional registrations or certifications, rather provide specific details. The government will evaluate, as appropriate, the registration, education, certifications, overall and relevant project experience, and longevity with the firm. Provide Section G Key Personnel Participation In Example Projects.&nbsp;</p>\n\n<p>This criterion focuses on the qualifications of the key personnel for the contract and not the quantity of personnel, which is addressed under the &quot;capacity to accomplish the work&quot; criterion.</p>\n\n<p>Provide key personnel resumes for the following:</p>\n\n<ol>\n\t<li>CONSTRUCTION MANAGERS</li>\n\t<li>PROJECT ENGINEERS</li>\n\t<li>PROJECT SCHEDULERS</li>\n\t<li>QUALITY ASSURANCE REPRESENTATIVES/INSPECTORS</li>\n</ol>\n\n<p><u>c. Knowledge of Locality:</u></p>\n\n<p>Offerors key personnel will be evaluated on specific familiarity with the site conditions in Hawaii and other areas of the USACE Pacific Ocean Honolulu (POH) Area of Responsibility (AOR). &nbsp;</p>\n\n<p>&nbsp;Knowledge of the local conditions, including physical environment, local and applicable engineering criteria/codes/processes of local city/county/state/federal jurisdictions/authorities, and construction market conditions and methods will be evaluated. &nbsp;Example projects performed within the USACE POH AOR will have greater weight than those performed outside the USACE POH AOR.&nbsp; The basis of evaluation for this criterion will focus on the information provided in SF330, Part I, Section E (Resume of Key Personnel), Section F (Example Projects), and H (Additional Information).</p>\n\n<p><u>d. Past Performance:</u></p>\n\n<p>The evaluation will consider all past performance of the prime A-E contractor as documented in the Government&#39;s Past Performance Information Retrieval System (PPIRS) managed through the Contractor Performance Assessment Reporting System (CPARS). Offerors will be evaluated on past performance on schedule, cost, and management. Performance evaluations for the prime firm is considered the most relevant criteria; however, past performance for any significant subconsultants may also be considered. Performance evaluations on completed projects within seven (7) years of solicitation closing date and/or SF 330 Section F example projects is also considered more relevant.&nbsp; Final evaluations have higher value than interim evaluations.</p>\n\n<p>Any credible, documented information on past performance may be submitted, but the government is not required to seek other information on past performance if none is available through PPIRS. An offeror may use Past Performance Questionnaires (PPQ) to provide or supplement a firm&#39;s past performance. Firms choosing to use the PPQ may obtain a PPQ standard form by submitting a request to POCs indicated in this solicitation.</p>\n\n<p><u>e. Capacity to accomplish the work:</u></p>\n\n<p>Provide a narrative discussing the Offeror&rsquo;s capacity to perform at least two (2) simultaneous task orders, and capacity to take on unanticipated additional work, accomplished within the Government&#39;s required schedule. Information shall be provided in SF330, Part I, Section H (Additional Information). Also considered are the number of employees listed in Part II General Qualifications.&nbsp;Provide a Part II form for each prime, JV, and sub-consultant.<br />\nSECONDARY selection criteria, to be used as &ldquo;tie-breakers&rdquo; among technically equal Offerors, are listed in descending order of importance as follows:&nbsp;</p>\n\n<p><u>f. Volume of recent DoD contract awards:</u></p>\n\n<p>Provide a complete listing of all work awarded to the Offeror within the previous twelve (12) months of this solicitation&rsquo;s closing date. &nbsp;When identifying the total volume of work, include all stand-alone or indefinite delivery contract (IDC) task orders, including modifications, issued by DoD agencies. &nbsp;For IDCs, include total value of task orders actually issued by agencies in the last 12 months.&nbsp; DO NOT include the potential value of an IDC, nor options which have not been exercised. &nbsp;For all types of contracts, do not include for consideration options that have not been exercised. Present information for this criterion in SF330, Part I, Section H (Additional Information).</p>\n\n<p><u>g. Small Business Participation:</u></p>\n\n<p>Extent of participation of small business (SB), small disadvantaged business (SDB), women-owned small businesses (WOSB), HUBZone small businesses, Veteran Owned small businesses, and Service Disabled Veteran Owned Small Businesses will be measured as a percentage of the total anticipated contract effort. The greater the participation, the greater the consideration. Present information for this criterion in SF330, Part I, Section H (Additional Information).</p>\n\n<p></p>\n\n<p><strong>4. BASIS FOR ADJECTIVAL EVALUATION:&nbsp; </strong>An adjectival rating scale will be applied to each selection criteria with the highest possible rating first and in descending order: Excellent, Highly Acceptable, Acceptable, Marginal, Unacceptable.</p>\n\n<p><u>Excellent (E):</u> The proposal is outstanding in that it clearly demonstrates a thorough understanding of the requirements and greatly exceeds the minimum level for the criterion. The Offeror&rsquo;s capabilities are of the highest proficiency and are thoroughly illustrated or substantiated. The proposal is internally consistent throughout when addressing the criterion. The proposal has significant strengths in exceeding the minimum level of the criterion and contains no weaknesses or deficiencies.</p>\n\n<p><u>Highly Acceptable (HA):</u> The proposal is very good, demonstrates good understanding of requirements, and exceeds the minimum level for the criterion. The Offeror&rsquo;s capabilities are of high proficiency and are well justified or substantiated. The proposal contains very minor or no inconsistencies with other portions of the proposal when addressing the criterion. The proposal has strengths in exceeding the minimum level for the criterion and is not significantly offset by weaknesses and contains no deficiencies.&nbsp;</p>\n\n<p><u>Acceptable (A):</u> The proposal is acceptable in that it meets the minimum level for the criterion. The proposal demonstrates an acceptable level of understanding of requirements. The Offeror&rsquo;s capabilities are of an acceptable level of competency and are sufficiently illustrated or substantiated. The proposal contains minor or no inconsistencies or incompatibilities with other portions of the proposal when addressing the criterion. The proposal has strengths in meeting the minimum level for the criterion and is not significantly offset by weaknesses and/or deficiencies.</p>\n\n<p><u>Marginal (M):</u> The proposal does not meet the minimum level for the criterion and does not demonstrate an acceptable level of understanding the requirements. The proposal is weak in providing sufficient evidence to demonstrate or illustrate its qualifications or capabilities to perform the anticipated work at an acceptable level of quality. The proposal contains inconsistencies in addressing the criterion. The proposal may have strengths in meeting a portion of the criterion; however, it is offset by weaknesses and/or deficiencies.<br />\n<u>Unacceptable (U):</u> The proposal is incomplete in that it does not satisfactorily meet the minimum level for this criterion. There is little to no evidence to illustrate that the Offeror understands the government&rsquo;s minimum requirements. The proposal lacks evidence to demonstrate or illustrate its capabilities to perform the anticipated work. The proposal may have strengths in meeting a portion of the criterion; however, it is completely offset by various inconsistencies, weaknesses, and deficiencies. &nbsp;</p>\n\n<p><u>Only applies to Past Performance Acceptable (A)</u>:&nbsp; The Offeror lacks past performance information in the Past Performance Information Retrieval System (PPIRS). The intent of this rating is not to penalize the Offeror for no past performance as a Prime A-E firm. Therefore, the Government will deem the Offeror to have an &ldquo;Unknown&rdquo; past performance. In the context of acceptability / unacceptability for past performance, &ldquo;Unknown&rdquo; shall be considered &ldquo;Acceptable.&rdquo;</p>\n\n<p></p>\n\n<p><strong>5. &nbsp;SUBMISSION REQUIREMENTS: &nbsp;</strong>Interested Offerors having the capabilities to perform this work must submit the following no later than May 28, 2025, 2:00 PM Hawaii Standard Time.</p>\n\n<p>a. One (1) electronic copy (PDF*) of SF 330 Part I</p>\n\n<p>b. One (1) electronic copy (PDF*) of SF 330 Part II for the prime firm and all consultants /subcontractors</p>\n\n<p><strong>*PDF SF330s shall be bookmarked with searchable text.</strong></p>\n\n<p></p>\n\n<p><strong>6.</strong> The SF 330 package must be submitted through the Department of Defense (DoD) Secure Access File Exchange (SAFE) system. Please see &ldquo;Electronic Submittal Instructions&rdquo; file attached to this notice for instructions for submitting the SF 330 submittal electronically and requesting a DoD SAFE Drop-Off Link. The submittal must clearly identify the announcement number. Facsimile and email submissions will not be accepted. Solicitation packages are not provided and no additional project information will be given to Offerors during the announcement period. This is not a request for proposal.</p>\n\n<p>Regulation requires that the Selection Board not consider any submittals received after the specified time and date. Late submittal rules in FAR 15.208 will be followed for submittals received after 2:00pm Hawaii Standard Time (HST) on the closing date specified in this announcement.</p>\n\n<p>The SF 330, 7/2021 edition, must be used, and may be obtained from the following web site: https://www.gsa.gov/reference/forms/architectengineer-qualifications.</p>\n\n<p>The SF330 submittal must meet the following requirements:</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">a. Include UEI number and CAGE code in SF330 Part I, Section B, Block 5.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">b. The UEI number and CAGE code should be identified in SF 330 Part I, Section C, Block 9, for EACH TEAM MEMBER.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">c. The submittal shall have a page limit of 100 pages (total of 100 pages allowed for complete copy of the submittal, ALL-INCLUSIVE). The selection board will not evaluate beyond 100 pages. A page is one side of a sheet. Past performance records, Joint Venture Agreement, blank sheets, divider sheets with section identifiers, and/or tabs with section identifiers separating the sections within the SF 330 will not count against the maximum page count.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">d. All fonts shall be at least 10 pitch or larger.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">e. Pages shall be 8-1/2 inches by 11 inches. Organizational charts may be presented on a sheet up to 11 inches by 17 inches. If an 11-inch by 17-inch sheet is used it shall be neatly folded to 8-1/2 inches by 11 inches, bound in the SF 330 at the proper location, and counted as one page.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">f. A Part II is required for each branch office of the prime firm and any consultants/subcontractors that will have a key role in the proposed contract (i.e. a Part II is required for all entities identified in SF 330 Part I, Section C of the submittal).</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">g. Cover letters, company literature and extraneous materials are not desired and will not be considered.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">h. Sections E and G of SF 330 Part I must include only individuals proposed to perform the anticipated work, including all consultants/subcontractors.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">i. In SF 330 Part I, Section G, Block 26, along with the name, include the firm with which the person is associated.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">j. A maximum of five (5) example projects including the prime and consultants/subcontractors will be reviewed for SF 330 Part I, Section F. If more than 5 projects are submitted, only the first 5 projects will be evaluated. Use no more than two (2) pages per project.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">k. When listing projects in SF 330 Part 1, Section F, an Indefinite Delivery Contract (IDC) with multiple Task Orders as examples is not considered a project. For example a task order executed under an IDC contract is a project.</p>\n\n<p class=\"sam-rich-text-editor-indent-a\">l. Past Performance evaluations (CPARS/ACASS, PPQ - reference Paragraph 3.c. above) shall be submitted for each project provided in SF 330, Part I, Section F.</p>\n\n<p></p>\n\n<p><strong>7.</strong> Joint ventures shall submit the following additional documentation of the evidence of a joint venture entity:</p>\n\n<p>a. Offerors shall provide a copy of a legally binding joint venture agreement.</p>\n\n<p>b. Identification of the party who can legally bind the joint venture.</p>\n\n<p></p>\n\n<p><strong>8. Technical Inquiries and Questions:</strong> Inquiries related to this announcement may be submitted via email to Mr. Kriztofer Laborete, at kriztofer.r.laborete@usace.army.mil, AND to Mr. Colin Waki, at colin.k.waki@usace.army.mil no later than May 14, 2025, 2:00 PM Hawaii Standard Time.</p>\n"
+    }
+  ],
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://api.sam.gov/prod/opportunities/v2/search?limit=2&offset=0&ptype=k&ncode=541330&postedFrom=04%2F21%2F2025&postedTo=05%2F21%2F2025"
+    }
+  ]
+}

@@ -1,0 +1,724 @@
+[
+    {
+        "noticeId": "e0d82c0e3cd44a2a9cd336e8a88dd0c8",
+        "title": "FDIC's Tenable Subscription Maintenance",
+        "solicitationNumber": "CORHQ-25-Q-0377",
+        "fullParentPathName": "FEDERAL DEPOSIT INSURANCE CORPORATION.FEDERAL DEPOSIT INSURANCE CORPORATION._",
+        "fullParentPathCode": "051.5100.F05603",
+        "postedDate": "2025-10-08",
+        "type": "Solicitation",
+        "baseType": "Solicitation",
+        "archiveType": "auto15",
+        "archiveDate": "2025-11-01",
+        "typeOfSetAsideDescription": "No Set aside used",
+        "typeOfSetAside": "NONE",
+        "responseDeadLine": "2025-10-17T12:00:00-04:00",
+        "naicsCode": "541519",
+        "naicsCodes": [
+            "541519"
+        ],
+        "classificationCode": "7J20",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "ditoles@fdic.gov",
+                "phone": "5712134018",
+                "title": null,
+                "fullName": "Diamond Toles"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=e0d82c0e3cd44a2a9cd336e8a88dd0c8",
+        "organizationType": "OFFICE",
+        "officeAddress": null,
+        "placeOfPerformance": {
+            "city": {
+                "code": "3000",
+                "name": "Arlington"
+            },
+            "state": {
+                "code": "VA",
+                "name": "Virginia"
+            },
+            "zip": "22226",
+            "country": {
+                "code": "USA",
+                "name": "UNITED STATES"
+            }
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/e0d82c0e3cd44a2a9cd336e8a88dd0c8/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=e0d82c0e3cd44a2a9cd336e8a88dd0c8&limit=1"
+            }
+        ],
+        "resourceLinks": [
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/05d50085a3b24d8384def028d76e6a40/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/71b5be507e184ade968cd35fb45ab372/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a2662db4824546008d5a51f4c0af3f2d/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/b597476beb23445b884d759cfdf3b8bf/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c41c2e985377490fa3603f17e541fa81/download"
+        ],
+        "descriptionText": "<p>This solicitation is to for FDIC&#39;s Tenable Subscription Maintenance.</p>\n\n<p>The Federal Deposit Insurance Corporation formally invites you to submit a quote for RFQ# CORHQ-25-Q-0377 FDIC&rsquo;s Tenable Subscription Maintenance Requirement.&nbsp; Offerors must utilize the Price Schedule to fill in your pricing for all line items needed. Please provide your most favorable discount to the Government. Any Terms and Conditions, EULA, or MSAs must be sent with your quote to be incorporated in the subsequent contract award, the FDIC prefers Government approved terms. See Attachment M-1 for Evaluation criteria.&nbsp;</p>\n\n<p>Each submission should have these components (preferably separated):</p>\n\n<ol>\n\t<li>Price Schedule (REQUIRED) - see attachments</li>\n\t<li>Section K of the RFQ &ndash; Representation and Certifications (REQUIRED)</li>\n\t<li>Reseller/Partner Agreement or Certificate with Tenable (REQUIRED)&nbsp;</li>\n\t<li>Pre-Award SCRM Information &ndash; (REQUIRED) - See attachments</li>\n\t<li>EULA or MSAs Or Warranty Terms &ndash; Any terms and conditions (<em>If Applicable</em>)</li>\n</ol>\n\n<p>Questions are due by&nbsp;<strong>12:00PM EST on</strong>&nbsp;<strong>September 19, 2025</strong>. All quotes are due by&nbsp;<strong>12:00PM EST on October 6, 2025.</strong></p>\n\n<p><strong>9/22/2025 - Amendment 0001</strong> - This amendment is issued to issue the Government&#39;s response to all questions recieved before the Question due date/time. See attachments.</p>\n\n<p><u><strong>10/8/2025 - Amendment 0002 - This amendment is to update the Price Schedule, Instructions, and Attachment M-1 LPTA Evaluation Method. Please note offers that do not include the required components in the amendment and solicitaton will be deemed not acceptable. All Offerors must use the revised Pricing Schedule excel spreadsheet with their submission. All offers and revised offers are now due October 17, 2025 at Noon EST.&nbsp;</strong></u></p>\n"
+    },
+    {
+        "noticeId": "db360b7bfd1c4e78b5090513e36f75e9",
+        "title": "R499--3rd Party Fire Protection and Life Safety Reviews",
+        "solicitationNumber": "36C24726Q0061",
+        "fullParentPathName": "VETERANS AFFAIRS, DEPARTMENT OF.VETERANS AFFAIRS, DEPARTMENT OF.247-NETWORK CONTRACT OFFICE 7 (36C247)",
+        "fullParentPathCode": "036.3600.36C247",
+        "postedDate": "2025-10-08",
+        "type": "Combined Synopsis/Solicitation",
+        "baseType": "Presolicitation",
+        "archiveType": "autocustom",
+        "archiveDate": "2026-01-23",
+        "typeOfSetAsideDescription": "Service-Disabled Veteran-Owned Small Business Set Aside",
+        "typeOfSetAside": "SDVOSBC",
+        "responseDeadLine": "2025-10-16T14:00:00-04:00",
+        "naicsCode": "541690",
+        "naicsCodes": [
+            "541690"
+        ],
+        "classificationCode": "R499",
+        "active": "Yes",
+        "award": {
+            "awardee": {}
+        },
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "David.Parente@va.gov",
+                "phone": "843-252-6747",
+                "title": "Contracting Officer",
+                "fullName": "David Parente"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=db360b7bfd1c4e78b5090513e36f75e9",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "30904",
+            "city": "AUGUSTA",
+            "countryCode": "USA",
+            "state": "GA"
+        },
+        "placeOfPerformance": {
+            "streetAddress": "Department of Veterans Affairs Ralph H. Johnson VA Medical Center",
+            "streetAddress2": " 109 Bee St",
+            "city": {
+                "name": "Charleston"
+            },
+            "state": {
+                "code": "SC",
+                "name": "South Carolina"
+            },
+            "zip": "29401",
+            "country": {
+                "code": "USA",
+                "name": "UNITED STATES"
+            }
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/db360b7bfd1c4e78b5090513e36f75e9/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=db360b7bfd1c4e78b5090513e36f75e9&limit=1"
+            }
+        ],
+        "resourceLinks": [
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/b95063913ee84e68b07beb52949b7a61/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/f5d7429c5fa0477292758223257bc395/download"
+        ],
+        "descriptionText": "See attached, RFQ# 36C24726Q0061\n"
+    },
+    {
+        "noticeId": "050fd6fd00c343dab6e2093a66c98199",
+        "title": "Southeast Fisheries Observer Program Support Services",
+        "solicitationNumber": "REQUIREMENTS-25-1794",
+        "fullParentPathName": "COMMERCE, DEPARTMENT OF.NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION.DEPT OF COMMERCE NOAA",
+        "fullParentPathCode": "013.1330.1305M3",
+        "postedDate": "2025-10-08",
+        "type": "Presolicitation",
+        "baseType": "Presolicitation",
+        "archiveType": "auto15",
+        "archiveDate": "2025-11-09",
+        "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+        "typeOfSetAside": "SBA",
+        "responseDeadLine": "2025-10-25T14:00:00-07:00",
+        "naicsCode": "541690",
+        "naicsCodes": [
+            "541690"
+        ],
+        "classificationCode": "F020",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "carina.topasna@noaa.gov",
+                "phone": "(please CC Sarah.waugh@noaa.gov)",
+                "title": null,
+                "fullName": "CARINA TOPASNA"
+            },
+            {
+                "fax": "",
+                "type": "secondary",
+                "email": "jamie.abushakrah@noaa.gov",
+                "phone": "",
+                "title": null,
+                "fullName": "JAMIE ABU SHAKRAH"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=050fd6fd00c343dab6e2093a66c98199",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "98115",
+            "city": "SEATTLE",
+            "countryCode": "USA",
+            "state": "WA"
+        },
+        "placeOfPerformance": null,
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/050fd6fd00c343dab6e2093a66c98199/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=050fd6fd00c343dab6e2093a66c98199&limit=1"
+            }
+        ],
+        "resourceLinks": null,
+        "descriptionText": "<p>The U.S. Department of Commerce (DOC), National Oceanic and Atmospheric Administration (NOAA), NOAA Fisheries, Southeast Fisheries Science Center (SEFSC) requires Fishery Observer Support Services in support of the Southeast Fisheries Observer Program (SEFOP).&nbsp;</p>\n\n<p>The SEFSC requires a contractor to provide all qualified personnel, material, equipment, services, support and facilities (except as otherwise specified) to perform quality environmental, biological, and fisheries operations data collection, data analysis, and information dissemination for the SEFSC. Data quality is of the utmost importance.</p>\n\n<p>Performance of contract requirements may occur in multiple locations on land and at sea from ports located in the South Atlantic and Gulf of America regions.</p>\n\n<p><br />\nThe proposed contract action is set aside 100% for small business. The associated North American Industry Classification System (NAICS) code is 541690, and the small business size standard for this requirement is $19.0 million. It is highly encouraged that any small business meeting this size standard and desiring to be considered for award be registered in the System for Award Management (SAM) using this NAICS code. It should be noted that offerors must be registered in SAM prior to submission of an offer. For additional information and to register in SAM, please access the following website: https://sam.gov/. In order to register with the SAM, all offerors must also have a unique entity identifier through http://sam.gov/conent/entity-registration.</p>\n\n<p><br />\nThe proposed contract action is anticipated to be solicited as a single award, Indefinite Delivery, Indefinite Quantity (IDIQ) commercial services type contract with a five (5) year ordering period and Firm-Fixed-Price daily rates for Fishery Observer Support Services. The period of performance is anticipated to be 12/21/2025 &ndash; 12/20/2030. This notice is not a solicitation, a request for proposal (RFP), request for quote (RFQ), nor an invitation for bid (IFB). This notice does not guarantee that a solicitation for this proposed contract action will be issued and does not guarantee, implied or otherwise, that a contract will be awarded for the proposed contract action. Solicitation documents are anticipated to be made available for download at a later date at https://sam.gov/. Paper copies of the solicitation will not be issued. Interested parties may also use the &ldquo;follow&rdquo; feature to monitor changes to this notice as well as all postings of information associated with the solicitation thereafter. Each potential offeror is responsible for checking https://sam.gov/ to gain all current information related to the solicitation. The solicitation and any further announcements regarding the solicitation will be posted only at <u>https://sam.gov/</u>, and all responsible sources may submit a quotation, bid, or proposal, as appropriate, which will be considered by the agency. The date offers are due will be stated within the solicitation documents. All questions of any nature regarding this procurement should be sent via email to the Contract Specialist, Jamie AbuShakrah, at <u>jamie.abushakrah@noaa.gov</u>.</p>\n\n<p><strong>This is an excepted activity; however, not all personnel are available during a lapse in appropriations, so please all CC Sarah Waugh @ sarah.waugh@noaa.gov on any responses.</strong></p>\n"
+    },
+    {
+        "noticeId": "dff0c7b42381413a991f5c4366aad2ab",
+        "title": "TATF Redwood Tank Inspection",
+        "solicitationNumber": "N0025326Q0001",
+        "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE NAVY.NAVSEA.NAVSEA WARFARE CENTER.NAVAL UNDERSEA WARFARE CENTER",
+        "fullParentPathCode": "017.1700.NAVSEA.NAVSEA WARFARE CTR.N00253",
+        "postedDate": "2025-10-08",
+        "type": "Combined Synopsis/Solicitation",
+        "baseType": "Combined Synopsis/Solicitation",
+        "archiveType": "auto15",
+        "archiveDate": "2025-11-01",
+        "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+        "typeOfSetAside": "SBA",
+        "responseDeadLine": "2025-10-17T14:00:00-07:00",
+        "naicsCode": "541990",
+        "naicsCodes": [
+            "541990"
+        ],
+        "classificationCode": "R425",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "john.l.thompson1.civ@us.navy.mil",
+                "phone": "3603158916",
+                "title": null,
+                "fullName": "John Thompson"
+            },
+            {
+                "fax": "",
+                "type": "secondary",
+                "email": "kaci.j.campbell.civ@us.navy.mil",
+                "phone": "(360) 315-0988",
+                "title": null,
+                "fullName": "Kaci Campbell"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=dff0c7b42381413a991f5c4366aad2ab",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "98345-7610",
+            "city": "KEYPORT",
+            "countryCode": "USA",
+            "state": "WA"
+        },
+        "placeOfPerformance": {
+            "city": {
+                "code": "35625",
+                "name": "Keyport"
+            },
+            "state": {
+                "code": "WA",
+                "name": "Washington"
+            },
+            "zip": "98345",
+            "country": {
+                "code": "USA",
+                "name": "UNITED STATES"
+            }
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/dff0c7b42381413a991f5c4366aad2ab/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=dff0c7b42381413a991f5c4366aad2ab&limit=1"
+            }
+        ],
+        "resourceLinks": [
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/0bdde70446b740a5a016f5812bbd893b/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/362fbd274dd244c49f1e98a90f401532/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/517363cb07634df2b5ef3150f9698e33/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/89fec0dcbc314d14bb8a9c71956a3552/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a43ee6064b564329974f05ca52d93922/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c566cef804374bdfacb8353b5f0835b9/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c7e679d93b1e4f1698f265c82c31a00f/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ea2ba6c4f79d4a7c98ffb52733d403d8/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/f5fbd5c769e848cb8799458bd8957e64/download"
+        ],
+        "descriptionText": "<p>Naval Undersea Warfare Center Division (NUWC) Keyport is soliciting for freshwater tank inspection.&nbsp; &nbsp;The building is structured on a concrete foundation over a free-standing freshwater redwood tank that is 30&rsquo; diameter by 30&rsquo; tall, protected from the elements by a tent fixture, equipped with heating capabilities, and an overhead crane with decking to allow personnel to access testing equipment and test fixtures in the area above the tank. The inspection will include a physical and visual inspection of the tank exterior, hoops, lugs, pipe fittings, bottom, and foundation. Additionally, a visual inspection of the tank interior shall be accomplished, including the bottom of the tank. All metal components shall be inspected for corrosion, and all wood components shall be inspected for decay.&nbsp;</p>\n"
+    },
+    {
+        "noticeId": "49cd16a0008c42e5981a882aa290bd19",
+        "title": "Lead Development and Open-Source Intelligence/Social Media Contract",
+        "solicitationNumber": "NCATC-PERC-IRDA-2025",
+        "fullParentPathName": "HOMELAND SECURITY, DEPARTMENT OF.US IMMIGRATION AND CUSTOMS ENFORCEMENT.DETENTION COMPLIANCE AND REMOVALS",
+        "fullParentPathCode": "070.7012.70CDCR",
+        "postedDate": "2025-10-08",
+        "type": "Sources Sought",
+        "baseType": "Sources Sought",
+        "archiveType": "auto15",
+        "archiveDate": "2025-11-01",
+        "typeOfSetAsideDescription": "No Set aside used",
+        "typeOfSetAside": "NONE",
+        "responseDeadLine": "2025-10-17T12:00:00-04:00",
+        "naicsCode": "541990",
+        "naicsCodes": [
+            "541990"
+        ],
+        "classificationCode": "R499",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "Marland.Clark@ice.dhs.gov",
+                "phone": "",
+                "title": null,
+                "fullName": "Marland Clark"
+            },
+            {
+                "fax": "",
+                "type": "secondary",
+                "email": "brittany.tobias@ice.dhs.gov",
+                "phone": "",
+                "title": null,
+                "fullName": "Brittany Tobias"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=49cd16a0008c42e5981a882aa290bd19",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "20024",
+            "city": "WASHINGTON",
+            "countryCode": "USA",
+            "state": "DC"
+        },
+        "placeOfPerformance": {
+            "state": {
+                "code": "DC",
+                "name": "District of Columbia"
+            },
+            "zip": "20024",
+            "country": {
+                "code": "USA",
+                "name": "UNITED STATES"
+            }
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/49cd16a0008c42e5981a882aa290bd19/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=49cd16a0008c42e5981a882aa290bd19&limit=1"
+            }
+        ],
+        "resourceLinks": [
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/27fe534a01014332a5e49ce8f414bce7/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/be5c46ca84a54793b7244986b4fe2166/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/cfef29dd7d784b3fb38676e8c668a627/download"
+        ],
+        "descriptionText": "<p>This Request for Information (RFI) is for Investigative and Analytical Services in support of U.S. Immigration and Customs Enforcement (ICE), Enforcement and Removal Operations (ERO), Targeting Operations Division at the National Criminal Analysis and Targeting Center (NCATC) in Williston, VT and the Pacific Enforcement Response Center (PERC) in Santa Ana, CA. Additional information on this contract is defined in the attached draft Performance Work Statement (PWS).</p>\n"
+    },
+    {
+        "noticeId": "1dd51b0fe7324aeba24d220ccb1597bd",
+        "title": "Fire Alarm and Extinguisher Service",
+        "solicitationNumber": "W911XK25QA026",
+        "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.US ARMY CORPS OF ENGINEERS.ENGINEER DIVISION GREAT LAKES AND OHIO.W072 ENDIST DETROIT",
+        "fullParentPathCode": "021.2100.USACE.LRD.W911XK",
+        "postedDate": "2025-10-08",
+        "type": "Combined Synopsis/Solicitation",
+        "baseType": "Combined Synopsis/Solicitation",
+        "archiveType": "autocustom",
+        "archiveDate": "2026-10-08",
+        "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+        "typeOfSetAside": "SBA",
+        "responseDeadLine": "2025-10-10T14:00:00-04:00",
+        "naicsCode": "541990",
+        "naicsCodes": [
+            "541990"
+        ],
+        "classificationCode": "S202",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "sally.artz@usace.army.mil",
+                "phone": "3132262206",
+                "title": null,
+                "fullName": "Sally Artz"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=1dd51b0fe7324aeba24d220ccb1597bd",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "48226-5000",
+            "city": "DETROIT",
+            "countryCode": "USA",
+            "state": "MI"
+        },
+        "placeOfPerformance": {
+            "streetAddress": "",
+            "zip": "49783"
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/1dd51b0fe7324aeba24d220ccb1597bd/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=1dd51b0fe7324aeba24d220ccb1597bd&limit=1"
+            }
+        ],
+        "resourceLinks": null,
+        "descriptionText": "***Amendment 0001***Fire Alarm and Extinguisher Service Combined Synopsis/SolicitationThe U.S. Army Corps of Engineers (USACE) Detroit District has a requirement for a contract for Fire Alarm and Extinguisher Services located in Sault Ste. Marie, MI. (i)\tThis is a combined synopsis/solicitation for a commercial service prepared in accordance with FAR Part 12, as supplemented with additional information included in this notice. This announcement constitutes the only solicitation; quotes are being requested and a written solicitation is being provided.(ii)\tThe solicitation number is W911XK25QA026. The solicitation is being issued as a Request for Quote (RFQ).(iii)\tThe solicitation document and incorporated provisions and clauses are those in effect through Federal Acquisition Circular 2025-04 dated June 11, 2025, and Defense Federal Acquisition Regulation Supplement (DFARS) Change Notice (DCN) dated January 17, 2025. This action is subject to any changes to the Federal Acquisition Regulation (FAR) and the DFARS prior to establishment of this date.(iv)\tThis procurement is a 100% small business set-aside. It is being procured as a Firm-Fixed Price (FFP) contract  under FAR Part 12, Acquisition of Commercial Products and Commercial Services and FAR Part 13, Simplified Acquisition Procedures. The associated NAICS code is 541990 ? All Other Professional, Scientific and Technical Services, small business size standard of $19.5 million in average annual receipts. The PSC code is S202 ? Housekeeping ? Fire Protection.(v)\tContract supply by line-item number, item, quantities, and unit of measure are within the pricing schedule contained in the solicitation.\t(vi)\tThis contract involves inspection and testing of the Soo Locks campus fire alarm notification and fire suppression equipment and systems. Basis of Award: The Government intends to award a Firm Fixed Price (FFP) contract to the Lowest Priced Offeror that meets the requirements as laid out in this RFQ and is determined to be responsive and responsible by the Contracting Officer. The Contractor shall provide all labor, materials, transportation, tools, equipment, and pickup and delivery for the inspection and testing of the Soo Locks campus fire alarm notification and fire suppression equipment and systems for all areas listed herein. This document contains an itemized list of what is included in each area, along with corresponding floor plans and device locations for all permanent structures.(vii)\tCustomary commercial practices for warranty requirements are applicable for this acquisition.(viii)\tThe Offeror shall submit an electronic proposal. All quotation information must be in the English language and priced in U.S. dollars. The Government reserves the right to seek clarification on any aspect of the offeror?s proposal.(ix)\tProposals for this requirement are due on October 8th, 2025, at 2:00 PM (Eastern). Proposals shall be submitted through the PIEE Solicitation Module as identified in the RFQ.(x)\tTo assure timely processing of proposals, Offerors must follow the instructions contained within the solicitation. Offerors are required to meet all solicitation requirements. Failure to include all required information may cause the offer or proposal to be considered non-responsive and not considered further for award. "
+    },
+    {
+        "noticeId": "df674756a7ab4d2891b63e29b7b63c21",
+        "title": "Technical Support on the Department of Energy (DOE) Appliance Standards Program",
+        "solicitationNumber": "RFPTechSupportApplianceStandardsProgram102025",
+        "fullParentPathName": "ENERGY, DEPARTMENT OF.ENERGY, DEPARTMENT OF.BERKELEY NATL LAB - DOE CONTRACTOR",
+        "fullParentPathCode": "089.8900.899032",
+        "postedDate": "2025-10-08",
+        "type": "Solicitation",
+        "baseType": "Solicitation",
+        "archiveType": "auto15",
+        "archiveDate": "2025-11-14",
+        "typeOfSetAsideDescription": "No Set aside used",
+        "typeOfSetAside": "NONE",
+        "responseDeadLine": "2025-10-30T10:00:00-07:00",
+        "naicsCode": "541715",
+        "naicsCodes": [
+            "541715"
+        ],
+        "classificationCode": "AG21",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": null,
+                "type": "primary",
+                "email": "nshaherzad@lbl.gov",
+                "phone": "510-486-4842",
+                "title": null,
+                "fullName": "Nadia Shaherzad"
+            },
+            {
+                "fax": null,
+                "type": "secondary",
+                "email": "teh@lbl.gov",
+                "phone": "510-486-4922",
+                "title": null,
+                "fullName": "Thomas E. Hussey"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=df674756a7ab4d2891b63e29b7b63c21",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "94720",
+            "city": "Berkeley",
+            "countryCode": "USA",
+            "state": "CA"
+        },
+        "placeOfPerformance": {
+            "city": {
+                "code": "4906",
+                "name": "Berkeley"
+            },
+            "state": {
+                "code": "MO",
+                "name": "Missouri"
+            },
+            "country": {
+                "code": "USA",
+                "name": "UNITED STATES"
+            }
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/df674756a7ab4d2891b63e29b7b63c21/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=df674756a7ab4d2891b63e29b7b63c21&limit=1"
+            }
+        ],
+        "resourceLinks": [
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/7c267d05bfb64e1fac1571474c0f8b05/download"
+        ],
+        "descriptionText": "<p>The Energy Efficiency Studies (EES) Department offers a broad range of expertise primarily in support of the U.S. Department of Energy&#39;s (DOE&#39;s) Appliance &amp; Equipment Standards Program and its mission to promulgate standards (through a rulemaking process) that achieve the maximum improvement in energy efficiency that is both technologically feasible and economically justified. EES conducts research and develops a unique and powerful set of core capabilities, including: energy policy analysis, cost-benefits assessment, including uncertainty and variability analysis, product life-cycle cost analysis, energy modeling and forecasting, environmental impacts assessment. EES analysis cover a range of products, including residential appliance, commercial and industrial equipment, and lighting system.&nbsp; The selected offeror will be responsible for two primary projects: Energy conservation standards analysis and text procedure development. Within each project, the tasks apply to selected space-heating, water-heating, and electronics equipment for which DOE funds Lawrence Berkeley National Laboratory (LBNL) during the performance period of the Subcontract. In addition, the offeror will provide strategic advice regarding research within the program and assist on additional research tasks as needed.&nbsp;</p>\n"
+    },
+    {
+        "noticeId": "283ea9e4b3944345a39b5744c56577f6",
+        "title": "AirBorne Sensors Program (ABS) Draft Request for Proposal (DRFP)",
+        "solicitationNumber": "HQ085525E0001",
+        "fullParentPathName": "DEPT OF DEFENSE.MISSILE DEFENSE AGENCY (MDA).MISSILE DEFENSE AGENCY (MDA)",
+        "fullParentPathCode": "097.97JC.HQ0855",
+        "postedDate": "2025-10-08",
+        "type": "Presolicitation",
+        "baseType": "Presolicitation",
+        "archiveType": "autocustom",
+        "archiveDate": "2025-10-31",
+        "typeOfSetAsideDescription": null,
+        "typeOfSetAside": null,
+        "responseDeadLine": "2025-07-11T16:00:00-05:00",
+        "naicsCode": "541715",
+        "naicsCodes": [
+            "541715"
+        ],
+        "classificationCode": "AC13",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "krystal.ballinger@mda.mil",
+                "phone": "",
+                "title": null,
+                "fullName": "Krystal Ballinger"
+            },
+            {
+                "fax": "",
+                "type": "secondary",
+                "email": "parker.hughes@mda.mil",
+                "phone": "",
+                "title": null,
+                "fullName": "Parker Hughes"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=283ea9e4b3944345a39b5744c56577f6",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "35898",
+            "city": "HUNTSVILLE",
+            "countryCode": "USA",
+            "state": "AL"
+        },
+        "placeOfPerformance": {
+            "city": {
+                "code": "63912",
+                "name": "Redstone Arsenal"
+            },
+            "state": {
+                "code": "AL",
+                "name": "Alabama"
+            },
+            "country": {
+                "code": "USA",
+                "name": "UNITED STATES"
+            }
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/283ea9e4b3944345a39b5744c56577f6/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=283ea9e4b3944345a39b5744c56577f6&limit=1"
+            }
+        ],
+        "resourceLinks": [
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/1943f6b9897143b3a23b4a45b08ca15f/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/32f59a765c06413994a30cd8c85a781d/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/541a2e3581a44c86b58aab8cc91f88e6/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/66264ba08de44185930a79d2f0190614/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/aa72f477d8b14d3b88af4d31d003af27/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ece70950c6704b54a4243f34d32203b6/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/fa06e92f0c0d4625959bff72ea0d44b5/download"
+        ],
+        "descriptionText": "<p><strong>Product Service Code:&nbsp;</strong>AC13 - NATIONAL DEFENSE R&amp;D SERVICES; DEPARTMENT OF DEFENSE - MILITARY; EXPERIMENTAL DEVELOPMENT</p>\n\n<p><strong>NAICS Code: </strong>541715&nbsp;- RESEARCH AND DEVELOPMENT IN THE PHYSICAL, ENGINEERING, AND LIFE SCIENCES (EXCEPT NANOTECHNOLOGY AND BIOTECHNOLOGY)</p>\n\n<p></p>\n\n<p>The Missile Defense Agency (MDA) is issuing this Draft Request for Proposal (DRFP) for the AirBorne Sensors (ABS) Program.&nbsp; The Government will solicit this procurement as a Full and Open Competition. It is the MDA&rsquo;s intent to provide the DRFP in phased increments. The purpose of this approach is to share information in stages as it becomes available, thereby providing ample time for feedback and refinement prior to issuance of the final RFP.&nbsp; Once all documents associated with the DRFP have been posted, the solicitation notice will be updated to state as such. <u>The <strong>first</strong> increment includes:</u></p>\n\n<ol>\n\t<li>Draft ABS Program IDIQ Performance Work Statement (PWS)</li>\n\t<li>Draft ABS Program Task Order_Mission Planning and Test Execution PWS</li>\n\t<li>Draft ABS Program Task Order_Operation and Sustainment (O&amp;S) PWS</li>\n\t<li>Draft Contract Data Requirements List (CDRLs)</li>\n\t<li>ABS Program Industry Day Registration Form</li>\n\t<li>ABS_Bidders Library Request Form</li>\n\t<li>Draft Bidders Library Attachments: Bidders Library 1_Applicable Documents and Bidders Library 2_PUGS&nbsp;<strong>(Controlled Access_Vendors must submit the ABS Bidders Library Requst Form for access)</strong></li>\n</ol>\n\n<p></p>\n\n<p>Note: On May 7, 2025 a seperate SAM.gov posting was established for additional Bidders Library documents associated with the ABS Draft Request for Proposal. Navigation to that posting is as follows:</p>\n\n<p>Title: AirBorne Sensors Program (ABS) Draft Request for Proposal (DRFP) Partial Bidders Library</p>\n\n<p>Notice ID: HQ085525E0001BL</p>\n\n<p>Attachments: Bidders Library 3_NGS and Bidders Library 4_Aircraft</p>\n\n<p>Link:&nbsp;https://sam.gov/opp/0e4172eae7f24042b223578bb1f7c3df/review</p>\n\n<p><u>The <strong>2nd</strong> DRFP increment includes:</u></p>\n\n<ol>\n\t<li>Draft ABS4 Section L (Posted 5.29.25)</li>\n\t<li>Draft ABS4 Section M (Posted 5.29.25)</li>\n</ol>\n\n<p><u>The <strong>3rd</strong> DRFP increment includes an update to the &quot;AirBorne Sensors Program (ABS) Draft Request for Proposal (DRFP) Partial Bidders Library&quot; Notice ID: HQ085525E0001BL&nbsp;(https://sam.gov/opp/0e4172eae7f24042b223578bb1f7c3df/review):</u></p>\n\n<ol>\n\t<li>Bidders Library 3_NGS and Bidders Library 4_Aircraft (Posted 7.1.25)</li>\n</ol>\n\n<p><u>The <strong>4th</strong>&nbsp;DRFP increment includes:</u></p>\n\n<ol>\n\t<li>ABS Program Industry Day Q&amp;A&#39;s (Posted 7.25.25)</li>\n</ol>\n\n<p><u>The <strong>5th</strong>&nbsp;DRFP increment includes:</u></p>\n\n<ol>\n\t<li>ABS Draft RFP Additional Q_A&#39;s (Posted 10.8.25)</li>\n</ol>\n\n<p>The purpose of providing these drafts is to exchange information to improve understanding of the Government&rsquo;s requirements and industry capabilities, thereby allowing potential offerors to judge whether or how they can satisfy the Government&rsquo;s requirements and enhancing the Government&rsquo;s ability to obtain quality services. As such, this DRFP does not constitute a promise to issue a Final RFP in the future nor does it commit the MDA to establish a contract for any supply or service whatsoever.</p>\n\n<p></p>\n\n<p>The requirements in this DRFP are for the ABS Program.&nbsp; Participation in this effort is voluntary with no cost or obligation to be incurred by the MDA. All costs associated with responding to this posting will be solely at the Respondent&rsquo;s expense. Additionally, participation in this or future Agency transactions and procurement opportunities is not contingent upon responding to this posting. It is the responsibility of the potential Respondents to monitor this site for additional information pertaining to this requirement.</p>\n\n<p></p>\n\n<p><strong>ABS ELIGIBLE FOR AWARD</strong></p>\n\n<p>Offerors are notified that in order to be eligible for award, Offerors must be registered in the System for Award Management (SAM) database in accordance with FAR 4.1102. Offerors may obtain information on registration in SAM at https://www.sam.gov.&nbsp; If you are interested in saving searches, following contract opportunities, requesting secure documents, or signing up for an Interested Vendor List, you will need a login.gov account in SAM.gov.</p>\n\n<p></p>\n\n<p>Prime Offerors must have a Facility Clearance of SECRET in order to be granted access to the draft Offeror&rsquo;s Library and to be eligible for award.</p>\n\n<p></p>\n\n<p><strong>FOREIGN OWNERSHIP EXCLUSION</strong><strong>:</strong></p>\n\n<p>This DRFP contains Controlled Unclassified Information (CUI). Companies under Foreign Ownership, Control, or Influence (FOCI) will be excluded from contract award unless steps are taken to negate FOCI or mitigate associated risks to the satisfaction of the U.S. Government.</p>\n\n<p>In accordance with Part 117 of Title 32, Code of Federal Regulations, subsection 11(a), a U.S. entity is considered under FOCI when:</p>\n\n<p>(i) A foreign interest has the power to direct or decide issues affecting the entity&#39;s management or operations in a manner that could either:</p>\n\n<p>(A) Result in unauthorized access to classified information; or</p>\n\n<p>(B) Adversely affect performance of a classified contract or agreement.</p>\n\n<p>(ii) The foreign government is currently exercising, or could prospectively exercise, that power, whether directly or indirectly, such as:</p>\n\n<p>(A) Through ownership of the U.S. entity&#39;s securities, by contractual arrangements, or other means, or;</p>\n\n<p>(B) By the ability to control or influence the election or appointment of one or more members to the entity&#39;s governing board.</p>\n\n<p>For further detailed information regarding FOCI, refer to 32 CFR Part 117.11.</p>\n\n<p></p>\n\n<p><strong>ACCESS TO DRFP AND DRAFT OFFEROR&rsquo;S LIBRARY</strong></p>\n\n<p>The DRFP/Draft Offeror&rsquo;s Library, is available to Respondents upon request, subject to clearance validation.&nbsp; Access to the ABS DRFP/Draft Offeror&rsquo;s Library is restricted to Respondents that have been cleared by MDA Contracting and Security Officials.&nbsp; Dissemination by Respondents to potential subcontractors will be in accordance with the ABS DD Form 254, which MDA will provide upon access approval.&nbsp; Subcontractor access is the responsibility of the Respondent. &nbsp;In order to receive the CUI documents, the Respondent requires a facility security clearance and level of safeguarding of no less than SECRET. &nbsp;This requirement shall be flowed down from the Respondent to all subcontractors prior to dissemination of information. &nbsp;</p>\n\n<p></p>\n\n<p>For access requests, Respondents must complete the <strong>ABS Bidders Library and Request Form (found in the Attachments/Links of this SAM.gov posting)</strong>. &nbsp;Please return the completed forms to mda.redstone.dtk.mbx.abs4@mail.mil. &nbsp;Utilize DoD SAFE site as necessary.</p>\n\n<p></p>\n\n<p>All technical data, computer software, computer software documentation, and programmatic and operational information provided by the MDA is in an &quot;as is&quot; condition without any warranty as to its accuracy, completeness, or adequacy. The Respondent shall use this technical data at its own risk. The MDA assumes no responsibility for such data/documentation nor will the MDA have any liability should such data/documentation prove to be inaccurate, incomplete, or otherwise defective. The recipient shall adhere to and properly control all documents according to the security classification, technical data, computer software, computer software documentation, distribution, privileged or confidential markings as they appear on the various documents.</p>\n\n<p></p>\n\n<p><strong>DRFP FEEDBACK</strong></p>\n\n<p></p>\n\n<p>The MDA will consider industry feedback to DRFP documents before the final ABS Program RFP is released.&nbsp; Feedback to DRFP documents must be submitted electronically to mda.redstone.dtk.mbx.abs4@mail.mil no later than 4:00 pm Central Time on July 11, 2025.&nbsp; The subject of the e-mail transmitting the feedback should be, &ldquo;ABS Program Draft RFP Redline Review Tracking Spreadsheet.&rdquo;&nbsp; The preferred method of industry feedback is via tracked changes and comment balloons in the DRFP documents with an accompanying spreadsheet entitled, ABS Program Draft RFP Redline Review Tracking Spreadsheet so all feedback can be tracked to closure.</p>\n\n<p></p>\n\n<p>In addition to providing feedback on the DRFP documents released with this DRFP announcement, the MDA requests industry input on the ABS Program CLIN structure, incentives, and any other aspect of this acquisition that will achieve the desired outcomes described in the draft ABS Program PWS.</p>\n\n<p></p>\n\n<p>Hardcopy responses to this announcement will not be accepted.&nbsp; The Government will not accept or review any response other than those submitted on the spreadsheet form provided. Any other documentation (e.g., white papers, product/service brochures, etc.) in response to this posting will be disregarded.&nbsp;</p>\n\n<p></p>\n\n<p><strong>ABS PROGRAM INDUSTRY DAY [UPDATED EVENT INFORMATION AS OF 5/23/25 - changes identified in <u>Bold/Underlined</u> Font]</strong></p>\n\n<p>In support of satisfying the follow-on requirement, the Missile Defense Agency (MDA) will host an Industry Day on June 3, 2025, in Tulsa, Oklahoma.&nbsp; The purpose of this Industry Day is to provide an orientation of the ABS Program, its mission, and information related to the solicitation in a conference style presentation.&nbsp; The Industry Day will also offer the opportunity for potential Prime Offerors to ask questions during one-on-one tours of ABS equipment.&nbsp;</p>\n\n<p></p>\n\n<p>Target Audience: &nbsp;Prospective Prime offerors and subcontractors on ABS DRFP</p>\n\n<p>When: June 3, 2025, <u><strong>0800</strong></u>-1700 Central Daylight Time (CDT)</p>\n\n<p>Where: Tulsa Air and Space Museum</p>\n\n<p><u><strong>Attire: Business Casual&nbsp;</strong></u></p>\n\n<p>Contact: mda.redstone.dtk.mbx.abs4@mail.mil</p>\n\n<p></p>\n\n<p>Interested participants must complete and submit the Industry Day Registration Form (attached) via email to <u>mda.redstone.dtk.mbx.abs4@mail.mil</u> no later than 1700 CDT May 19, 2025. &nbsp;The email subject line shall state &ldquo;RSVP ABS Industry Day Event.&rdquo;&nbsp; Each prospective prime offeror must provide the following information with its RSVP:</p>\n\n<ul>\n\t<li>Name and information (including title, email address, and phone number) of no more than four personnel per company (inclusive of Business Units and potential subcontractors)</li>\n\t<li>Identify intent to participate as either prime, subcontractor, or joint venture; and request a tour/one-on-one session, if desired.&nbsp; <strong><u>Group</u></strong> sessions will be available for potential prime<strong><u>/sub</u></strong> offerors in 30-minute increments, first come, first served in the order received.&nbsp;</li>\n</ul>\n\n<p>An email confirmation will be sent by the MDA/DT Contracting Office verifying successful receipt of registration along with a detailed industry day agenda, schedule, and map.&nbsp; Receipt of registration documents does not guarantee clearance to attend this event.</p>\n\n<p></p>\n\n<p>Each person attending Industry Day must provide one form of valid US Government-issued photo identification and sign-in to the facility upon arrival.&nbsp;</p>\n\n<p></p>\n\n<p>The Government will not assume liability for costs incurred by an attendee.&nbsp; All costs associated with attending this Industry Day event will be solely at the attending party&#39;s expense.&nbsp; Personal electronic devices, to include but not limited to: cameras, cell phones, smart watches/fitness trackers, photographic equipment, recording devices, wireless headphones, thumb drives, and computer drives are prohibited from being brought onto the aircraft.&nbsp; Visitors are reminded that all bags and packages brought into the facilities are subject to inspection at all times by access control personnel.&nbsp; Attendees should arrive at the facility at <strong><u>8:00AM CDT</u> </strong>on the day of the event to ensure time for check-in and badging prior to entering the facility.&nbsp; <u><strong>Check-in will be from 8:00am - 8:30am CDT with the presentation starting promptly at 8:30am</strong>.</u> No photography is permitted at any time.</p>\n\n<p></p>\n\n<p>As part of the pre-registration process, MDA requires all industry participants to submit a Visit Authorization Request (VAR) with MDA to participate in the Industry Day event.&nbsp; Any person attending the Industry Day event and tour/<strong><u>group</u></strong> session must, at a minimum, have a US SECRET security clearance.</p>\n\n<p></p>\n\n<p>VARs must be sent at least one week prior to the event via the Defense Information System for Security (DISS) to SMO Code: DDAAUH. Missile Defense Agency, 5222 Martin Rd., Redstone Arsenal, AL 35898.&nbsp; The individual&rsquo;s name, company name and phone number shall be included in the VAR submission.&nbsp; The date of the visit shall be limited to June 3, 2025, the purpose shall be specific: &ldquo;ABS Industry Day Event,&rdquo; and the POC is Ms. Karen Bearden, karen.bearden@mda.mil, 256-425-5792.&nbsp; VARs submitted after May 27, 2025 <u><strong>will</strong></u> result in personnel not being cleared to attend the Industry Day Event.&nbsp; There will be no day-of processing by the MDA security office.</p>\n\n<p></p>\n\n<p><strong><u>**Registration for this event has closed.&nbsp;All participants attending Industry Day must submit a VAR no later than May 27, 2025. VARs submitted after May 27, 2025 will result in personnel not being cleared to attend the Industry Day event. **</u></strong></p>\n\n<p></p>\n\n<p><u><strong>Government Systems Engineering &amp; Technical Assistance (SETA) support contractors will be present and supporting the Government during Industry Day and HALO group tours. Please contact the Government points of contact identified in this announcement to express any concerns with these contractors. SETA support are from the following companies:</strong></u></p>\n\n<p><u><strong>1. Astrion&nbsp;</strong></u></p>\n\n<p><u><strong>308 Voyager Way NW</strong></u></p>\n\n<p><u><strong>Huntsville, AL 35806</strong></u></p>\n\n<p><u><strong>2. AeroVironment Inc.</strong></u></p>\n\n<p><u><strong>410 Jan Davis Dr NW</strong></u></p>\n\n<p><u><strong>Huntsville, AL 35806</strong></u></p>\n\n<p></p>\n\n<p>DISTRIBUTION STATEMENT A. Approved for public release; distribution is unlimited.</p>\n\n<p>Approved for Public Release&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />\n25-MDA-12077 (24 Apr 25)</p>\n\n<p></p>\n"
+    },
+    {
+        "noticeId": "9141769e2be4420c825f59a056a094c1",
+        "title": "National Community Outreach & Prevention",
+        "solicitationNumber": "15DDHQ25R00000010",
+        "fullParentPathName": "JUSTICE, DEPARTMENT OF.DRUG ENFORCEMENT ADMINISTRATION.OFFICE OF PUBLIC AFFAIRS",
+        "fullParentPathCode": "015.1524.15DDCP",
+        "postedDate": "2025-10-08",
+        "type": "Solicitation",
+        "baseType": "Solicitation",
+        "archiveType": "autocustom",
+        "archiveDate": "2025-10-16",
+        "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+        "typeOfSetAside": "SBA",
+        "responseDeadLine": "2025-10-15T10:00:00-04:00",
+        "naicsCode": "611430",
+        "naicsCodes": [
+            "611430"
+        ],
+        "classificationCode": "U008",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "Naomi.S.Collier@dea.gov",
+                "phone": "",
+                "title": null,
+                "fullName": "Naomi Collier"
+            },
+            {
+                "fax": "",
+                "type": "secondary",
+                "email": "andrew.j.craig@dea.gov",
+                "phone": "",
+                "title": null,
+                "fullName": "Andrew Craig"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=9141769e2be4420c825f59a056a094c1",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "22152",
+            "city": "SPRINGFIELD",
+            "countryCode": "USA",
+            "state": "VA"
+        },
+        "placeOfPerformance": {
+            "city": {
+                "code": "74592",
+                "name": "Springfield"
+            },
+            "state": {
+                "code": "VA",
+                "name": "Virginia"
+            },
+            "zip": "22152",
+            "country": {
+                "code": "USA",
+                "name": "UNITED STATES"
+            }
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/9141769e2be4420c825f59a056a094c1/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=9141769e2be4420c825f59a056a094c1&limit=1"
+            }
+        ],
+        "resourceLinks": [
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/09f05e719e17466f9b251af8935bd54d/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/15d1581fd3464f38b83ba52ec1c91096/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/2473477590a7420c832223b8d53cb9eb/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/4f57730119194109b52033a37aaab6b4/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/98755180c5d040b19dbf4f389ff17b71/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a6f814ae1e1845a28aad493e3a56ca39/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/d692128385d3489684d25214d8d11300/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ecf4b859c7a540b7ac1347e8e086cb16/download"
+        ],
+        "descriptionText": "<p>A0006-&nbsp;The purpose of this amendment&nbsp; is to post an updated Request for Quote(RFQ), a new CLIN structure pricing sheet and<br />\nanswers to questions submitted by prospective offeror.&nbsp;<u><strong>Final proposals must incorporate the changes from this amendment in order to be in compliance with the solicitation as amended.</strong></u> The hour and date specified for receipt of offers is <strong><u>October 15, 2025 at 10:00am EST. No late submissions will be accepted.</u></strong>&nbsp;The attachments for this amendment are: A28 Request for Quote- Amendment A0006, A31 Questions and Answers- Amendment A0006&nbsp;and A0006&nbsp; New CLIN Excel Pricing Sheet.</p>\n\n<p>A0005-&nbsp;The purpose of this amendment is to extend the due date to <u><strong>October 15, 2025 at 10:00am EST.</strong></u> No late submissions will be accepted. Another amendment is forthcoming, which will address questions from prospective offerors and to make changes to the solicitation including the CLIN structure. All other terms and conditions remain unchanged.</p>\n\n<p>A0004-&nbsp;The purpose of this amendment is to extend the due date to <u><strong>October 8, 2025 at 10:00am EST.</strong></u> No late submissions will be accepted. Another amendment is forthcoming, which will address questions from prospective offerors and to make changes to the solicitation including the CLIN structure. All other terms and conditions remain unchanged.&nbsp;</p>\n\n<p>A0003-&nbsp;The purpose of this amendment is to extend the due date to <u><strong>September 25, 2025 at 10:00am EST.</strong></u> No late submissions will be accepted. All other terms and conditions remain unchanged.&nbsp;</p>\n\n<p>A0002- The purpose of this amendment is to extend the due date to September 18, 2025 at 10:00am EST. No late submissions will be accepted. All other terms and conditions remain unchanged.&nbsp;</p>\n\n<p>*A0001-<u><strong>This amendment clarifies that this request for quote (RFQ) is 100 percent set aside for small businesses only. All other terms and conditions remain unchanged.&nbsp;</strong></u></p>\n\n<p>This is a solicitation for a 5-year Blanket Purchase Agreement is for the National Community Outreach &amp; Prevention Engagement. Services are to be performed in accordance with the attached Request for Quote and Statement of Work.&nbsp;</p>\n\n<p>All communications concerning this solicitation, including any of a technical nature, shall be made through the Contract Specialist and Contracting Officer. All questions, technical or otherwise, in response to this solicitation shall be in writing and received by the Government on or before <u><strong>Wednesday 27, August 2025 by 10:00 AM, Eastern Time.</strong></u> The government will not address any additional questions after this date.</p>\n\n<p>Final quotes are due by email to <strong><u>Naomi.S.Collier@dea.gov and Andrew.J.Craig@dea.gov</u></strong> on or before 8 October 2025 by 10:00 AM, Eastern Time. No late submissions will be accepted. SMALL BUSINESSES ONLY</p>\n\n<p></p>\n"
+    },
+    {
+        "noticeId": "0d5fc6fc8b864a75bda5fceb70fdd9e8",
+        "title": "INFORMATION RESOURCE CENTER SERVICES",
+        "solicitationNumber": "1131PL25RSA41150",
+        "fullParentPathName": "UNITED STATES TRADE AND DEVELOPMENT AGENCY.UNITED STATES TRADE AND DEVELOPMENT AGENCY.US TRADE AND DEVELOPMENT AGENCY",
+        "fullParentPathCode": "011.1153.1131PL",
+        "postedDate": "2025-10-08",
+        "type": "Combined Synopsis/Solicitation",
+        "baseType": "Combined Synopsis/Solicitation",
+        "archiveType": "auto15",
+        "archiveDate": "2025-11-15",
+        "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+        "typeOfSetAside": "SBA",
+        "responseDeadLine": "2025-10-31T13:00:00-04:00",
+        "naicsCode": "561110",
+        "naicsCodes": [
+            "561110"
+        ],
+        "classificationCode": "R699",
+        "active": "Yes",
+        "award": null,
+        "pointOfContact": [
+            {
+                "fax": "",
+                "type": "primary",
+                "email": "ghibbert@ustda.gov",
+                "phone": "7038754357",
+                "title": null,
+                "fullName": "Garth Hibbert"
+            },
+            {
+                "fax": "",
+                "type": "secondary",
+                "email": "aasibey@ustda.gov",
+                "phone": "7038754357",
+                "title": null,
+                "fullName": "Afua Serwah-Asibey"
+            }
+        ],
+        "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=0d5fc6fc8b864a75bda5fceb70fdd9e8",
+        "organizationType": "OFFICE",
+        "officeAddress": {
+            "zipcode": "22209",
+            "city": "ARLINGTON",
+            "countryCode": "USA",
+            "state": "VA"
+        },
+        "placeOfPerformance": {
+            "city": {
+                "code": "3000",
+                "name": "Arlington"
+            },
+            "state": {
+                "code": "VA",
+                "name": "Virginia"
+            },
+            "zip": "22209",
+            "country": {
+                "code": "USA",
+                "name": "UNITED STATES"
+            }
+        },
+        "additionalInfoLink": null,
+        "uiLink": "https://sam.gov/workspace/contract/opp/0d5fc6fc8b864a75bda5fceb70fdd9e8/view",
+        "links": [
+            {
+                "rel": "self",
+                "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=0d5fc6fc8b864a75bda5fceb70fdd9e8&limit=1"
+            }
+        ],
+        "resourceLinks": [
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/1ae5bb060a1441a8a15e2a18e1bf02be/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/7fa7d1a988064e168420e247d37df4e9/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/b2a669619111462fa1eb1b1be2ea896c/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/b3f0439c924f4473be1ed6f7a1bb21fc/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/bd762a84c0af4dc9bb06c9088dd5d67f/download",
+            "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ecbd8d0d2fc7463fa6dc34582d57ada5/download"
+        ],
+        "descriptionText": "<p>Amendment 0001 - Provides Q &amp; A and updated RFP</p>\n\n<p></p>\n\n<p>The successful Contractor shall provide program and administrative support services to USTDA&rsquo;s Office of Administration, primarily in support of, but not limited to, the Agency&rsquo;s records management program; FOIA program; mailroom operation; receptionist/visitor assistance; conference rooms and business center maintenance; and travel, facilities, and other administrative management programs. This requirement is 100% set aside for small business.&nbsp;</p>\n"
+    }
+]

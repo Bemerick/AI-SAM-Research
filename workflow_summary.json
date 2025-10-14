@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-10-09T11:50:14.926001",
+  "sam_opportunities_fetched": 9,
+  "opportunities_ranked": 9,
+  "opportunities_stored": 8,
+  "govwin_matches_found": 0,
+  "errors": [],
+  "ai_token_usage": {
+    "prompt_tokens": 8465,
+    "completion_tokens": 2390,
+    "total_tokens": 10855
+  },
+  "created_opportunity_ids": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

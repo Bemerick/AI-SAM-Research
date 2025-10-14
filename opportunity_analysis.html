@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM.gov Opportunity Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <style>
+        .high-score { background-color: #d4edda; }
+        .medium-score { background-color: #fff3cd; }
+        .low-score { background-color: #f8d7da; }
+        .urgent { color: #dc3545; font-weight: bold; }
+        .approaching { color: #fd7e14; font-weight: bold; }
+        .adequate { color: #28a745; }
+        .fit-score { font-weight: bold; }
+        .card-header { background-color: #f8f9fa; }
+        .filter-section { margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="my-4">SAM.gov Opportunity Analysis</h1>
+        
+        ```html
+<section class="executive-summary">
+    <h2>Executive Summary</h2>
+    <ul>
+        <li>Total number of opportunities analyzed: 49</li>
+        <li>Number of opportunities ranked by practice area: 22</li>
+        <li>Number of opportunities not ranked: 27</li>
+        <li>Top 3 highest-scoring opportunities across all practice areas: 
+            <ul>
+                <li>Opportunity #14: FEMA Region VI: Mitigation IT Lifecycle Refresh - Score: 9</li>
+                <li>Opportunity #1: DA01--Appraisal Management Requirement - Score: 8</li>
+                <li>Opportunity #8: DA10--Vocera/Engage - Ascom Nurse Call Integration - Score: 8</li>
+            </ul>
+        </li>
+        <li>Distribution of opportunities by department: 
+            <ul>
+                <li>Department of Veterans Affairs: 12</li>
+                <li>Department of Defense: 15</li>
+                <li>Department of Homeland Security: 5</li>
+                <li>Department of Treasury: 3</li>
+                <li>Department of Interior: 3</li>
+            </ul>
+        </li>
+        <li>Distribution of opportunities by practice area: 
+            <ul>
+                <li>Acquisition Lifecycle Management: 2</li>
+                <li>Program Management & Delivery: 4</li>
+                <li>Business Transformation & Change Management: 1</li>
+                <li>Grant Program Management: 0</li>
+                <li>Risk, Safety & Mission Assurance: 0</li>
+                <li>Business & Technology Services: 12</li>
+                <li>Human Capital & Workforce Innovation: 3</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<div class="accordion">
+    <h3>Acquisition Lifecycle Management</h3>
+    <table class="datatable">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Opportunity Title</th>
+                <th>Solicitation Number</th>
+                <th>Posted Date</th>
+                <th>Type</th>
+                <th>Set-Aside</th>
+                <th>Summary Description</th>
+                <th>Link</th>
+                <th>Practice Area(s)</th>
+                <th>Fit Score</th>
+                <th>Tags</th>
+                <th>Opportunity Size</th>
+                <th>Response Deadline</th>
+                <th>Competitive Assessment</th>
+                <th>Recommended Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="high-score" data-department="VETERANS AFFAIRS" data-practice-area="Acquisition Lifecycle Management" data-score="high">
+                <td>VETERANS AFFAIRS</td>
+                <td>DA01--Appraisal Management Requirement</td>
+                <td>36C10D25R0008</td>
+                <td>2025-05-21</td>
+                <td>Solicitation</td>
+                <td>None</td>
+                <td>Appraisal Management Services for the Department of Veterans Affairs.</td>
+                <td><a href="https://sam.gov/opp/e1137775bb51402d81cb59ad2526bb18/view">Link</a></td>
+                <td>Acquisition Lifecycle Management</td>
+                <td>★★★★★★★★☆☆</td>
+                <td>Appraisal Management, Veterans Affairs</td>
+                <td>Medium</td>
+                <td>🔴 Urgent (< 7 days)</td>
+                <td>Strong competition, but we have experience in VA contracts.</td>
+                <td>Pursue Immediately</td>
+            </tr>
+            <tr class="medium-score" data-department="VETERANS AFFAIRS" data-practice-area="Acquisition Lifecycle Management" data-score="medium">
+                <td>VETERANS AFFAIRS</td>
+                <td>DA10--Vocera/Engage - Ascom Nurse Call Integration</td>
+                <td>36C25225Q0440</td>
+                <td>2025-05-21</td>
+                <td>Solicitation</td>
+                <td>None</td>
+                <td>Integrate the Vocera system into the Ascom Nurse Call System.</td>
+                <td><a href="https://sam.gov/opp/32119373cf08462694a3babbb9571802/view">Link</a></td>
+                <td>Acquisition Lifecycle Management</td>
+                <td>★★★★★★★☆☆☆</td>
+                <td>Nurse Call System, Integration</td>
+                <td>Medium</td>
+                <td>🟠 Approaching (7-14 days)</td>
+                <td>Moderate competition, we have relevant integration experience.</td>
+                <td>Further Research</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Program Management & Delivery</h3>
+    <table class="datatable">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Opportunity Title</th>
+                <th>Solicitation Number</th>
+                <th>Posted Date</th>
+                <th>Type</th>
+                <th>Set-Aside</th>
+                <th>Summary Description</th>
+                <th>Link</th>
+                <th>Practice Area(s)</th>
+                <th>Fit Score</th>
+                <th>Tags</th>
+                <th>Opportunity Size</th>
+                <th>Response Deadline</th>
+                <th>Competitive Assessment</th>
+                <th>Recommended Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="high-score" data-department="HOMELAND SECURITY" data-practice-area="Program Management & Delivery" data-score="high">
+                <td>HOMELAND SECURITY</td>
+                <td>FEMA Region VI: Mitigation IT Lifecycle Refresh</td>
+                <td>70FBR625Q00000023</td>
+                <td>2025-05-21</td>
+                <td>Solicitation</td>
+                <td>Total Small Business Set-Aside</td>
+                <td>IT Lifecycle Refresh Equipment for FEMA Region VI.</td>
+                <td><a href="https://sam.gov/opp/e36c6db2710744ca9588509dbc659fba/view">Link</a></td>
+                <td>Program Management & Delivery</td>
+                <td>★★★★★★★★★★</td>
+                <td>IT Refresh, FEMA</td>
+                <td>Large</td>
+                <td>🟢 Adequate time (> 14 days)</td>
+                <td>Strong competition, we have experience with FEMA.</td>
+                <td>Pursue Immediately</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Business & Technology Services</h3>
+    <table class="datatable">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Opportunity Title</th>
+                <th>Solicitation Number</th>
+                <th>Posted Date</th>
+                <th>Type</th>
+                <th>Set-Aside</th>
+                <th>Summary Description</th>
+                <th>Link</th>
+                <th>Practice Area(s)</th>
+                <th>Fit Score</th>
+                <th>Tags</th>
+                <th>Opportunity Size</th>
+                <th>Response Deadline</th>
+                <th>Competitive Assessment</th>
+                <th>Recommended Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="medium-score" data-department="VETERANS AFFAIRS" data-practice-area="Business & Technology Services" data-score="medium">
+                <td>VETERANS AFFAIRS</td>
+                <td>Email Marketing Delivery Service and Software Maintenance</td>
+                <td>VA-25-00019994</td>
+                <td>2025-05-21</td>
+                <td>Sources Sought</td>
+                <td>None</td>
+                <td>Enterprise-level cloud-based digital communications platform for VA.</td>
+                <td><a href="https://sam.gov/opp/fcece1f804164adc9e1c206ae3da5d97/view">Link</a></td>
+                <td>Business & Technology Services</td>
+                <td>★★★★★★☆☆☆☆</td>
+                <td>Email Marketing, Cloud Services</td>
+                <td>Large</td>
+                <td>🟢 Adequate time (> 14 days)</td>
+                <td>Moderate competition, we have cloud service experience.</td>
+                <td>Further Research</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Human Capital & Workforce Innovation</h3>
+    <table class="datatable">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Opportunity Title</th>
+                <th>Solicitation Number</th>
+                <th>Posted Date</th>
+                <th>Type</th>
+                <th>Set-Aside</th>
+                <th>Summary Description</th>
+                <th>Link</th>
+                <th>Practice Area(s)</th>
+                <th>Fit Score</th>
+                <th>Tags</th>
+                <th>Opportunity Size</th>
+                <th>Response Deadline</th>
+                <th>Competitive Assessment</th>
+                <th>Recommended Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="medium-score" data-department="DEPT OF DEFENSE" data-practice-area="Human Capital & Workforce Innovation" data-score="medium">
+                <td>DEPT OF DEFENSE</td>
+                <td>DC3 Cyber Academy Training (CTA) Follow-On</td>
+                <td>FY25DC3CTA</td>
+                <td>2025-05-21</td>
+                <td>Solicitation</td>
+                <td>None</td>
+                <td>Cyber training for Air Force and DoD entities.</td>
+                <td><a href="https://sam.gov/opp/da1594f7890f445faf6d6ff0dace886c/view">Link</a></td>
+                <td>Human Capital & Workforce Innovation</td>
+                <td>★★★★★★☆☆☆☆</td>
+                <td>Cyber Training, DoD</td>
+                <td>Large</td>
+                <td>🟢 Adequate time (> 14 days)</td>
+                <td>Moderate competition, we have training experience.</td>
+                <td>Further Research</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<section class="not-ranked">
+    <h2>Not Ranked Opportunities</h2>
+    <table class="datatable">
+        <thead>
+            <tr>
+                <th>Department</th>
+                <th>Opportunity Title</th>
+                <th>Solicitation Number</th>
+                <th>Posted Date</th>
+                <th>Type</th>
+                <th>Set-Aside</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>BOSS HW/SW MX Renewal</td>
+                <td>FA813925Q0012</td>
+                <td>2025-05-21</td>
+                <td>Combined Synopsis/Solicitation</td>
+                <td>None</td>
+                <td><a href="https://sam.gov/opp/b909d18ac6d0474baee4a708ca4511d8/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>Open-Source Architecture for Unmanned Ground Vehicle (UGV)</td>
+                <td>N6600125Q6224</td>
+                <td>2025-05-21</td>
+                <td>Presolicitation</td>
+                <td>None</td>
+                <td><a href="https://sam.gov/opp/9cc54e3cb9a54b53bffc896bc788524a/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>Regional CounterDrug Database to include Hosting and Maintenance</td>
+                <td>W9127Q25RA007</td>
+                <td>2025-05-21</td>
+                <td>Combined Synopsis/Solicitation</td>
+                <td>Total Small Business Set-Aside</td>
+                <td><a href="https://sam.gov/opp/2966a6260cfd48489e87c31862cafffa/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>Logistics IT Integration and Support (LIIS) Capability Modernization</td>
+                <td>N6852024R0020</td>
+                <td>2025-05-22</td>
+                <td>Solicitation</td>
+                <td>Partial Small Business Set-Aside</td>
+                <td><a href="https://sam.gov/opp/43bdd72f23544e5ea8b8f4500f31a19c/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>DA10--Vocera/Engage - Ascom Nurse Call Integration</td>
+                <td>36C25225Q0440</td>
+                <td>2025-05-21</td>
+                <td>Presolicitation</td>
+                <td>Service-Disabled Veteran-Owned Small Business Set-Aside</td>
+                <td><a href="https://sam.gov/opp/01e8368240a94c9abc8c5ffc0717ff49/view">Link</a></td>
+            </tr>
+            <tr data-department="SOCIAL SECURITY ADMINISTRATION">
+                <td>SOCIAL SECURITY ADMINISTRATION</td>
+                <td>Establish a new 10-year contract for IBM mainframe hardware warranty/maintenance</td>
+                <td>28321325R00000011</td>
+                <td>2025-05-21</td>
+                <td>Presolicitation</td>
+                <td>None</td>
+                <td><a href="https://sam.gov/opp/e9a41c2aa887483985bc45155e2ea431/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>Annual Fire Protection System Inspection</td>
+                <td>70Z03325Q201900001</td>
+                <td>2025-05-21</td>
+                <td>Combined Synopsis/Solicitation</td>
+                <td>Total Small Business Set-Aside</td>
+                <td><a href="https://sam.gov/opp/d4bbb68aabf34690b90fa957e85f7325/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>Annual Mobile Fire Emergency Inspection IAW NFPA 1910</td>
+                <td>W911S725QA002</td>
+                <td>2025-05-21</td>
+                <td>Solicitation</td>
+                <td>8(a) Set-Aside</td>
+                <td><a href="https://sam.gov/opp/b265c06286b74a5fad1928ad704ef8dd/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>Maintenance of Ion Chromatograph Equipment</td>
+                <td>N0017425SN0036</td>
+                <td>2025-05-21</td>
+                <td>Sources Sought</td>
+                <td>None</td>
+                <td><a href="https://sam.gov/opp/eb8b07433a704e459150af190eeeb018/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>Maintenance of Analytical Equipment</td>
+                <td>N0017425SN0030</td>
+                <td>2025-05-21</td>
+                <td>Sources Sought</td>
+                <td>None</td>
+                <td><a href="https://sam.gov/opp/44d4a2def084409ca71bb9aa39f7b78f/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+                <td>Fuel Tank Inspection at Joint Base McGuire-Dix-Lakehurst, NJ.</td>
+                <td>PANNWD-25-P-0000005887</td>
+                <td>2025-05-21</td>
+                <td>Combined Synopsis/Solicitation</td>
+                <td>Total Small Business Set-Aside</td>
+                <td><a href="https://sam.gov/opp/3aa70b13dcbd4a08a1e6766b18f325bd/view">Link</a></td>
+            </tr>
+            <tr data-department="DEPT OF DEFENSE">
+                <td>DEPT OF DEFENSE</td>
+
+        
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTables
+            $('.datatable').DataTable({
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                "responsive": true
+            });
+            
+            // Initialize Bootstrap components
+            $('[data-toggle="tooltip"]').tooltip();
+            
+            // Filter functionality
+            $('.filter-btn').click(function() {
+                var filterValue = $(this).data('filter');
+                var filterType = $(this).data('filter-type');
+                
+                if (filterValue === 'all') {
+                    $('.opportunity-item').show();
+                } else {
+                    $('.opportunity-item').hide();
+                    $('.opportunity-item[data-' + filterType + '="' + filterValue + '"]').show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

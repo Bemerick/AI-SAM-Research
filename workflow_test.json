@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-10-09T12:09:17.566436",
+  "target_date": "yesterday",
+  "naics_codes_searched": [
+    "541512",
+    "541519"
+  ],
+  "sam_opportunities_fetched": 4,
+  "opportunities_ranked": 4,
+  "opportunities_stored": 2,
+  "govwin_matches_found": 0,
+  "errors": [],
+  "naics_results": {
+    "541512": 2,
+    "541519": 2
+  },
+  "ai_token_usage": {
+    "prompt_tokens": 2962,
+    "completion_tokens": 991,
+    "total_tokens": 3953
+  },
+  "created_opportunity_ids": [
+    10,
+    11
+  ]
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAM.gov Opportunity Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+    <style>
+        .high-score { background-color: #d4edda; }
+        .medium-score { background-color: #fff3cd; }
+        .low-score { background-color: #f8d7da; }
+        .urgent { color: #dc3545; font-weight: bold; }
+        .approaching { color: #fd7e14; font-weight: bold; }
+        .adequate { color: #28a745; }
+        .fit-score { font-weight: bold; }
+        .card-header { background-color: #f8f9fa; }
+        .filter-section { margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="my-4">SAM.gov Opportunity Analysis</h1>
+        
+        <!-- Content will be inserted here by the OpenAI model -->
+        
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize DataTables
+            $('.datatable').DataTable({
+                "paging": true,
+                "ordering": true,
+                "info": true,
+                "responsive": true
+            });
+            
+            // Initialize Bootstrap components
+            $('[data-toggle="tooltip"]').tooltip();
+            
+            // Filter functionality
+            $('.filter-btn').click(function() {
+                var filterValue = $(this).data('filter');
+                var filterType = $(this).data('filter-type');
+                
+                if (filterValue === 'all') {
+                    $('.opportunity-item').show();
+                } else {
+                    $('.opportunity-item').hide();
+                    $('.opportunity-item[data-' + filterType + '="' + filterValue + '"]').show();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

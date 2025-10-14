@@ -1,0 +1,20 @@
+{
+  "notice_id": "TEST001",
+  "title": "AI Solutions for Agricultural Data Analysis",
+  "department": "Department of Agriculture",
+  "standardized_department": "USDA",
+  "naics_code": "541512",
+  "fit_score": 8.5,
+  "posted_date": "2024-01-15",
+  "response_deadline": "2024-12-15",
+  "solicitation_number": "USDA-2024-001",
+  "description": "The Department of Agriculture seeks AI-powered solutions for analyzing agricultural data to improve crop yield predictions.",
+  "summary_description": "AI data analysis platform for agricultural research",
+  "ptype": "Solicitation",
+  "set_aside": "Small Business",
+  "assigned_practice_area": "Business & Technology Services",
+  "justification": "Strong alignment with AI and data analytics capabilities.",
+  "review_for_bid": "Pending",
+  "recommend_bid": "Pending",
+  "sam_link": "https://sam.gov/opp/TEST001"
+}

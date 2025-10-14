@@ -1,0 +1,2301 @@
+{
+  "sam_opportunity": {
+    "noticeId": "8f8f9f2630cd433c9ea13c3b95df7fd5",
+    "title": "REQUEST FOR QUOTE(RFQ) in Support of U.S. Coast Guard Search and Rescue Optimal Planning System (SAROPS)  Environmental Data Services (EDS) Subscription Services and Enhancements",
+    "solicitationNumber": "70Z04425ROIPL0003",
+    "fullParentPathName": "HOMELAND SECURITY, DEPARTMENT OF.US COAST GUARD.C5I DIVISION 3 PORTSMOUTH",
+    "fullParentPathCode": "070.7008.70Z044",
+    "postedDate": "2025-10-07",
+    "type": "Combined Synopsis/Solicitation",
+    "baseType": "Combined Synopsis/Solicitation",
+    "archiveType": "auto15",
+    "archiveDate": "2025-10-25",
+    "typeOfSetAsideDescription": "No Set aside used",
+    "typeOfSetAside": "NONE",
+    "responseDeadLine": "2025-10-10T15:00:00-04:00",
+    "naicsCode": "518210",
+    "naicsCodes": [
+      "518210"
+    ],
+    "classificationCode": "7B22",
+    "active": "Yes",
+    "award": null,
+    "pointOfContact": [
+      {
+        "fax": null,
+        "type": "primary",
+        "email": "Jerrett.A.Solven@uscg.mil",
+        "phone": null,
+        "title": null,
+        "fullName": "Jerrett Solven, Contract Specialist"
+      },
+      {
+        "fax": "",
+        "type": "secondary",
+        "email": "Daniel.R.LaRussa@uscg.mil",
+        "phone": "",
+        "title": null,
+        "fullName": "Daniel LaRussa; Contract Officer"
+      }
+    ],
+    "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=8f8f9f2630cd433c9ea13c3b95df7fd5",
+    "organizationType": "OFFICE",
+    "officeAddress": {
+      "zipcode": "23703",
+      "city": "PORTSMOUTH",
+      "countryCode": "USA",
+      "state": "VA"
+    },
+    "placeOfPerformance": {
+      "country": {
+        "code": "USA",
+        "name": "UNITED STATES"
+      }
+    },
+    "additionalInfoLink": null,
+    "uiLink": "https://sam.gov/workspace/contract/opp/8f8f9f2630cd433c9ea13c3b95df7fd5/view",
+    "links": [
+      {
+        "rel": "self",
+        "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=8f8f9f2630cd433c9ea13c3b95df7fd5&limit=1"
+      }
+    ],
+    "resourceLinks": [
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/3b44965f7fc94148a4b69b1efe71755c/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/4106183793bf4eb0bfc759a12dad0b80/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/44087602abbc4ec1b6c3b42168185e10/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6ba7822d01454a18a8410480c914e426/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/773bb14616804d68832a94c798862917/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a4957c9644664fc9b69b24d723683ad5/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a6d5a303c8fd4f82ba2d812519af7181/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c7060737205d46fb8aaec2f605d86a85/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c8e7f99084594bb49f75887282550217/download",
+      "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/f917b0bdc9fb42058e65875ac858c04d/download"
+    ],
+    "descriptionText": "<p>10/07/2025: Amendment A00001 is issued to address questions submitted for this solicitation as well as update the POC&#39;s for quote submissions. Please see applicable attachments.</p>\n\n<p>Attached you will find the Combined Synopsis/Solicitation for the SAROPS EDS 70Z04425ROIPL0003<br />\nrequirement with associated documents.</p>\n",
+    "notice_id": "8f8f9f2630cd433c9ea13c3b95df7fd5",
+    "standardized_department": "HOMELAND SECURITY, DEPARTMENT OF",
+    "standardized_type": "combined synopsis/solicitation",
+    "naics_code": "518210",
+    "set_aside": "No Set aside used",
+    "is_small_business": false,
+    "ptype": "combined synopsis/solicitation",
+    "response_date": "2025-10-10",
+    "posted_date": "2025-10-07",
+    "assigned_practice_area": "Business & Technology Services",
+    "fit_score": 7,
+    "justification": "The opportunity involves subscription services and enhancements which align with our Business & Technology Services practice area, and it is from a preferred agency.",
+    "summary_description": "<p>10/07/2025: Amendment A00001 is issued to address questions submitted for this solicitation as well as update the POC&#39;s for quote submissions. Please see applicable attachments.</p>\n\n<p>Attached you will find the Combined Synopsis/Solicitation for the SAROPS EDS 70Z04425ROIPL0003<br />\nrequir..."
+  },
+  "keyword_results": [
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/229862"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/30688"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/fboNotices"
+        },
+        "sourcedFrom": [
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3898302"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3949633"
+          }
+        ],
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP229862/contracts"
+        }
+      },
+      "acronym": "SPP",
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2026-01-13T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 39,
+          "title": "Small Bus Set-Aside"
+        },
+        {
+          "id": 40,
+          "title": "Full and Open / Unrestricted"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 8,
+          "title": "Cost Reimbursement"
+        },
+        {
+          "id": 13,
+          "title": "Indefinite Delivery Indefinite Quantity"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2023-03-21T13:33:50.447",
+      "description": "<p>The Department of Homeland Security (DHS), Transportation Security Administration (TSA) has a requirement for&nbsp;security screening services.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<p>The Contractor shall provide all of the security screening services within the framework of the TSA provided guidance, oversight, directives, training, performance measurements and required deliverables for each subsequent task order and all operational directives as provided.<br />\nAll security screening services conducted within this SOW shall be done in accordance with TSA Standard Operating Procedures (SOPs), Operational Directives (ODs), Management Directives (MDs), Administrative Directives (ADs), and Executive Orders. Security screening services include, but are not limited to:</p>\n\n<ul>\n\t<li>Screening persons entering designated security areas</li>\n\t<li>Screening baggage and other items entering designated security areas</li>\n\t<li>Travel document checking</li>\n\t<li>Executing Layered Security Programs, such as Advanced Threat Local Allocation Strategy (ATLAS) activities and screening of passengers by Behavior Detection &amp; Analysis (BDA)</li>\n\t<li>Security training</li>\n\t<li>Preventative maintenance of designated screening equipment</li>\n\t<li>Temporary screening for pilots and surge requirements (as needed)</li>\n\t<li>Screening workforce management.</li>\n</ul>\n\n<p>Security screening services shall be performed at a level equal to or greater than the level provided by Federal government personnel, as defined in C.2. The security screening services shall prevent the introduction of prohibited articles into the sterile areas.</p>\n\n<p>TSA screening procedures may include the use of animals such as canines or other animals. The Contractor shall perform security screening and coordination activities alongside these animals and their Federal handlers, or any other DHS and TSA security personnel, if required by TSA.</p>\n\n<p>Given the dynamic and changing nature of airport infrastructure and operations, the Contractor shall conduct security screening services at all current, future, and reconfigured TSA established passenger and baggage screening locations.</p>\n\n<p>In addition to providing security screening services, the Contractor shall be responsible for conducting airport transition, data management and security, program and personnel management and claims management. The SPP will work with the Contractor and other TSA stakeholders to integrate best SPP IDIQ practices and lessons learned from Federal screening operations and previous contracts in order to continuously seize improvement opportunities.</p>\n",
+      "duration": "10 year(s) base",
+      "govEntity": {
+        "id": 30688,
+        "title": "TRANSPORTATION SECURITY ADMINISTRATION"
+      },
+      "id": "OPP229862",
+      "iqOppId": 229862,
+      "oppValue": 5300000,
+      "primaryNAICS": {
+        "id": "488190",
+        "title": "Other Support Activities for Air Transportation",
+        "sizeStandard": "$40 million annual receipts"
+      },
+      "primaryRequirement": "Physical Security",
+      "procurement": "<p>Information regarding an award that may have resulted for this effort has not yet become available. A request has been sent to learn if awards have been made.</p>\n",
+      "smartTag": "Products & Services > Primary Tags:Aircraft repair services, Secondary Tags:Aviation consulting services, Charter aircraft services, ",
+      "smartTagObject": [
+        {
+          "id": "69DDBE9E-6CD3-57BF-AE33-77CF0C799961",
+          "name": "Aviation consulting services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "32155174-A2A6-5BE9-9B32-8721F60330C0",
+          "name": "Charter aircraft services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "5F031A89-3C92-4AAB-A64B-A08EB4C457C2",
+          "name": "Aircraft repair services",
+          "type": "Services",
+          "isPrimary": 1
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2025-02-11T00:00:00.000"
+      },
+      "solicitationNumber": "70T05025R5900N002",
+      "sourceURL": "https://sam.gov/opp/cb61331b799841319609ec5403dfade2/view",
+      "status": "Source Selection",
+      "title": "SCREENING PARTNERSHIP PROGRAM IDIQ (SPP)",
+      "type": "trackedopp",
+      "typeOfAward": "IDIQ - Agency Specific",
+      "updateDate": "2025-10-08T11:44:27.653"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/256474"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/30688"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP256474/contracts"
+        }
+      },
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2026-02-19T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 47,
+          "title": "Undetermined"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-07-17T11:42:21.940",
+      "description": "<p>The Department of Homeland Security, Transportation Security Administration has a requirement for&nbsp;Cisco field site switch and router hardware maintenance.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<p>Cisco maintenance support for hardware installed at 675 field sites covering switches and routers. Under this task order, TSA receives software/security updates and hardware fixes in the event of failure and access to software patches, to include those that address critical security vulnerabilities. Maintenance ensures the optimal performance, security and reliabitility of network infrastructure.</p>\n",
+      "duration": "Date of award  - Oct. 31, 2026",
+      "govEntity": {
+        "id": 30688,
+        "title": "TRANSPORTATION SECURITY ADMINISTRATION"
+      },
+      "id": "OPP256474",
+      "iqOppId": 256474,
+      "oppValue": 1522,
+      "primaryNAICS": {
+        "id": "541519",
+        "title": "Other Computer Related Services",
+        "sizeStandard": "$34.0 million annual receipts except 150 Employees for Information Technology Value Added Resellers"
+      },
+      "primaryRequirement": "IT Services",
+      "procurement": "<p><span data-teams=\"true\">Previously the Solicitation was expected to be released on or about September 26, 2025. Due to the federal government shutdown, a new timeline is not currently available. Pending further information, Deltek projects a possible solicitation later this month, or in Q1 FY 2026, depending on when the government reopens. Even once the federal contracting activity restarts, there typically is some lag time as the agencies get back up to speed. </span></p>\n",
+      "smartTag": "Products & Services > Primary Tags:Computer repair services, Secondary Tags:Network services, Software maintenance, ",
+      "smartTagObject": [
+        {
+          "id": "EEC22D34-13F7-4727-85C3-1D3CF34D2BF5",
+          "name": "Computer repair services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "5E40085A-A042-5EAC-AF60-733B9B18D5C8",
+          "name": "Network services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "5EF6355E-ACDD-5601-B67E-9C668A8ADF30",
+          "name": "Software maintenance",
+          "type": "Services",
+          "isPrimary": 0
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-11-13T00:00:00.000"
+      },
+      "solicitationNumber": "F2025070982",
+      "sourceURL": "https://apfs-cloud.dhs.gov/record/70982/public-print/",
+      "status": "Pre-RFP",
+      "title": "FY26 CISCO FIELD SITE SWITCH AND ROUTER MAINTENANCE",
+      "type": "trackedopp",
+      "typeOfAward": "Task / Delivery Order",
+      "updateDate": "2025-10-08T15:10:03.817"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/255947"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/148319"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP255947/contracts"
+        }
+      },
+      "awardDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2025-09-05T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 44,
+          "title": "HUBZone Set-Aside"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-06-27T11:09:17.377",
+      "description": "<p>Reli Group, Inc. is fulfilling the Department of Homeland Security, Transportation Security Administration, Office of Acquisition Program Management,&nbsp;Procurement Coordination Branch&#39;s requirement for&nbsp;Program Management Support Services.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<p>Support services for Program, Knowledge Management, and Administrative Support to include shared (e.g., iShare) sites, databases, reports, reporting systems and dashboards, and other related mechanisms and collaboration tools.</p>\n",
+      "duration": "Date of award - March 9, 2028",
+      "govEntity": {
+        "id": 148319,
+        "title": "OFFICE OF ACQUISITION PROGRAM MANAGEMENT"
+      },
+      "id": "OPP255947",
+      "iqOppId": 255947,
+      "oppValue": 463,
+      "primaryNAICS": {
+        "id": "541611",
+        "title": "Administrative Management and General Management Consulting Services",
+        "sizeStandard": "$24.5 million annual receipts"
+      },
+      "primaryRequirement": "Administrative, Logistics & Management",
+      "procurement": "<p>This effort was awarded to Reli Group, Inc. as BPA Call # 70T01025F7672N004 on September 5, 2025. The Call has a value of $463,282. The BPA this was awarded under is currently under Opportunity Report  <a href=\"https://iq.govwin.com/neo/opportunity/view/193867\">193867</a>.</p>\n",
+      "smartTag": "Products & Services > Primary Tags:Procurement services, Program management services, ",
+      "smartTagObject": [
+        {
+          "id": "AA95E200-8B5C-5328-9831-83324F31CFAE",
+          "name": "Program management services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "5182C464-83E3-5E71-9074-E262E57C3A12",
+          "name": "Procurement services",
+          "type": "Services",
+          "isPrimary": 1
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2025-08-01T00:00:00.000"
+      },
+      "solicitationNumber": "F2025070760",
+      "sourceURL": "https://apfs-cloud.dhs.gov/record/70760/public-print/",
+      "status": "Awarded",
+      "title": "PROGRAM MANAGEMENT SUPPORT SERVICES FOR PROCUREMENT COORDINATION BRANCH",
+      "type": "trackedopp",
+      "typeOfAward": "Task / Delivery Order",
+      "updateDate": "2025-10-08T12:13:43.963"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/253346"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/125068"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP253346/contracts"
+        }
+      },
+      "acronym": "GRCSS",
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2026-03-12T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 45,
+          "title": "Service Disabled Veteran Owned Small Business"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-03-31T15:46:29.353",
+      "description": "<p>The Department of Homeland Security, Transportation Security Administration, Office of Information Technology (IT), Information Assurance and Cyber Security Division&nbsp;has a requirement&nbsp;for governance, risk, and compliance support services (GRCSS).</p>\n\n<h4>REQUIREMENTS</h4>\n\n<p>The purpose of this requirement is to obtain Governance, Risk and Compliance support services to meet their goals and objectives for cybersecurity assessments, system compliance, policy, and training necessary to protect and maintain the availability, integrity, and confidentiality of TSA&rsquo;s information technology systems and comply with FISMA and ever-changing cybersecurity requirements</p>\n",
+      "duration": "1 year(s) base plus 4 x 1 year(s) option(s) ",
+      "govEntity": {
+        "id": 125068,
+        "title": "OFFICE OF INFORMATION TECHNOLOGY"
+      },
+      "id": "OPP253346",
+      "iqOppId": 253346,
+      "oppValue": 50000,
+      "primaryNAICS": {
+        "id": "541519",
+        "title": "Other Computer Related Services",
+        "sizeStandard": "$34.0 million annual receipts except 150 Employees for Information Technology Value Added Resellers"
+      },
+      "primaryRequirement": "Information Technology",
+      "procurement": "<p><span data-teams=\"true\">Previously the Solicitation was expected to be released via NITAAC CIO-SP3 on or about September 30, 2025. Due to the federal government shutdown, a new timeline is not currently available. Pending further information, Deltek projects a possible solicitation later this month, or in Q1 FY 2026, depending on when the government reopens. Even once the federal contracting activity restarts, there typically is some lag time as the agencies get back up to speed. </span></p>\n\n<p><strong>Deltek has no visibility into the procurement activity for tasks issued through this vehicle. Interested vendors are encouraged to monitor their NITAAC portals for updates and additional information.</strong></p>\n",
+      "smartTag": "Products & Services > Primary Tags:Information technology services, Risk management services, Secondary Tags:Cyber security services, ",
+      "smartTagObject": [
+        {
+          "id": "7420E80C-E7D8-5C3A-8665-18072F530C57",
+          "name": "Risk management services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "E5ED4CD8-AC2A-5388-BF50-7124DC9239F8",
+          "name": "Information technology services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "DAEDD427-F400-4143-A9F3-A59A7181070A",
+          "name": "Cyber security services",
+          "type": "Services",
+          "isPrimary": 0
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-11-17T00:00:00.000"
+      },
+      "solicitationNumber": "F2025070558",
+      "sourceURL": "https://apfs-cloud.dhs.gov/record/70558/public-print/",
+      "status": "Pre-RFP",
+      "title": "GOVERNANCE RISK AND COMPLIANCE SUPPORT SERVICES (GRCSS)",
+      "type": "trackedopp",
+      "typeOfAward": "Task / Delivery Order",
+      "updateDate": "2025-10-08T15:19:25.047"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/254443"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/30688"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/fboNotices"
+        },
+        "sourcedFrom": [
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO4003414"
+          }
+        ],
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP254443/contracts"
+        }
+      },
+      "acronym": "BLS AIT ETD",
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2026-01-15T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 47,
+          "title": "Undetermined"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 23,
+          "title": "TBD"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-05-07T10:23:24.867",
+      "description": "<p>The Department of Homeland Security, Transportation Security Administration has a requirement for&nbsp;Bottle Liquid Scanner (BLS), Advanced Imaging Technology (AIT), and Explosives Trace Detection (ETD)&nbsp;technologies and associated support services.</p>\n\n<h4>BACKGROUND</h4>\n\n<p>The mission of the TSA is to protect the nation&rsquo;s transportation systems to ensure freedom of movement for people and commerce. To achieve its mission, the TSA must ensure that its security screening equipment is both effective and efficient. This includes security equipment used at all domestic transportation facilities, including aviation, rail, other surface transportation, and maritime transportation (including port security). The TSA&rsquo;s AR portfolio is responsible for secondary screening of potential threats, and the OPS portfolio is responsible for screening people for potential threats. TSA is continuously evaluating and modernizing processes and capabilities to strengthen the agency&rsquo;s ability to respond to adversarial actors, detect emerging and evolving threats, and enable efficient and effective targeting of screening resources.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<p>To establish enhanced operational and detection capabilities, which are outlined below.</p>\n\n<ul>\n\t<li>Bottled Liquid Scanner\n\t<ul>\n\t\t<li>The BLS is equipment designed to detect a wide range of hazardous and prohibited substances in liquids, aerosols, and gels contained in bottles or other sealed containers. Any liquid, aerosol, gel, cream, or paste that alarms during the initial screening process requires secondary screening. The BLS can identify hazardous substances, including explosives and toxic chemicals using advanced detection technologies such as Raman spectroscopy and infrared analysis. The BLS can differentiate between safe liquids like water, juice, or shampoo and dangerous substances without opening the container, ensuring minimal disruption at security checkpoints. It can analyze a variety of container materials, including plastic, glass, and metals, and can effectively scan liquids of varying viscosities and compositions. Additionally, the BLS provides rapid and accurate results, making it suitable for high throughput environments such as the security checkpoint.</li>\n\t</ul>\n\t</li>\n\t<li>Advanced Imaging Technology\n\t<ul>\n\t\t<li>TSA is looking to establish OPS solutions with a focus on enhancing threat detection capabilities with reduced false alarm rates to reduce contact between passengers and TSOs, moving passengers through the checkpoint in a continuous manner, standardizing image display, and enabling operational connectivity through secure data transmission.&nbsp;</li>\n\t</ul>\n\t</li>\n\t<li>Explosives Trace Detection\n\t<ul>\n\t\t<li>ETD technology is used to screen travelers and their property. ETD systems identify trace threats by detecting the chemical attributes/signatures of microscopic residue of threat compounds. The technology is highly sensitive, thereby enabling fast and accurate screening for trace explosives on a variety of surfaces and can be used in all public areas and airports to screen people and their accessible property for the presence of trace threats. The operational procedure includes the collection and analysis of a sample. The ETD system then informs the user both visually and audibly if the sample contains a prohibited threat(s). TSA&rsquo;s goal is to enable fast and accurate screening for trace threats on a variety of surfaces.</li>\n\t</ul>\n\t</li>\n</ul>\n",
+      "duration": "TBD",
+      "govEntity": {
+        "id": 30688,
+        "title": "TRANSPORTATION SECURITY ADMINISTRATION"
+      },
+      "id": "OPP254443",
+      "iqOppId": 254443,
+      "oppValue": 23325,
+      "primaryNAICS": {
+        "id": "334511",
+        "title": "Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",
+        "sizeStandard": "1350 Employees"
+      },
+      "primaryRequirement": "Defense & Aerospace",
+      "procurement": "<p>A request has been submitted to inquire about the status of this requirement and to confirm whether it has been awarded under contract number 70T04025C7672N003.</p>\n",
+      "smartTag": "Products & Services > Primary Tags:Explosive products, Imaging equipment, Scanners, Secondary Tags:Spectrometers, ",
+      "smartTagObject": [
+        {
+          "id": "C394ADB5-0660-5351-9C2E-0764A0D83927",
+          "name": "Scanners",
+          "type": "Products",
+          "isPrimary": 1
+        },
+        {
+          "id": "4DE96CA3-92AA-54B8-932B-1E2C71AE1CD4",
+          "name": "Spectrometers",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "D0977BE2-3228-47F6-8583-65B6420EDC9F",
+          "name": "Imaging equipment",
+          "type": "Products",
+          "isPrimary": 1
+        },
+        {
+          "id": "4D784465-6CAC-5CB9-9A37-DE19853D43D1",
+          "name": "Explosive products",
+          "type": "Products",
+          "isPrimary": 1
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-12-04T00:00:00.000"
+      },
+      "solicitationNumber": "TSA25040463",
+      "sourceURL": "https://sam.gov/opp/9ad204658bef4331a555244d738cf5cf/view",
+      "status": "Pre-RFP",
+      "title": "BOTTLE LIQUID SCANNER ADVANCED IMAGING TECHNOLOGY AND EXPLOSIVES TRACE DETECTION (BLS AIT ETD)",
+      "type": "trackedopp",
+      "typeOfAward": "Undetermined",
+      "updateDate": "2025-10-08T15:12:05.217"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/258269"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/116065"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258269/contracts"
+        }
+      },
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2026-02-18T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 47,
+          "title": "Undetermined"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-09-23T12:44:56.037",
+      "description": "<p>The Department of Homeland Security, Immigration and Customs Enforcement, Enforcement and Removal Operations Directorate has a requirement for&nbsp;management, transportation, and the escort of non-citizens in a secure manner to provide armed Detention Officer(DO) transportation services within the ERO&nbsp;Los Angeles Field Office Area of Responsibility.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<ul>\n\t<li>This requirement will provide management, transportation, and the escort of non-citizens in a secure manner to provide armed Detention Officer(DO) transportation services within the U.S. Immigration and Customs Enforcement, Enforcement and Removal Operations (ERO) Los Angeles Field Office Area of Responsibility.</li>\n\t<li>Transportation /detention officer services will entail bus, van, and/or sedan over the road transport services, courtroom security services, and medical escort services and detention officer duties.</li>\n\t<li>The mission objective is to pick-up and safely transport non-citizens within Los Angeles AOR as expeditiously and efficiently as possible to/from processing centers, detention facilities, Ports of Entry/Exit, release locations, airports, jails, prisons, courthouses, juvenile centers, points of apprehension, hospitals and other points as needed and directed by the ICE/ERO Contracting Officer&#39;s Representative(COR).</li>\n\t<li>The Contractor will be responsible for the security, control, and well-being of detainees and accountable for the detainees&rsquo; personal possessions during transportation / guarding.</li>\n\t<li>The Contractor shall furnish the necessary know-how, equipment, personnel, and services to transport detainees of all nationalities.</li>\n\t<li>The Contractor shall be required to operate Government-Owned Vehicles (GOV),which will be made available by ICE/ERO, or Contractor-Owned Vehicles (COV),but not a combination of the two.</li>\n\t<li>The operation of GOV will be done incompliance with all Federal Government, DHS, ICE, and ERO policies and procedures regarding contractor use of government-owned vehicles.</li>\n\t<li>The Contractor shall be capable of providing a uniformed DO staff 24-hoursper day,7-days per week (including holidays), year-round, for the detention and transportation of detainees in custody and under the responsibility of ICE/ERO on an as-needed basis.</li>\n</ul>\n",
+      "duration": "date of award - Oct. 19, 2030",
+      "govEntity": {
+        "id": 116065,
+        "title": "ENFORCEMENT AND REMOVAL OPERATIONS DIRECTORATE"
+      },
+      "id": "OPP258269",
+      "iqOppId": 258269,
+      "oppValue": 100000,
+      "primaryNAICS": {
+        "id": "561612",
+        "title": "Security Guards and Patrol Services",
+        "sizeStandard": "$29.0 million annual receipts"
+      },
+      "primaryRequirement": "Physical Security",
+      "procurement": "<p><span data-teams=\"true\">Previously the Solicitation was expected to be released on or about October 1, 2025. Due to the federal government shutdown, a new timeline is not currently available. Pending further information, Deltek projects a possible solicitation later this month, or in Q1 FY 2026, depending on when the government reopens. Even once the federal contracting activity restarts, there typically is some lag time as the agencies get back up to speed. </span></p>\n",
+      "smartTag": "Products & Services > Primary Tags:Security guard services, Secondary Tags:Immigration enforcement services, ",
+      "smartTagObject": [
+        {
+          "id": "FF15454B-86F2-5BBE-B07E-3C1FBD4B4C26",
+          "name": "Security guard services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "468EA01C-BC55-5C9B-A733-7D242BE17985",
+          "name": "Immigration enforcement services",
+          "type": "Services",
+          "isPrimary": 0
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-11-14T00:00:00.000"
+      },
+      "solicitationNumber": "F2025072155",
+      "sourceURL": "https://apfs-cloud.dhs.gov/record/72155/public-print/",
+      "status": "Pre-RFP",
+      "title": "DETAINEE TRANSPORTATION AND DETENTION CUSTODY REQUIREMENTS",
+      "type": "trackedopp",
+      "typeOfAward": "Task / Delivery Order",
+      "updateDate": "2025-10-08T16:33:15.293"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/258646"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/25283"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP258646/contracts"
+        }
+      },
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-11-24T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 39,
+          "title": "Small Bus Set-Aside"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-10-08T09:49:14.323",
+      "description": "<p>The Department of Homeland Security, US Secret Service has a requirement for warehouse support services.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<p>The United States Secret Service requires warehouse support services to include:</p>\n\n<ul>\n\t<li>Receiving and distribution of supplies</li>\n\t<li>Light moving duties</li>\n\t<li>Disposal and destruction of sensitive documents</li>\n\t<li>Destruction of sensitive materials/property at the end of its useful lifecycle</li>\n\t<li>General knowledge of inventory control</li>\n\t<li>Continued upkeep and maintenance of warehouse spaces</li>\n</ul>\n",
+      "duration": "Award through November 23, 2030",
+      "govEntity": {
+        "id": 25283,
+        "title": "US SECRET SERVICE"
+      },
+      "id": "OPP258646",
+      "iqOppId": 258646,
+      "oppValue": 1000,
+      "primaryNAICS": {
+        "id": "493110",
+        "title": "General Warehousing and Storage",
+        "sizeStandard": "$34 million annual receipts"
+      },
+      "primaryRequirement": "Operations & Maintenance",
+      "procurement": "<p>A Solicitation is anticipated to be released on or about October 24, 2025 via GSA MAS.  An award is expected during Q1 FY2026.</p>\n\n<p><strong>Deltek encourages interested vendors to monitor their eBuy portals directly.</strong></p>\n",
+      "smartTag": "Products & Services > Primary Tags:Warehousing services, ",
+      "smartTagObject": [
+        {
+          "id": "3EE4CD9E-C795-5407-84D4-F880F44B2DA2",
+          "name": "Warehousing services",
+          "type": "Services",
+          "isPrimary": 1
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2025-10-24T00:00:00.000"
+      },
+      "solicitationNumber": "F2026072259",
+      "sourceURL": "https://apfs-cloud.dhs.gov/record/72259/public-print/",
+      "status": "Pre-RFP",
+      "title": "WAREHOUSE OPERATIONS SUPPORT SERVICES",
+      "type": "trackedopp",
+      "typeOfAward": "Task / Delivery Order",
+      "updateDate": "2025-10-08T09:49:14.323"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/257653"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/30686"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP257653/contracts"
+        }
+      },
+      "acronym": "MDDP",
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2026-03-18T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 47,
+          "title": "Undetermined"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 15,
+          "title": "Time and Materials"
+        },
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-08-28T12:56:10.957",
+      "description": "<p>The&nbsp;Department of Homeland Security Countering Weapons of Mass Destruction (CWMD), Mobile Detection Deployment Program (MDDP) has a requirement for&nbsp;deployable field management and scientific support services.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<p>The Department of Homeland Security Countering Weapons of Mass Destruction (CWMD), Mobile Detection Deployment Program (MDDP) enhances the chemical, biological, radiological, and nuclear (CBRN) detection and assessment capabilities of CWMD by deploying equipment and technical support personnel to mission partners. MDDP seeks to acquire deployable field management and scientific support services. The purpose of this effort is to provide operational, technical, administrative, logistical, information coordination services, and subject matter expertise to the Mobile Detection Deployment Program (MDDP) to enhance the nation&rsquo;s abilities to prevent terrorists and other threat actors from using weapons of mass destruction and support operational partners in closing capability gaps within the CONUS and OCONUS.</p>\n",
+      "duration": "Date of award - June 18, 2027",
+      "govEntity": {
+        "id": 30686,
+        "title": "COUNTERING WEAPONS OF MASS DESTRUCTION OFFICE"
+      },
+      "id": "OPP257653",
+      "iqOppId": 257653,
+      "oppValue": 50000,
+      "primaryNAICS": {
+        "id": "541330",
+        "title": "Engineering Services",
+        "sizeStandard": "$25.5 million annual receipts except $47.0 million annual receipts for Military and Aerospace Equipment and Military Weapons and Contracts and Subcontracts for Engineering Services Awarded Under the National Energy Policy of 1992 and Marine"
+      },
+      "primaryRequirement": "Professional Services",
+      "procurement": "<p><span data-teams=\"true\">Previously the Solicitation was expected to be released via OASIS+ on or about October 2, 2025. Due to the federal government shutdown, a new timeline is not currently available. Pending further information, Deltek projects a possible solicitation later this month, or in Q1 FY 2026, depending on when the government reopens. Even once the federal contracting activity restarts, there typically is some lag time as the agencies get back up to speed. </span></p>\n",
+      "smartTag": "Products & Services > Primary Tags:Engineering services, Program management services, ",
+      "smartTagObject": [
+        {
+          "id": "AA95E200-8B5C-5328-9831-83324F31CFAE",
+          "name": "Program management services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "CD22361A-B390-4092-A830-A878E03DA136",
+          "name": "Engineering services",
+          "type": "Services",
+          "isPrimary": 1
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-11-19T00:00:00.000"
+      },
+      "solicitationNumber": "F2025070534",
+      "sourceURL": "https://apfs-cloud.dhs.gov/record/70534/public-print/",
+      "status": "Pre-RFP",
+      "title": "MOBILE DETECTION DEPLOYMENT PROGRAM SUPPORT SERVICES (MDDP)",
+      "type": "trackedopp",
+      "typeOfAward": "Task / Delivery Order",
+      "updateDate": "2025-10-08T15:35:46.297"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/251757"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/148325"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP251757/contracts"
+        }
+      },
+      "acronym": "HCM - SA",
+      "awardDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2025-09-26T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 39,
+          "title": "Small Bus Set-Aside"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-02-06T13:42:03.197",
+      "description": "<p>JPI JV, LLC is fulfilling the Department of Homeland Security (DHS), US Coast Guard (USCG), Deputy Commandant of&nbsp;Mission Support-Deputy for Personnel Readiness&#39;s requirement&nbsp;of&nbsp;support services&nbsp;for Human Capital Management.&nbsp;</p>\n\n<h4>REQUIREMENTS</h4>\n\n<ul>\n\t<li>The Department of Homeland Security, US Coast Guard has&nbsp;requirements of support services for Human Capital Management (HCM) for DCMS-DPR, Assistant Commandant of&nbsp;Mission Readiness-Deputy for Personnel Readiness, are segment architecture (SA), a governance of change and enhancement requests for the Direct Access Local Change Control Board (LCCB), and upkeep of DPR-2 strategic plans</li>\n</ul>\n",
+      "duration": "1 year(s) base plus 4 x 1 year(s) option(s) ",
+      "govEntity": {
+        "id": 148325,
+        "title": "DEPUTY COMMANDANT OF MISSION SUPPORT"
+      },
+      "id": "OPP251757",
+      "iqOppId": 251757,
+      "oppValue": 3624,
+      "primaryNAICS": {
+        "id": "541612",
+        "title": "Human Resources Consulting Services",
+        "sizeStandard": "$29.0 million annual receipts"
+      },
+      "primaryRequirement": "Administrative, Logistics & Management",
+      "procurement": "<p>Deltek determined a task order for this requirement was awarded to Quasars JPI JV, LLC on September 26, 2025 with an expected total value of $3,624,988. </p>\n",
+      "smartTag": "Products & Services > Primary Tags:Architecture services, Human resources services, Secondary Tags:Strategic planning services, ",
+      "smartTagObject": [
+        {
+          "id": "F75FECBB-2ECF-446F-B22A-2C96D25D9C4C",
+          "name": "Architecture services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "573A3488-F194-54CB-A323-56FC0B4A05FC",
+          "name": "Human resources services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "602C8A3B-0084-5846-B3F8-68083C6D2EFA",
+          "name": "Strategic planning services",
+          "type": "Services",
+          "isPrimary": 0
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2025-05-02T00:00:00.000"
+      },
+      "solicitationNumber": "70Z02325Q1B000004",
+      "sourceURL": "https://apfs-cloud.dhs.gov/record/69304/public-print/",
+      "status": "Awarded",
+      "title": "CONTRACTOR HUMAN CAPITAL MANAGEMENT SEGMENT ARCHITECTURE SUPPORT SERVICES (HCM - SA)",
+      "type": "trackedopp",
+      "typeOfAward": "Task / Delivery Order",
+      "updateDate": "2025-10-09T08:56:02.983"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/249723"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/124922"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/fboNotices"
+        },
+        "sourcedFrom": [
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3938876"
+          }
+        ],
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP249723/contracts"
+        }
+      },
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-06-30T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 39,
+          "title": "Small Bus Set-Aside"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2024-11-21T09:55:29.237",
+      "description": "<p>A vendor may have been fulfilling the Department of Homeland Security, Immigration and Customs Enforcement, Management and Administration Directorate, Office of Acquisition Management requirement for a new Secure Housing Unit (SHU).</p>\n\n<h4>REQUIREMENTS</h4>\n\n<ul>\n\t<li>The project requires the design and construction of a new Secure Housing Unit (SHU) at the Port Isabel Service Processing Center (SPC), Los Fresnos, TX.</li>\n\t<li>The work includes, but is not limited to, design, site earthwork as needed to prepare the site for the new building, selective demolition of site and utility structure elements to accommodate the new SHU, foundations, superstructure, roof framing, building envelope, building interior construction, finishes, interior and exterior painting, and building systems. Such systems include, but are not limited to electrical power, lighting, special systems, fire suppression, heating, air-conditioning and ventilating, security, telecommunications, plumbing, and alarm. All exterior building systems and equipment surfaces exposed to exterior environments must have protective coatings. All coatings, interior and exterior, must provide protection from ISO Corrosivity Category 5 conditions, or equivalent. It is intended to provide long term durability to the surfaces and coatings in the local environmental conditions. Coating colors will match adjacent architectural aesthetics.</li>\n\t<li>The conceptual building drawings present a building design that meets the needs of the ICE program and is acceptable to the Government. This does not preclude the Contractor from making improvements to the design so long as such improvements are consistent with the requirements and are acceptable to the Government. The building drawing plans are conceptual and have been provided to illustrate spatial adjacencies and design intent. The Contractor must provide a complete design. In completing the design, the Contractor will be allowed some latitude in manipulating the plans and elevations to improve functional layout, to accommodate structural, mechanical, electrical, and other systems, and to allow flexibility for design/esthetic expression. The spatial relationships and adjacencies, however, must be maintained, unless the Contractor recommends changes to the Government, and the Government approves such changes.</li>\n\t<li>Site improvements include utility line connections, new fencing, pavements, drainage structures, new security walls and extensions of existing campus systems to serve the new building.</li>\n</ul>\n",
+      "duration": "Date of award - April 30, 2026",
+      "govEntity": {
+        "id": 124922,
+        "title": "OFFICE OF ACQUISITION MANAGEMENT"
+      },
+      "id": "OPP249723",
+      "iqOppId": 249723,
+      "oppValue": 5000,
+      "primaryNAICS": {
+        "id": "236220",
+        "title": "Commercial and Institutional Building Construction",
+        "sizeStandard": "$45.0 million annual receipts"
+      },
+      "primaryRequirement": "Building Construction Services",
+      "procurement": "<p><span style=\"font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;\nmso-fareast-font-family:Aptos;mso-fareast-theme-font:minor-latin;mso-ligatures:\nstandardcontextual;mso-ansi-language:EN-US;mso-fareast-language:EN-US;\nmso-bidi-language:AR-SA\">Information regarding an award that may have resulted for this effort has not yet become available. Deltek believes - based on the timing of the procurement and the nature of the work - that this effort has been awarded, and has closed this report. Please note, this is an estimate only and subject to change.</span></p>\n",
+      "smartTag": "Products & Services > Primary Tags:Building construction services, Secondary Tags:Building components construction services, Concrete trades, Electrical trades, Excavation services, Painting trades, Paving trades, Plumbing services, Residential facilities construction services, Rough carpentry, ",
+      "smartTagObject": [
+        {
+          "id": "67759100-FFB0-5D34-BC5B-0F33EC439ECD",
+          "name": "Rough carpentry",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "5637B97F-1231-5915-B598-11A285988FC5",
+          "name": "Paving trades",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "D164F133-3EF7-5A23-884C-171FA2152C46",
+          "name": "Concrete trades",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "267F9D0B-0D3B-541B-96C2-26B7D076FA52",
+          "name": "Plumbing services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "C0497280-42CF-5D24-AF5A-89A07A096E92",
+          "name": "Painting trades",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "216DC23B-38C0-5B81-8415-9260E253E8F2",
+          "name": "Electrical trades",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "D204E897-B80F-4CDD-B687-D621C04042EE",
+          "name": "Excavation services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "47F35B54-EF80-46B7-87DE-E74E17443409",
+          "name": "Residential facilities construction services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "32AA3FFB-7CA1-4B45-A53B-F3F416C7AAD7",
+          "name": "Building construction services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "257CE499-A41C-481B-BE31-F71DB9D15032",
+          "name": "Building components construction services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "68EF046E-12A8-5D52-870F-65ACCF883CCE",
+          "name": "Correctional facilities",
+          "type": "Structure",
+          "isPrimary": 0
+        },
+        {
+          "id": "977B8A0B-E245-54E5-AF89-B7E73734F4FF",
+          "name": "Residential facilities",
+          "type": "Structure",
+          "isPrimary": 0
+        },
+        {
+          "id": "C1B97CD1-3A1B-5796-9A08-EF66926584DF",
+          "name": "Ports",
+          "type": "Structure",
+          "isPrimary": 0
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-03-12T00:00:00.000"
+      },
+      "solicitationNumber": "F2025068661",
+      "sourceURL": "https://sam.gov/opp/5732f92d8f3749f1aabd5ac69627c46b/view",
+      "status": "Awarded",
+      "title": "SECURE HOUSING UNIT AT PORT ISABEL DETENTION CENTER TX",
+      "type": "trackedopp",
+      "typeOfAward": "Other",
+      "updateDate": "2025-10-08T14:11:18.113"
+    }
+  ],
+  "naics_results": [
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/214624"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/24856"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP214624/contracts"
+        }
+      },
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2027-02-15T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 40,
+          "title": "Full and Open / Unrestricted"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2022-01-19T09:54:39.167",
+      "description": "<p>The U.S.&nbsp;Department of Commerce,&nbsp;Patent and Trademark Office may have a requirement for&nbsp;an alternate processing site in order to maintain the security and accessibility of data services for the organization.</p>\n\n<h4>BACKGROUND</h4>\n\n<p>The United States Patent and Trademark Office (USPTO)&nbsp;is the federal agency for granting U.S. patents and registering trademarks. In doing this, the USPTO fulfills the mandate of Article I, Section 8, Clause 8, of the Constitution that the legislative branch &quot;promote the Progress of Science and useful Arts, by securing for limited Times to Authors and Inventors the exclusive Right to their respective Writings and Discoveries.&quot; The USPTO registers trademarks based on the commerce clause of the Constitution (Article I, Section 8, Clause 3). Under this system of protection, American industry has flourished. New products have been invented, new uses for old ones discovered, and employment opportunities created for millions of Americans. The strength and vitality of the U.S. economy depends directly on effective mechanisms that protect new ideas and investments in innovation and creativity. The continued demand for patents and trademarks underscores the ingenuity of American inventors and entrepreneurs. The USPTO is at the cutting edge of the nation&#39;s technological progress and achievement.</p>\n\n<h4>PREVIOUS REQUIREMENTS</h4>\n\n<p>Minimum Data Center Requirements include:</p>\n\n<ul>\n\t<li>Space Requirements:\n\t<ul>\n\t\t<li>The Offeror shall provide a facility that is fully concurrently maintainable and comply with Tier III standards and be able to withstand natural disasters such as Category 3 hurricanes, tornadoes, and floods. The provided space should be contiguous and securely segregated from the other clients&rsquo; space</li>\n\t\t<li>Data Center facility must be located within in the Denver City limits</li>\n\t\t<li>7,000 square feet with the option to expand to 10,000 feet</li>\n\t\t<li>Design of the data center must incorporate a ten-foot space between the finished concrete floor (SLAB) and dropped ceiling to accommodate equipment, racks, overhead cabling and cooling space</li>\n\t\t<li>The data center shell shall consist of a 6&rdquo; slab on grade floor; 3-hour fire rated exterior walls, to include all doors, ventilation openings and all conduit and piping penetrations.&nbsp; Doors to outside area must be of an approved fire retardant material</li>\n\t\t<li>The floor finish shall be a static dissipative finish, the walls shall be a non-VOC water based paint finish, and the ceiling shall be an acoustical, fire resistive, perforated suspended ceiling, installed at 10 feet above slab</li>\n\t\t<li>One non-primary entrance to the data center must be able open to a minimum of 42&rdquo;W x 72&rdquo; Height, to accommodate equipment loaded on pallets for delivery</li>\n\t</ul>\n\t</li>\n\t<li>Electrical Requirements:\n\t<ul>\n\t\t<li>Critical Power Distribution Systems are required to be N+1 at a minimum</li>\n\t\t<li>All rack mounted critical I.T. hardware (servers) will have two separate feeds (L6-30 Receptacles) one from each Critical Distribution System</li>\n\t\t<li>All floor mounted devices will need power requirements ranging from 3 phase 30 amp, single and three phase 50, 60, 100 amp service, one from each critical distribution system</li>\n\t\t<li>Power requirements need to support no less than 150 watts per square foot</li>\n\t</ul>\n\t</li>\n</ul>\n",
+      "duration": "7 year(s) base",
+      "govEntity": {
+        "id": 24856,
+        "title": "PATENT AND TRADEMARK OFFICE"
+      },
+      "id": "OPP214624",
+      "iqOppId": 214624,
+      "oppValue": 45464,
+      "primaryNAICS": {
+        "id": "518210",
+        "title": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",
+        "sizeStandard": "$40 million annual receipts"
+      },
+      "primaryRequirement": "Information Technology",
+      "procurement": "<p>The incumbent contract with Iron Mountain remains active and is set to expire in May 2027, if all option years are exercised. As of October 2025, the obligated amount is $31.4M against the $45.5M ceiling value. </p>\n",
+      "smartTag": "Products & Services > Primary Tags:Information technology services, Secondary Tags:Artificial Intelligence, Data management services, ",
+      "smartTagObject": [
+        {
+          "id": "625C62FA-314D-5141-AA1B-0A833E6D00BD",
+          "name": "Data management services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "E5ED4CD8-AC2A-5388-BF50-7124DC9239F8",
+          "name": "Information technology services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "1BA501E1-B22D-47E0-AE20-E64E6DDDC5FF",
+          "name": "Artificial Intelligence",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "F9BED32A-B3D9-572E-B24A-BC94CD625E7C",
+          "name": "Data centers",
+          "type": "Structure",
+          "isPrimary": 0
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2026-09-30T00:00:00.000"
+      },
+      "solicitationNumber": "",
+      "sourceURL": "https://www.ebuy.gsa.gov/ebuy/",
+      "status": "Forecast Pre-RFP",
+      "title": "DATA CENTER ALTERNATE PROCESSING SITE",
+      "type": "trackedopp",
+      "typeOfAward": "Task / Delivery Order",
+      "updateDate": "2025-10-09T09:46:36.523"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/239247"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/30619"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/fboNotices"
+        },
+        "sourcedFrom": [
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3711089"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3761166"
+          }
+        ],
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP239247/contracts"
+        }
+      },
+      "acronym": "RAPID",
+      "awardDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2024-09-11T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 40,
+          "title": "Full and Open / Unrestricted"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 75,
+          "title": "Other Transaction Agreement"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2024-01-25T10:12:30.767",
+      "description": "<p>Noblis, Inc and&nbsp;Dark Wolf Solutions, LLC are fulfilling the&nbsp;Department of the Army, Joint Program Executive Office for Chemical, Biological, Radiological, and Nuclear Defense, Enabling Biotechnologies&#39;&nbsp;requirement for&nbsp;a RAPID Database to enable stakeholders to make data-driven decisions about fielding and accelerating development of MCMs.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<ul>\n\t<li>\n\t<p>Streamlined access to a top-level information regarding information and availability of MCMs against specific threat of interest to inform decision regarding potential use</p>\n\t</li>\n\t<li>\n\t<p>Streamlined access to in-depth information regarding individual threats, and individual MCMs for use of this information in other EB efforts</p>\n\t</li>\n\t<li>\n\t<p>Efficient review of threat space coverage with existing MCMs at different levels of maturity, to include an interactive and user-friendly visualization of threat space coverage.</p>\n\t</li>\n\t<li>\n\t<p>Gap assessment to inform decision making process for threat prioritization</p>\n\t</li>\n</ul>\n",
+      "duration": "TBD",
+      "govEntity": {
+        "id": 30619,
+        "title": "JPEO FOR CHEMICAL AND BIOLOGICAL DEFENSE"
+      },
+      "id": "OPP239247",
+      "iqOppId": 239247,
+      "oppValue": 4440,
+      "primaryNAICS": {
+        "id": "518210",
+        "title": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",
+        "sizeStandard": "$40 million annual receipts"
+      },
+      "primaryRequirement": "IT Services",
+      "procurement": "<p>Deltek is tracking the follow-on effort under Opp ID: <a href=\"https://iq.govwin.com/neo/opportunity/view/258690\">258690</a></p>\n",
+      "smartTag": "Products & Services > Primary Tags:Database development, ",
+      "smartTagObject": [
+        {
+          "id": "5B027316-CB81-5591-B676-A34B7BEBAA6D",
+          "name": "Database development",
+          "type": "Services",
+          "isPrimary": 1
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2024-04-11T00:00:00.000"
+      },
+      "solicitationNumber": "W911SR249RAPID",
+      "sourceURL": "https://sam.gov/opp/4b0b159e960548fa9c39087039124e7a/view",
+      "status": "Awarded",
+      "title": "RAPID ACCESS TO PRODUCTS IN DEVELOPMENT DATABASE (RAPID)",
+      "type": "trackedopp",
+      "typeOfAward": "Other Transaction Agreement",
+      "updateDate": "2025-10-09T09:22:40.297"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/245162"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/26339"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/fboNotices"
+        },
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP245162/contracts"
+        }
+      },
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2028-07-17T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 39,
+          "title": "Small Bus Set-Aside"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 13,
+          "title": "Indefinite Delivery Indefinite Quantity"
+        },
+        {
+          "id": 30,
+          "title": "Task Order"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2024-07-25T15:30:33.830",
+      "description": "<p>The Department of Health and Human Services, Indian Health Service, Bemidji Area Office may have a&nbsp;continuing requirement for Healthcare Clearinghouse Services.</p>\n\n<h4>BACKGROUND</h4>\n\n<p>Bemidji Area Indian Health Service provides service and support to 34 Federally-recognized Tribes and 4 Urban Indian Health programs located in Illinois, Indiana, Michigan, Minnesota and Wisconsin. Tribal Health services are provided through 11 P.L. 93-638 Title V compacts and 23 Title I contracts. Urban Indian Health programs are located in Chicago, IL; Detroit, MI; Milwaukee, WI; and Minneapolis, MN. Tribes in the Bemidji Area include Ojibwe (Chippewa), Ho-Chunk, Menominee, Mohican, Oneida, Odawa, Potawatomi, and Sioux. The BAO operates three Federal/direct service programs on behalf of the Leech Lake Band of Ojibwe, Red Lake Band of Chippewa Indians and the White Earth Band of Chippewa Indians of Minnesota. These Federal/direct service programs include Cass Lake Hospital, Red Lake Hospital, and White Earth Health Center.</p>\n\n<p>All three facilities provide moderately complex health care services surrounding primary care, preventive medicine, pediatrics, emergency care, optometry, dentistry, and behavioral health care. Two of these facilities are designated as Critical Access Hospitals and operate robust Emergency Department services. Bemidji Area Indian healthcare is funded primarily using third party reimbursements, so collections are vital to sustaining operations and expanding quality patient care. The BAO seeks to establish a centralized healthcare revenue cycle management solution that that offers an intuitive and unified user experience using available Electronic Data Interchange (EDI) technology to conduct patient third-party eligibility checks, prior authorizations, claims management (including clearinghouse, scrub claims, transmit claims, denial management, accept remittance advice, produce reports), facilitate payer enrollments, and patient payment processing. Patient and Claim information must be securely exchanged with outside insurance payers; assuming all electronic transactions and Direct Data Entry (DDE)/Florida Information Shared System (FISS), which includes CMS Section 1011 billing, access with confidentiality, authentication, integrity, and nonrepudiation for the Bemidji Area Indian Health Service Office. In order to standardize processes and streamline implementation and daily maintenance, the use of one clearinghouse that uses EDI technology is sought for three federal service units. Revenue Cycle Management Services (here in described as Clearinghouse services) provide enhanced and maximized third party revenue in a streamlined, electronic approach to claim submission. Use of a clearinghouse substantially reduces the adjudication timeframe of claims from 30+ days to 10 business days; real-time batch receipt verification; realtime verification of eligibility for most (if not all) insurance payers; identification of claim formatting errors; ability to correct electronic claims within the claim portal; ability to receive electronic remittance advices; ability to process credit card payments--all of these processes to be processed within one portal.</p>\n\n<p>Clearinghouse Services will provide patient eligibility checking, initial scrubbing of all electronic third-party claims produced by Resource Patient Management System (RPMS) data system, provide efficient denial management work queues to track and process work-loads, EFT and ERA capabilities, and credit card payment processing capacity. RPMS is an integrated solution for the management of clinical, business practice, and administrative information in healthcare facilities of various sizes. Flexible hardware configurations, over 50 software applications, and appropriate network communication components combine to provide a comprehensive clinical, financial, and administrative solution.&nbsp;</p>\n\n<h4>PREVIOUS REQUIREMENTS</h4>\n\n<ul>\n\t<li>Maintain EDI transaction capability throughout the term of this contract to deliver consistency in process as well as standardized execution at all Federal sites is a goal of instituting this contract; speed in maximizing revenue return is the primary goal. Electronic submission of clean claims means faster payment receipt and lower aged&nbsp;receivables. The overall effectiveness and quality of these activities will be monitored using standard, regular reports. The service must meet established Federal security requirements</li>\n\t<li>Clearinghouse will provide a single, unified user experience which means user log-on to one system</li>\n\t<li>Clearinghouse will provide real-time point-of-service eligibility data from third party insurance databases to include commercial payers, Medicare intermediaries, and state Medicaid plans. Queries will be conducted pre-encounter. This may occur in either batches the day before or in real-time</li>\n\t<li>Clearinghouse will provide secure data transmission of all electronic claims, approximately 45,000 encounters per month for three service units. Payer enrollment and ability to transmit electronic VA claims is required</li>\n\t<li>Clearinghouse will provide initial data checks, initial data scrubbing to ensure clean claim submission to the end-payer, and claim status inquiry and response</li>\n\t<li>Clearinghouse will ensure HIPAA Compliant transactions and password protected access and meet IHS security requirements</li>\n\t<li>Clearinghouse will have capabilities to drop an electronic claim to paper</li>\n\t<li>All claims with errors will be rejected to a site within the portal where rework can occur. Portal should have simple response rejections messages and intuitive interactive decision support through use of &lsquo;help tiles&rsquo; within the portal. Claim attachment functionality is necessary. The denial workflow allows direct resubmission</li>\n\t<li>All inquiries and responses will provide accurate and up-to-date eligibility information available to the end user. All information will be uploaded for electronic claims transmissions in order for clean claim billing and third-party revenue activities. ? Summary integrated dashboard reports with top tile metrics are needed for ongoing performance tracking, tracking aging receivables, and employee assignments</li>\n\t<li>Adherence to Federal and State regulatory requirements</li>\n</ul>\n",
+      "duration": "1 year(s) base plus 4 x 1 year(s) option(s) ",
+      "govEntity": {
+        "id": 26339,
+        "title": "BEMIDJI AREA OFFICE"
+      },
+      "id": "OPP245162",
+      "iqOppId": 245162,
+      "oppValue": 1500,
+      "primaryNAICS": {
+        "id": "518210",
+        "title": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",
+        "sizeStandard": "$40 million annual receipts"
+      },
+      "primaryRequirement": "IT Services",
+      "procurement": "<p>According to the Deltek Contracts Database, the incumbent contract remains active and is scheduled to expire in July 2028. As of October 2025, approximately $548K has been obligated against the incumbent contract value. Karen McDonald is the Point of Contact for this potential effort.</p>\n",
+      "smartTag": "Products & Services > Primary Tags:Information technology services, ",
+      "smartTagObject": [
+        {
+          "id": "E5ED4CD8-AC2A-5388-BF50-7124DC9239F8",
+          "name": "Information technology services",
+          "type": "Services",
+          "isPrimary": 1
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2028-03-06T00:00:00.000"
+      },
+      "solicitationNumber": "",
+      "sourceURL": "https://sam.gov",
+      "status": "Forecast Pre-RFP",
+      "title": "HEALTHCARE CLEARINGHOUSE SERVICES",
+      "type": "trackedopp",
+      "typeOfAward": "IDIQ - Agency Specific",
+      "updateDate": "2025-10-09T08:35:20.350"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/opportunity/view/108089"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/116448"
+        },
+        "fboNotices": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/fboNotices"
+        },
+        "sourcedFrom": [
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO2374342"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3117302"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3261788"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3369679"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3450465"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3459403"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO3525575"
+          },
+          {
+            "href": "https://services.govwin.com/neo-ws/opportunities/FBO97"
+          }
+        ],
+        "relatedArticles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/relatedArticles"
+        },
+        "contractVehicles": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/contractVehicles"
+        },
+        "verticals": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/verticals"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/OPP108089/contracts"
+        }
+      },
+      "additionalNaics": [
+        {
+          "id": "518210",
+          "title": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",
+          "sizeStandard": "$40 million annual receipts"
+        },
+        {
+          "id": "541512",
+          "title": "Computer Systems Design Services",
+          "sizeStandard": "$34 million annual receipts"
+        }
+      ],
+      "awardDate": {
+        "deltekEstimate": "true",
+        "govtEstimate": "false",
+        "value": "2025-12-31T00:00:00.000"
+      },
+      "competitionTypes": [
+        {
+          "id": 39,
+          "title": "Small Bus Set-Aside"
+        },
+        {
+          "id": 40,
+          "title": "Full and Open / Unrestricted"
+        }
+      ],
+      "contractTypes": [
+        {
+          "id": 1,
+          "title": "Firm Fixed Price"
+        },
+        {
+          "id": 13,
+          "title": "Indefinite Delivery Indefinite Quantity"
+        },
+        {
+          "id": 15,
+          "title": "Time and Materials"
+        },
+        {
+          "id": 16,
+          "title": "Labor Hour"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2014-01-31T00:00:00.000",
+      "description": "<p>The Department of State, Bureau of Information Resource Management (IRM)&nbsp;has a continuing requirement to provide a secure IT network infrastructure for the State Department. The government intends to award a multiple award IDIQ to support the needs currently met under Vanguard 2.2.1 and the scope will also encompass IRM&rsquo;s future IT-Service needs not currently under Vanguard 2.2.1 and ITESS.</p>\n\n<h4>BACKGROUND</h4>\n\n<p>The Department of State (DoS) Bureau of Information Resource Management (IRM) provides the transparent, interconnected systems and security serving the DoS needs to successfully carry out its U.S. foreign policy mission. IRM provides enterprise architecture design, engineering, operations and maintenance support services for desktops, servers, networks, firewalls, and enterprise applications across the Department. IRM is also responsible for planning and implementing strategic goals for IT management furthering diplomacy and securing information services and data, anytime and anywhere.<br />\n<br />\nThe IRM bureau&#39;s IT consolidation and management strategy is named &quot;Vanguard&quot; and is divided into six (6) main areas of focus. Support for focus area 1, consisting of the Department&#39;s servers, mainframes, network devices, network perimeter, anti-virus engineering, public key infrastructure (PKI)/biometrics/encryption, monitoring tools, telephony, mobile computing platform, virtual environment, and enclave design/security engineering, will be procured through the Vanguard 2, Task Order 2.2.1.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<ul>\n\t<li>IRM is currently undergoing a re-organization and is pivoting to a project-based mentality instead of a technology-based one</li>\n\t<li>IRM intends to utilize this vehicle to support its enterprise-wide information technology requirements and its efforts to transform to a plan, build, test, run, and customer service structure</li>\n</ul>\n\n<p>IDIQ SCOPE:&nbsp;</p>\n\n<ul>\n\t<li>The Contractor shall provide the full range of IT services, technical and management expertise, and solution-related enabling products in one or more of the functional categories to meet the mission needs of the Department of State. Specific IT solutions/capabilities will be identified in individual Task Orders (TOs) to support DOS worldwide. Contractors shall furnish the necessary personnel, materials, equipment, facilities, travel, and other services required to satisfy the ordered IT capabilities and solutions. While the Statement of Work (SOW) identifies five functional categories, the suite of resulting contracts is intended to satisfy the full range of IT-related requirements</li>\n\t<li>The scope of each individual IDIQ contract will be based on&nbsp;the functional categories which the Contractor is awarded. The Evolve contract is intended to remain current and continue to provide the full range of IT capabilities, solutions, and emerging technologies throughout its life. The Contractor shall provide solutions for one or more of the following functional categories, with specific tasks to be set forth in task orders:\n\t<ul>\n\t\t<li>IT Management Services</li>\n\t\t<li>Cloud and Data Center Services</li>\n\t\t<li>Application Development Services</li>\n\t\t<li>Network and Telecommunication Services</li>\n\t\t<li>Customer and End User Support Services</li>\n\t</ul>\n\t</li>\n</ul>\n",
+      "duration": "1 year(s) base plus 6 x 1 year(s) option(s) with an option for an additional six months extension",
+      "govEntity": {
+        "id": 116448,
+        "title": "BUREAU OF DIPLOMATIC TECHNOLOGY (DT)"
+      },
+      "id": "OPP108089",
+      "iqOppId": 108089,
+      "oppValue": 10000000,
+      "primaryNAICS": {
+        "id": "541513",
+        "title": "Computer Facilities Management Services",
+        "sizeStandard": "$37.0 million annual receipts"
+      },
+      "primaryRequirement": "Information Technology",
+      "procurement": "<p>According to Deltek's Contracts Database, twelve (12) contracts were awarded under this requirement on September 15 and 16, 2025. These contracts\u00a0cover\u00a0functional categories for Cloud and Data Center Services\u00a0and\u00a0Network and Telecommunication Services.\u00a0For detailed Award information, please refer to the Contracts section of this Opportunity Report.</p>\n",
+      "smartTag": "Products & Services > Primary Tags:Cloud service providers, Cyber security services, Data management services, Database design, Information management services, Information technology products, Information technology services, Network services, Secondary Tags:Accounting software, Agenda management software, Analytics software, Asset management software, Business intelligence services, Business intelligence software, Cloud computing software, Computer repair services, Computer switches, Content management software, Data acquisition systems, Data backup services, Data center software, Data management software, Data warehouse services, Database administration, Digital media software, Enterprise resource planning software, Financial management software, Firewall hardware, Human machine interface software, Human resource management software, Information architecture, Information technology staffing services, Information technology training services, Infrastructure as a service, Internet service providers, Laptop computers, Modems, Monitors, Network access points, Network interface controllers, Network routers, Network security services, Networking software, Office applications, Operating system software, Performance management software, Platform as a service, Procurement software, Public address systems, Radio equipment, Security software, Security system software, Servers, Social services case management software, Software as a service, Software consulting, Software development, Software installation, Software maintenance, Student assessment and information systems, Telecommunications equipment, Telephones, Uninterruptible power supplies, Web design services, Web software, ",
+      "smartTagObject": [
+        {
+          "id": "055B0A5B-3B05-58F0-9579-056DF38C730F",
+          "name": "Content management software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "1EF02502-0D1A-54E4-AAE3-104E6AC6A84B",
+          "name": "Asset management software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "C674ABC5-96E6-4711-9822-250ADF5C243D",
+          "name": "Agenda management software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "105304C8-5A65-4D59-817E-269AC5004B0D",
+          "name": "Human machine interface software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "49EA1B29-D285-52EC-BEA3-2CF00091CF7D",
+          "name": "Data center software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "04442E84-8BF1-5B16-A27D-31D525B7829D",
+          "name": "Operating system software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "702C1A4D-6959-5433-914E-330B4A595B04",
+          "name": "Radio equipment",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "32420C07-3A32-4A4E-BAA4-39BBD6ED4C33",
+          "name": "Procurement software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "3AB5E2BA-194F-48F7-8978-3E8D64E2D9E0",
+          "name": "Analytics software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "D1C9830D-F588-47A8-98CE-4447854B45CA",
+          "name": "Social services case management software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "991D7993-7E5F-5DEE-8CA4-4BD69D7C8B12",
+          "name": "Networking software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "1695167A-02A5-5170-961F-52A12C1378A3",
+          "name": "Monitors",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "D226AEB2-B380-5AF7-BBC8-52CEBBA9B791",
+          "name": "Performance management software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "9625C8B2-CBBE-479E-BFF6-5575B72634A9",
+          "name": "Accounting software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "5672C85E-9347-5D4F-8CBA-569332552965",
+          "name": "Telecommunications equipment",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "F2287999-B583-542C-B72F-58AC31175F5C",
+          "name": "Laptop computers",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "8CA75C0A-6F71-4ED1-A37A-5BA49CD0B252",
+          "name": "Student assessment and information systems",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "3743DEE1-CFBA-5356-8838-60505414A901",
+          "name": "Business intelligence software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "9EF3D30C-571F-4965-96A2-6123D2F54261",
+          "name": "Data acquisition systems",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "5B972B9D-32E0-53F9-9488-64F089E14F48",
+          "name": "Data management software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "35FA2BA5-FF44-515D-925D-6C5C132BC158",
+          "name": "Security system software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "3DDDDDC2-BF90-51C1-A104-6E1921CC790C",
+          "name": "Network access points",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "689E6C36-D865-554D-9D14-70ABC2A05CA2",
+          "name": "Servers",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "0069E880-D11D-51D8-A9A8-88DB42BBA734",
+          "name": "Public address systems",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "18CA2F88-38A8-548A-A2A2-9467BFF5C984",
+          "name": "Security software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "7683FD62-9650-56A3-830B-A56B0CB7BC24",
+          "name": "Network interface controllers",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "0E828D7C-C8F0-592E-A7CC-A8B86B74AF8B",
+          "name": "Information technology products",
+          "type": "Products",
+          "isPrimary": 1
+        },
+        {
+          "id": "39115010-0AB0-40E6-B5EB-A92C614BA27C",
+          "name": "Uninterruptible power supplies",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "11E5DC86-427E-4FB5-8599-AD81C3765D51",
+          "name": "Enterprise resource planning software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "F59E0F8B-1931-547C-9D41-AF95D981BD73",
+          "name": "Firewall hardware",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "9FA20283-9A15-5CC0-A675-BE66E1EC56FA",
+          "name": "Human resource management software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "D97BD029-83B8-5428-8955-CD2B14B460CE",
+          "name": "Modems",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "25820A3E-C633-5CEA-82EB-DD437F2EB8C5",
+          "name": "Web software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "3C8AD7ED-74C9-5854-A3D4-DDC1A3BC11B6",
+          "name": "Cloud computing software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "821EC477-138A-593E-9A06-E193C449E220",
+          "name": "Financial management software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "0E49745A-BC83-52F4-AC51-EC6F30D9A39C",
+          "name": "Digital media software",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "38926525-A3C6-588F-8DCE-EC7139AF6C7F",
+          "name": "Office applications",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "6E072DFB-CD87-5C2B-8A76-EC9D80687A1E",
+          "name": "Network routers",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "37D0439A-11B5-5844-AED3-EFEC628A3316",
+          "name": "Computer switches",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "BC56BF07-018E-55D8-A6A1-FF7520DD2381",
+          "name": "Telephones",
+          "type": "Products",
+          "isPrimary": 0
+        },
+        {
+          "id": "B554062C-5BC9-5140-B83E-091C786291BF",
+          "name": "Data backup services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "625C62FA-314D-5141-AA1B-0A833E6D00BD",
+          "name": "Data management services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "88FC3888-11D4-5399-9425-1065487AE52D",
+          "name": "Information management services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "9FE12F07-A511-4773-A642-10A38A124044",
+          "name": "Network security services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "123861D5-9717-531F-A327-1195AE32A999",
+          "name": "Software development",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "F7438638-5A4B-4267-BDA1-13B32F91DB62",
+          "name": "Infrastructure as a service",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "EEC22D34-13F7-4727-85C3-1D3CF34D2BF5",
+          "name": "Computer repair services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "41D45059-D060-5D0D-A8B1-2F817677CEAE",
+          "name": "Database administration",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "FA9697F8-8F8B-595C-A146-401CC49FA3DF",
+          "name": "Software installation",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "5D61CB4A-5E4F-4211-ADB5-4BA1946ABCC1",
+          "name": "Platform as a service",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "0725B586-6F50-442F-8249-54D4629FB1B2",
+          "name": "Software consulting",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "24F7F83B-4215-4320-84E9-55482BB55451",
+          "name": "Data warehouse services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "F7AEB2F5-93AE-5E34-8740-586495F36036",
+          "name": "Internet service providers",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "E5ED4CD8-AC2A-5388-BF50-7124DC9239F8",
+          "name": "Information technology services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "5E40085A-A042-5EAC-AF60-733B9B18D5C8",
+          "name": "Network services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "1EA7EB75-1216-56AA-9B96-8A548AD822DC",
+          "name": "Information technology staffing services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "5FFD5A97-F37F-50FF-8C3D-8ECEA5B926D9",
+          "name": "Database design",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "D1C2A2AF-19D1-5F11-93F4-92B51B1BE423",
+          "name": "Business intelligence services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "5EF6355E-ACDD-5601-B67E-9C668A8ADF30",
+          "name": "Software maintenance",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "DAEDD427-F400-4143-A9F3-A59A7181070A",
+          "name": "Cyber security services",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "0C7C247E-FFD7-40F0-B3C0-B06514C932AA",
+          "name": "Information technology training services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "4479ADE1-8AFF-5B8A-B803-CF458F5ADBA7",
+          "name": "Web design services",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "5A032E41-EF43-487A-9B6E-D933B1C695CF",
+          "name": "Software as a service",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "DFADCD2E-41D4-499C-89FE-DA7E937BDE48",
+          "name": "Information architecture",
+          "type": "Services",
+          "isPrimary": 0
+        },
+        {
+          "id": "FAA2C598-9A8B-5288-A65B-ECA7B02467D9",
+          "name": "Cloud service providers",
+          "type": "Services",
+          "isPrimary": 1
+        }
+      ],
+      "solicitationDate": {
+        "deltekEstimate": "false",
+        "govtEstimate": "false",
+        "value": "2022-12-02T00:00:00.000"
+      },
+      "solicitationNumber": "19AQMM23R0042",
+      "sourceURL": "https://sam.gov/opp/102db3c78bb440a69f757f9948237c55/view",
+      "status": "Partial Award",
+      "title": "EVOLVE IDIQ",
+      "type": "trackedopp",
+      "typeOfAward": "IDIQ - Agency Specific",
+      "updateDate": "2025-10-08T11:23:47.570"
+    },
+    {
+      "links": {
+        "webHref": {
+          "href": "https://iq.govwin.com/neo/fbo/view/4111433"
+        },
+        "markedByUsers": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/FBO4111433/markedByUsers"
+        },
+        "relatedDocuments": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/FBO4111433/relatedDocuments"
+        },
+        "contacts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/FBO4111433/contacts"
+        },
+        "placesOfPerformance": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/FBO4111433/placesOfPerformance"
+        },
+        "govEntity": {
+          "href": "https://services.govwin.com/neo-ws/govEntities/25321"
+        },
+        "assessment": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/FBO4111433/assessment"
+        },
+        "companies": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/FBO4111433/companies"
+        },
+        "milestones": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/FBO4111433/milestones"
+        },
+        "contracts": {
+          "href": "https://services.govwin.com/neo-ws/opportunities/FBO4111433/contracts"
+        }
+      },
+      "classificationCodeDesc": "DA10 - IT And Telecom- Business Application/Application Development Software As A Service",
+      "competitionTypes": [
+        {
+          "id": 74,
+          "title": "N/A"
+        }
+      ],
+      "country": "USA",
+      "createdDate": "2025-10-08T11:00:52.350",
+      "description": "The purpose of this acquisition is to provide HRD with a singular Service Management Systems (SMS) and Change Management (CM) Software as a Service (SaaS) based, FedRAMP-authorized solution. The primary goal of this acquisition is to Implement a singular SMS and CM Software as a Service (SaaS) based, FedRAMP-authorized solution.",
+      "govEntity": {
+        "id": 25321,
+        "title": "INTERIOR"
+      },
+      "id": "FBO4111433",
+      "iqOppId": 4111433,
+      "noticeHistoryCount": 1,
+      "originalPostedDt": "2025-10-08T10:43:00.000",
+      "primaryNAICS": {
+        "id": "518210",
+        "title": "Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",
+        "sizeStandard": "$40 million annual receipts"
+      },
+      "primaryRequirement": "Information Technology",
+      "procurement": "Justification and Approval (J&A)",
+      "smartTag": "Products & Services > Primary Tags:Customer relationship management software,Software development,Secondary Tags:Software as a service,",
+      "smartTagObject": [
+        {
+          "id": "6D285713-EB03-5037-BF6F-43DA6D2FB33E",
+          "name": "Customer relationship management software",
+          "type": "Products",
+          "isPrimary": 1
+        },
+        {
+          "id": "123861D5-9717-531F-A327-1195AE32A999",
+          "name": "Software development",
+          "type": "Services",
+          "isPrimary": 1
+        },
+        {
+          "id": "5A032E41-EF43-487A-9B6E-D933B1C695CF",
+          "name": "Software as a service",
+          "type": "Services",
+          "isPrimary": 0
+        }
+      ],
+      "solicitationNumber": "140D0425Q0598",
+      "sourceURL": "https://sam.gov/opp/a19674a05ffb4821be8a020b00f42f56/view",
+      "status": "Awarded",
+      "title": "D--HRD Service Management Modernization ServiceNow",
+      "type": "fbo",
+      "updateDate": "2025-10-08T11:00:52.350"
+    }
+  ],
+  "combined_results": {}
+}

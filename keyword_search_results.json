@@ -1,0 +1,97 @@
+{
+  "searchCriteria": {
+    "keyTerms": [
+      "financial assessment",
+      "human capital",
+      "workforce"
+    ],
+    "procurementTypes": [
+      "p",
+      "r",
+      "o",
+      "k"
+    ],
+    "dateRange": {
+      "from": "05/16/2025",
+      "to": "05/21/2025"
+    }
+  },
+  "totalMatches": 1,
+  "opportunities": [
+    {
+      "noticeId": "f1695942ebe342e1b67b72cc42c9bf81",
+      "title": "Precision Strike Missile (PrSM) Increment 4",
+      "solicitationNumber": "W31P4Q25R0068",
+      "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE ARMY.AMC.ACC.ACC-CTRS.ACC RSA.W6QK ACC-RSA",
+      "fullParentPathCode": "021.2100.AMC.ACC.ACC-CTRS.ACC RSA.W31P4Q",
+      "postedDate": "2025-05-21",
+      "type": "Sources Sought",
+      "baseType": "Sources Sought",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-06-03",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": null,
+      "responseDeadLine": "2025-06-02T16:00:00-05:00",
+      "naicsCode": "336414",
+      "naicsCodes": [
+        "336414"
+      ],
+      "classificationCode": "1440",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "leslie.k.dyer.civ@army.mil",
+          "phone": "",
+          "title": null,
+          "fullName": "Leslie K. Dyer"
+        },
+        {
+          "fax": null,
+          "type": "secondary",
+          "email": "celia.f.meeks.civ@army.mil",
+          "phone": null,
+          "title": null,
+          "fullName": "Celia Meeks"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f1695942ebe342e1b67b72cc42c9bf81",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "35898-5090",
+        "city": "REDSTONE ARSENAL",
+        "countryCode": "USA",
+        "state": "AL"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "63912",
+          "name": "Redstone Arsenal"
+        },
+        "state": {
+          "code": "AL",
+          "name": "Alabama"
+        },
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/opp/f1695942ebe342e1b67b72cc42c9bf81/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f1695942ebe342e1b67b72cc42c9bf81&limit=1"
+        }
+      ],
+      "resourceLinks": null,
+      "descriptionText": "<p>Strategic and Operational Rockets and Missiles Precision Strike Missile</p>\n\n<p></p>\n\n<p>INTRODUCTION</p>\n\n<p>The Army Contracting Command &ndash; Redstone Arsenal is issuing this sources sought notice as a means of conducting market research to identify parties having an interest in and the resources to support the requirement for Precision Strike Missile (PrSM) Increment 4 contract supporting the Strategic and Operational Rockets and Missiles Project Office. &nbsp;</p>\n\n<p></p>\n\n<p>DISCLAIMER</p>\n\n<p>&ldquo;THIS SOURCES SOUGHT NOTICE IS FOR INFORMATIONAL PURPOSES ONLY. THIS IS NOT A &ldquo;REQUEST FOR PROPOSAL (RFP)&rdquo; TO BE SUBMITTED. IT DOES NOT CONSTITUTE A SOLICITATION AND SHALL NOT BE CONSTRUED AS A COMMITMENT BY THE GOVERNMENT. RESPONSES IN ANY FORM ARE NOT OFFERS AND THE GOVERNMENT IS UNDER NO OBLIGATION TO AWARD A CONTRACT AS A RESULT OF THIS ANNOUNCEMENT. NO FUNDS ARE AVAILABLE TO PAY FOR PREPARATION OF RESPONSES TO THIS ANNOUNCEMENT. ANY INFORMATION SUBMITTED BY RESPONDENTS TO THIS TECHNICAL DESCRIPTION IS STRICTLY VOLUNTARY. RESPONSES WILL NOT BE RETURNED TO THE RESPONDER. NOT RESPONDING TO THIS NOTICE DOES NOT PRECLUDE PARTICIPATION IN ANY FUTURE REQUEST FOR QUOTE (RFQ) OR INVITATION FOR BID (IFB) OR RFP, IF ANY ISSUED. IF A SOLICITATION IS RELEASED, IT WILL BE SYNOPSIZED ON THE GOVERNMENT-WIDE POINT OF ENTRY (GPE). IT IS THE RESPONSIBILITY OF POTENTIAL OFFERORS TO MONITOR THE GPE FOR ADDITIONAL INFORMATION PERTAINING TO THIS REQUIREMENT.&rdquo;</p>\n\n<p></p>\n\n<p>PROGRAM BACKGROUND</p>\n\n<p><strong><u>The PrSM Increment 4 contract supports the Army&rsquo;s requirement for a capability to engage moving maritime and relocatable targets while maintaining effects on target. PrSM Increment 4 utilizes a multi-mode seeker consisting of radio frequency and imaging infra-red to engage desired target sets in an anti-access/area denial environment. PrSM Increment 4 provides two (2) missiles per Launcher Pod Missile Container (LPMC), doubles the existing range of approximately 499 kilometers, and provides greater velocity and responsiveness. This procurement will provide the munitions needed to meet the PrSM Increment 4 initial operational capability in FY30. </u></strong></p>\n\n<p></p>\n\n<p></p>\n\n<p>REQUIRED CAPABILITIES</p>\n\n<p>The Army Contracting Command-Redstone anticipates awarding a contract for PrSM Increment 4 no later than 1QFY27. PrSM Increment 4 will utilize current launchers, the existing Enclosure Assembly Launch Pod (EALP) form factor, and available launcher power.</p>\n\n<p>If your organization has the potential capacity to perform this requirement, please provide the following information: 1) organization name, address, email address, Website address, telephone number, and size and type of ownership for the organization; and 2) tailored capability statements addressing the particulars of this effort with appropriate documentation supporting claims of organizational and staff capability. &nbsp;If significant subcontracting or teaming is anticipated to deliver technical capability, organizations should address the administrative and management structure of such arrangements.</p>\n\n<p></p>\n\n<p>The Government will evaluate market information to ascertain potential market capacity to:</p>\n\n<p>1. Provide services consistent, in scope and scale, with those described in this notice and otherwise anticipated.</p>\n\n<p>2. Secure and apply the full range of corporate financial, human capital, and technical resources required to successfully perform similar requirements.</p>\n\n<p>3. Implement a successful project management plan that includes: compliance with tight program schedules; cost containment; meeting and tracking performance; hiring and retention of key personnel and risk mitigation.</p>\n\n<p>4. Provide services under a performance-based service acquisition contract.</p>\n\n<p></p>\n\n<p>SPECIAL REQUIREMENTS:</p>\n\n<ul>\n\t<li>Personnel and Facility Security Clearances. A DD Form 254 Contract Security Classification Specification shall apply to this requirement and the prime contractor shall have or demonstrate the ability to obtain a Secret Facility Clearance</li>\n\t<li>Berry Amendment</li>\n\t<li>Information technology (e.g., Clinger-Cohen Act) and cybersecurity.</li>\n\t<li>Service Contract Act</li>\n\t<li>Government furnished property plan</li>\n</ul>\n\n<p></p>\n\n<p>ELIGIBILITY</p>\n\n<p>The applicable NAICS code for this requirement is 336414. &nbsp;The Product Service Code is 1410. &nbsp;</p>\n\n<p></p>\n\n<p>ADDITIONAL INFORMATION AND SUBMISSION DETAILS (CAPABILITIES STATEMENT)</p>\n\n<p>Interested parties are requested to submit a capabilities statement of no more than ten (10) pages in length in Times New Roman font of not less than 10 pitch. &nbsp;The deadline for response to this request is no later than 4 pm, CST, 2 June 2025. &nbsp;All responses under this sources sought notice must be e-mailed to Contract Specialist, Ceilia Meeks, at celia.f.meeks.civ@army.mil and Contracting Officer, Leslie Dyer, at leslie.k.dyer.civ@army.mil.</p>\n\n<p></p>\n\n<p>This documentation must address, at a minimum, the following items:</p>\n\n<ol>\n\t<li>What type of work has your company performed in the past in support of the same or similar requirement?</li>\n\t<li>Can or has your company managed a task of this nature? If so, please provide details.</li>\n\t<li>Can or has your company managed a team of subcontractors before? If so, provide details.</li>\n\t<li>What specific technical skills does your company possess which ensure capability to perform the tasks and to integrate required technology with current launchers and the existing EALP form factor?</li>\n\t<li>Commercial and Government Entity (CAGE) code</li>\n\t<li>Business size</li>\n</ol>\n\n<p></p>\n\n<p>Your response to this sources sought notice, including any capabilities statement, shall be electronically submitted to the Contracting Specialist, Celia Meeks, and Contracting Officer, Leslie Dyer, in either Microsoft Word or Portable Document Format, via email to celia.f.meeks.civ@army.mil and leslie.k.dyer.civ@army.mil.</p>\n\n<p>All data received in response to this sources sought notice that is marked or designated as corporate or proprietary will be fully protected from any release outside the Government<strong>.</strong></p>\n\n<p>No phone calls will be accepted.</p>\n\n<p>All questions must be submitted to the contract specialist and contracting officer identified above. &nbsp;The Government is not committed nor obligated to pay for the information provided, and no basis for claims against the Government shall arise because of a response to this sources sought notice.</p>\n\n<p></p>\n\n<p>Question 1.&nbsp; &nbsp;&quot;The team is looking for confirmation on whether the Title page, Table of Contents, and the acronym list are included or excluded from the overall page count.&nbsp; Can you please advise?&quot;&nbsp;</p>\n\n<p>Answer 1.&nbsp; The Title page, Table of Contents, and the acronym list are included in the 10-page count.&nbsp;</p>\n",
+      "keywordMatches": [
+        "human capital"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "links": {
+    "webHref": {
+      "href": "https://iq.govwin.com/neo/opportunity/view/256560"
+    },
+    "markedByUsers": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/markedByUsers"
+    },
+    "relatedDocuments": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/relatedDocuments"
+    },
+    "contacts": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/contacts"
+    },
+    "placesOfPerformance": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/placesOfPerformance"
+    },
+    "govEntity": {
+      "href": "https://services.govwin.com/neo-ws/govEntities/25642"
+    },
+    "fboNotices": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/fboNotices"
+    },
+    "sourcedFrom": [
+      {
+        "href": "https://services.govwin.com/neo-ws/opportunities/FBO4087696"
+      },
+      {
+        "href": "https://services.govwin.com/neo-ws/opportunities/FBO97"
+      }
+    ],
+    "relatedArticles": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/relatedArticles"
+    },
+    "contractVehicles": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/contractVehicles"
+    },
+    "verticals": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/verticals"
+    },
+    "assessment": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/assessment"
+    },
+    "companies": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/companies"
+    },
+    "milestones": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/milestones"
+    },
+    "contracts": {
+      "href": "https://services.govwin.com/neo-ws/opportunities/OPP256560/contracts"
+    }
+  },
+  "acronym": "HRIT",
+  "awardDate": {
+    "deltekEstimate": "true",
+    "govtEstimate": "false",
+    "value": "2026-11-30T00:00:00.000"
+  },
+  "competitionTypes": [
+    {
+      "id": 47,
+      "title": "Undetermined"
+    }
+  ],
+  "contractTypes": [
+    {
+      "id": 1,
+      "title": "Firm Fixed Price"
+    },
+    {
+      "id": 13,
+      "title": "Indefinite Delivery Indefinite Quantity"
+    }
+  ],
+  "country": "USA",
+  "createdDate": "2025-07-21T11:21:11.990",
+  "description": "<p>The U.S. Office of Personnel Management (OPM), the Office of Management and Budget (OMB)&nbsp;has&nbsp;a requirement for consolidation into a centrally managed government-wide Human Resources Information Technology (HRIT) suite of capabilities.</p>\n\n<h4>BACKGROUND</h4>\n\n<p>Today&rsquo;s decentralized Federal Human Resources Information Technology (HRIT) landscape is costly and ineffective, leading to numerous challenges, including fragmented data and interoperability issues. OPM is&nbsp;interested in learning about various unified HRIT system solutions that will ensure data accuracy, improve reporting, and enhance interoperability, enabling the Federal Government to manage its workforce as a cohesive entity. The solutions sought include position management, personnel action and records processing, workforce analytics, and employee and manager self-service capabilities. The agency seeks possible solutions that will integrate with federal payroll providers and other human capital functions, ultimately improving service to employees and managers and increasing accountability to the American taxpayer.</p>\n\n<h4>REQUIREMENTS</h4>\n\n<p>The contractor shall provide services in support of&nbsp;a potential consolidation of&nbsp;Federal Human Resources Information Technology&nbsp;into a centrally managed government-wide Human Resources Information Technology (HRIT) suite of capabilities.</p>\n\n<p><strong>Strategic Objectives:</strong></p>\n\n<ul>\n\t<li>Policy Alignment: Drive government-wide policy alignment and accountability</li>\n\t<li>Cost Savings: Reduce duplicative HR technologies government-wide</li>\n\t<li>Efficiency: Streamline HR processes and eliminate overlapping systems</li>\n\t<li>Modernization: Enhance experience for managers, employees, and HR professionals</li>\n\t<li>Interoperability: Share data and integrate with payment and government systems</li>\n</ul>\n\n<p>The Contractor shall deliver and sustain a Federal Risk and Authorization Management Program (FedRAMP) certified HCM platform and associated services for the following functional areas of the Federal Human Capital Business Reference Model (HCBRM): (A1.1) Human Capital Strategy; (A1.3) Position Classification and Position Management; (A1.4) Employee Engagement (including employee and management HR self-service); (A3) Talent Development/Learning; (A5) Compensation and Benefits (including Time and Attendance with integration to Federal payroll providers); (A9) Human Capital Analytics and Employee Records; and (X1) Personnel Action Request Processing. (See https://www.opm.gov/services-for-agencies/hr-line-of-business/hc-business-reference-model/.) The government intends for the Core HCM platform to integrate historical and current data across various systems to create a single source of truth. Agencies will leverage OPM USA Talent Suite applications during the initial Core HCM deployments. Key HR systems to be integrated include OPM&rsquo;s retirement systems; USA Staffing and USA Hire (OPM&rsquo;s Talent Acquisition System, including assessments and onboarding); USA Performance (OPM&rsquo;s Performance Management System); and EHRI/eOPF (OPM&rsquo;s Enterprise Human Resources Integration and electronic Official Personnel File). The Core HCM platform shall be adaptive and scalable to include multi-tenant capabilities, role-based workflows, and absorb diverse agency systems.</p>\n",
+  "duration": "10 year(s) base",
+  "govEntity": {
+    "id": 25642,
+    "title": "OFFICE OF PERSONNEL MANAGEMENT"
+  },
+  "id": "OPP256560",
+  "iqOppId": 256560,
+  "oppValue": 0,
+  "primaryNAICS": {
+    "id": "541512",
+    "title": "Computer Systems Design Services",
+    "sizeStandard": "$34 million annual receipts"
+  },
+  "primaryRequirement": "IT Services",
+  "procurement": "<p>The Contracting Office has not released any Modifications extending the Responses due date. Responses were due by 5:00 PM ET on October 8, 2025. The Point of Contact is Christina Barr.</p>\n",
+  "smartTag": "Products & Services > Primary Tags:Human resources services, Information technology products, Information technology services, Secondary Tags:Billing software, Compensation services, Data management services, Employee incentive programs, Human capital management software, Human resource management software, Performance management software, Software consulting, Staffing services, ",
+  "smartTagObject": [
+    {
+      "id": "D226AEB2-B380-5AF7-BBC8-52CEBBA9B791",
+      "name": "Performance management software",
+      "type": "Products",
+      "isPrimary": 0
+    },
+    {
+      "id": "BCE40C50-0056-56E4-93B8-96354D8214BD",
+      "name": "Human capital management software",
+      "type": "Products",
+      "isPrimary": 0
+    },
+    {
+      "id": "0E828D7C-C8F0-592E-A7CC-A8B86B74AF8B",
+      "name": "Information technology products",
+      "type": "Products",
+      "isPrimary": 1
+    },
+    {
+      "id": "9FA20283-9A15-5CC0-A675-BE66E1EC56FA",
+      "name": "Human resource management software",
+      "type": "Products",
+      "isPrimary": 0
+    },
+    {
+      "id": "C6C8944D-D04C-5B3D-9C21-C0033DEF714B",
+      "name": "Billing software",
+      "type": "Products",
+      "isPrimary": 0
+    },
+    {
+      "id": "625C62FA-314D-5141-AA1B-0A833E6D00BD",
+      "name": "Data management services",
+      "type": "Services",
+      "isPrimary": 0
+    },
+    {
+      "id": "0725B586-6F50-442F-8249-54D4629FB1B2",
+      "name": "Software consulting",
+      "type": "Services",
+      "isPrimary": 0
+    },
+    {
+      "id": "573A3488-F194-54CB-A323-56FC0B4A05FC",
+      "name": "Human resources services",
+      "type": "Services",
+      "isPrimary": 1
+    },
+    {
+      "id": "E5ED4CD8-AC2A-5388-BF50-7124DC9239F8",
+      "name": "Information technology services",
+      "type": "Services",
+      "isPrimary": 1
+    },
+    {
+      "id": "EE77BCA5-AE9F-584E-9413-8D32259BB88B",
+      "name": "Staffing services",
+      "type": "Services",
+      "isPrimary": 0
+    },
+    {
+      "id": "6DD6B77C-9676-5A30-B309-B6356803B58E",
+      "name": "Compensation services",
+      "type": "Services",
+      "isPrimary": 0
+    },
+    {
+      "id": "08F772BB-64DD-5AFD-99DB-E85B8DE7EF6C",
+      "name": "Employee incentive programs",
+      "type": "Services",
+      "isPrimary": 0
+    }
+  ],
+  "solicitationDate": {
+    "deltekEstimate": "true",
+    "govtEstimate": "false",
+    "value": "2026-01-30T00:00:00.000"
+  },
+  "solicitationNumber": "FHRITM250001",
+  "status": "Pre-RFP",
+  "title": "GOVERNMENT WIDE HUMAN RESOURCES INFORMATION TECHNOLOGY MODERNIZATION (HRIT)",
+  "type": "trackedopp",
+  "typeOfAward": "IDIQ - Agency Specific",
+  "updateDate": "2025-10-09T08:40:11.997"
+}

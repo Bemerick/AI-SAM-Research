@@ -1,0 +1,1508 @@
+{
+  "ranked_opportunities": [
+    {
+      "noticeId": "a09fd19804854fab9c2df631c9826958",
+      "title": "National Weather Service Commercial Data Program (National Mesonet Program)",
+      "solicitationNumber": "1305M225R0027",
+      "fullParentPathName": "COMMERCE, DEPARTMENT OF.NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION.DEPT OF COMMERCE NOAA",
+      "fullParentPathCode": "013.1330.1305M2",
+      "postedDate": "2025-10-07",
+      "type": "Solicitation",
+      "baseType": "Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-10-25",
+      "typeOfSetAsideDescription": "No Set aside used",
+      "typeOfSetAside": "NONE",
+      "responseDeadLine": "2025-10-10T15:00:00-04:00",
+      "naicsCode": "518210",
+      "naicsCodes": [
+        "518210"
+      ],
+      "classificationCode": "DC10",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "paul.thomas@noaa.gov",
+          "phone": "",
+          "title": null,
+          "fullName": "Paul Thomas"
+        },
+        {
+          "fax": "",
+          "type": "secondary",
+          "email": "Jennifer.Roesner@noaa.gov",
+          "phone": "",
+          "title": null,
+          "fullName": "Jennifer Roesner"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=a09fd19804854fab9c2df631c9826958",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "23510",
+        "city": "NORFOLK",
+        "countryCode": "USA",
+        "state": "VA"
+      },
+      "placeOfPerformance": {
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/a09fd19804854fab9c2df631c9826958/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=a09fd19804854fab9c2df631c9826958&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/1d886198eb144ceb87a06669a068e667/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/1e071c48dcb24c3a8bd5f4f57fcaba86/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/23eaf5dd707748e483e1582f207df91d/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/24cee34097364d588a88d39c1b836f38/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/4b72a098c68f444fbd7624fb7382e847/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/5ea73c9150444fa8b689d94278d63d9c/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6b50efc23d9e474d939aad54dd4eec53/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/85c17c8d4ef44def8e505e9a9db5601b/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/8ac06e8a2d1f426db6e3e4eb6a8ac28f/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/8cc4b8645241420c83bbd71857a0e8f4/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/9e28f93da448488a8f3b93a0bccd3d22/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/de2661f8d9f64d1985fb8d3b18fd37d9/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/dfa8324767024838bb4bc5ec41e05e04/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ee55534b0aae4c91a790977207d54ba7/download"
+      ],
+      "descriptionText": "<p>Amendment 0003 published on 10/07/2025 providing the following updated documents: Questions and Answers_Amendment 0003,&nbsp;RFP 1305M225R0027_Amendment 0003, and&nbsp;RFP_Attachment 3 - Past Performance Form_Amend 0003.</p>\n\n<p></p>\n\n<p>Amendment 0002 published on 10/01/2025 providing the following updated documents: Questions and Answers_Amendment 0002,&nbsp;RFP 1305M225R0027_Amendment 0002,&nbsp;and RFP_Attachment 2 - Price Exhibit_Amend 0002.</p>\n\n<p></p>\n\n<p>Amendment 0001 published on 9/19/2025 providing the following updated documents: Questions and Answers_Amendment 0001,&nbsp;RFP 1305M225R0027_Amendment 0001,&nbsp;RFP_Attachment 2 - Price Exhibit_Amend0001, and&nbsp;RFP_Attachment 3 - Past Performance Form_Amend0001.</p>\n\n<p></p>\n\n<p>This is a Request For Proposal (RFP) for the National Weather Service Commercial Data Program (National Mesonet Program).</p>\n\n<p>Please refer to the attached RFP and RFP Attachments for full solicitation details.</p>\n",
+      "notice_id": "a09fd19804854fab9c2df631c9826958",
+      "standardized_department": "COMMERCE, DEPARTMENT OF",
+      "standardized_type": "solicitation",
+      "naics_code": "518210",
+      "set_aside": "No Set aside used",
+      "is_small_business": false,
+      "ptype": "solicitation",
+      "response_date": "2025-10-10",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Business & Technology Services",
+      "fit_score": 6,
+      "justification": "The opportunity involves data services which align with our Business & Technology Services practice area, though it is not from a preferred agency.",
+      "summary_description": "<p>Amendment 0003 published on 10/07/2025 providing the following updated documents: Questions and Answers_Amendment 0003,&nbsp;RFP 1305M225R0027_Amendment 0003, and&nbsp;RFP_Attachment 3 - Past Performance Form_Amend 0003.</p>\n\n<p></p>\n\n<p>Amendment 0002 published on 10/01/2025 providing the follow..."
+    },
+    {
+      "noticeId": "8f8f9f2630cd433c9ea13c3b95df7fd5",
+      "title": "REQUEST FOR QUOTE(RFQ) in Support of U.S. Coast Guard Search and Rescue Optimal Planning System (SAROPS)  Environmental Data Services (EDS) Subscription Services and Enhancements",
+      "solicitationNumber": "70Z04425ROIPL0003",
+      "fullParentPathName": "HOMELAND SECURITY, DEPARTMENT OF.US COAST GUARD.C5I DIVISION 3 PORTSMOUTH",
+      "fullParentPathCode": "070.7008.70Z044",
+      "postedDate": "2025-10-07",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-10-25",
+      "typeOfSetAsideDescription": "No Set aside used",
+      "typeOfSetAside": "NONE",
+      "responseDeadLine": "2025-10-10T15:00:00-04:00",
+      "naicsCode": "518210",
+      "naicsCodes": [
+        "518210"
+      ],
+      "classificationCode": "7B22",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "Jerrett.A.Solven@uscg.mil",
+          "phone": null,
+          "title": null,
+          "fullName": "Jerrett Solven, Contract Specialist"
+        },
+        {
+          "fax": "",
+          "type": "secondary",
+          "email": "Daniel.R.LaRussa@uscg.mil",
+          "phone": "",
+          "title": null,
+          "fullName": "Daniel LaRussa; Contract Officer"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=8f8f9f2630cd433c9ea13c3b95df7fd5",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "23703",
+        "city": "PORTSMOUTH",
+        "countryCode": "USA",
+        "state": "VA"
+      },
+      "placeOfPerformance": {
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/8f8f9f2630cd433c9ea13c3b95df7fd5/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=8f8f9f2630cd433c9ea13c3b95df7fd5&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/3b44965f7fc94148a4b69b1efe71755c/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/4106183793bf4eb0bfc759a12dad0b80/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/44087602abbc4ec1b6c3b42168185e10/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6ba7822d01454a18a8410480c914e426/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/773bb14616804d68832a94c798862917/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a4957c9644664fc9b69b24d723683ad5/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a6d5a303c8fd4f82ba2d812519af7181/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c7060737205d46fb8aaec2f605d86a85/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c8e7f99084594bb49f75887282550217/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/f917b0bdc9fb42058e65875ac858c04d/download"
+      ],
+      "descriptionText": "<p>10/07/2025: Amendment A00001 is issued to address questions submitted for this solicitation as well as update the POC&#39;s for quote submissions. Please see applicable attachments.</p>\n\n<p>Attached you will find the Combined Synopsis/Solicitation for the SAROPS EDS 70Z04425ROIPL0003<br />\nrequirement with associated documents.</p>\n",
+      "notice_id": "8f8f9f2630cd433c9ea13c3b95df7fd5",
+      "standardized_department": "HOMELAND SECURITY, DEPARTMENT OF",
+      "standardized_type": "combined synopsis/solicitation",
+      "naics_code": "518210",
+      "set_aside": "No Set aside used",
+      "is_small_business": false,
+      "ptype": "combined synopsis/solicitation",
+      "response_date": "2025-10-10",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Business & Technology Services",
+      "fit_score": 7,
+      "justification": "The opportunity involves subscription services and enhancements which align with our Business & Technology Services practice area, and it is from a preferred agency.",
+      "summary_description": "<p>10/07/2025: Amendment A00001 is issued to address questions submitted for this solicitation as well as update the POC&#39;s for quote submissions. Please see applicable attachments.</p>\n\n<p>Attached you will find the Combined Synopsis/Solicitation for the SAROPS EDS 70Z04425ROIPL0003<br />\nrequir..."
+    },
+    {
+      "noticeId": "c06d1e08e4074a1ab88e2e4956388e5e",
+      "title": "Intent to Sole Source: Electronic Health Records System (EHRS)",
+      "solicitationNumber": "SS-AFR-26-008",
+      "fullParentPathName": "TREASURY, DEPARTMENT OF THE.BUREAU OF THE FISCAL SERVICE.ARC DIV PROC SVCS - AFRH",
+      "fullParentPathCode": "020.2036.203423",
+      "postedDate": "2025-10-07",
+      "type": "Sources Sought",
+      "baseType": "Sources Sought",
+      "archiveType": "auto15",
+      "archiveDate": "2025-10-29",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-10-14T10:00:00-04:00",
+      "naicsCode": "541512",
+      "naicsCodes": [
+        "541512"
+      ],
+      "classificationCode": "R617",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "purchasing@fiscal.treasury.gov",
+          "phone": "",
+          "title": null,
+          "fullName": "Kaity Eaton"
+        },
+        {
+          "fax": "",
+          "type": "secondary",
+          "email": "purchasing@fiscal.treasury.gov",
+          "phone": "",
+          "title": null,
+          "fullName": "Jason Schofield"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=c06d1e08e4074a1ab88e2e4956388e5e",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "26101",
+        "city": "PARKERSBURG",
+        "countryCode": "USA",
+        "state": "WV"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "5350",
+          "name": "Beaverton"
+        },
+        "state": {
+          "code": "OR",
+          "name": "Oregon"
+        },
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/c06d1e08e4074a1ab88e2e4956388e5e/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=c06d1e08e4074a1ab88e2e4956388e5e&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/0e2141360e304113a1c75298b7f7a002/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a4aacdca941041d5a7bfdaeea271bee9/download"
+      ],
+      "descriptionText": "<p>Fiscal Service Procurement, on behalf of the Armed Forces Retirement Home of Washington, D.C. (AFRH-W) intends to make an award to Ensoftek, Inc., 735 SW 158th Ave Apt 140 Beaverton, Oregon 97006, on a sole source basis, under authority of FAR 13.106-1(b)(1) for the purpose of providing an Electronic Health Records System (EHRS), which has been previously provided by the vendor. The agency anticipates awarding a Firm-Fixed-Price Task Order as a Sole Source requirement to Ensoftek, Inc. to acquire licensing, hosting and development services for their proprietary cloud based application, DrCloudEHR. The award will be for one (1) 12-month base period to begin on 12/01/2025, pursuant to FAR Part 6.302-1(b)(1)(i).</p>\n\n<p>A draft Performance Work Statement (PWS) is attached to this Intent to Sole Source. The PWS includes the full requirements description for this acquisition. Interested vendors shall be able to complete <strong>all </strong>tasks and deliverables in the PWS.</p>\n\n<p>Capable vendors are encouraged to submit written responses for this requirement. Responses should be received <strong><u>no later than 10:00a.m. ET on October 14, 202</u></strong><strong><u>5</u></strong>. Responses must include sufficient evidence that clearly shows the vendor is capable of providing all required services for AFRH. If no written response is received that clearly demonstrates the vendor&rsquo;s ability to meet all of the features of the requirement, then Fiscal Service shall proceed with an award on a sole source basis to Ensoftek, Inc. &nbsp;</p>\n\n<p>NO SOLICITATION IS AVAILABLE. &nbsp;A request for more information, or a copy of the solicitation, will not be considered an affirmative response to this Special Notice. Telephone responses or inquiries to this Special Notice will NOT be accepted.<br />\n<br />\nInterested vendors shall provide the following:</p>\n\n<p>1. The name and location of your company, contact information, UEI number, and identify your business size (Large Business, Small Business, Disadvantaged Business, 8(a), Service-Disabled Veteran Owned Small Business, HUBZone, etc.) based on NAICS Code 541512 size standard $34 million. Please ensure contact information includes the name of the point of contact, email address, and telephone number should the Government have questions regarding individual responses.</p>\n\n<p>2. Whether your services are available through a Government contract vehicle or Open Market.</p>\n\n<p>3. A brief capabilities statement (not to exceed 5 pages) that includes a description of your company&#39;s standard line of business, as well as a list of customers your company currently provides these products/services for.</p>\n\n<p>4. Complete details of your company&rsquo;s services that clearly and sufficiently demonstrates that it is equivalent to the standards stated above without pricing at this time.</p>\n\n<p><strong>Responses to this request shall be submitted by email to </strong><strong>purchasing@fiscal.treasury.gov</strong><strong> and </strong><strong>kaity.eaton@fiscal.treasury.gov</strong><strong> including &ldquo;SS-AFR-26-008 Attn: KAE/JMS&rdquo; in the subject line. </strong>The following file extensions are not allowable and application materials/data submitted with these extensions cannot be considered: .bat, .cmd, .com, .exe, .pif, .rar, .scr, .vbs, .hta, .cpl, and .zip files. Microsoft Office compatible documents are acceptable.</p>\n\n<p>No other information regarding this Special Notice will be provided at this time.</p>\n\n<p>This notice does not restrict the Government to an ultimate acquisition approach. All vendors responding to this notice are advised that their response is not a request that will be considered for contract award. &nbsp;All interested parties will be required to respond to any resultant solicitation separately from their response to this notice if the Government determines there is clearly an equivalent vendor for the services required.</p>\n",
+      "notice_id": "c06d1e08e4074a1ab88e2e4956388e5e",
+      "standardized_department": "TREASURY, DEPARTMENT OF THE",
+      "standardized_type": "sources sought",
+      "naics_code": "541512",
+      "set_aside": "Total Small Business Set-Aside (FAR 19.5)",
+      "is_small_business": true,
+      "ptype": "sources sought",
+      "response_date": "2025-10-14",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Business & Technology Services",
+      "fit_score": 5,
+      "justification": "The opportunity involves electronic health records which align with our Business & Technology Services practice area, but it is a sole source requirement limiting competition.",
+      "summary_description": "<p>Fiscal Service Procurement, on behalf of the Armed Forces Retirement Home of Washington, D.C. (AFRH-W) intends to make an award to Ensoftek, Inc., 735 SW 158th Ave Apt 140 Beaverton, Oregon 97006, on a sole source basis, under authority of FAR 13.106-1(b)(1) for the purpose of providing an Electr..."
+    },
+    {
+      "noticeId": "b4d8a2a558bc4a82a25171f8922af3e3",
+      "title": "OPM USA HIRE SUPPORT SERVICES II",
+      "solicitationNumber": "47QFMA25K0009",
+      "fullParentPathName": "GENERAL SERVICES ADMINISTRATION.FEDERAL ACQUISITION SERVICE.GSA FAS AAS OSO (QFA)",
+      "fullParentPathCode": "047.4732.47QFA0",
+      "postedDate": "2025-10-07",
+      "type": "Sources Sought",
+      "baseType": "Sources Sought",
+      "archiveType": "auto15",
+      "archiveDate": "2025-11-05",
+      "typeOfSetAsideDescription": "No Set aside used",
+      "typeOfSetAside": "NONE",
+      "responseDeadLine": "2025-10-21T12:00:00-04:00",
+      "naicsCode": "541512",
+      "naicsCodes": [
+        "541512"
+      ],
+      "classificationCode": "DA01",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "steven.nerenberg@gsa.gov",
+          "phone": null,
+          "title": null,
+          "fullName": "Steven Nerenberg"
+        },
+        {
+          "fax": null,
+          "type": "secondary",
+          "email": "michael.levy@gsa.gov",
+          "phone": null,
+          "title": null,
+          "fullName": "Mike Levy"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=b4d8a2a558bc4a82a25171f8922af3e3",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "20405",
+        "city": "Washington",
+        "countryCode": "USA",
+        "state": "DC"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "50000",
+          "name": "Washington"
+        },
+        "state": {
+          "code": "DC",
+          "name": "District of Columbia"
+        },
+        "zip": "20415",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/b4d8a2a558bc4a82a25171f8922af3e3/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=b4d8a2a558bc4a82a25171f8922af3e3&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/391522262ca84908987f34b96252c106/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/3c15040751e042b982627b12ed102d2c/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/5ceca879d3af44718a7ad592ef4e7d86/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a5e46687e4c1421aa1b3d5860f7518b1/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/cdc210a487a64313a365a30552fc959b/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/cf9318fe43fa404b881509aa8bba7b89/download"
+      ],
+      "descriptionText": "<p>USA HIRE II RFI/MAD 47QFMA25K0009<br />\n<br />\nRequest for Information (RFI)&nbsp;And&nbsp;Market Assessment Discussion (MAD)&nbsp;47QFMA25K0009</p>\n\n<p>USA Hire \u2120 Support Services II&nbsp;in support of:&nbsp;The United States Office of Personnel Management (OPM)</p>\n\n<p>Issued to:&nbsp;All Industry Partners (Open Market)</p>\n\n<p>Issued by:&nbsp;GSA Assisted Acquisition Services (AAS) ARMY 24 September 2025</p>\n\n<p>Responses due no later than 12:00 hrs. Eastern Time (ET) on 21 October 2025<br />\n<br />\n1. INTRODUCTION<br />\nThe General Services Administration (GSA), Assisted Acquisition Services (AAS) is releasing this Market Assessment Discussion (MAD) notice on behalf of The United States Office of Personnel Management (OPM). The purpose of this notice is to assist the Government in conducting market research regarding the subject requirements, promote competition, and garner high-quality proposals.<br />\nAs provided by Federal Acquisition Regulation (FAR) 10.002 and 15.201, the Government anticipates conducting one-on-one virtual meetings with respondents to this notice to promote competition in a potential future acquisition. The Government is particularly interested in gathering information on industry best practices for<br />\n&bull; hosting and managing assessment content (e.g., items, item banks) in a secure environment,<br />\n&bull; delivering assessments in a secure unproctored asynchronous environment,<br />\n&bull; delivering online video-based interviews<br />\n&bull; remote proctoring,<br />\n&bull; using Artificial Intelligence/Machine Learning in assessment development and scoring,<br />\n&bull; minimizing and/or mitigating applicant use of Artificial Intelligence (e.g, AI chatbots) to improve assessment performance<br />\n&bull; facilitating data sharing, including PII, between integrated platforms,<br />\n&bull; integrating and delivering assessments across multiple assessment platforms,<br />\n&bull; and ensuring scalable governmentwide assessment delivery.<br />\nThis information will be used for market research only and any information provided by an Industry Partner because of these conversations will not be shared with any other Industry Partner. The Government is not obligated to release a future solicitation.<br />\nThe MAD is a market research method utilized by AAS Army to determine the extent of interest in a specific acquisition and industry practices related to the acquisition. The MAD methodology allows for a one-on-one exchange between the AAS Contracting Officer (CO) and any interested Industry Partner early in the acquisition process. In this process, the Government requests only a minimum amount of information necessary to gauge industry interest. The Government may consider the responses within these exchanges in the future determination of an appropriate acquisition strategy for the program.<br />\nThis RFI and MAD notice does NOT constitute a Request for Proposal and is not to be construed as a commitment, implied or otherwise, by the Government that a procurement action will be issued. Response to this notice is not a request to be added to a bidders list or to receive a copy of a solicitation. No entitlement to payment of direct or indirect costs or charges by the Government will arise as a result of the submission of the requested information. No reimbursement will be made for any costs associated with providing information in response to this announcement and any follow-up information requests. Responses to this RFI and MAD may be considered in the future determination of an appropriate acquisition strategy for the program. The Government may not respond to any specific questions or comments submitted in response to this RFI and MAD or information provided as a result of this request. Any information submitted by respondents as a result of this notice is strictly voluntary.</p>\n\n<p>2. BACKGROUND<br />\nThe landscape for Federal hiring has changed dramatically in the past 12 months. The Chance to Compete Act of 2024 (CCA), Executive Order 14170 (Reforming the Federal Hiring Process and Restoring Merit to Government Service, January 20, 2025) and the Merit Hiring Plan (MHP, issued May 29, 2025) require Federal agencies to: a) incorporate skills-based assessments into their hiring processes; and b) eliminate the use of self-rating assessment questionnaires that have been used pervasively across government for many years. The United States Office of Personnel Management (OPM) is the central agency for providing human resources solutions to Federal agencies. Through its Human Resources Solutions (HRS) Federal Staffing Center (FSC) USA<br />\nHire \u2120 Program Office, OPM provides Federal agencies with high-quality assessment tools through a centralized assessment platform that meets the goal of more efficient evaluation of applicants and better-quality hires across government. USA Hire \u2120 includes a range of assessment solutions that can help agencies meet skills-based assessment requirements. In Fiscal Year 2024, USA Hire \u2120 customer agencies used the program to assess approximately 1 million applicants for over 20,000 job opportunity announcements; OPM expects continued exponential growth in the use of its assessments in future fiscal years. USA Hire \u2120 provides an online assessment program designed specifically to meet the hiring needs of government agencies. Federal agencies need professionally developed and validated assessment tools to identify highly qualified and proficient applicants and ultimately make the best hires. Better assessments can lead to better hires and a stronger workforce that builds a high performing organization set up to achieve mission success. USA Hire \u2120 currently offers off-the-shelf assessment batteries covering over 800 individual job series/grade combinations, off-the-shelf assessment batteries covering skills and competencies shared across jobs (e.g., project management, writing, data skills, supervisory skills), and custom assessment batteries targeting the needs of individual agencies, access to test center locations worldwide, and a broad array of assessment and IT expertise. HRS can develop, customize, and deliver assessment solutions that effectively and efficiently meet the needs of Federal agencies. USA Hire \u2120 was built specifically for use in the Federal Government; USA Hire \u2120 fully integrates with USA Staffing&reg;; USA Hire \u2120 meets all Federal IT standards; and USA Hire \u2120 maintains high levels of security, accessibility, and usability. Agencies use the USA Hire \u2120 platform to administer a wide variety of online assessments such as traditional multiple-choice assessments, sophisticated work simulations, video-based assessments, computer adaptive tests (CAT), computer-scored writing assessments, video-based interviews, and more.<br />\nUSA Hire \u2120 currently blends state-of-the-art assessments and technology enabled assessment delivery solutions to modernize and transform the Federal hiring process. Through USA Hire \u2120 , Federal agencies have access to online assessment (proctored and un-proctored) products and services with the goals of helping to manage large applicant pools, improving the quality of hires, decreasing the time-to-hire, minimizing applicant burden, and improving the applicant experience. USA Hire \u2120 is part of an integrated solution that currently combines HRS&rsquo; internal expertise (e.g., Industrial/Organizational Psychology, staff acquisition), assessment technology resources (USAJOBS and USA Staffing) with the external capabilities of industry partner(s).<br />\nUSA Hire \u2120 includes computer adaptive testing technology. All assessments are fully compliant with Section 508 of the U.S. Rehabilitation Act, and video-based items are supported by an HTML5-based video player and allow for closed-captioned videos. USA Hire \u2120 also complies with all Federal IT security and privacy mandates.</p>\n\n<p>3. SCOPE<br />\nThe USA Hire \u2120 program seeks an industry partner-provided commercial solution that meets the needs of its federal customer base. OPM requires an online system that can deploy off-the-shelf and custom assessments that measure a variety of competencies for Federal occupations. OPM seeks an assessment delivery system that can automatically score closed-end and open-ended responses, including writing samples. The online assessment platform shall be able to handle any mathematical formula for scoring purposes. Based on the needs of USA Hire \u2120 &rsquo;s customers, OPM requires an assessment platform that supports static, multi-form, computer-adaptive (CAT), and linear-on-the-fly (LOFT) assessments delivered in un-proctored, in-person, and remote proctored settings. The platform shall support applicant self-scheduling for proctored test sessions. The platform shall additionally support the delivery of synchronous (live) and asynchronous (recorded) online interviews, online interview scheduling, and provide an interface for raters to review and rate applicant interviews. Online interviews shall be delivered through the&nbsp;integration with USA Staffing and combinable with other assessments. The platform shall include an interface for OPM and customer Industrial/Organizational Psychologists to author, upload, and configure tests, and to manage assessment processes. The contractor shall be able to support secure, standardized, real-time data interconnections with other assessment delivery platforms and provide the government with access to additional online assessments, including technical skills-based assessment content (e.g., accounting, coding, cybersecurity, engineering). All assessment platforms shall rely on the applicant&rsquo;s USAJOBS Login.gov account or Federal employee&rsquo;s USA Hire \u2120 Login.gov account for authentication.<br />\nOPM requires an industry partner that can provide psychometric expertise to support Federal Industrial/Organizational Psychologist resources in developing and implementing valid, defensible assessment batteries for the USA Hire \u2120 customer base, which may include conducting job analyses, data analyses, integrating multiple content sources, and evaluating and interpreting results. The USA Hire \u2120 contractor will also support OPM program evaluation efforts that assess the current health of USA Hire \u2120 and guide the program&rsquo;s strategic direction. OPM also seeks to leverage vendor partner resources for project management in support of assessment and talent acquisition projects with customer agencies.<br />\nOPM requires an industry partner whose platform and psychometric support can dynamically scale to support both the growth and surge needs of the USA Hire \u2120 program. The CCA and MHP foster the use of skill-based and competency-based technical assessments by requiring at least one technical or alternative assessment in competitive hiring processes. Further, the MHP strongly encourages the use of multiple-hurdle assessment approaches and encourages agencies to use USA Hire \u2120 assessments. OPM intends to position USA Hire \u2120 as the assessment program of choice for agencies to meet their competitive hiring assessment needs. To provide an idea of the potential scale, the approximately 1 million applicants for more than 20,000 job opportunity announcements mentioned earlier represent less than 20% of competitive hiring across the government in FY24. While it is challenging to estimate the exact number of assessments to be delivered in future years given the variation in needs across government and the current gap in use of skills-based assessments, the USA Hire \u2120 program anticipates the need to support the delivery of online assessment batteries for several million applicants per year. OPM is seeking an industry partner who can assist the USA Hire \u2120 program with delivering online assessments at scale across government as efficiently and effectively as possible.<br />\nIn sum, OPM requires a contractor that is able to deliver:<br />\n&bull; Psychometric expertise to manage and support delivery of online assessment solutions<br />\n&bull; A scalable solution that can efficiently address both expected growth and surge demands<br />\n&bull; An online assessment solution/platform for use in proctored and un-proctored environments that also allows for assessment scheduling<br />\n&bull; Assessment delivery in proctored and un-proctored environments using a variety of delivery engines (e.g. static, CAT)<br />\n&bull; Delivery of online video-based interviews in both synchronous and asynchronous modes<br />\n&bull; Reporting to document activities, results, system performance, system maintenance and other relevant information<br />\n&bull; Responses to and support for data calls<br />\n&bull; System management, integration, and testing services<br />\n&bull; Help desk support<br />\n&bull; Ensuring approved reasonable accommodations are applied at proctored test centers<br />\n&bull; Project management and program reviews<br />\n&bull; Program evaluation<br />\n&bull; Data analytics<br />\n&bull; Ease of editing candidate-focused content (notifications, instructions, etc.)</p>\n\n<p>1. REQUIREMENTS</p>\n\n<p>TASK 1: PROJECT MANAGEMENT<br />\nThe Contractor shall provide a Psychometric expert as the overall Project Manager who shall be responsible for all Contractor work performed under this project. The Project Manager shall be a single point of contact for the Contracting Officer and the OPM Technical Point of Contact (TPOC) and serve as the integrator for all engagements. The Project Manager shall be one of the senior level employees provided by the Contractor for this work effort<br />\nIn addition to the Project Manager described above, the Contractor shall provide an IT expert (IT Project Manager) and an I-O expert (I-O Psychology Project Manager). The IT Project Manager will lead all related IT efforts in support of USA Hire \u2120 and shall ensure the quality, cost, and timeliness of all Contractor work in areas including, but not limited to, IT security, performance, functionality, and availability. The IT Project manager shall be a senior staff member skilled and experienced in managing large-scale IT solutions for online assessment delivery including integrations across multiple platforms. The I-O Psychology Project Manager will lead all related I-O Psychology efforts in support of USA Hire \u2120 and shall ensure the quality, cost, and timeliness of all Contractor work in areas including, but not limited to, content management, assessment development, technical reports, and statistical analysis. The I-O Psychology Project Manager shall be a senior staff member skilled and experienced in managing large-scale projects focused on selection and assessment design, development, and delivery. The individual shall hold a graduate degree in Industrial-Organizational Psychology or a closely related field<br />\nTASK 2: ONLINE ASSESSMENT SOLUTIONS: PLATFORM AND CONTENT<br />\nThe contractor shall provide and maintain a fully integrated online assessment platform that seamlessly interfaces with OPM&#39;s USA Staffing&reg; Talent Acquisition System to support Federal hiring assessment processes while ensuring security, compliance, and optimal user experience. The integration with USA Staffing shall allow for real-time, bidirectional transfer of applicant, position and assessment data. The data interconnection shall adhere to the current assessment interconnection framework and not require any changes to USA Staffing. The Contractor platform shall rely on the applicant&rsquo;s USAJOBS Login.gov account for authentication. The assessment platform shall support a full range of assessment content and methodology, to include but not limited to static, multi-form, computer-adaptive (CAT), linear-on-the-fly (LOFT), and multi-stage (hurdle) delivery in un-proctored, in-person, and remote proctored settings. The assessment platform shall include support for both synchronous (live) and asynchronous (recorded) online video-based interviews. The platform shall support applicant self-scheduling for proctored test sessions and online interviews.The platform shall support technology designed to detect and/or mitigate applicant use of Artificial Intelligence (e.g, AI chatbots) to improve assessment performance for assessments in which the use of AI is prohibited.<br />\n<br />\nTASK 3: PSYCHOMETRIC AND INDUSTRIAL/ORGANIZATIONAL (I/O) SUPPORT<br />\nThe contractor shall provide comprehensive psychometric and I/O psychology expertise to successfully manage and support the delivery of online assessment solutions in accordance with Federal Human Resources policies and practices for multi-agency environments. Support services include, but may not be limited to, assessment strategy, design, development, and validation; applying advanced measurement theory, item response theory (IRT), and classical test theory (CTT) to analyze and maintain assessment tools and content; reviewing assessments for compliance with EEOC, ADA, and other regulatory guidelines; conducting job analyses; conducting and analyzing pilot studies; providing and implementing test security and integrity recommendations; translating complex psychometric concepts into clear, actionable guidance to ensure smooth adoption and effective use of assessment solutions; monitoring, evaluating, and reporting assessment performance over time; and refining assessment tools to adapt to the evolving needs of the government and/or evolving assessment technology. The contractor shall have experience using Artificial Intelligence/Machine Learning in assessment development and scoring.</p>\n\n<p>TASK 4: SYSTEM MANAGEMENT AND TESTING<br />\nThe contractor shall provide comprehensive systems management and integration services to ensure secure, reliable, and continuous operation of the online assessment platform while maintaining full compliance with OPM security requirements and supporting seamless integration with USA Staffing systems.<br />\nThe contractor shall be compliant with current Federal regulations and guidance found in: the Federal Information Security Management Act (FISMA), the Privacy Act of 1974, the E-Government Act of 2002, Section 208, National Institute of Standards and Technology (NIST) Federal Information Processing Standards (FIPS) and the 800-Series Special Publications (SP), Office of Management and Budget (OMB) memorandum, and other relevant Federal laws and regulations with which OPM must comply.</p>\n\n<p>TASK 5: ASSESSMENT PLATFORM INTEGRATION AND DELIVERY SERVICES<br />\nThe contractor shall provide a comprehensive assessment platform that serves as the central hub for USA Hire \u2120 , facilitating secure data interconnections with multiple assessment service providers while delivering flexible assessment administration services across all U.S. locations. This includes establishing and maintaining USA Hire \u2120 as a centralized assessment integration platform that seamlessly connects USA Staffing with multiple external assessment service providers through secure, scalable, and persistent data interconnections.<br />\n<br />\nThe diagram presents a conceptual framework for the assessment platform integration and delivery services. The integrations shown are for illustration purposes only. Actual required integrations will be determined based on the Contractor platform capabilities and the Government&rsquo;s assessment needs.</p>\n\n<p>5.0 ANTICIPATED CONTRACT DETAILS<br />\nThe Government anticipates that this requirement will be awarded on a combination Time and Materials (T&amp;M) and Firm Fixed Price (FFP) basis. The planned contract action will include the procurement of labor, other direct costs (ODCs) and travel within the Contiguous United States (CONUS) with a period of performance of a twelve (12) month base and seven (7) year optional periods of performance. The Government currently estimates this requirement to be valued at approximately $750 million.</p>\n\n<p>6.0 SUBMISSION INSTRUCTIONS</p>\n\n<p>The Government requests responses in two Parts: MAD RSVP Google Form Submission, and Written Email Submission.</p>\n\n<p>1.&nbsp; MAD RSVP responses shall be submitted electronically via Google Form using the link provided below, no later than <strong>21 October 2025</strong> at 12:00 PM EST using the link below:</p>\n\n<p>MAD Market Assessment RSVP&nbsp; (USE THE LINK IN THE NOTICE)</p>\n\n<p>The Government will assign a 30-minute timeframe for each respondent on <em><strong>dates to be determined</strong></em>.</p>\n\n<ol>\n\t<li>RFI responses shall be submitted by email to AAS Contracting Personnel, Contracting Officers, Steven Nerenberg (steven.nerenberg@gsa.gov) and Mike Levy (michael.levy@gsa.gov), no later than <strong>21 October 2025</strong> at 12:00 PM EST.</li>\n\t<li>Responses submitted via email must maintain one-inch margins, 12-point Times New Roman font and be single spaced. Submissions shall be no greater than ten (10) pages, inclusive of Corporate Experience Template.<strong> </strong></li>\n</ol>\n\n<p>7.0 MARKET RESEARCH QUESTIONS</p>\n\n<p>1. Maintaining the integrity of USA Hire \u2120 assessment content and processes is paramount to the success of the OPM USA Hire \u2120 mission. Please describe commercially available technology solutions for maintaining test security, preventing content piracy, and minimizing applicant use of Artificial Intelligence (AI) technologies to gain an assessment advantage.</p>\n\n<p>2. Based on the desired outcomes described above, how long would it take to integrate and customize a commercial online assessment platform with OPM&rsquo;s USA Staffing&trade; Talent Acquisition System? Note: The integration shall adhere to the current assessment interconnection framework and not require any changes to USA Staffing. The Contractor platform shall rely on the applicant&rsquo;s USAJOBS&trade; Login.gov account for authentication.</p>\n\n<p>3. Please provide feedback on the OPM framework outlined in Task 5 above. Is the information sufficient to develop an approach to accomplishing the requirement?</p>\n\n<p>4. What pricing approach(es) do you recommend for OPM to achieve economies of scale while expanding delivery of a wide variety of assessments government-wide?</p>\n\n<p>7.1 CORPORATE CAPABILITIES AND APPROACHES</p>\n\n<p>1. Please describe your organization&rsquo;s experience in using Artificial Intelligence in the development, maintenance, and scoring of assessments.</p>\n\n<p>2. Please describe your organization&rsquo;s assessment capability to develop and/or deliver assessments that measure a full range of cross-cutting general competencies (e.g., reasoning, decision making, customer service, flexibility) and job-specific technical skills (e.g., coding, data analysis, accounting, project management). In your response, please include any innovative solutions you offer such as interactive work sample assessments, AI-based branching assessments, etc.</p>\n\n<p>3. Please describe your firm&rsquo;s capability to provide industrial-organizational and psychometric expertise in managing, consulting, developing, and supporting the delivery of online assessments in the multi-Federal agency environment. Please include how your firm uses psychometric expertise to develop, validate, implement, and evaluate assessment content and tools.</p>\n\n<p>4. Describe your firm&rsquo;s litigation experience defending assessments and assessment batteries in high stakes testing situations.</p>\n\n<p>5. Once interconnected, what is your ability to manage and maintain an assessment platform, including seamlessly transitioning OPM and current customer agencies from an existing platform to your proposed platform without a break in service. Please detail your transition-in strategy based on specific experience interconnecting with Government systems used in Federal hiring.</p>\n\n<p>6. What is your firm&rsquo;s strategy to developing and delivering an online assessment platform for use in un-proctored environments, in-person proctored environments, and remote proctored environments?</p>\n\n<p>7. Please provide a description of work performed that is relevant to the scope of services outlined in this RFI for the development and delivery of assessments at the government wide scale described above.</p>\n\n<p>8. Describe your firm&rsquo;s experience working with and protecting Personally Identifiable Information (PII).</p>\n\n<p>9. Describe your experience with obtaining Federal Agency&rsquo;s ATO or FedRAMP certification.<br />\n<br />\n7.2 CORPORATE OVERVIEW<br />\nName of Company<br />\nName of Business Unit Responding to the RFI (if applicable)<br />\nUnique Entity Identifier (UEI) Code<br />\nCorporate Address</p>\n\n<p>POC Name and Email Address:</p>\n\n<p></p>\n",
+      "notice_id": "b4d8a2a558bc4a82a25171f8922af3e3",
+      "standardized_department": "GENERAL SERVICES ADMINISTRATION",
+      "standardized_type": "sources sought",
+      "naics_code": "541512",
+      "set_aside": "No Set aside used",
+      "is_small_business": false,
+      "ptype": "sources sought",
+      "response_date": "2025-10-21",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Human Capital & Workforce Innovation",
+      "fit_score": 6,
+      "justification": "The opportunity involves support services for hiring which aligns with our Human Capital & Workforce Innovation practice area.",
+      "summary_description": "<p>USA HIRE II RFI/MAD 47QFMA25K0009<br />\n<br />\nRequest for Information (RFI)&nbsp;And&nbsp;Market Assessment Discussion (MAD)&nbsp;47QFMA25K0009</p>\n\n<p>USA Hire \u0000 Support Services II&nbsp;in support of:&nbsp;The United States Office of Personnel Management (OPM)</p>\n\n<p>Issued to:&nbsp;All Indus..."
+    },
+    {
+      "noticeId": "68848f77fffd40b691dbf201e74dbb55",
+      "title": "DF01--Infrastructure Operations Franchise Fund Support Services",
+      "solicitationNumber": "36C10A25Q0090",
+      "fullParentPathName": "VETERANS AFFAIRS, DEPARTMENT OF.VETERANS AFFAIRS, DEPARTMENT OF.TECHNOLOGY ACQUISITION CENTER AUSTIN (36C10A)",
+      "fullParentPathCode": "036.3600.36C10A",
+      "postedDate": "2025-10-07",
+      "type": "Sources Sought",
+      "baseType": "Sources Sought",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-12-20",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": "",
+      "responseDeadLine": "2025-10-21T13:00:00-04:00",
+      "naicsCode": "541512",
+      "naicsCodes": [
+        "541512"
+      ],
+      "classificationCode": "DF01",
+      "active": "Yes",
+      "award": {
+        "awardee": {}
+      },
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "Anthony.Araujo@va.gov",
+          "phone": "848-377-5250",
+          "title": "Contract Specialist",
+          "fullName": "Anthony  Araujo"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=68848f77fffd40b691dbf201e74dbb55",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "78744",
+        "city": "AUSTIN",
+        "countryCode": "USA",
+        "state": "TX"
+      },
+      "placeOfPerformance": {
+        "streetAddress": "",
+        "streetAddress2": "",
+        "city": {
+          "name": ""
+        },
+        "state": {
+          "name": ""
+        },
+        "zip": "",
+        "country": {
+          "name": ""
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/68848f77fffd40b691dbf201e74dbb55/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=68848f77fffd40b691dbf201e74dbb55&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/00e5dd7f55a148e3aa31701073286f61/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/8584c6fc136b44778d4107e0b5a4af3c/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/8f2c36d3b6034cf994d0aba106962a78/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/97e7b4a6d6bf4903af6228c904bb3855/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/a49e2e795d9040009371b735b25a1bb2/download"
+      ],
+      "descriptionText": "Please see amendment to RFI request. \n",
+      "notice_id": "68848f77fffd40b691dbf201e74dbb55",
+      "standardized_department": "VETERANS AFFAIRS, DEPARTMENT OF",
+      "standardized_type": "sources sought",
+      "naics_code": "541512",
+      "set_aside": null,
+      "is_small_business": false,
+      "ptype": "sources sought",
+      "response_date": "2025-10-21",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Business & Technology Services",
+      "fit_score": 8,
+      "justification": "The opportunity involves infrastructure operations support which aligns with our Business & Technology Services practice area, and it is from a preferred agency.",
+      "summary_description": "Please see amendment to RFI request. \n"
+    },
+    {
+      "noticeId": "82d667b69af748a5b6c7ac011400173c",
+      "title": "DH10--Vocera Support Services  Base and 4 Option Periods",
+      "solicitationNumber": "36C25526Q0026",
+      "fullParentPathName": "VETERANS AFFAIRS, DEPARTMENT OF.VETERANS AFFAIRS, DEPARTMENT OF.255-NETWORK CONTRACT OFFICE 15 (36C255)",
+      "fullParentPathCode": "036.3600.36C255",
+      "postedDate": "2025-10-07",
+      "type": "Presolicitation",
+      "baseType": "Presolicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-10-27",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": "",
+      "responseDeadLine": "2025-10-22T11:00:00-05:00",
+      "naicsCode": "541519",
+      "naicsCodes": [
+        "541519"
+      ],
+      "classificationCode": "DH10",
+      "active": "Yes",
+      "award": {
+        "awardee": {}
+      },
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "veronica.flores@va.gov",
+          "phone": "913-946-1167",
+          "title": "Contract Specialist",
+          "fullName": "Betty Flores"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=82d667b69af748a5b6c7ac011400173c",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "66048",
+        "city": "LEAVENWORTH",
+        "countryCode": "USA",
+        "state": "KS"
+      },
+      "placeOfPerformance": {
+        "streetAddress": "Department of Veterans Affairs Kansas City VA Medical Center",
+        "streetAddress2": " 4801 East Linwood Boulevard",
+        "city": {
+          "name": "Kansas City"
+        },
+        "state": {
+          "name": "MO"
+        },
+        "zip": "64128-2226",
+        "country": {
+          "name": ""
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/82d667b69af748a5b6c7ac011400173c/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=82d667b69af748a5b6c7ac011400173c&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/1710406e6c1c46b09f84dfe2ec902096/download"
+      ],
+      "descriptionText": "The Department of Veterans Affairs, Network Contracting Office - NCO 15, intends to release a Request for Quotes (RFQ). We are seeking quotes on the following:\n\n*** VOCERA SUPPORT SERVICES FOR KANSAS CITY VAMC ***\n\nThe North American Industry Classification System (NAICS) Code for this RFQ is 541519   Other Computer Related Services, with a Size Standards of 150 Employees, and Product Supply Code (PSC) of DH10. This is a Firm-Fixed Price, FOB Destination requirement, and is an Unrestricted solicitation.    \n\nAll RFQ details, to include full specifications, will be included in Section B of the RFQ, which will be released on or about October 7, 2025.  Any contractor who wishes to receive a copy of the RFQ should monitor this posting.  Due date for submission of quote will be October 22, 2025, at 11:00 am Central Time (CT). RFQ response shall be submitted via email referencing the  RFQ - 36C25526Q0026  in the subject line to veronica.flores@va.gov\nQuestions regarding this RFQ shall be submitted by 10/09/2025 at 3:00 pm CT via email referencing the  RFQ - 36C25526Q0026  in the subject line to veronica.flores@va.gov. All amendments, other information pertaining to this Request for Quote, and answers to the submitted questions will be posted on the Sam website at https://sam.gov/content/home.\n Interested firms are reminded that in accordance with FAR 4.12, prospective contractors shall complete electronic annual representations and certifications to be considered for award. In addition, FAR 4.11 states that prospective contractors shall be registered in the System for Award Management (www.SAM.gov) database. All Veteran Owned Small Business (VOSB), Service-Disabled Veteran Owned Small Businesses (SDVOSB) shall be verified in SBA Dynamic Small Business Search at https://dsbs.sba.gov/. Non-OEM firms must submit their Authorized Distributor Letter with the quote.\n \nPoint of Contact for this RFQ is: \nBetty Flores\nDepartment of Veterans Affairs\nNetwork Contracting Office -15\n3450 S. 4th Street Trafficway\nLeavenworth, KS. 66048.\u00c2\u00a0 \nveronica.flores@va.gov\n\n\n",
+      "notice_id": "82d667b69af748a5b6c7ac011400173c",
+      "standardized_department": "VETERANS AFFAIRS, DEPARTMENT OF",
+      "standardized_type": "presolicitation",
+      "naics_code": "541519",
+      "set_aside": null,
+      "is_small_business": false,
+      "ptype": "presolicitation",
+      "response_date": "2025-10-22",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Business & Technology Services",
+      "fit_score": 8,
+      "justification": "The opportunity involves support services for a technology system, aligning well with our Business & Technology Services practice area. The involvement of the Department of Veterans Affairs adds a preference boost.",
+      "summary_description": "The Department of Veterans Affairs, Network Contracting Office - NCO 15, intends to release a Request for Quotes (RFQ). We are seeking quotes on the following:\n\n*** VOCERA SUPPORT SERVICES FOR KANSAS CITY VAMC ***\n\nThe North American Industry Classification System (NAICS) Code for this RFQ is 541519..."
+    },
+    {
+      "noticeId": "7a3715d4a8cc4b7e87d87ac931cd7a6f",
+      "title": "DH10--Vocera Support Services  Base and 4 Option Periods",
+      "solicitationNumber": "36C25526Q0026",
+      "fullParentPathName": "VETERANS AFFAIRS, DEPARTMENT OF.VETERANS AFFAIRS, DEPARTMENT OF.255-NETWORK CONTRACT OFFICE 15 (36C255)",
+      "fullParentPathCode": "036.3600.36C255",
+      "postedDate": "2025-10-07",
+      "type": "Solicitation",
+      "baseType": "Presolicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-10-27",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": null,
+      "responseDeadLine": "2025-10-22T11:00:00-05:00",
+      "naicsCode": "541519",
+      "naicsCodes": [
+        "541519"
+      ],
+      "classificationCode": "DH10",
+      "active": "Yes",
+      "award": {
+        "awardee": {}
+      },
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "Veronica.Flores@va.gov",
+          "phone": null,
+          "title": "Contract Specialist",
+          "fullName": "Veronica (Betty) T Flores"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=7a3715d4a8cc4b7e87d87ac931cd7a6f",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "66048",
+        "city": "LEAVENWORTH",
+        "countryCode": "USA",
+        "state": "KS"
+      },
+      "placeOfPerformance": {
+        "city": {},
+        "state": {},
+        "country": {}
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/7a3715d4a8cc4b7e87d87ac931cd7a6f/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=7a3715d4a8cc4b7e87d87ac931cd7a6f&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/76c433748938469e9bc18b9e39a5db29/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/cdb43dcdf0554799aa435631f3b6276d/download"
+      ],
+      "descriptionText": "VOCERA SUPPORT SERVICES\n",
+      "notice_id": "7a3715d4a8cc4b7e87d87ac931cd7a6f",
+      "standardized_department": "VETERANS AFFAIRS, DEPARTMENT OF",
+      "standardized_type": "solicitation",
+      "naics_code": "541519",
+      "set_aside": null,
+      "is_small_business": false,
+      "ptype": "solicitation",
+      "response_date": "2025-10-22",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Business & Technology Services",
+      "fit_score": 8,
+      "justification": "This opportunity is identical to the previous one, focusing on technology support services, which fits well with our Business & Technology Services practice area. The Department of Veterans Affairs is a preferred agency.",
+      "summary_description": "VOCERA SUPPORT SERVICES\n"
+    },
+    {
+      "noticeId": "05041487df964e86a715e7b5d154fcf3",
+      "title": "Cyber Range for Training for the AO",
+      "solicitationNumber": "USCA25Q0053",
+      "fullParentPathName": "ADMINISTRATIVE OFFICE OF THE US COURTS.ADMINISTRATIVE OFFICE OF THE US COURTS.AOUSC-PROCUREMENT MANAGEMENT DIV",
+      "fullParentPathCode": "010.1027.103299",
+      "postedDate": "2025-10-07",
+      "type": "Solicitation",
+      "baseType": "Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-11-08",
+      "typeOfSetAsideDescription": "No Set aside used",
+      "typeOfSetAside": "NONE",
+      "responseDeadLine": "2025-10-24T11:00:00-04:00",
+      "naicsCode": "541519",
+      "naicsCodes": [
+        "541519"
+      ],
+      "classificationCode": "DA10",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "magdalena_torres@ao.uscourts.gov",
+          "phone": "",
+          "title": null,
+          "fullName": "Magdalena Torres"
+        },
+        {
+          "fax": "",
+          "type": "secondary",
+          "email": "andrew_bunk@ao.uscourts.gov",
+          "phone": "",
+          "title": null,
+          "fullName": "Andrew Bunk"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=05041487df964e86a715e7b5d154fcf3",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "20002",
+        "city": "WASHINGTON",
+        "countryCode": "USA",
+        "state": "DC"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "50000",
+          "name": "Washington"
+        },
+        "state": {
+          "code": "DC",
+          "name": "District of Columbia"
+        },
+        "zip": "20544",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/05041487df964e86a715e7b5d154fcf3/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=05041487df964e86a715e7b5d154fcf3&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/1e460ea206044a729b5cc06b702b8f90/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/24dc1303d37e4914b6ab8e0961ea5244/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/6d2382e98bdb47228e87125b0c6ba30c/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/d24d87a4293c48ba9c28adafcbef2f8c/download"
+      ],
+      "descriptionText": "<p>The Administrative Office of the United States Courts (AO) has a mission to support the federal judiciary (judiciary) and the public it serves by providing various services and support functions to the courts and organizations that are part of the judiciary.&nbsp;</p>\n\n<p>For this requirement, the AO&#39;s Department of Technology Services (DTS) Systems Development and Support Office (SDSO) Training Division (TD, collectively, SDSO-TD) has a requirement for a Cyber Range for training purposes. SDSO-TD&#39;s mission is to develop and deliver IT training, both in-person and online, for nationally supported technologies and applications to meet the operational needs of judges, court staff, and AO employees. In addition, the SDSO-TD delivers cybersecurity training to the approximately 1000 IT professionals within the Federal Court community. SDSO-TD is looking to enhance the cybersecurity skills of IT personnel through the hands-on use of supported tools and techniques. This request for proposal (RFP) is soliciting responses from qualified vendors (&ldquo;Offerors&rdquo;) to provide virtual cyber range services to the SDSO-TD. The cyber range should allow for SDSO-TD trainers to conduct live, virtual training events with congruent operating models supporting custom hands-on training on cybersecurity tools.&nbsp;&nbsp;The specific requirements for the cyber range requirement and information on how to submit a proposal in response to this solicitation can be found in the attachments to this posting. Instructions for proposals can be found in section L of the solicitation, USCA25Q0053.&nbsp;</p>\n\n<p><strong>It is important to note that procurement within the federal judiciary is not subject to the Federal Acquisition Regulation (FAR), which applies&nbsp;to most Executive Branch agencies. Judiciary procurement policies are the responsibility of the Procurement&nbsp;Management Division (PMD) within the AO and are issued in&nbsp;the Guide to Judiciary Policy (Guide), Volume 14 (Procurement). Offerors or contractors wishing to find the full text of&nbsp;individual provisions or clauses incorporated by reference in judiciary solicitations and contracts are directed&nbsp;to Appendix 1B of Volume 14 that can be found on the US Courts website (www.uscourts.gov).</strong></p>\n\n<p><strong>Questions</strong>&nbsp;in regards to this RFQ shall be emailed to magdalena_torres@ao.uscourts.gov and andrew_bunk@ao.uscourts.gov no later than October 14th, at 11:00 am Eastern Time. Questions received after this date may not be answered.</p>\n\n<p><strong>Proposals&nbsp;</strong>shall be submitted in electronic format and emailed to magdalena_torres@ao.uscourts.gov and andrew_bunk@ao.uscourts.gov, no later than October 24th, at 11:00 am Eastern Time.</p>\n\n<p>The following are attached as part of this RFP:</p>\n\n<p>RFP USCA25Q0053</p>\n\n<p>Attachment J.1&nbsp; - Required Capabilities Document</p>\n\n<p>Attachment J.2 &ndash; Requirements Questionnaire Cyber Range</p>\n\n<p>Attachment J.3 - Attachment J.3 Pricing Sheet</p>\n",
+      "notice_id": "05041487df964e86a715e7b5d154fcf3",
+      "standardized_department": "ADMINISTRATIVE OFFICE OF THE US COURTS",
+      "standardized_type": "solicitation",
+      "naics_code": "541519",
+      "set_aside": "No Set aside used",
+      "is_small_business": false,
+      "ptype": "solicitation",
+      "response_date": "2025-10-24",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Business & Technology Services",
+      "fit_score": 7,
+      "justification": "The requirement for a cyber range for training aligns with our Business & Technology Services, particularly in cybersecurity training and support.",
+      "summary_description": "<p>The Administrative Office of the United States Courts (AO) has a mission to support the federal judiciary (judiciary) and the public it serves by providing various services and support functions to the courts and organizations that are part of the judiciary.&nbsp;</p>\n\n<p>For this requirement, th..."
+    },
+    {
+      "noticeId": "d9a935f02fb74d14ba1218c96c324c1c",
+      "title": "R499--3rd Party Fire Protection and Life Safety Reviews",
+      "solicitationNumber": "36C24726Q0061",
+      "fullParentPathName": "VETERANS AFFAIRS, DEPARTMENT OF.VETERANS AFFAIRS, DEPARTMENT OF.247-NETWORK CONTRACT OFFICE 7 (36C247)",
+      "fullParentPathCode": "036.3600.36C247",
+      "postedDate": "2025-10-07",
+      "type": "Presolicitation",
+      "baseType": "Presolicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2026-01-15",
+      "typeOfSetAsideDescription": "Service-Disabled Veteran-Owned Small Business Set Aside",
+      "typeOfSetAside": "SDVOSBC",
+      "responseDeadLine": "2025-10-08T17:00:00-04:00",
+      "naicsCode": "541690",
+      "naicsCodes": [
+        "541690"
+      ],
+      "classificationCode": "R499",
+      "active": "Yes",
+      "award": {
+        "awardee": {}
+      },
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "David.Parente@va.gov",
+          "phone": "843-252-6747",
+          "title": "Contracting Officer",
+          "fullName": "David Parente"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=d9a935f02fb74d14ba1218c96c324c1c",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "30904",
+        "city": "AUGUSTA",
+        "countryCode": "USA",
+        "state": "GA"
+      },
+      "placeOfPerformance": {
+        "streetAddress": "Department of Veterans Affairs Ralph H. Johnson VAMC",
+        "streetAddress2": " 109 Bee Street",
+        "city": {
+          "name": "Charleston"
+        },
+        "state": {
+          "code": "SC",
+          "name": "South Carolina"
+        },
+        "zip": "29401",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/d9a935f02fb74d14ba1218c96c324c1c/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=d9a935f02fb74d14ba1218c96c324c1c&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/7c8cad1050a54902aeeeb5c0af2267f8/download"
+      ],
+      "descriptionText": "DEPARTMENT OF VETERANS AFFAIRS NETWORK CONTRACTING OFFICE\u00c2\u00a007\u00c2\u00a0(NCO\u00c2\u00a07)\u00c2\u00a0\n\nDescription: THIS IS A PRE-SOLICITATION NOTICE FOR\u00c2\u00a03rd Party Fire Protection and Life Safety Reviews FOR THE Ralph h. Johnson VA medical center.\n\u00c2\u00a0\u00c2\u00a0\nThe Department of Veterans Affairs, Network Contracting Office 7,  intends on soliciting for proposals for 3rd party fire protection and life safety reviews for the Ralph H. Johnson VA Medical Center, located at 109 Bee St in Charleston, SC 29401.\u00c2\u00a0 The solicitation will be conducted in accordance with FAR Part 13 Procedures. \n\nRequest for Quote (RFQ)#\u00c2\u00a036C24726Q0061\u00c2\u00a0for this effort\u00c2\u00a0which will be set-aside for SDVSOB only,\u00c2\u00a0will be posted to\u00c2\u00a0SAM\u00c2\u00a0(https://sam.gov) on or about October 8, 2025. This solicitation will contain all necessary specifications and information necessary to quote the project.\n\nThe North American Industry Classification System Code (NAICS) is 541690; Other Scientific and Technical Consulting Service with a Small Business Administration size standard of $19 Million. \nAll interested parties must be registered in the System for Award Management (SAM) database (https://sam.gov) and complete online Representations and Certifications at (https://sam.gov/) prior to submitting a quote.\u00c2\u00a0 Service-Disabled Veteran Owned Small Business s must be Certified by the SBA (https://search.certifications.sba.gov) to qualify for  a SDVSOB Set-Aside. \n\u00c2\u00a0\u00c2\u00a0\nQuotes are tentatively scheduled to be due on\u00c2\u00a0October 16, 2025 (see solicitation when available for specific time/date).\n\u00c2\u00a0\u00c2\u00a0\nPoint of Contact:\u00c2\u00a0David\u00c2\u00a0Parente, Contracting Officer\u00c2\u00a0\u00c2\u00a0\nQuestions regarding this notice may be submitted via e-mail to\u00c2\u00a0david.parente@va.gov.\u00c2\u00a0\n\n",
+      "notice_id": "d9a935f02fb74d14ba1218c96c324c1c",
+      "standardized_department": "VETERANS AFFAIRS, DEPARTMENT OF",
+      "standardized_type": "presolicitation",
+      "naics_code": "541690",
+      "set_aside": "Service-Disabled Veteran-Owned Small Business Set Aside",
+      "is_small_business": true,
+      "ptype": "presolicitation",
+      "response_date": "2025-10-08",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Risk, Safety & Mission Assurance",
+      "fit_score": 2,
+      "justification": "The focus on fire protection and life safety reviews involves terms like 'Fire Protection', which are considered irrelevant to our core capabilities.",
+      "summary_description": "DEPARTMENT OF VETERANS AFFAIRS NETWORK CONTRACTING OFFICE\u0007\u0000(NCO\u00007)\u0000\n\nDescription: THIS IS A PRE-SOLICITATION NOTICE FOR\u00003rd Party Fire Protection and Life Safety Reviews FOR THE Ralph h. Johnson VA medical center.\n\u000000\u000000\nThe Department of Veterans Affairs, Network Contracting Office 7,  intends..."
+    },
+    {
+      "noticeId": "ad4fb0e16b9d4fc5b1fca23140a820aa",
+      "title": "TATF Redwood Tank Inspection",
+      "solicitationNumber": "N0025326Q0001",
+      "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE NAVY.NAVSEA.NAVSEA WARFARE CENTER.NAVAL UNDERSEA WARFARE CENTER",
+      "fullParentPathCode": "017.1700.NAVSEA.NAVSEA WARFARE CTR.N00253",
+      "postedDate": "2025-10-07",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-11-01",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-10-17T14:00:00-07:00",
+      "naicsCode": "541990",
+      "naicsCodes": [
+        "541990"
+      ],
+      "classificationCode": "R425",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "john.l.thompson1.civ@us.navy.mil",
+          "phone": "3603158916",
+          "title": null,
+          "fullName": "John Thompson"
+        },
+        {
+          "fax": "",
+          "type": "secondary",
+          "email": "kaci.j.campbell.civ@us.navy.mil",
+          "phone": "(360) 315-0988",
+          "title": null,
+          "fullName": "Kaci Campbell"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=ad4fb0e16b9d4fc5b1fca23140a820aa",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "98345-7610",
+        "city": "KEYPORT",
+        "countryCode": "USA",
+        "state": "WA"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "35625",
+          "name": "Keyport"
+        },
+        "state": {
+          "code": "WA",
+          "name": "Washington"
+        },
+        "zip": "98345",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/ad4fb0e16b9d4fc5b1fca23140a820aa/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=ad4fb0e16b9d4fc5b1fca23140a820aa&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/0bdde70446b740a5a016f5812bbd893b/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/89fec0dcbc314d14bb8a9c71956a3552/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c4f56cbc0ae84ffe826466f6859b7f29/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c566cef804374bdfacb8353b5f0835b9/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/f5fbd5c769e848cb8799458bd8957e64/download"
+      ],
+      "descriptionText": "<p>Naval Undersea Warfare Center Division (NUWC) Keyport is soliciting for freshwater tank inspection.&nbsp; &nbsp;The building is structured on a concrete foundation over a free-standing freshwater redwood tank that is 30&rsquo; diameter by 30&rsquo; tall, protected from the elements by a tent fixture, equipped with heating capabilities, and an overhead crane with decking to allow personnel to access testing equipment and test fixtures in the area above the tank. The inspection will include a physical and visual inspection of the tank exterior, hoops, lugs, pipe fittings, bottom, and foundation. Additionally, a visual inspection of the tank interior shall be accomplished, including the bottom of the tank. All metal components shall be inspected for corrosion, and all wood components shall be inspected for decay.&nbsp;</p>\n",
+      "notice_id": "ad4fb0e16b9d4fc5b1fca23140a820aa",
+      "standardized_department": "DEPT OF DEFENSE",
+      "standardized_type": "combined synopsis/solicitation",
+      "naics_code": "541990",
+      "set_aside": "Total Small Business Set-Aside (FAR 19.5)",
+      "is_small_business": true,
+      "ptype": "combined synopsis/solicitation",
+      "response_date": "2025-10-17",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Uncategorized",
+      "fit_score": 1,
+      "justification": "The opportunity involves tank inspection, which does not align with any of our practice areas and involves irrelevant terms such as 'Inspection'.",
+      "summary_description": "<p>Naval Undersea Warfare Center Division (NUWC) Keyport is soliciting for freshwater tank inspection.&nbsp; &nbsp;The building is structured on a concrete foundation over a free-standing freshwater redwood tank that is 30&rsquo; diameter by 30&rsquo; tall, protected from the elements by a tent fixt..."
+    },
+    {
+      "noticeId": "6c362cb7f78f4614a00373f28b597341",
+      "title": "Network monitoring enterprise tool",
+      "solicitationNumber": "AE-NTI-SE-O-26-00014",
+      "fullParentPathName": "COMMERCE, DEPARTMENT OF.NATIONAL TELECOMMUNICATIONS AND INFORMATION ADMINISTRATION.DEPT OF COMMERCE NTIA/FIRST NET",
+      "fullParentPathCode": "013.1335.1333P2",
+      "postedDate": "2025-10-07",
+      "type": "Presolicitation",
+      "baseType": "Presolicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-10-16",
+      "typeOfSetAsideDescription": "No Set aside used",
+      "typeOfSetAside": "NONE",
+      "responseDeadLine": "2025-10-13T16:30:00-04:00",
+      "naicsCode": "541990",
+      "naicsCodes": [
+        "541990"
+      ],
+      "classificationCode": "7H20",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "claire.rotruck@firstnet.gov",
+          "phone": "5718954035",
+          "title": null,
+          "fullName": "Claire Rotruck"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=6c362cb7f78f4614a00373f28b597341",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "20192",
+        "city": "RESTON",
+        "countryCode": "USA",
+        "state": "VA"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "66672",
+          "name": "Reston"
+        },
+        "state": {
+          "code": "VA",
+          "name": "Virginia"
+        },
+        "zip": "20192",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/6c362cb7f78f4614a00373f28b597341/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=6c362cb7f78f4614a00373f28b597341&limit=1"
+        }
+      ],
+      "resourceLinks": null,
+      "descriptionText": "<p>The First Responder Network Authority (FirstNet Authority) Chief Procurement Office (OCPO) intends to negotiate with Ookla, LLC on a sole source basis under the authority of FAR Subpart 13.106-1(b), Soliciting from a single source, for providing a real-time network monitoring tool. The FirstNet Authority anticipates negotiating and awarding a firm-fixed-price purchase order to Ookla, LLC as the only source identified through market research able to meet all below listed requirements.</p>\n\n<p>The technical requirements for the solution include:</p>\n\n<ul>\n\t<li>Enterprise solution for 14 users with near real-time (less than 15 minutes) updates on service status, outages, and disruptions, specifically for outages and operational degradation of US -based utility companies, wireless carriers, and backhaul providers.&nbsp;</li>\n\t<li>Crowd-sourced event detection based on user-reported network status, aggregated and validated by the contractor&nbsp;</li>\n\t<li>High-volume reporting: ability to process and analyze over 200,000 user reports annually across the United States&nbsp;</li>\n\t<li>Event detail: whenever possible, provide information including event location (city level), type of event, services affected and duration&nbsp;</li>\n\t<li>Event lifecycle alerts: notifications when an outage or disruption begins and when it resolves.&nbsp;</li>\n\t<li>Customizable dashboards for different user roles and areas of interest&nbsp;</li>\n\t<li>Notifications delivered via RSSS feed, email, and/or text messages&nbsp;</li>\n\t<li>Outage visualization maps with heat-map style displays at national, regional and local levels&nbsp;</li>\n\t<li>Comparative benchmarking tools to visualize and analyze FirstNet network events relative to other carriers/service providers&nbsp;</li>\n\t<li>Export capabilities for dashboards, maps and data (Excel, PowerPoint, CSV).&nbsp;</li>\n\t<li>API availability for integration with FirstNet internal dashboards and other third-party tools&nbsp;</li>\n\t<li>Noise reduction: filtering to minimize false positives and irrelevant events&nbsp;</li>\n\t<li>Agency-specific web portal hosted by the Contractor to provide dedicated FirstNet interface.&nbsp;</li>\n\t<li>Correlation of network impairments with casual factors as power outages, fiber disruptions and carrier performance issues.&nbsp;</li>\n\t<li>Analytic tools and AI capabilities for data analysis, including customizable automated data exporting capabilities&nbsp;</li>\n</ul>\n\n<p>The contractor shall be able to demonstrate:</p>\n\n<ul>\n\t<li>A record of crowdsourced outage detection in the U.S. covering wireless carries, utilities, and backhaul providers;</li>\n\t<li>The ability to collect and analyze large volumes of user reports at a national scale; and</li>\n\t<li>An established infrastructure to ensure service availability and access for FirstNet users.</li>\n</ul>\n\n<p>All responsible sources who can demonstrate they could satisfy all requirements listed above by the anticipated award date must clearly and unambiguously identify their capability to do so in writing on or before the response date for this notice. Please limit responses to five (5) pages or less. Responses should include the following information:</p>\n\n<p>1. Name of company that will provide the solution, and business size.</p>\n\n<p>2. Name of the solution.</p>\n\n<p>3. Demonstration of how the solution meets each requirement above.</p>\n\n<p>4. Any other relevant information that is not listed above which the Government should consider.</p>\n\n<p>This notice is not a solicitation. Responses to this notice will be considered by the agency to determine whether competitive procedures could be used for this acquisition. A determination by the Government not to compete this proposed purchase order is entirely at the discretion of the Government. The Government will not pay for any information received in response to this announcement.</p>\n\n<p>It is estimated that an award will be issued on or before 10/31/2025. All responses to this notice must be submitted so that they are received at Claire.Rotruck@firstnet.gov no later than 4:30pm Eastern on 10/13/2025.</p>\n",
+      "notice_id": "6c362cb7f78f4614a00373f28b597341",
+      "standardized_department": "COMMERCE, DEPARTMENT OF",
+      "standardized_type": "presolicitation",
+      "naics_code": "541990",
+      "set_aside": "No Set aside used",
+      "is_small_business": false,
+      "ptype": "presolicitation",
+      "response_date": "2025-10-13",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Business & Technology Services",
+      "fit_score": 6,
+      "justification": "The opportunity involves a network monitoring tool with AI capabilities, aligning with our Business & Technology Services practice area. However, the focus on network support and monitoring slightly reduces the fit.",
+      "summary_description": "<p>The First Responder Network Authority (FirstNet Authority) Chief Procurement Office (OCPO) intends to negotiate with Ookla, LLC on a sole source basis under the authority of FAR Subpart 13.106-1(b), Soliciting from a single source, for providing a real-time network monitoring tool. The FirstNet A..."
+    },
+    {
+      "noticeId": "f1501bcb4e744fbd828a8f1698c4f098",
+      "title": "Missile Defense Agency (MDA) SHIELD Multiple Award IDIQ Contract",
+      "solicitationNumber": "HQ085925RE001",
+      "fullParentPathName": "DEPT OF DEFENSE.MISSILE DEFENSE AGENCY (MDA).MISSILE DEFENSE AGENCY (MDA)",
+      "fullParentPathCode": "097.97JC.HQ0859",
+      "postedDate": "2025-10-07",
+      "type": "Solicitation",
+      "baseType": "Solicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2026-10-03",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": null,
+      "responseDeadLine": "2025-10-16T16:00:00-05:00",
+      "naicsCode": "541715",
+      "naicsCodes": [
+        "541715"
+      ],
+      "classificationCode": "AC13",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "mda.schriever.cts.mbx.shield-idiq@mail.mil",
+          "phone": "",
+          "title": null,
+          "fullName": "SHIELD IDIQ Team"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=f1501bcb4e744fbd828a8f1698c4f098",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "35898",
+        "city": "HUNTSVILLE",
+        "countryCode": "USA",
+        "state": "AL"
+      },
+      "placeOfPerformance": {
+        "streetAddress": "",
+        "zip": ""
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/f1501bcb4e744fbd828a8f1698c4f098/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=f1501bcb4e744fbd828a8f1698c4f098&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/3e91564e6e3e437bb3be74b6545a6818/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/60417361da5a470398bcdd05cfff70c9/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ed3aea1ccd294e6aa0187c7ebdd0eebc/download"
+      ],
+      "descriptionText": "<p>This post contains the final responses from the question period that closed on September 15, 2025. All outstanding responses have now been published.&nbsp;</p>\n\n<p>The purpose of this post is to release additional responses associated with the question period that closed 15 September 2025.</p>\n\n<p>The purpose of Amendment 0002 is to update the following: (1) the PIEE file size limitation in L-1.3 is updated to 5MB, (2) Small Business Subcontracting Plans in L-2.4 shall use a sample dollar value of $151,000,000,000, and (3) L-3.0 contained a typo. All other terms and conditions remain unchanged. The solicitation and supporting amendments are posted in PIEE. The solicitation generated considerable interest. The purpose of Amendment 0001 is to update the solicitation based on inquiries from industry. The question period is closed, and the MDA does not intend to initiate a subsequent question period. Offerors are encouraged to carefully review Amendment 0001 and the associated documents in their entirety. Please note, in accordance with FAR 19.102, the solicitation is updated to reflect only one NAICS code, 541715. As a result, several updates have been made to the solicitation. The Offeror?s corporate experience will not be rated unacceptable or considered not responsible for award of the SHIELD IDIQ if this specific NAICS code is not listed in the Offeror?s SAM registration. The Missile Defense Agency (MDA) announces the release of the Multiple Award Scalable Homeland Innovative Enterprise Layered Defense (SHIELD) Indefinite Delivery Indefinite Quantity (IDIQ) Request for Proposal (RFP) using a full and open competition. This final RFP supersedes any draft RFP information posted to date. As a long-planned strategy, SHIELD will allow MDA and other DoD entities to rapidly issue orders under one enterprise flexible vehicle. The proposed contract vehicle anticipates a period of performance of 10 years, which will consist of a base ordering period and one or more optional ordering periods. The anticipated stated maximum value is $151 Billion. Individual order awards will consist of various contract types across various NAICS codes. MDA has created a helpful information resource document to assist potential offerors in developing a responsive proposal. This document addresses common areas of inquiry and provides guidance designed to clarify instructions and facilitate proposal preparation. Potential offerors are encouraged to thoroughly review the information provided in this helpful information resource document and the solicitation/RFP in its entirety. Any questions shall be submitted via a Microsoft Form located at https://forms.osi.apps.mil/r/e2y0QrsDUW no later than 3:00 p.m. Central Daylight Time (CDT) on 15 September 2025. Offerors shall submit proposals no later than 4:00 p.m. CDT on 16 October 2025.</p>\n",
+      "notice_id": "f1501bcb4e744fbd828a8f1698c4f098",
+      "standardized_department": "DEPT OF DEFENSE",
+      "standardized_type": "solicitation",
+      "naics_code": "541715",
+      "set_aside": null,
+      "is_small_business": false,
+      "ptype": "solicitation",
+      "response_date": "2025-10-16",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Uncategorized",
+      "fit_score": 2,
+      "justification": "The opportunity is heavily focused on defense and missile systems, which are outside our core practice areas. The presence of terms like 'missile defense' and 'enterprise layered defense' indicates a poor fit.",
+      "summary_description": "<p>This post contains the final responses from the question period that closed on September 15, 2025. All outstanding responses have now been published.&nbsp;</p>\n\n<p>The purpose of this post is to release additional responses associated with the question period that closed 15 September 2025.</p>\n\n<..."
+    },
+    {
+      "noticeId": "939ef4541fbc451b8cbc338f89184d29",
+      "title": "Washington Headquarters Services Commercial Solutions Opening",
+      "solicitationNumber": "WHSCSO250002",
+      "fullParentPathName": "DEPT OF DEFENSE.WASHINGTON HEADQUARTERS SERVICES (WHS).WASHINGTON HEADQUARTERS SERVICES",
+      "fullParentPathCode": "097.97F5.HQ0034",
+      "postedDate": "2025-10-07",
+      "type": "Solicitation",
+      "baseType": "Solicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-11-10",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": null,
+      "responseDeadLine": "2025-10-23T16:00:00-04:00",
+      "naicsCode": "541715",
+      "naicsCodes": [
+        "541715"
+      ],
+      "classificationCode": "AC32",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "erin.p.eslinger.civ@mail.mil",
+          "phone": "",
+          "title": null,
+          "fullName": "Erin Eslinger"
+        },
+        {
+          "fax": "",
+          "type": "secondary",
+          "email": "noah.van_zandt.1@us.af.mil",
+          "phone": "",
+          "title": null,
+          "fullName": "Noah Van Zandt"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=939ef4541fbc451b8cbc338f89184d29",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "203011000",
+        "city": "WASHINGTON",
+        "countryCode": "USA",
+        "state": "DC"
+      },
+      "placeOfPerformance": {
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/939ef4541fbc451b8cbc338f89184d29/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=939ef4541fbc451b8cbc338f89184d29&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/b080b3fd989646fcaa91a40f8f92f701/download"
+      ],
+      "descriptionText": "<p><u><strong>Amendment 1 </strong></u>adds the Agreements Officer as an additional contracting point of contact and extends the deadline for questions and solution brief submittals. Due to a lapse in appropriations, many government personnel are furloughed and questions or solution briefs submitted prior to this amendment may not be accessible.&nbsp;<br />\n*<strong> *Any questions or solution briefs submitted before Amendment 1 must be resumitted to include the Agreements Officer in order to be considered.**&nbsp;</strong></p>\n\n<p>See attached Area of Interest Amendment 1 with changes highligthed in yellow.</p>\n\n<p><br />\n++++++++++++++++<br />\nThe Joint Directed Energy Transition Office (JDETO) is part of the Office of the Under Secretary of Defense for Research and Engineering, Office of the Assistant Secretary of Defense for Critical Technologies.&nbsp; In accordance with the Department of Defense (Department) Directed Energy (DE) Roadmap and other strategic guidance, the JDETO executes a science and technology (S&amp;T) investment portfolio in DE to impact multiple directed energy weapon systems (DEWS) and multiple military missions while complementing specific military service needs.&nbsp; The JDETO&rsquo;s S&amp;T investments focus heavily on near-term transition opportunities (at the component, sub-system, and system levels) to accelerate the fielding of DEWS.</p>\n\n<p>JDETO investments in advanced components will unlock the potential of DEWS as part of integrated air and missile defense. Certain missions require advances in technical capabilities, producibility, and/or affordability of key components. Once these component advances are made, the high magazine depth, low cost per shot, speed-of-light time-to-target, and other benefits of DEWS will enhance mission effectiveness by increasing the number of incoming threats that can be defeated within allowable time periods, costs, and logistical burdens.</p>\n\n<p>The specific component for this Area of Interest is a DEWS common component camera (CC-CAM) prototype under the authority in 10 United States Code 4022. The CC-CAM captures images and/or data from targets at long range. It enables several critical functions for DEWS, including target acquisition, tracking, and beam control.&nbsp; See attached Area of Interest for additional information.</p>\n",
+      "notice_id": "939ef4541fbc451b8cbc338f89184d29",
+      "standardized_department": "DEPT OF DEFENSE",
+      "standardized_type": "solicitation",
+      "naics_code": "541715",
+      "set_aside": null,
+      "is_small_business": false,
+      "ptype": "solicitation",
+      "response_date": "2025-10-23",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Uncategorized",
+      "fit_score": 2,
+      "justification": "The focus on directed energy weapon systems and defense technologies is outside our practice areas, and terms like 'directed energy' and 'weapon systems' indicate a poor fit.",
+      "summary_description": "<p><u><strong>Amendment 1 </strong></u>adds the Agreements Officer as an additional contracting point of contact and extends the deadline for questions and solution brief submittals. Due to a lapse in appropriations, many government personnel are furloughed and questions or solution briefs submitted..."
+    },
+    {
+      "noticeId": "8ce78d0be9514a158e0dc4ea2f3ebd6b",
+      "title": "DSO Pitch Day Solicitation",
+      "solicitationNumber": "DARPA-PA-26-01",
+      "fullParentPathName": "DEPT OF DEFENSE.DEFENSE ADVANCED RESEARCH PROJECTS AGENCY  (DARPA).DEF ADVANCED RESEARCH PROJECTS AGCY",
+      "fullParentPathCode": "097.97AE.HR0011",
+      "postedDate": "2025-10-07",
+      "type": "Solicitation",
+      "baseType": "Solicitation",
+      "archiveType": "autocustom",
+      "archiveDate": "2026-02-13",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": null,
+      "responseDeadLine": "2025-10-27T12:00:00",
+      "naicsCode": "541715",
+      "naicsCodes": [
+        "541715"
+      ],
+      "classificationCode": "AC11",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "DSO-PitchDay@darpa.mil",
+          "phone": null,
+          "title": null,
+          "fullName": "BAA Coordinator"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=8ce78d0be9514a158e0dc4ea2f3ebd6b",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "222032114",
+        "city": "ARLINGTON",
+        "countryCode": "USA",
+        "state": "VA"
+      },
+      "placeOfPerformance": null,
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/8ce78d0be9514a158e0dc4ea2f3ebd6b/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=8ce78d0be9514a158e0dc4ea2f3ebd6b&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/1937c9b2c4984f42996675a1d501a273/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/7323203b2a2245dfa919b1d23db66bb7/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/99f9de4e33f44ba8a12da065801e7ee2/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/ab452477184c449ba0f32950c9cc779a/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/f959d8fbdb66452a916e4e5774b6548f/download"
+      ],
+      "descriptionText": "The mission of DARPA\u2019s Defense Science Office (DSO) is to identify and sponsor scientific discovery to fuel innovation in research and development for defense. DSO develops and executes an aggressive and forward-leaning portfolio that accelerates the development and maturation of scientific advances across a broad set of technical areas to create asymmetric advantage for U.S. National Security. DSO aims to create strategic surprise by pushing technology toward its fundamental scientific limits, thereby expanding the art of the possible. In addition, DSO looks for transformative trends at the global scale and their potential impact on our nation.  <br/>The goals of the DSO Pitch Day are to: 1. fund proposals for targeted, short-term efforts with the potential to grow into groundbreaking new DARPA programs, and 2. employ an acquisition strategy to encourage participation by new and first-time or non-traditional proposers. This funding opportunity will aim to broaden DARPA\u2019s reach with small businesses, educational institutions, and other non-traditional performers to break down barriers of entry for performers new to DARPA and the national security space.<br/><br/>NOTE: Due date reflected is for Abstract submissions (10/27/2025 at 12:00PM ET noon).",
+      "notice_id": "8ce78d0be9514a158e0dc4ea2f3ebd6b",
+      "standardized_department": "DEPT OF DEFENSE",
+      "standardized_type": "solicitation",
+      "naics_code": "541715",
+      "set_aside": null,
+      "is_small_business": false,
+      "ptype": "solicitation",
+      "response_date": "2025-10-27",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Uncategorized",
+      "fit_score": 2,
+      "justification": "The opportunity is focused on defense R&D and scientific discovery for defense, which are not aligned with our practice areas. The emphasis on 'defense' and 'scientific discovery' suggests a poor fit.",
+      "summary_description": "The mission of DARPA\u0019s Defense Science Office (DSO) is to identify and sponsor scientific discovery to fuel innovation in research and development for defense. DSO develops and executes an aggressive and forward-leaning portfolio that accelerates the development and maturation of scientific advances..."
+    },
+    {
+      "noticeId": "23bbe7b3cae5429eb94ab3555dc58155",
+      "title": "Technical Research Services for the FHWA Office of Safety and Operations Research and Development  Saxton Transportation Operations Laboratory (STOL4)",
+      "solicitationNumber": "693JJ3-26-SS-0001",
+      "fullParentPathName": "TRANSPORTATION, DEPARTMENT OF.FEDERAL HIGHWAY ADMINISTRATION.693JJ3 ACQUISITION AND GRANTS MGT",
+      "fullParentPathCode": "069.6925.693JJ3",
+      "postedDate": "2025-10-07",
+      "type": "Sources Sought",
+      "baseType": "Sources Sought",
+      "archiveType": "auto15",
+      "archiveDate": "2025-11-05",
+      "typeOfSetAsideDescription": "No Set aside used",
+      "typeOfSetAside": "NONE",
+      "responseDeadLine": "2025-10-21T12:00:00-04:00",
+      "naicsCode": "541715",
+      "naicsCodes": [
+        "541715"
+      ],
+      "classificationCode": "AS12",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "daniel.confer@dot.gov",
+          "phone": "",
+          "title": null,
+          "fullName": "Daniel Confer"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=23bbe7b3cae5429eb94ab3555dc58155",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "20590",
+        "city": "WASHINGTON",
+        "countryCode": "USA",
+        "state": "DC"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "48376",
+          "name": "Mc Lean"
+        },
+        "state": {
+          "code": "VA",
+          "name": "Virginia"
+        },
+        "zip": "22101",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/23bbe7b3cae5429eb94ab3555dc58155/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=23bbe7b3cae5429eb94ab3555dc58155&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/76af1581e78a499b8142bae947391954/download"
+      ],
+      "descriptionText": "<p>See Attached Sources Sought Notification.</p>\n",
+      "notice_id": "23bbe7b3cae5429eb94ab3555dc58155",
+      "standardized_department": "TRANSPORTATION, DEPARTMENT OF",
+      "standardized_type": "sources sought",
+      "naics_code": "541715",
+      "set_aside": "No Set aside used",
+      "is_small_business": false,
+      "ptype": "sources sought",
+      "response_date": "2025-10-21",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Program Management & Delivery",
+      "fit_score": 7,
+      "justification": "The opportunity aligns with our Program Management & Delivery practice area, focusing on research and development in transportation safety and operations, which fits well with our capabilities.",
+      "summary_description": "<p>See Attached Sources Sought Notification.</p>\n"
+    },
+    {
+      "noticeId": "38758e7561614615ae906505638adfff",
+      "title": "U--OWF WFDP Learning Experiences",
+      "solicitationNumber": "140D0426Q0012",
+      "fullParentPathName": "INTERIOR, DEPARTMENT OF THE.DEPARTMENTAL OFFICES.IBC ACQ SVCS DIRECTORATE (00004)",
+      "fullParentPathCode": "014.1406.140D04",
+      "postedDate": "2025-10-07",
+      "type": "Sources Sought",
+      "baseType": "Sources Sought",
+      "archiveType": "autocustom",
+      "archiveDate": "2025-10-11",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": null,
+      "responseDeadLine": "2025-10-10T12:00:00-04:00",
+      "naicsCode": "611430",
+      "naicsCodes": [
+        "611430"
+      ],
+      "classificationCode": "U008",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": null,
+          "type": "primary",
+          "email": "alexandra_tsybulevsky@ibc.doi.gov",
+          "phone": "0000",
+          "title": null,
+          "fullName": "Tsybulevsky, Alexandra"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=38758e7561614615ae906505638adfff",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "20170",
+        "city": "HERNDON",
+        "countryCode": "USA",
+        "state": "VA"
+      },
+      "placeOfPerformance": {
+        "city": {},
+        "state": {},
+        "country": {}
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/38758e7561614615ae906505638adfff/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=38758e7561614615ae906505638adfff&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/30ff4bbdd5a54a4687c7c5b630f33ab1/download"
+      ],
+      "descriptionText": "I.\tIntroduction<br/>THIS IS A SOURCES SOUGHT NOTICE. NO SOLICITATION IS AVAILABLE AT THIS TIME. The purpose of this Sources Sought Notice is to identify potential sources capable of performing the effort described herein pursuant to FAR part 10, Market Research. This is for planning purposes only.<br/><br/>Any information submitted by respondents to this Source Sought Notice is voluntary. The Government does not intend to award a contract on the basis of this notice or to otherwise pay for the information solicited. Neither unsolicited proposals nor any other kinds of offers will be considered in response to this RFI. Respondents should not construe this notice as a commitment by the Government.  <br/><br/>If the vendor believes that their response contains trade secrets or confidential commercial or financial information exempt from disclosure under the Freedom of Information Act, (5 U.S.C. 552), the cover page of their response shall be marked with the following legend:<br/><br/>\"The information specifically identified on pages ____________ of this response constitutes trade secrets or confidential commercial and financial information which the vendor believes to be exempt from disclosure under the Freedom of Information Act. The offeror requests that this information not be disclosed to the public, except as may be required by law. The vendor also requests that this information not be used in whole or part by the government for any purpose other than market research.\"<br/><br/>II.\tSources Sought Objective:<br/><br/>The goals of this Sources Sought are to identify if the Government\u00bfs requirement contains sufficient information for vendors to submit quotes, and to assess the competitive environment.  <br/><br/>III.\tStatement of Work<br/><br/>I.\tSCOPE<br/><br/>The vendor will provide services to support the design and development of between eight to ten asynchronous LXs that measurably enhance identified competencies within the federal wildland fire workforce. Each LX will require between one to four student hours of engagement. Hours of student engagement will include time students spend completing application activities, case studies, etc. The design and development will be completed between the award of the contract and March 31, 2026. The Government anticipates requiring two to four LXs per month.<br/><br/>II.\tAttachments<br/><br/>Attachment 1 DOI IT Baseline Compliance Guidelines<br/><br/>III.\tTasking<br/><br/>The required tasking and deliverables must include:<br/><br/>1.\tActively participate with FWDP staff in meetings and correspondence re: the LX\u00bfs as requested by the COR.<br/><br/>2.\tThe Government will provide some content directly. The vendor must use newer tools and applications to quickly gather potential content based on the learning objectives.<br/><br/>3.\tThe LXs must be developed using tools organic to Moodle Workplace, other than the creation of video files. The vendor is encouraged to use generative AI tools to maximize efficiency, reduce development time and streamline instructional design and development. If the vendor uses generative AI, then upon request the vendor must provide the government a list of generative AI tools as well as any prompts used to generate the development of content for the LXs. The prompts and any work products created during the development of each LX must become the property of the Government, in accordance with FAR 52.227-14 Rights in Data-General.<br/><br/>4.\tSubmission of a design document, in accordance with the vendor\u00bfs quote, prior to any development, that describes the types of activities and resources that will be included in each LX. In lieu of a design document, the vendor may use the government\u00bfs Moodle Workplace development site to create a course shell with placeholders for a description of activities and resources that will be included in the LX. The design document is due within 10 business days of receiving the LX terminal and enabling learning objectives from the COR. The Government will provide feedback within 5 business days.<br/><br/>5.\tMake revisions to the design document or the Moodle Workplace design course shall be based on one review cycle. The final design document will be provided within five business days of receiving the Government\u00bfs input.<br/><br/>6.\tDevelop assessment and application activities that are similar to sample assessment and application activities the government will provide upon award of the contract. Assessment activities primarily consist of eight to ten Likert scale questions that students use to self-assess their competency in the LX subject matter. Application activities primarily consist of three to five questions the students respond to that identify how they plan to apply the learning, and an additional three to five questions that students respond to that have them reflect on what they learned from completing the application activity. Initial development of each LX should be fully accomplished within 10 business days of receiving the Government\u00bfs approval of the final design document<br/><br/>7.\tDevelop learning activities for each LX that teach the students the key concepts needed to achieve the learning objectives of that LX.<br/><br/>8.\tMake revisions to the development of each LX based on one review cycle. The final developed LX is due within five business days after receiving the Government\u00bfs signoff on the initial LX development.<br/><br/>9.\tBefore the end of the period of performance, the vendor must submit an Accessibility Conformance Report (ACR) certifying the LX deliverables\u00bf conformance with Section 508 compliance in accordance with the requirements at Accessibility Conformance Report (ACR) | Section508.gov.<br/><br/>10.\tAll deliverables must be in conformance with the standards in Attachment 1 DOI IT Baseline Compliance Guidelines.<br/><br/>11.\tVideo Fidelity Requirements:<br/>1. File Format<br/>\u00bf\tFormat: MP4 (H.264 codec)<br/>\u00bf\tContainer: .mp4<br/>\u00bf\tAudio Codec: AAC<br/>2. Resolution<br/>\u00bf\tStandard: 1920x1080 (Full HD)<br/>\u00bf\tMinimum Acceptable: 1280x720 (HD) \u00bf only for screen recordings or low-bandwidth modules<br/>\u00bf\tOptional: 4K (3840x2160) for flagship content, if justified and approved<br/>3. Frame Rate<br/>\u00bf\tStandard: 30 fps<br/>\u00bf\tAcceptable Range: 24\u00bf30 fps depending on animation or motion style<br/>4. Bitrate<br/>\u00bf\tTarget Bitrate: 5\u00bf10 Mbps for 1080p<br/>\u00bf\tMinimum Bitrate: 3 Mbps for 720p<br/>\u00bf\tAudio Bitrate: 128\u00bf192 kbps<br/>5. Audio Quality<br/>\u00bf\tVoice Clarity: Clean, intelligible, and free of background noise<br/>\u00bf\tVoice Type: Human or AI-generated voice must be natural-sounding and appropriate for the audience<br/>\u00bf\tVolume Normalization: Consistent across all modules<br/>6. Accessibility<br/>\u00bf\tCaptions: Required (closed captions in .vtt or .srt format)<br/>\u00bf\tTranscript: Required for each video<br/>\u00bf\tVisual Contrast: Must meet WCAG 2.1 AA standards<br/><br/>The Government anticipates this effort to result in a Labor Hour contract, with one Contract Line Item Number (CLIN) for all required LXs and a Not-to-Exceed ceiling price. North American Industrial Classification System (NAICS) code is anticipated to be 611430 Professional and Management Development Training, size standard $15M. The anticipated Product Service Code (PSC) is U008 Training/Curriculum Development.<br/><br/>IV.\tFunds:<br/><br/>This is a Fiscal Year 2026 (FY26) acquisition.<br/><br/>V.\tSubmission Requirements:<br/><br/>Please provide a brief response to the Contracting Officer, answering the following questions:<br/><br/>1.\tAre you interested in submitting a quote in response to this Statement of Work (SOW)?<br/>2.\tIs there enough information in the SOW for you to submit a quote?<br/>3.\tIf there is not enough information in the SOW for you to submit a quote, what information would need to be included in order for you to quote? <br/>4.\tAre these requirements typically structured as Firm Fixed Price or Time and Materials/Labor Hour, in your experience?<br/>5.\tPlease also provide the name of your company, Unique Entity Identifier (UEI), point of contact, and any small business size.<br/><br/>Please email your response to the Contracting Officer, Ms. Ali Tsybulevsky, at Alexandra_tsybulevsky@ibc.doi.gov, no later than October 10, 2025 @ 12:00 PM, Eastern Time. Responses submitted by any other method will not be accepted or answered. Please ensure that your e-mail response has \u00bfOWF WFDP LXs\u00bf in the subject line. The Contracting Officer will respond via email to confirm receipt of the vendor\u00bfs RFI response. If you do not receive an acknowledgement within one business day, please notify the Contracting Officer listed to ensure successful delivery.<br/>",
+      "notice_id": "38758e7561614615ae906505638adfff",
+      "standardized_department": "INTERIOR, DEPARTMENT OF THE",
+      "standardized_type": "sources sought",
+      "naics_code": "611430",
+      "set_aside": null,
+      "is_small_business": false,
+      "ptype": "sources sought",
+      "response_date": "2025-10-10",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Human Capital & Workforce Innovation",
+      "fit_score": 7,
+      "justification": "The opportunity involves designing and developing learning experiences, aligning well with our capabilities in workforce development and training.",
+      "summary_description": "I.\tIntroduction<br/>THIS IS A SOURCES SOUGHT NOTICE. NO SOLICITATION IS AVAILABLE AT THIS TIME. The purpose of this Sources Sought Notice is to identify potential sources capable of performing the effort described herein pursuant to FAR part 10, Market Research. This is for planning purposes only.<b..."
+    },
+    {
+      "noticeId": "205eb359d97944389af91aa90d3268f1",
+      "title": "Sales Force Training  Materials and Services",
+      "solicitationNumber": "M00263-25-R-1005",
+      "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE NAVY.USMC.MARCORP I&L.COMMANDING GENERAL",
+      "fullParentPathCode": "017.1700.USMC.MARCORP I&L.M00263",
+      "postedDate": "2025-10-07",
+      "type": "Solicitation",
+      "baseType": "Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-11-15",
+      "typeOfSetAsideDescription": "Total Small Business Set-Aside (FAR 19.5)",
+      "typeOfSetAside": "SBA",
+      "responseDeadLine": "2025-10-31T16:00:00-04:00",
+      "naicsCode": "611430",
+      "naicsCodes": [
+        "611430"
+      ],
+      "classificationCode": "U008",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "zachary.e.keener.mil@usmc.mil",
+          "phone": "8432282129",
+          "title": null,
+          "fullName": "Captain Zach Keener"
+        },
+        {
+          "fax": "8432282163",
+          "type": "secondary",
+          "email": "kacy.m.mohead@usmc.mil",
+          "phone": "8432282188",
+          "title": null,
+          "fullName": "Kacy Mohead"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=205eb359d97944389af91aa90d3268f1",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "29905-9001",
+        "city": "PARRIS ISLAND",
+        "countryCode": "USA",
+        "state": "SC"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "54850",
+          "name": "Parris Island"
+        },
+        "state": {
+          "code": "SC",
+          "name": "South Carolina"
+        },
+        "zip": "29905",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/205eb359d97944389af91aa90d3268f1/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=205eb359d97944389af91aa90d3268f1&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/210f9eb652b64692b676f74c03a4018c/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/3948929b13794e038be053231190d9df/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/5ef8c04292a8443a86f591d9ffa3603c/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/68acfc59f6224689bb90203f212f8541/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/c29ed11335b347f886f048fecefbb46b/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/d2cdb8814fa34fb99aff4d5993eb2f9a/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/e0599142771c43c1ac62a40e54fca982/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/e622f972b5c6448e8969ac2fbc33d40f/download"
+      ],
+      "descriptionText": "<p><strong>THIS IS A COMBINED SYNOPSIS/SOLICITAITON</strong></p>\n\n<p>The Regional Contracting Office, Marine Corps Recruit Depot- Parris Island, SC intends to solicit and award a Firm Fixed Price Contract for Solicitation number M00263-25-R-1005 Sales Forces Training Materials and Services.&nbsp; In addition, this contract will be a single Firm Fixed Price (FFP) Indefinite Delivery Indefinite Quantity (IDIQ) contract with a five (5) year ordering period.</p>\n\n<p>(1) The Government intends to award without discussions, but reserves the right to conduct discussions, if the Contracting Officer determines that discussions are necessary.&nbsp; Offerors are cautioned to examine this solicitation in its entirety and to ensure that their proposal contains all necessary information, provides all required documentation, and is complete in all respects.</p>\n\n<p>(2) Use of general or vague statements such as &ldquo;standard procedures will be used&rdquo; will not satisfy this requirement.&nbsp; Unnecessary elaboration or presentations beyond what is sufficient to present a complete and effective solution are not desired and may be construed as a lack of understanding of the requirement for commercial items prepared in accordance with the format in FAR Subpart 15.101-1, as supplemented with additional information included in this notice.&nbsp; This announcement constitutes the only solicitation:&nbsp; quotes are being requested and a written solicitation will not be issued.</p>\n\n<p>Solicitation number M00263-25-R-1005 is issued as a Request for Proposals (RFP) including seven (7) attachments using the commercial procedures in accordance with FAR Parts 12 and 15. The Source Selection procedures are in accordance with FAR Part 15 Contracting by Negotiations. The solicitation document and incorporated provisions and clauses are those in effect through Federal Acquisition Circular 2025-05 and DFARS Publication 20250117.</p>\n\n<p>This solicitation is issued for 100% total small business set-aside.&nbsp; The North American Industrial Classification System (NAICS) code for this requirement is&nbsp;<u>611430</u>, with a size standard of $<u>12,000.000 million.</u></p>\n\n<p>All applicable Federal Acquisition Regulation (FAR) and Defense Federal Acquisition Regulation Supplement (DFARS) provisions and clauses are contained in SF 1449 M00263-25-R-1005 &nbsp;attached to this synopsis. Offerors responding to this announcement shall submit their quotes in accordance with FAR Part 12 and additional instructions, conditions, and notices to offerors provided in Section L of the attached SF1449. The provision at 52.212-1, Instructions to Offerors -- Commercial, applies to this acquisition and its addendum provision.&nbsp; In accordance with FAR Parts 12 and 15, the Government will award a contract resulting from this solicitation to the responsible offeror whose offer conforming to the solicitation will be most advantageous to the Government, price and other factors considered.&nbsp; The Government intends to award a contract to the offeror whose proposal offers the best value to the Government. The Government will execute the evaluation using the Best Value Tradeoff process, as defined in FAR 15.101-1. Proposals will be evaluated using FAR 15- Contracting by Negotiations, including a Tradeoff process between price and non-price factors.&nbsp; The Government intends to evaluate proposals and award a contract without discussions with Offerors. However, the Government reserves the right to conduct discussions if the Contracting Officer later determines them to be necessary. If the Contracting Officer determines that the number of proposals that would otherwise be in the competitive range exceeds the number at which an efficient competition can be conducted, the Contracting Officer may limit the number of proposals in the competitive range to the greatest number that will permit an efficient competition among the most highly rated proposals.</p>\n\n<p>Proposals will be assessed for how well the offeror&rsquo;s proposal meets the solicitation requirements and the risks associated with the offeror&rsquo;s approach.</p>\n\n<p>The following factors shall be used to evaluate offers:</p>\n\n<p>Factor 1</p>\n\n<p>Technical Capability</p>\n\n<p>Factor 2</p>\n\n<p>Past Performance</p>\n\n<p>Factor 3</p>\n\n<p>Price</p>\n\n<p>The non-price evaluation factors (Factors 1 and 2) are listed in descending order of importance. Both non-price factors when combined are significantly more important than Factor 3 &ndash; Price. Factor 3- Price becomes increasingly more important when Offerors receive similar ratings for the non-price factors. Prospective Offerors are forewarned that a proposal meeting solicitation requirements with the lowest evaluated price may not be selected for award if a higher rated evaluated price proposal is determined to be most advantageous to the Government.</p>\n\n<p>Offerors shall include a completed copy of the provision at 52.212-3, Offeror Representations and Certifications -- Commercial Items, with its offer.&nbsp; Clause at 52.212-4, Contract Terms and Conditions -- Commercial Items, applies to this acquisition.&nbsp; All other additional contract requirement for this acquisition can be found in the attached SF 1449.</p>\n\n<p>The Government will answer questions received up to <strong><u>ten (10) days </u></strong>after release of the solicitation and will provide responses to interested parties via an amendment to the solicitation.&nbsp; Questions received after that time may not be answered.&nbsp; Additional information is provided in the SF1449.</p>\n\n<p>The closing date and time for this solicitation is 31 October 2025 at 4:00 PM Eastern Standard Time.</p>\n\n<p>Points of contact:</p>\n\n<p>Captain Zach Keener 843-228-2129,&nbsp;&nbsp; zachary.e.keener.mil@usmc.mil</p>\n\n<p>Kacy M. Mohead 843-228-2151, kacy.m.mohead@usmc.mil</p>\n",
+      "notice_id": "205eb359d97944389af91aa90d3268f1",
+      "standardized_department": "DEPT OF DEFENSE",
+      "standardized_type": "solicitation",
+      "naics_code": "611430",
+      "set_aside": "Total Small Business Set-Aside (FAR 19.5)",
+      "is_small_business": true,
+      "ptype": "solicitation",
+      "response_date": "2025-10-31",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Human Capital & Workforce Innovation",
+      "fit_score": 6,
+      "justification": "The focus on training materials and services aligns with our expertise in workforce development and training solutions.",
+      "summary_description": "<p><strong>THIS IS A COMBINED SYNOPSIS/SOLICITAITON</strong></p>\n\n<p>The Regional Contracting Office, Marine Corps Recruit Depot- Parris Island, SC intends to solicit and award a Firm Fixed Price Contract for Solicitation number M00263-25-R-1005 Sales Forces Training Materials and Services.&nbsp; In..."
+    },
+    {
+      "noticeId": "0aa6c87d571d4b2c8cf247fab0347b8d",
+      "title": "Ken Blanchard Training Materials",
+      "solicitationNumber": "FA813926Q0002",
+      "fullParentPathName": "DEPT OF DEFENSE.DEPT OF THE AIR FORCE.AIR FORCE MATERIEL COMMAND.AIR FORCE SUSTAINMENT CENTER.FA8126  AFSC PZIMB",
+      "fullParentPathCode": "057.5700.AFMC.AFSC.FA8126",
+      "postedDate": "2025-10-07",
+      "type": "Combined Synopsis/Solicitation",
+      "baseType": "Combined Synopsis/Solicitation",
+      "archiveType": "auto15",
+      "archiveDate": "2025-10-29",
+      "typeOfSetAsideDescription": null,
+      "typeOfSetAside": null,
+      "responseDeadLine": "2025-10-14T13:00:00-05:00",
+      "naicsCode": "611430",
+      "naicsCodes": [
+        "611430"
+      ],
+      "classificationCode": "6910",
+      "active": "Yes",
+      "award": null,
+      "pointOfContact": [
+        {
+          "fax": "",
+          "type": "primary",
+          "email": "alicia.mcgill@us.af.mil",
+          "phone": "",
+          "title": null,
+          "fullName": "Alicia McGill"
+        },
+        {
+          "fax": "",
+          "type": "secondary",
+          "email": "bryce.cornish@us.af.mil",
+          "phone": "",
+          "title": null,
+          "fullName": "Bryce Cornish"
+        }
+      ],
+      "description": "https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid=0aa6c87d571d4b2c8cf247fab0347b8d",
+      "organizationType": "OFFICE",
+      "officeAddress": {
+        "zipcode": "73145-3305",
+        "city": "TINKER AFB",
+        "countryCode": "USA",
+        "state": "OK"
+      },
+      "placeOfPerformance": {
+        "city": {
+          "code": "0",
+          "name": "S Coffeyville"
+        },
+        "state": {
+          "code": "OK",
+          "name": "Oklahoma"
+        },
+        "zip": "73145",
+        "country": {
+          "code": "USA",
+          "name": "UNITED STATES"
+        }
+      },
+      "additionalInfoLink": null,
+      "uiLink": "https://sam.gov/workspace/contract/opp/0aa6c87d571d4b2c8cf247fab0347b8d/view",
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://api.sam.gov/prod/opportunities/v2/search?noticeid=0aa6c87d571d4b2c8cf247fab0347b8d&limit=1"
+        }
+      ],
+      "resourceLinks": [
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/23bf1d37b62f423d9dbffce187194a43/download",
+        "https://sam.gov/api/prod/opps/v3/opportunities/resources/files/eb0a2411d8784519b8a9a9feb10c668f/download"
+      ],
+      "descriptionText": "<p>This is a combined synopsis/solicitation notice for the procurement of training materials for Ken Blanchard Company courses for a five-year Indefinite Delivery/Indefinite Quantity contract. This requirement is Sole Source to Blanchard Training and Development, Inc. (CAGE 1Z016). FOB Destination is Tinker AFB, OK.</p>\n",
+      "notice_id": "0aa6c87d571d4b2c8cf247fab0347b8d",
+      "standardized_department": "DEPT OF DEFENSE",
+      "standardized_type": "combined synopsis/solicitation",
+      "naics_code": "611430",
+      "set_aside": null,
+      "is_small_business": false,
+      "ptype": "combined synopsis/solicitation",
+      "response_date": "2025-10-14",
+      "posted_date": "2025-10-07",
+      "assigned_practice_area": "Uncategorized",
+      "fit_score": 2,
+      "justification": "The opportunity is a sole source procurement for specific training materials, limiting our ability to compete effectively.",
+      "summary_description": "<p>This is a combined synopsis/solicitation notice for the procurement of training materials for Ken Blanchard Company courses for a five-year Indefinite Delivery/Indefinite Quantity contract. This requirement is Sole Source to Blanchard Training and Development, Inc. (CAGE 1Z016). FOB Destination i..."
+    }
+  ],
+  "unranked_opportunities": [],
+  "usage": {
+    "prompt_tokens": 16980,
+    "completion_tokens": 4918,
+    "total_tokens": 21898
+  }
+}
