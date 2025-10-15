@@ -1,0 +1,106 @@
+services:
+  # FastAPI Backend
+  - type: web
+    name: sam-govwin-api
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sam-govwin-db
+          property: connectionString
+      - key: SAM_API_KEY
+        sync: false
+      - key: GOVWIN_USERNAME
+        sync: false
+      - key: GOVWIN_PASSWORD
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11
+    healthCheckPath: /health
+
+  # React Frontend (Static Site)
+  - type: web
+    name: sam-govwin-frontend
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: ./frontend/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        value: https://sam-govwin-api.onrender.com
+
+  # SAM Fetcher Cron Job
+  - type: cron
+    name: sam-govwin-fetcher
+    env: python
+    schedule: "0 */6 * * *"  # Every 6 hours
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m scripts.sam_fetcher_cron
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sam-govwin-db
+          property: connectionString
+      - key: SAM_API_KEY
+        sync: false
+      - key: GOVWIN_USERNAME
+        sync: false
+      - key: GOVWIN_PASSWORD
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: BACKEND_API_URL
+        value: https://sam-govwin-api.onrender.com
+
+  # AI Analyzer Cron Job
+  - type: cron
+    name: sam-govwin-ai-analyzer
+    env: python
+    schedule: "0 */12 * * *"  # Every 12 hours
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m scripts.ai_analyzer_cron
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sam-govwin-db
+          property: connectionString
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: BACKEND_API_URL
+        value: https://sam-govwin-api.onrender.com
+
+  # GovWin Matcher Cron Job
+  - type: cron
+    name: sam-govwin-govwin-matcher
+    env: python
+    schedule: "0 */24 * * *"  # Every 24 hours
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python -m scripts.govwin_matcher_cron
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: sam-govwin-db
+          property: connectionString
+      - key: GOVWIN_USERNAME
+        sync: false
+      - key: GOVWIN_PASSWORD
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: BACKEND_API_URL
+        value: https://sam-govwin-api.onrender.com
+
+databases:
+  - name: sam-govwin-db
+    databaseName: sam_govwin
+    user: sam_govwin_user
+    plan: starter  # $7/month - 1GB RAM, 1GB storage
