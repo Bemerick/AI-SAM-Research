@@ -45,9 +45,19 @@ NAICS_CODES = [
 def fetch_sam_opportunities(naics_code: str):
     """Fetch opportunities from SAM.gov for a specific NAICS code"""
     try:
+        from datetime import timedelta
+
         client = SAMClient(api_key=SAM_API_KEY)
+
+        # Only fetch opportunities posted in the last 2 days to avoid duplicates
+        # Using 2 days instead of 1 to account for timezone differences
+        posted_from = datetime.now() - timedelta(days=2)
+        posted_to = datetime.now()
+
         result = client.search_opportunities(
             naics_code=naics_code,
+            posted_from=posted_from,
+            posted_to=posted_to,
             limit=100,
             include_description=True
         )
