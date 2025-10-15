@@ -62,11 +62,11 @@ def fetch_sam_opportunities(naics_code: str):
 def store_opportunity(opp):
     """Store opportunity in database via backend API"""
     try:
-        # Extract nested fields
-        place_of_performance = opp.get("placeOfPerformance", {})
-        city_data = place_of_performance.get("city", {})
-        state_data = place_of_performance.get("state", {})
-        point_of_contact = opp.get("pointOfContact", [])
+        # Extract nested fields with null safety
+        place_of_performance = opp.get("placeOfPerformance") or {}
+        city_data = place_of_performance.get("city") or {}
+        state_data = place_of_performance.get("state") or {}
+        point_of_contact = opp.get("pointOfContact") or []
         primary_contact = point_of_contact[0] if point_of_contact else {}
 
         # Prepare opportunity data
