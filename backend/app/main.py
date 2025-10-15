@@ -5,8 +5,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
 
-from app.api import sam_opportunities, govwin_opportunities, matches, analytics, govwin_contracts, crm_integration
-from app.database import init_db
+from backend.app.api import sam_opportunities, govwin_opportunities, matches, analytics, govwin_contracts, crm_integration
+from backend.app.database import init_db
 
 # Create FastAPI app
 app = FastAPI(
