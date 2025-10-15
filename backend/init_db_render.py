@@ -4,12 +4,14 @@ Non-interactive database initialization script for Render deployment.
 Creates all tables in the PostgreSQL database without user prompts.
 """
 import sys
+import os
 from pathlib import Path
 
-# Add backend to path
-sys.path.insert(0, str(Path(__file__).parent))
+# Add project root to path so we can import backend modules
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
 
-from app.database import init_db, engine
+from backend.app.database import init_db, engine
 from sqlalchemy import text
 
 
