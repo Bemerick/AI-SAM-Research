@@ -14,6 +14,8 @@ services:
         fromDatabase:
           name: sam-govwin-db
           property: connectionString
+      - key: FRONTEND_URL
+        value: https://sam-govwin-frontend.onrender.com
       - key: SAM_API_KEY
         sync: false
       - key: GOVWIN_USERNAME
