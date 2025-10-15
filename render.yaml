@@ -47,6 +47,8 @@ services:
     buildCommand: pip install -r backend/requirements.txt
     startCommand: python -m scripts.sam_fetcher_cron
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
       - key: DATABASE_URL
         fromDatabase:
           name: sam-govwin-db
@@ -71,6 +73,8 @@ services:
     buildCommand: pip install -r backend/requirements.txt
     startCommand: python -m scripts.ai_analyzer_cron
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
       - key: DATABASE_URL
         fromDatabase:
           name: sam-govwin-db
@@ -89,6 +93,8 @@ services:
     buildCommand: pip install -r backend/requirements.txt
     startCommand: python -m scripts.govwin_matcher_cron
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
       - key: DATABASE_URL
         fromDatabase:
           name: sam-govwin-db
