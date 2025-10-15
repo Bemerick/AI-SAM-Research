@@ -42,6 +42,7 @@ services:
   - type: cron
     name: sam-govwin-fetcher
     env: python
+    plan: starter
     schedule: "0 */6 * * *"  # Every 6 hours
     buildCommand: pip install -r backend/requirements.txt
     startCommand: python -m scripts.sam_fetcher_cron
@@ -65,6 +66,7 @@ services:
   - type: cron
     name: sam-govwin-ai-analyzer
     env: python
+    plan: starter
     schedule: "0 */12 * * *"  # Every 12 hours
     buildCommand: pip install -r backend/requirements.txt
     startCommand: python -m scripts.ai_analyzer_cron
@@ -82,6 +84,7 @@ services:
   - type: cron
     name: sam-govwin-govwin-matcher
     env: python
+    plan: starter
     schedule: "0 */24 * * *"  # Every 24 hours
     buildCommand: pip install -r backend/requirements.txt
     startCommand: python -m scripts.govwin_matcher_cron
