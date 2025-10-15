@@ -9,7 +9,6 @@ import requests
 import logging
 from datetime import datetime
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
 from dotenv import load_dotenv
 
 load_dotenv()

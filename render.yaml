@@ -45,7 +45,7 @@ services:
     plan: starter
     schedule: "0 */6 * * *"  # Every 6 hours
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: python -m scripts.sam_fetcher_cron
+    startCommand: PYTHONPATH=/opt/render/project/src/backend python scripts/sam_fetcher_cron.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
@@ -71,7 +71,7 @@ services:
     plan: starter
     schedule: "0 */12 * * *"  # Every 12 hours
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: python -m scripts.ai_analyzer_cron
+    startCommand: PYTHONPATH=/opt/render/project/src/backend python scripts/ai_analyzer_cron.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0
@@ -91,7 +91,7 @@ services:
     plan: starter
     schedule: "0 */24 * * *"  # Every 24 hours
     buildCommand: pip install -r backend/requirements.txt
-    startCommand: python -m scripts.govwin_matcher_cron
+    startCommand: PYTHONPATH=/opt/render/project/src/backend python scripts/govwin_matcher_cron.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.0

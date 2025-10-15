@@ -9,9 +9,6 @@ import requests
 import logging
 from datetime import datetime
 
-# Add backend to Python path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'backend'))
-
 from app.sam_client import SAMClient
 from dotenv import load_dotenv
 
