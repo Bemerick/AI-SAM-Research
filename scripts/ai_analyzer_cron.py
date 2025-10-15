@@ -22,33 +22,87 @@ logger = logging.getLogger(__name__)
 
 BACKEND_API_URL = os.getenv('BACKEND_API_URL', 'http://localhost:8000')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+BATCH_SIZE = 5  # Process 5 opportunities at a time
 
-def analyze_opportunity(analyzer, opp):
-    """Analyze a single opportunity using OpenAI"""
+
+def transform_opportunity_for_analyzer(opp):
+    """
+    Transform API response format to the format expected by the analyzer.
+    The analyzer expects SAM.gov API format (camelCase), but our API returns snake_case.
+    Note: _standardize_opportunity does opportunity.copy() which preserves original fields,
+    so we need to provide the camelCase SAM.gov format here.
+    """
+    return {
+        # SAM.gov API format (camelCase) - required by the analyzer
+        'noticeId': opp.get('notice_id'),  # Critical: used for ID matching
+        'title': opp.get('title'),
+        'fullParentPathName': opp.get('full_parent_path', ''),
+        'type': opp.get('type', ''),
+        'naicsCode': opp.get('naics_code', ''),
+        'typeOfSetAsideDescription': opp.get('set_aside', ''),
+        'setAside': opp.get('set_aside', ''),
+        'responseDeadLine': opp.get('response_deadline', ''),
+        'postedDate': opp.get('posted_date', ''),
+        'solicitationNumber': opp.get('solicitation_number', ''),
+        'classificationCode': opp.get('classification_code', ''),
+        'descriptionText': opp.get('description', ''),
+        'description': opp.get('description', ''),
+        'uiLink': opp.get('sam_link', '') if opp.get('sam_link') else 'N/A',
+        # Keep our database ID for mapping results back
+        '_db_id': opp.get('id'),
+        '_db_notice_id': opp.get('notice_id')
+    }
+
+
+def analyze_batch(analyzer, batch):
+    """Analyze a batch of opportunities using OpenAI"""
     try:
-        # Analyze this opportunity
-        result = analyzer.analyze_opportunities([opp], output_format="json")
+        # Transform opportunities to expected format
+        transformed_batch = [transform_opportunity_for_analyzer(opp) for opp in batch]
 
-        # Extract the analysis for this opportunity
+        # Create mapping of notice_id to db_id for later
+        notice_id_to_db_id = {
+            opp['_db_notice_id']: opp['_db_id']
+            for opp in transformed_batch
+            if opp.get('_db_notice_id') and opp.get('_db_id')
+        }
+
+        logger.info(f"Analyzing batch of {len(transformed_batch)} opportunities...")
+
+        # Analyze the batch
+        result = analyzer.analyze_opportunities(transformed_batch, output_format="json")
+
+        # Extract and map results back to database IDs
+        analyses = {}
         ranked_opps = result.get('ranked_opportunities', [])
-        if ranked_opps and len(ranked_opps) > 0:
-            analyzed = ranked_opps[0]
-            return {
-                'fit_score': analyzed.get('fit_score', 0),
-                'assigned_practice_area': analyzed.get('assigned_practice_area'),
-                'justification': analyzed.get('justification'),
-                'summary_description': analyzed.get('summary_description', opp.get('description', ''))
-            }
-        else:
-            # Check if it was unranked
-            unranked = result.get('unranked_opportunities', [])
-            if unranked:
-                logger.warning(f"Opportunity {opp.get('notice_id')} was marked as unrankable")
-            return None
+
+        for analyzed in ranked_opps:
+            notice_id = analyzed.get('notice_id')
+            if notice_id and notice_id in notice_id_to_db_id:
+                db_id = notice_id_to_db_id[notice_id]
+                analyses[db_id] = {
+                    'fit_score': analyzed.get('fit_score', 0),
+                    'assigned_practice_area': analyzed.get('assigned_practice_area'),
+                    'justification': analyzed.get('justification'),
+                    'summary_description': analyzed.get('summary_description', analyzed.get('description', ''))
+                }
+                logger.info(f"Analyzed {notice_id} (DB ID: {db_id}): score={analyzed.get('fit_score')}, area={analyzed.get('assigned_practice_area')}")
+            else:
+                logger.warning(f"Could not map analyzed opportunity with notice_id={notice_id} back to database")
+
+        # Check for unranked opportunities
+        unranked = result.get('unranked_opportunities', [])
+        if unranked:
+            logger.info(f"{len(unranked)} opportunities were marked as unrankable")
+            for unranked_opp in unranked:
+                logger.debug(f"Unranked: {unranked_opp.get('notice_id')} - {unranked_opp.get('title', 'Unknown')[:50]}")
+
+        return analyses
 
     except Exception as e:
-        logger.error(f"Error analyzing opportunity {opp.get('notice_id')}: {e}")
-        return None
+        logger.error(f"Error analyzing batch: {e}", exc_info=True)
+        return {}
+
 
 def update_opportunity(opp_id, analysis_data):
     """Update opportunity via backend API"""
@@ -64,6 +118,7 @@ def update_opportunity(opp_id, analysis_data):
     except Exception as e:
         logger.error(f"Error updating opportunity {opp_id}: {e}")
         return False
+
 
 def main():
     logger.info("=" * 80)
@@ -85,28 +140,37 @@ def main():
 
         logger.info(f"Found {len(opportunities)} unscored opportunities")
 
+        if not opportunities:
+            logger.info("No opportunities to analyze")
+            return
+
         analyzed_count = 0
         updated_count = 0
 
-        # Process each opportunity
-        for opp in opportunities:
-            opp_id = opp.get('id')
-            notice_id = opp.get('notice_id')
+        # Process in batches
+        for i in range(0, len(opportunities), BATCH_SIZE):
+            batch = opportunities[i:i + BATCH_SIZE]
+            batch_num = (i // BATCH_SIZE) + 1
+            total_batches = (len(opportunities) + BATCH_SIZE - 1) // BATCH_SIZE
 
-            logger.info(f"Analyzing opportunity {notice_id} (ID: {opp_id})...")
+            logger.info(f"\n{'='*60}")
+            logger.info(f"Processing batch {batch_num}/{total_batches}")
+            logger.info(f"{'='*60}")
 
-            # Analyze
-            analysis = analyze_opportunity(analyzer, opp)
+            # Analyze the batch
+            analyses = analyze_batch(analyzer, batch)
 
-            if analysis:
-                analyzed_count += 1
+            # Update each opportunity with its analysis
+            for db_id, analysis in analyses.items():
+                if analysis:
+                    analyzed_count += 1
+                    if update_opportunity(db_id, analysis):
+                        updated_count += 1
 
-                # Update via API
-                if update_opportunity(opp_id, analysis):
-                    updated_count += 1
-
+        logger.info(f"\n{'='*60}")
         logger.info(f"Analyzed {analyzed_count} opportunities")
         logger.info(f"Updated {updated_count} opportunities")
+        logger.info(f"{'='*60}")
 
     except Exception as e:
         logger.error(f"Error in AI analyzer: {e}", exc_info=True)
