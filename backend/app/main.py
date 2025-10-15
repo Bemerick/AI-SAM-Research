@@ -5,7 +5,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
 
-from backend.app.api import sam_opportunities, govwin_opportunities, matches, analytics, govwin_contracts, crm_integration
+from app.api import sam_opportunities, govwin_opportunities, matches, analytics, govwin_contracts, crm_integration
+from app.database import init_db
 
 # Create FastAPI app
 app = FastAPI(
@@ -15,6 +16,14 @@ app = FastAPI(
     docs_url="/docs",
     redoc_url="/redoc"
 )
+
+# Initialize database tables on startup
+@app.on_event("startup")
+def startup_event():
+    """Initialize database tables on application startup."""
+    print("Initializing database tables...")
+    init_db()
+    print("Database tables initialized!")
 
 # CORS configuration for React frontend
 # In production, replace "*" with your actual frontend domain
