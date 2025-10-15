@@ -103,4 +103,4 @@ databases:
   - name: sam-govwin-db
     databaseName: sam_govwin
     user: sam_govwin_user
-    plan: starter  # $7/month - 1GB RAM, 1GB storage
+    plan: free  # Free tier - 256MB RAM, 1GB storage (90 day expiry)
