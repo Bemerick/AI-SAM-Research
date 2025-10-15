@@ -387,13 +387,13 @@ Return JSON format:
             return summary
 
 
-@app.timer_trigger(schedule="0 0 1 * * *", arg_name="myTimer", run_on_startup=False,
+@app.timer_trigger(schedule="0 0 5 * * *", arg_name="myTimer", run_on_startup=False,
                    use_monitor=False)
 def NightlyWorkflow(myTimer: func.TimerRequest) -> None:
     """
-    Timer-triggered Azure Function that runs nightly at 1 AM UTC (6 PM PST / 9 PM EST)
+    Timer-triggered Azure Function that runs nightly at 5 AM UTC (1 AM EDT / 10 PM PDT)
 
-    Schedule: "0 0 1 * * *" = 1:00 AM UTC every day
+    Schedule: "0 0 5 * * *" = 5:00 AM UTC every day = 1:00 AM EDT
 
     To change the schedule, modify the cron expression:
     Format: "second minute hour day month dayOfWeek"
