@@ -8,7 +8,6 @@ from openai import OpenAI
 import logging
 from .config import OPENAI_API_KEY, PRACTICE_AREAS, PREFERRED_AGENCIES
 import datetime
-from bs4 import BeautifulSoup
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 try:
@@ -377,11 +376,10 @@ Ensure the entire output is a valid JSON object adhering to this structure.
         }
 
 class ReportAgent:
-    def __init__(self, openai_api_key: str, model: str = "gpt-4o-mini", beautiful_soup_enabled: bool = True):
+    def __init__(self, openai_api_key: str, model: str = "gpt-4o-mini"):
         # Assuming existing __init__ structure.
         # self.openai_client = OpenAI(api_key=openai_api_key) # Example, if client is initialized here
         self.model = model
-        self.beautiful_soup_enabled = beautiful_soup_enabled # Though sanitization is now in BusinessDevelopmentAgent
 
     def generate_markdown_report(self,
                                  ranked_opportunities_batch: List[Dict[str, Any]],
