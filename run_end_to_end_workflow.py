@@ -209,23 +209,24 @@ class EndToEndWorkflow:
         for opp in ranked_opportunities:
             try:
                 # Map the analyzed opportunity to the database schema
+                # Note: SAM API uses camelCase, we need to handle both raw SAM data and AI-enriched data
                 payload = {
-                    "notice_id": opp.get('notice_id'),
+                    "notice_id": opp.get('notice_id') or opp.get('noticeId'),
                     "title": opp.get('title'),
-                    "department": opp.get('department', 'N/A'),
-                    "standardized_department": opp.get('standardized_department', opp.get('department', 'N/A')),
-                    "naics_code": opp.get('naics_code', 'N/A'),
+                    "department": opp.get('department') or opp.get('fullParentPathName'),
+                    "standardized_department": opp.get('standardized_department') or opp.get('department') or opp.get('fullParentPathName'),
+                    "naics_code": opp.get('naics_code') or opp.get('naicsCode'),
                     "fit_score": float(opp.get('fit_score', 0)),
-                    "posted_date": opp.get('posted_date'),
-                    "response_deadline": opp.get('response_date'),
-                    "solicitation_number": opp.get('solicitationNumber', 'N/A'),
-                    "description": opp.get('descriptionText', '')[:1000],  # Truncate if too long
+                    "posted_date": opp.get('posted_date') or opp.get('postedDate'),
+                    "response_deadline": opp.get('response_deadline') or opp.get('response_date') or opp.get('responseDeadLine'),
+                    "solicitation_number": opp.get('solicitation_number') or opp.get('solicitationNumber'),
+                    "description": (opp.get('descriptionText') or opp.get('description', ''))[:1000],  # Truncate if too long
                     "summary_description": opp.get('summary_description', ''),
-                    "ptype": opp.get('ptype', 'N/A'),
-                    "set_aside": opp.get('set_aside', 'N/A'),
+                    "ptype": opp.get('ptype') or opp.get('type'),
+                    "set_aside": opp.get('set_aside') or opp.get('typeOfSetAside'),
                     "assigned_practice_area": opp.get('assigned_practice_area', 'Uncategorized'),
                     "justification": opp.get('justification', ''),
-                    "sam_link": opp.get('uiLink', 'N/A')
+                    "sam_link": opp.get('sam_link') or opp.get('uiLink')
                 }
 
                 response = requests.post(

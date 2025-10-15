@@ -7,6 +7,8 @@ pydantic-settings==2.1.0
 # Database
 sqlalchemy==2.0.25
 psycopg2-binary==2.9.9
+pymssql==2.2.11
+pyodbc==5.0.1
 alembic==1.13.1
 
 # Environment and configuration
