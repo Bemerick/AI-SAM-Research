@@ -9,7 +9,10 @@ import requests
 import logging
 from datetime import datetime
 
-from app.sam_client import SAMClient
+# Add parent directory to Python path to import backend modules
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from backend.app.sam_client import SAMClient
 from dotenv import load_dotenv
 
 load_dotenv()
