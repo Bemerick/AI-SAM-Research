@@ -400,12 +400,24 @@ def main():
     try:
         # Initialize clients
         logger.info("Initializing GovWin client...")
-        govwin_client = GovWinClient(
-            client_id=GOVWIN_CLIENT_ID,
-            client_secret=GOVWIN_CLIENT_SECRET,
-            username=GOVWIN_USERNAME,
-            password=GOVWIN_PASSWORD
-        )
+        try:
+            govwin_client = GovWinClient(
+                client_id=GOVWIN_CLIENT_ID,
+                client_secret=GOVWIN_CLIENT_SECRET,
+                username=GOVWIN_USERNAME,
+                password=GOVWIN_PASSWORD
+            )
+        except ValueError as e:
+            logger.error(f"GovWin authentication failed: {e}")
+            logger.error("Please verify your GovWin credentials in the environment variables:")
+            logger.error("  - GOVWIN_USERNAME")
+            logger.error("  - GOVWIN_PASSWORD")
+            logger.error("  - GOVWIN_CLIENT_ID")
+            logger.error("  - GOVWIN_CLIENT_SECRET")
+            return
+        except Exception as e:
+            logger.error(f"Failed to initialize GovWin client: {e}")
+            return
 
         logger.info("Initializing OpenAI client...")
         openai_client = OpenAI(api_key=OPENAI_API_KEY)

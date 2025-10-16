@@ -67,23 +67,30 @@ class GovWinClient:
         
         try:
             response = requests.post(self.TOKEN_URL, data=payload, headers=headers)
+
+            # Handle authentication errors with detailed feedback
+            if response.status_code == 400:
+                error_data = response.json() if response.text else {}
+                error_type = error_data.get('error', 'unknown')
+                error_desc = error_data.get('error_description', 'No description provided')
+                print(f"Authentication failed: {response.status_code} Client Error: {response.reason} for url: {self.TOKEN_URL}")
+                print(f"Error: {error_type}")
+                print(f"Description: {error_desc}")
+                raise ValueError(f"GovWin authentication failed: {error_type} - {error_desc}")
+
             response.raise_for_status()
             token_data = response.json()
-            
+
             self.access_token = token_data['access_token']
             self.refresh_token = token_data['refresh_token']
             self.token_expires_at = time.time() + token_data['expires_in']
-            
+
             print("Authentication successful.")
+        except ValueError:
+            # Re-raise ValueError (authentication errors)
+            raise
         except requests.exceptions.RequestException as e:
             print(f"Authentication failed: {e}")
-            if response.status_code == 400:
-                try:
-                    error_data = response.json()
-                    print(f"Error: {error_data.get('error')}")
-                    print(f"Description: {error_data.get('error_description')}")
-                except:
-                    pass
             raise
     
     def refresh_auth_token(self) -> None:
