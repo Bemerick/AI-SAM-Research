@@ -313,6 +313,18 @@ def create_govwin_opportunity_record(govwin_client: GovWinClient, govwin_opp: Di
             json=payload,
             timeout=30
         )
+
+        # Handle validation errors with detailed logging
+        if response.status_code == 422:
+            try:
+                error_detail = response.json()
+                logger.error(f"422 Validation error for GovWin opportunity {govwin_id}:")
+                logger.error(f"Payload sent: {json.dumps(payload, indent=2)}")
+                logger.error(f"Validation errors: {json.dumps(error_detail, indent=2)}")
+            except:
+                logger.error(f"422 Validation error response body: {response.text}")
+            raise requests.exceptions.HTTPError(f"422 Validation Error: {response.text[:200]}")
+
         response.raise_for_status()
         new_record = response.json()
         govwin_db_id = new_record.get('id')
