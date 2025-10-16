@@ -34,6 +34,10 @@ def search_govwin_for_opportunity(govwin_client: GovWinClient, sam_opp: Dict[str
     """
     Search GovWin for opportunities similar to the given SAM opportunity.
 
+    NOTE: GovWin API's basic search endpoint doesn't support keyword/naics/limit parameters.
+    We need to use savedSearchId or marked opportunities instead.
+    For now, this returns empty results until proper search implementation is available.
+
     Args:
         govwin_client: Authenticated GovWin client
         sam_opp: SAM opportunity data
@@ -42,62 +46,19 @@ def search_govwin_for_opportunity(govwin_client: GovWinClient, sam_opp: Dict[str
         List of potential GovWin matches
     """
     try:
-        # Extract search criteria from SAM opportunity
-        title = sam_opp.get('title', '')
-        description = sam_opp.get('description', '')
-        naics_code = sam_opp.get('naics_code')
+        logger.info(f"GovWin search not yet implemented - API doesn't support keyword/NAICS search in base context")
+        logger.info(f"GovWin API requires using savedSearchId or marked opportunities")
+        logger.info(f"Skipping GovWin search for SAM opportunity: {sam_opp.get('notice_id')}")
 
-        # Try multiple search strategies
-        matches = []
+        # TODO: Implement using one of these approaches:
+        # 1. Use get_marked_opportunities() to get pre-selected opportunities
+        # 2. Create a saved search in GovWin UI and use get_opportunities_by_saved_search(search_id)
+        # 3. Use get_opportunity_by_id() if we already know the GovWin ID
 
-        # Strategy 1: Search by title keywords
-        if title:
-            # Extract key words from title (simple approach)
-            keywords = ' '.join([word for word in title.split() if len(word) > 4])[:100]
-            if keywords:
-                logger.info(f"Searching GovWin with keywords: {keywords[:50]}...")
-                try:
-                    results = govwin_client.search_opportunities({
-                        'keyword': keywords,
-                        'limit': 10
-                    })
-                    if results and 'opportunities' in results:
-                        for opp in results['opportunities']:
-                            matches.append({
-                                'opportunity': opp,
-                                'search_strategy': 'title_keyword'
-                            })
-                except Exception as e:
-                    logger.warning(f"Title keyword search failed: {e}")
-
-        # Strategy 2: Search by NAICS code
-        if naics_code and naics_code != 'N/A':
-            logger.info(f"Searching GovWin by NAICS: {naics_code}")
-            try:
-                results = govwin_client.search_opportunities({
-                    'naics': naics_code,
-                    'limit': 10
-                })
-                if results and 'opportunities' in results:
-                    for opp in results['opportunities']:
-                        matches.append({
-                            'opportunity': opp,
-                            'search_strategy': 'naics_code'
-                        })
-            except Exception as e:
-                logger.warning(f"NAICS search failed: {e}")
-
-        # Deduplicate matches by GovWin ID
-        unique_matches = {}
-        for match in matches:
-            opp_id = match['opportunity'].get('iqOppId') or match['opportunity'].get('id')
-            if opp_id and opp_id not in unique_matches:
-                unique_matches[opp_id] = match
-
-        return list(unique_matches.values())
+        return []
 
     except Exception as e:
-        logger.error(f"Error searching GovWin: {e}")
+        logger.error(f"Error in GovWin search: {e}")
         return []
 
 
