@@ -383,11 +383,18 @@ def main():
 
     # Validate credentials
     if not all([GOVWIN_USERNAME, GOVWIN_PASSWORD, GOVWIN_CLIENT_ID, GOVWIN_CLIENT_SECRET]):
-        logger.error("Missing GovWin credentials. Set GOVWIN_USERNAME, GOVWIN_PASSWORD, GOVWIN_CLIENT_ID, GOVWIN_CLIENT_SECRET")
+        logger.warning("GovWin credentials not configured. Skipping GovWin matcher.")
+        logger.warning("To enable, set: GOVWIN_USERNAME, GOVWIN_PASSWORD, GOVWIN_CLIENT_ID, GOVWIN_CLIENT_SECRET")
+        logger.info("=" * 80)
+        logger.info(f"GovWin Matcher completed (skipped) at {datetime.now()}")
+        logger.info("=" * 80)
         return
 
     if not OPENAI_API_KEY:
-        logger.error("OPENAI_API_KEY not set, cannot evaluate matches")
+        logger.warning("OPENAI_API_KEY not set. Skipping GovWin matcher.")
+        logger.info("=" * 80)
+        logger.info(f"GovWin Matcher completed (skipped) at {datetime.now()}")
+        logger.info("=" * 80)
         return
 
     try:
