@@ -171,9 +171,22 @@ def main():
         analyzer = OpportunityAnalyzer(openai_api_key=OPENAI_API_KEY)
 
         # Fetch unscored opportunities (fit_score = 0 or NULL)
-        response = requests.get(f"{BACKEND_API_URL}/api/sam-opportunities/unscored?limit=100", timeout=30)
-        response.raise_for_status()
-        opportunities = response.json()
+        # Use longer timeout (90s) to handle cold starts and large queries
+        logger.info("Fetching unscored opportunities from backend...")
+        try:
+            response = requests.get(
+                f"{BACKEND_API_URL}/api/sam-opportunities/unscored?limit=100",
+                timeout=90
+            )
+            response.raise_for_status()
+            opportunities = response.json()
+        except requests.exceptions.Timeout:
+            logger.error("Backend API timed out after 90 seconds. The backend may be cold-starting or the query is too slow.")
+            logger.error("Exiting to avoid hanging. Try running again in a few minutes.")
+            return
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Failed to fetch opportunities from backend: {e}")
+            return
 
         logger.info(f"Found {len(opportunities)} unscored opportunities (fit_score = 0 or NULL)")
 
