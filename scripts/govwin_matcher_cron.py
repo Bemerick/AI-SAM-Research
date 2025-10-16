@@ -422,10 +422,10 @@ def main():
         logger.info("Initializing OpenAI client...")
         openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
-        # Fetch high-scoring SAM opportunities without matches
+        # Fetch high-scoring SAM opportunities (fit_score >= 7 out of 10)
         logger.info("Fetching high-scoring SAM opportunities...")
         response = requests.get(
-            f"{BACKEND_API_URL}/api/sam-opportunities/?min_fit_score=70&limit=50",
+            f"{BACKEND_API_URL}/api/sam-opportunities/?min_fit_score=7&limit=50",
             timeout=30
         )
         response.raise_for_status()
