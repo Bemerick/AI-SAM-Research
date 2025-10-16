@@ -48,6 +48,9 @@ class SAMOpportunityCreate(SAMOpportunityBase):
 class SAMOpportunityUpdate(BaseModel):
     """Schema for updating SAM opportunity."""
     fit_score: Optional[float] = None
+    assigned_practice_area: Optional[str] = None
+    justification: Optional[str] = None
+    summary_description: Optional[str] = None
     analysis_data: Optional[str] = None
     review_for_bid: Optional[str] = None
     recommend_bid: Optional[str] = None
