@@ -318,13 +318,17 @@ def fetch_and_store_contracts(govwin_client: GovWinClient, govwin_id: str, govwi
             try:
                 # Extract contract fields
                 import json
+
+                # Extract and convert IDs to strings (schema expects strings)
+                vendor_id = contract.get('vendorId') or contract.get('vendor_id')
+
                 payload = {
-                    "govwin_opportunity_id": govwin_db_id,  # Use database ID
-                    "contract_id": contract_id,
-                    "contract_number": contract_number,
+                    "govwin_opportunity_id": govwin_db_id,  # Use database ID (int)
+                    "contract_id": str(contract_id) if contract_id else None,
+                    "contract_number": str(contract_number) if contract_number else None,
                     "title": contract.get('title'),
                     "vendor_name": contract.get('vendorName') or contract.get('vendor_name'),
-                    "vendor_id": contract.get('vendorId') or contract.get('vendor_id'),
+                    "vendor_id": str(vendor_id) if vendor_id else None,
                     "contract_value": contract.get('contractValue') or contract.get('contract_value') or contract.get('value'),
                     "award_date": contract.get('awardDate') or contract.get('award_date'),
                     "start_date": contract.get('startDate') or contract.get('start_date'),
@@ -337,6 +341,17 @@ def fetch_and_store_contracts(govwin_client: GovWinClient, govwin_id: str, govwi
                     json=payload,
                     timeout=30
                 )
+
+                # Handle validation errors with detailed logging
+                if response.status_code == 422:
+                    try:
+                        error_detail = response.json()
+                        logger.error(f"422 Validation error for contract {contract_id or contract_number}:")
+                        logger.error(f"Payload sent: {json.dumps(payload, indent=2)}")
+                        logger.error(f"Validation errors: {json.dumps(error_detail, indent=2)}")
+                    except:
+                        logger.error(f"422 Validation error response body: {response.text}")
+                    continue  # Skip this contract and move to next
 
                 if response.status_code == 201:
                     created_count += 1
