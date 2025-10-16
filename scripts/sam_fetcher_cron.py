@@ -96,7 +96,7 @@ def store_opportunity(opp):
             "type": opp.get("type"),
             "ptype": opp.get("type"),
             "classification_code": opp.get("classificationCode"),
-            "set_aside": opp.get("typeOfSetAside"),
+            "set_aside": opp.get("typeOfSetAsideDescription") or opp.get("typeOfSetAside"),
             "place_of_performance_city": city_data.get("name") if isinstance(city_data, dict) else None,
             "place_of_performance_state": state_data.get("code") if isinstance(state_data, dict) else None,
             "place_of_performance_zip": place_of_performance.get("zip"),
@@ -113,9 +113,25 @@ def store_opportunity(opp):
             json=opportunity_data,
             timeout=30
         )
+
+        if response.status_code == 400:
+            # Log the validation error details
+            try:
+                error_detail = response.json()
+                logger.error(f"Validation error for {opportunity_data['notice_id']}: {error_detail}")
+            except:
+                logger.error(f"400 error for {opportunity_data['notice_id']}: {response.text}")
+
         response.raise_for_status()
         logger.info(f"Stored opportunity: {opportunity_data['notice_id']}")
         return True
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 409:
+            # Duplicate - this is expected, not an error
+            logger.debug(f"Opportunity {opp.get('noticeId')} already exists (duplicate)")
+            return True
+        logger.error(f"Error storing opportunity {opp.get('noticeId')}: {e}")
+        return False
     except Exception as e:
         logger.error(f"Error storing opportunity {opp.get('noticeId')}: {e}")
         return False
