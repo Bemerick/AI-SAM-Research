@@ -2,13 +2,33 @@
 """
 GovWin Matcher Cron Job - Runs on Render as a scheduled job
 Matches scored SAM opportunities with GovWin data
+
+Search & Matching Strategy:
+1. Fetch high-scoring SAM opportunities (fit_score >= 7)
+2. For each SAM opportunity:
+   - Search GovWin by title keywords (words > 4 chars)
+   - Pre-filter results using:
+     * Solicitation number matching (regex pattern)
+     * Title similarity (60%+ threshold)
+     * Keyword overlap (2+ matching words)
+   - Fetch full GovWin details (with description) for matches passing pre-filter
+3. AI evaluation (OpenAI):
+   - Compare SAM vs GovWin using titles, descriptions, agencies, NAICS, dates
+   - Score 0-100 with confidence level
+   - Only record matches with score >= 70 and medium/high confidence
+4. For confirmed matches:
+   - Create GovWin opportunity record in database
+   - Fetch and store related contracts
+   - Create match record linking SAM <-> GovWin
 """
 import os
 import sys
 import requests
 import logging
+import re
 from datetime import datetime
 from typing import List, Dict, Any, Optional
+from difflib import SequenceMatcher
 
 # Add parent directory to Python path to import modules
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
@@ -29,6 +49,74 @@ GOVWIN_CLIENT_ID = os.getenv('GOVWIN_CLIENT_ID')
 GOVWIN_CLIENT_SECRET = os.getenv('GOVWIN_CLIENT_SECRET')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
+# Pre-filter thresholds
+TITLE_SIMILARITY_THRESHOLD = 0.6  # 60% similarity to pass pre-filter
+MIN_KEYWORD_MATCHES = 2  # Minimum matching keywords (>4 chars)
+
+
+def calculate_title_similarity(title1: str, title2: str) -> float:
+    """Calculate similarity ratio between two titles (0.0 to 1.0)."""
+    if not title1 or not title2:
+        return 0.0
+    return SequenceMatcher(None, title1.lower(), title2.lower()).ratio()
+
+
+def extract_solicitation_number(text: str) -> Optional[str]:
+    """Extract solicitation/contract number patterns from text."""
+    if not text:
+        return None
+    # Common patterns: alphanumeric with dashes/underscores
+    # e.g., "FA8732-24-R-0001", "HSHQDC-24-Q-00123"
+    pattern = r'\b[A-Z0-9]{2,}[-_][0-9]{2,}[-_][A-Z0-9][-_][0-9]+\b'
+    match = re.search(pattern, text.upper())
+    return match.group(0) if match else None
+
+
+def prefilter_govwin_match(sam_opp: Dict[str, Any], govwin_opp: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Pre-filter GovWin opportunities to determine if they're worth sending to AI evaluation.
+
+    Returns:
+        Dict with 'pass' (bool), 'score' (0-100), and 'reasons' (list of str)
+    """
+    reasons = []
+    score = 0
+
+    sam_title = sam_opp.get('title', '').lower()
+    govwin_title = govwin_opp.get('title', '').lower()
+    sam_solicitation = sam_opp.get('solicitation_number', '')
+
+    # Check 1: Solicitation number exact match (strong signal)
+    if sam_solicitation:
+        govwin_sol = extract_solicitation_number(govwin_title)
+        if govwin_sol and sam_solicitation.upper() in govwin_sol.upper():
+            score += 50
+            reasons.append(f"Solicitation number match: {sam_solicitation}")
+
+    # Check 2: Title similarity
+    title_sim = calculate_title_similarity(sam_title, govwin_title)
+    if title_sim >= TITLE_SIMILARITY_THRESHOLD:
+        score += int(title_sim * 30)  # Up to 30 points
+        reasons.append(f"Title similarity: {title_sim:.2%}")
+
+    # Check 3: Keyword matching (words > 4 chars)
+    sam_keywords = set([w for w in sam_title.split() if len(w) > 4])
+    govwin_keywords = set([w for w in govwin_title.split() if len(w) > 4])
+    matching_keywords = sam_keywords & govwin_keywords
+
+    if len(matching_keywords) >= MIN_KEYWORD_MATCHES:
+        score += min(len(matching_keywords) * 10, 20)  # Up to 20 points
+        reasons.append(f"Matching keywords: {', '.join(list(matching_keywords)[:3])}")
+
+    # Pass if score >= 40 (e.g., high title similarity OR solicitation match)
+    passed = score >= 40
+
+    return {
+        'pass': passed,
+        'score': score,
+        'reasons': reasons
+    }
+
 
 def search_govwin_for_opportunity(govwin_client: GovWinClient, sam_opp: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
@@ -44,12 +132,10 @@ def search_govwin_for_opportunity(govwin_client: GovWinClient, sam_opp: Dict[str
     try:
         # Extract search criteria from SAM opportunity
         title = sam_opp.get('title', '')
-        naics_code = sam_opp.get('naics_code')
 
-        # Try multiple search strategies
         matches = []
 
-        # Strategy 1: Search by title keywords using 'q' parameter
+        # Search by title keywords using 'q' parameter
         if title:
             # Extract key words from title (simple approach - words > 4 chars)
             keywords = ' '.join([word for word in title.split() if len(word) > 4])[:100]
@@ -63,43 +149,43 @@ def search_govwin_for_opportunity(govwin_client: GovWinClient, sam_opp: Dict[str
                     # Extract opportunities from response
                     opportunities = results.get('opportunities', []) if isinstance(results, dict) else results
                     if opportunities:
+                        logger.info(f"Found {len(opportunities)} opportunities from GovWin search")
+
+                        # Pre-filter each opportunity
                         for opp in opportunities:
-                            matches.append({
-                                'opportunity': opp,
-                                'search_strategy': 'title_keyword'
-                            })
-                        logger.info(f"Found {len(opportunities)} opportunities by keyword")
+                            filter_result = prefilter_govwin_match(sam_opp, opp)
+
+                            if filter_result['pass']:
+                                # Fetch full opportunity details with description
+                                govwin_id = opp.get('iqOppId') or opp.get('id')
+                                try:
+                                    full_opp = govwin_client.get_opportunity(govwin_id)
+                                    logger.info(f"Pre-filter PASS (score: {filter_result['score']}): {govwin_id} - {filter_result['reasons']}")
+                                    matches.append({
+                                        'opportunity': full_opp,  # Use full details with description
+                                        'search_strategy': 'title_keyword',
+                                        'prefilter_score': filter_result['score'],
+                                        'prefilter_reasons': filter_result['reasons']
+                                    })
+                                except Exception as e:
+                                    logger.warning(f"Failed to fetch full details for {govwin_id}: {e}")
+                                    # Fall back to basic opportunity data
+                                    matches.append({
+                                        'opportunity': opp,
+                                        'search_strategy': 'title_keyword',
+                                        'prefilter_score': filter_result['score'],
+                                        'prefilter_reasons': filter_result['reasons']
+                                    })
+                            else:
+                                govwin_id = opp.get('iqOppId') or opp.get('id')
+                                govwin_title = opp.get('title', 'Unknown')[:50]
+                                logger.debug(f"Pre-filter FAIL (score: {filter_result['score']}): {govwin_id} - {govwin_title}...")
+
+                        logger.info(f"{len(matches)} opportunities passed pre-filter")
                 except Exception as e:
                     logger.warning(f"Title keyword search failed: {e}")
 
-        # Strategy 2: Search by NAICS code
-        if naics_code and naics_code != 'N/A':
-            logger.info(f"Searching GovWin by NAICS: {naics_code}")
-            try:
-                results = govwin_client.search_opportunities({
-                    'naics': naics_code,  # Correct parameter name
-                    'max': 10             # Use 'max' not 'limit'
-                })
-                # Extract opportunities from response
-                opportunities = results.get('opportunities', []) if isinstance(results, dict) else results
-                if opportunities:
-                    for opp in opportunities:
-                        matches.append({
-                            'opportunity': opp,
-                            'search_strategy': 'naics_code'
-                        })
-                    logger.info(f"Found {len(opportunities)} opportunities by NAICS")
-            except Exception as e:
-                logger.warning(f"NAICS search failed: {e}")
-
-        # Deduplicate matches by GovWin ID
-        unique_matches = {}
-        for match in matches:
-            opp_id = match['opportunity'].get('iqOppId') or match['opportunity'].get('id')
-            if opp_id and opp_id not in unique_matches:
-                unique_matches[opp_id] = match
-
-        return list(unique_matches.values())
+        return matches
 
     except Exception as e:
         logger.error(f"Error searching GovWin: {e}")
@@ -143,16 +229,24 @@ Respond in JSON format with:
     "confidence": "<low/medium/high>"
 }"""
 
+        # Extract GovWin description (may be in different fields)
+        govwin_desc = ''
+        if 'description' in govwin_opp:
+            govwin_desc = govwin_opp.get('description', '')
+        elif 'descriptionText' in govwin_opp:
+            govwin_desc = govwin_opp.get('descriptionText', '')
+
         user_prompt = f"""Evaluate if these are the same opportunity:
 
 SAM.gov Opportunity:
 - Title: {sam_opp.get('title', 'N/A')}
 - Notice ID: {sam_opp.get('notice_id', 'N/A')}
+- Solicitation #: {sam_opp.get('solicitation_number', 'N/A')}
 - Department: {sam_opp.get('department', 'N/A')}
 - NAICS: {sam_opp.get('naics_code', 'N/A')}
 - Posted: {sam_opp.get('posted_date', 'N/A')}
-- Response Deadline: {sam_opp.get('response_date', 'N/A')}
-- Description: {sam_opp.get('description', '')[:500]}
+- Response Deadline: {sam_opp.get('response_deadline', 'N/A')}
+- Description: {sam_opp.get('description', '')[:800]}
 
 GovWin Opportunity:
 - Title: {govwin_opp.get('title', 'N/A')}
@@ -161,6 +255,7 @@ GovWin Opportunity:
 - NAICS: {govwin_opp.get('primaryNAICS', {}).get('id', 'N/A') if isinstance(govwin_opp.get('primaryNAICS'), dict) else 'N/A'}
 - Status: {govwin_opp.get('status', 'N/A')}
 - Value: ${govwin_opp.get('oppValue', 0):,}
+- Description: {govwin_desc[:800] if govwin_desc else 'N/A'}
 """
 
         response = openai_client.chat.completions.create(
@@ -283,27 +378,30 @@ def create_govwin_opportunity_record(govwin_client: GovWinClient, govwin_opp: Di
         if not govwin_id:
             raise ValueError("GovWin opportunity missing ID")
 
+        # Convert to string for API (schema expects string)
+        govwin_id_str = str(govwin_id)
+
         # Check if it already exists
         check_response = requests.get(
-            f"{BACKEND_API_URL}/api/govwin-opportunities/govwin-id/{govwin_id}",
+            f"{BACKEND_API_URL}/api/govwin-opportunities/govwin-id/{govwin_id_str}",
             timeout=30
         )
 
         if check_response.status_code == 200:
-            logger.info(f"GovWin opportunity {govwin_id} already exists")
+            logger.info(f"GovWin opportunity {govwin_id_str} already exists")
             existing_record = check_response.json()
             govwin_db_id = existing_record.get('id')
 
             # Still fetch contracts if requested, even for existing records
             if fetch_contracts and govwin_db_id:
-                fetch_and_store_contracts(govwin_client, govwin_id, govwin_db_id)
+                fetch_and_store_contracts(govwin_client, govwin_id_str, govwin_db_id)
 
             return existing_record
 
         # Create new record
         import json
         payload = {
-            "govwin_id": govwin_id,
+            "govwin_id": govwin_id_str,  # Must be string
             "title": govwin_opp.get('title', 'Unknown'),
             "raw_data": json.dumps(govwin_opp)  # Convert to JSON string
         }
