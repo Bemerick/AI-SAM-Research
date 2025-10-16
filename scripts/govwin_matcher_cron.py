@@ -138,7 +138,12 @@ def search_govwin_for_opportunity(govwin_client: GovWinClient, sam_opp: Dict[str
         # Search by title keywords using 'q' parameter
         if title:
             # Extract key words from title (simple approach - words > 4 chars)
-            keywords = ' '.join([word for word in title.split() if len(word) > 4])[:100]
+            # Remove special characters that might cause GovWin API issues
+            import re
+            # Remove special chars but keep spaces, alphanumeric, and basic punctuation
+            cleaned_title = re.sub(r'[^\w\s-]', ' ', title)
+            keywords = ' '.join([word for word in cleaned_title.split() if len(word) > 4])[:100]
+
             if keywords:
                 logger.info(f"Searching GovWin with keywords: {keywords[:50]}...")
                 try:
@@ -310,6 +315,13 @@ def fetch_and_store_contracts(govwin_client: GovWinClient, govwin_id: str, govwi
         for contract in contracts:
             contract_id = contract.get('id') or contract.get('contractId')
             contract_number = contract.get('contractNumber') or contract.get('contract_number')
+            task_order = contract.get('taskOrderNumber')
+
+            # Append task order to contract number if present
+            if task_order and contract_number:
+                contract_number = f"{contract_number} / TO: {task_order}"
+            elif task_order and not contract_number:
+                contract_number = f"TO: {task_order}"
 
             if not contract_id and not contract_number:
                 logger.warning(f"Contract missing ID and number, skipping: {contract.get('title', 'Unknown')[:50]}")
@@ -333,12 +345,15 @@ def fetch_and_store_contracts(govwin_client: GovWinClient, govwin_id: str, govwi
                     vendor_id = contract.get('vendorId') or contract.get('vendor_id')
 
                 # Extract contract value (estimatedValue in GovWin API)
-                contract_value = (
+                # NOTE: GovWin returns values in thousands, so multiply by 1000
+                contract_value_raw = (
                     contract.get('estimatedValue') or
                     contract.get('contractValue') or
                     contract.get('contract_value') or
                     contract.get('value')
                 )
+                # Multiply by 1000 since GovWin values are in thousands
+                contract_value = contract_value_raw * 1000 if contract_value_raw else None
 
                 # Extract expiration date
                 expiration_date = contract.get('expirationDate') or contract.get('endDate') or contract.get('end_date')
