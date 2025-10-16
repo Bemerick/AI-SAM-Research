@@ -1,79 +1,96 @@
 import type { GovWinContract } from '../types';
-import { formatCurrency, formatDate } from '../utils/formatters';
+import { formatDate } from '../utils/formatters';
 
 interface ContractCardProps {
   contract: GovWinContract;
 }
 
 export default function ContractCard({ contract }: ContractCardProps) {
+  // Format value in thousands
+  const formatValueInK = (value: number | null) => {
+    if (!value) return 'N/A';
+    const valueInK = value / 1000;
+    return `$${valueInK.toFixed(0)}K`;
+  };
+
   return (
     <div className="card border-l-4 border-green-500">
-      <div className="flex justify-between items-start mb-3">
-        <div className="flex-1">
-          <h5 className="text-md font-semibold text-gray-900 mb-1">
-            {contract.title || contract.contract_number || 'Untitled Contract'}
-          </h5>
-          {contract.contract_number && (
-            <p className="text-sm text-gray-500">Contract #: {contract.contract_number}</p>
-          )}
+      {/* Header with Contract Number and Title */}
+      <div className="mb-4">
+        <div className="flex justify-between items-start">
+          <div className="flex-1">
+            {contract.contract_number && (
+              <div className="text-xs font-semibold text-gray-500 mb-1">
+                Contract Number
+              </div>
+            )}
+            <h5 className="text-md font-bold text-gray-900 mb-2">
+              {contract.contract_number || 'N/A'}
+            </h5>
+          </div>
         </div>
-        {contract.contract_value && (
-          <div className="text-right">
-            <div className="text-xl font-bold text-green-600">
-              {formatCurrency(contract.contract_value)}
+
+        {contract.title && (
+          <div>
+            <div className="text-xs font-semibold text-gray-500 mb-1">
+              Contract Title
             </div>
-            <div className="text-xs text-gray-500">Contract Value</div>
+            <p className="text-sm text-gray-900">{contract.title}</p>
           </div>
         )}
       </div>
 
-      <div className="space-y-2 mb-3">
-        {contract.vendor_name && (
-          <div className="flex items-center text-sm">
-            <span className="text-gray-500 w-32">Vendor:</span>
-            <span className="text-gray-900 font-medium">{contract.vendor_name}</span>
-          </div>
-        )}
+      {/* Contract Details Grid */}
+      <div className="grid grid-cols-2 gap-3 text-sm">
+        {/* Vendor */}
+        <div>
+          <div className="text-xs font-semibold text-gray-500 mb-1">Vendor</div>
+          <div className="text-gray-900">{contract.vendor_name || 'N/A'}</div>
+        </div>
 
-        {contract.status && (
-          <div className="flex items-center text-sm">
-            <span className="text-gray-500 w-32">Status:</span>
-            <span className="badge badge-primary">{contract.status}</span>
+        {/* Award Date */}
+        <div>
+          <div className="text-xs font-semibold text-gray-500 mb-1">Award Date</div>
+          <div className="text-gray-900">
+            {contract.award_date ? formatDate(contract.award_date) : 'N/A'}
           </div>
-        )}
+        </div>
 
-        {contract.contract_type && (
-          <div className="flex items-center text-sm">
-            <span className="text-gray-500 w-32">Type:</span>
-            <span className="text-gray-900">{contract.contract_type}</span>
+        {/* Current Expiration Date */}
+        <div>
+          <div className="text-xs font-semibold text-gray-500 mb-1">Current Expiration Date</div>
+          <div className="text-gray-900">
+            {contract.end_date ? formatDate(contract.end_date) : 'N/A'}
           </div>
-        )}
+        </div>
 
-        {contract.award_date && (
-          <div className="flex items-center text-sm">
-            <span className="text-gray-500 w-32">Award Date:</span>
-            <span className="text-gray-900">{formatDate(contract.award_date)}</span>
+        {/* Ultimate Expiration Date (placeholder - would need to be in raw_data) */}
+        <div>
+          <div className="text-xs font-semibold text-gray-500 mb-1">Ultimate Expiration Date</div>
+          <div className="text-gray-900">
+            {contract.end_date ? formatDate(contract.end_date) : 'N/A'}
           </div>
-        )}
+        </div>
 
-        {contract.start_date && (
-          <div className="flex items-center text-sm">
-            <span className="text-gray-500 w-32">Start Date:</span>
-            <span className="text-gray-900">{formatDate(contract.start_date)}</span>
-          </div>
-        )}
+        {/* Spend-to-date (placeholder - would need to be in raw_data) */}
+        <div>
+          <div className="text-xs font-semibold text-gray-500 mb-1">Spend-to-date</div>
+          <div className="text-gray-900 font-semibold">N/A</div>
+        </div>
 
-        {contract.end_date && (
-          <div className="flex items-center text-sm">
-            <span className="text-gray-500 w-32">End Date:</span>
-            <span className="text-gray-900">{formatDate(contract.end_date)}</span>
+        {/* Est. Value */}
+        <div className="col-span-2">
+          <div className="text-xs font-semibold text-gray-500 mb-1">Est. Value</div>
+          <div className="text-lg font-bold text-green-600">
+            {formatValueInK(contract.contract_value)}
           </div>
-        )}
+        </div>
       </div>
 
+      {/* Description (if available) */}
       {contract.description && (
-        <div className="bg-gray-50 border border-gray-200 rounded-md p-3 mt-3">
-          <div className="text-xs font-semibold text-gray-700 mb-1">Description:</div>
+        <div className="bg-gray-50 border border-gray-200 rounded-md p-3 mt-4">
+          <div className="text-xs font-semibold text-gray-700 mb-1">Description</div>
           <p className="text-sm text-gray-600">{contract.description}</p>
         </div>
       )}
