@@ -157,7 +157,8 @@ def search_govwin_for_opportunity(govwin_client: GovWinClient, sam_opp: Dict[str
 
                             if filter_result['pass']:
                                 # Fetch full opportunity details with description
-                                govwin_id = opp.get('iqOppId') or opp.get('id')
+                                # Use 'id' (with prefix like FBO4090400) not 'iqOppId' (just number)
+                                govwin_id = opp.get('id') or opp.get('iqOppId')
                                 try:
                                     full_opp = govwin_client.get_opportunity(govwin_id)
                                     logger.info(f"Pre-filter PASS (score: {filter_result['score']}): {govwin_id} - {filter_result['reasons']}")
@@ -177,7 +178,7 @@ def search_govwin_for_opportunity(govwin_client: GovWinClient, sam_opp: Dict[str
                                         'prefilter_reasons': filter_result['reasons']
                                     })
                             else:
-                                govwin_id = opp.get('iqOppId') or opp.get('id')
+                                govwin_id = opp.get('id') or opp.get('iqOppId')
                                 govwin_title = opp.get('title', 'Unknown')[:50]
                                 logger.debug(f"Pre-filter FAIL (score: {filter_result['score']}): {govwin_id} - {govwin_title}...")
 
@@ -374,12 +375,16 @@ def create_govwin_opportunity_record(govwin_client: GovWinClient, govwin_opp: Di
         Created opportunity record
     """
     try:
-        govwin_id = govwin_opp.get('iqOppId') or govwin_opp.get('id')
-        if not govwin_id:
+        # Use 'id' field with prefix (e.g., 'FBO4114983') for API calls
+        # Use 'iqOppId' (numeric) for database storage
+        govwin_id_prefixed = govwin_opp.get('id')  # e.g., 'FBO4114983'
+        govwin_id_numeric = govwin_opp.get('iqOppId')  # e.g., 4114983
+
+        if not govwin_id_prefixed and not govwin_id_numeric:
             raise ValueError("GovWin opportunity missing ID")
 
-        # Convert to string for API (schema expects string)
-        govwin_id_str = str(govwin_id)
+        # Convert numeric ID to string for database (schema expects string)
+        govwin_id_str = str(govwin_id_numeric) if govwin_id_numeric else govwin_id_prefixed
 
         # Check if it already exists
         check_response = requests.get(
@@ -394,7 +399,7 @@ def create_govwin_opportunity_record(govwin_client: GovWinClient, govwin_opp: Di
 
             # Still fetch contracts if requested, even for existing records
             if fetch_contracts and govwin_db_id:
-                fetch_and_store_contracts(govwin_client, govwin_id_str, govwin_db_id)
+                fetch_and_store_contracts(govwin_client, govwin_id_prefixed, govwin_db_id)
 
             return existing_record
 
@@ -426,11 +431,11 @@ def create_govwin_opportunity_record(govwin_client: GovWinClient, govwin_opp: Di
         response.raise_for_status()
         new_record = response.json()
         govwin_db_id = new_record.get('id')
-        logger.info(f"Created GovWin opportunity record for {govwin_id} (DB ID: {govwin_db_id})")
+        logger.info(f"Created GovWin opportunity record for {govwin_id_str} (DB ID: {govwin_db_id})")
 
-        # Fetch and store related contracts
+        # Fetch and store related contracts using prefixed ID
         if fetch_contracts and govwin_db_id:
-            fetch_and_store_contracts(govwin_client, govwin_id, govwin_db_id)
+            fetch_and_store_contracts(govwin_client, govwin_id_prefixed, govwin_db_id)
 
         return new_record
 
@@ -476,6 +481,19 @@ def create_match_record(sam_notice_id: str, govwin_id: str, evaluation: Dict[str
             json=payload,
             timeout=30
         )
+
+        # Handle validation errors with detailed logging
+        if response.status_code == 422:
+            try:
+                import json as json_lib
+                error_detail = response.json()
+                logger.error(f"422 Validation error creating match record:")
+                logger.error(f"Payload sent: {json_lib.dumps(payload, indent=2)}")
+                logger.error(f"Validation errors: {json_lib.dumps(error_detail, indent=2)}")
+            except:
+                logger.error(f"422 Validation error response body: {response.text}")
+            return False
+
         response.raise_for_status()
         logger.info(f"Created match record: SAM {sam_notice_id} <-> GovWin {govwin_id} (score: {match_score})")
         return True
@@ -572,9 +590,12 @@ def main():
             for match_data in potential_matches:
                 govwin_opp = match_data['opportunity']
                 search_strategy = match_data['search_strategy']
-                govwin_id = govwin_opp.get('iqOppId') or govwin_opp.get('id')
+                # Get numeric ID for display and database storage
+                govwin_id_numeric = govwin_opp.get('iqOppId')
+                govwin_id_prefixed = govwin_opp.get('id')
+                govwin_id_for_display = govwin_id_numeric or govwin_id_prefixed
 
-                logger.info(f"Evaluating match: {notice_id} <-> {govwin_id}")
+                logger.info(f"Evaluating match: {notice_id} <-> {govwin_id_for_display}")
 
                 # Use AI to evaluate the match
                 evaluation = evaluate_match_with_ai(openai_client, sam_opp, govwin_opp)
@@ -586,8 +607,9 @@ def main():
                         # Create GovWin opportunity record and fetch related contracts
                         create_govwin_opportunity_record(govwin_client, govwin_opp, fetch_contracts=True)
 
-                        # Create match record
-                        if create_match_record(notice_id, govwin_id, evaluation, search_strategy):
+                        # Create match record using string version of numeric ID
+                        govwin_id_str = str(govwin_id_numeric) if govwin_id_numeric else govwin_id_prefixed
+                        if create_match_record(notice_id, govwin_id_str, evaluation, search_strategy):
                             match_count += 1
                     except Exception as e:
                         logger.error(f"Error recording match: {e}")
