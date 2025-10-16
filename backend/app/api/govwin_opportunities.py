@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from typing import List
 
-from . import crud, schemas
+from .. import crud, schemas
 from ..database import get_db
 
 router = APIRouter(prefix="/govwin-opportunities", tags=["GovWin Opportunities"])

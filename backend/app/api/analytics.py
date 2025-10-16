@@ -4,7 +4,7 @@ API endpoints for analytics and statistics.
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from . import crud, schemas
+from .. import crud, schemas
 from ..database import get_db
 
 router = APIRouter(prefix="/analytics", tags=["Analytics"])
