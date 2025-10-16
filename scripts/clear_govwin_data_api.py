@@ -80,6 +80,12 @@ def clear_govwin_data(skip_confirmation=False):
         raise
 
 if __name__ == "__main__":
-    # Check for --confirm flag
+    # Never skip confirmation by default - require explicit user approval
+    # The --confirm flag is only for automated scripts, not interactive use
     skip_confirmation = '--confirm' in sys.argv
+
+    if skip_confirmation:
+        print("\n⚠️  WARNING: Running with --confirm flag will delete data without confirmation!")
+        print("This should only be used in automated scripts.\n")
+
     clear_govwin_data(skip_confirmation=skip_confirmation)
