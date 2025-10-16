@@ -24,7 +24,7 @@ class BusinessDevelopmentAgent:
     Agent responsible for analyzing opportunities, standardizing them, 
     and preparing them for ranking.
     """
-    BATCH_SIZE = 5 # Class attribute for batch size
+    BATCH_SIZE = 3 # Class attribute for batch size (reduced from 5 to save tokens/time)
 
     def __init__(self, api_key: str, model: str = "gpt-4o"):
         self.api_key = api_key
@@ -32,7 +32,12 @@ class BusinessDevelopmentAgent:
         if not self.api_key:
             raise ValueError("OpenAI API key is required for BusinessDevelopmentAgent.")
         # self.client will be initialized here but used in get_ranked_opportunities_json
-        self.client = OpenAI(api_key=self.api_key)
+        # Set timeout to 5 minutes (300 seconds) to prevent hanging
+        import httpx
+        self.client = OpenAI(
+            api_key=self.api_key,
+            timeout=httpx.Timeout(300.0, read=300.0, write=300.0, connect=30.0)
+        )
         
     def _empty_usage(self) -> Dict[str, int]:
            """Returns an empty usage dictionary."""
@@ -172,9 +177,8 @@ class BusinessDevelopmentAgent:
                     processed_notice_ids_for_ranking.add(notice_id)
 
                 # For AI, provide a shorter summary if full description is very long, else full description.
-                # The AI prompt will refer to this as 'summary_description' to be included in its output.
-                # Keep full description for storage, truncate only for AI processing input
-                ai_description_input = description[:3000] + "...[truncated]" if len(description) > 3000 else description # For AI to read
+                # Truncate more aggressively to save tokens (1500 chars is ~300-400 words)
+                ai_description_input = description[:1500] + "...[truncated]" if len(description) > 1500 else description # For AI to read
                 summary_desc_for_output = description  # Keep full description for database storage
 
                 rankable_prepared_data.append({
@@ -257,24 +261,21 @@ Instructions:
    5. Risk, Safety & Mission Assurance
    6. Acquisition Lifecycle Management
    7. Grant Program Management
-5. Provide a brief 'justification' (1-2 sentences) for the score and practice area assignment.
+5. Provide a CONCISE 'justification' (1 sentence maximum, 15 words or less) for the score and practice area assignment.
 6. Structure your output as a single JSON object. This object must have a key "ranked_opportunities", whose value is a list of objects. Each object in this list represents an analyzed opportunity and must include:
    - 'original_opportunity_id': The 'id' from the input JSON for that opportunity.
    - 'title': The opportunity title (from input).
    - 'notice_id': The notice ID (from input).
-   - 'department': The department (from input).
-   - 'posted_date': The posted date (from input).
-   - 'response_date': The response date (from input).
-   - 'set_aside': The set aside description (from input).
-   - 'summary_description': The 'summary_description_for_output' from the input.
    - 'assigned_practice_area': The practice area you assigned. If no specific practice area clearly fits, assign the value 'Uncategorized'. This field must always be present.
    - 'fit_score': Your calculated fit score (integer 1-10).
-   - 'justification': Your brief justification (string).
-   - 'link': The opportunity UI link (from input).
+   - 'justification': Your brief justification (string, 15 words max).
+
+   DO NOT include: department, posted_date, response_date, set_aside, summary_description, or link in your response. We already have these fields.
+
 7. **Irrelevant Terms:** The following terms generally indicate a poor fit for our company: *Membership Renewal, Medical Services, Fire Alarm, Trauma, Injury, Expert Witness, Data Entry, Culinary, Geospatial, Heritage Resource, Chemical, Surface Power, Laptops, Hardware, Helpdesk, Geophysical, Subscription, Network Support, Targeting, Commercial Solutions, Indian, Specimen, Sensors, Software Licensing, Licensing, Enterprise License, Battlefield, Warfighter*, Fire Suppression, Fire Alarm. If an opportunity's primary focus clearly revolves around one or more of these terms, assign a 'fit_score' between 1 and 2 and explicitly state the presence of these irrelevant terms as a key reason in your 'justification'.
 
 Example of an item in the output 'ranked_opportunities' list:
-{{ "original_opportunity_id": 1, "title": "Example Title", "notice_id": "EX123", "department": "DEPT OF EXAMPLE", "posted_date": "01/01/2024", "response_date": "01/15/2024", "set_aside": "Small Business", "summary_description": "This is a summary...", "assigned_practice_area": "Business & Technology Services", "fit_score": 8, "justification": "Strong alignment with our tech services capabilities.", "link": "http://example.com/opp1" }}
+{{ "original_opportunity_id": 1, "title": "Example Title", "notice_id": "EX123", "assigned_practice_area": "Business & Technology Services", "fit_score": 8, "justification": "Strong alignment with tech services capabilities." }}
 
 Ensure the entire output is a valid JSON object adhering to this structure.
 '''

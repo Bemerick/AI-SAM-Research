@@ -22,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 BACKEND_API_URL = os.getenv('BACKEND_API_URL', 'http://localhost:8000')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-BATCH_SIZE = 5  # Process 5 opportunities at a time
+BATCH_SIZE = 3  # Process 3 opportunities at a time (reduced to save tokens and processing time)
 
 
 def transform_opportunity_for_analyzer(opp):
@@ -69,8 +69,20 @@ def analyze_batch(analyzer, batch):
 
         logger.info(f"Analyzing batch of {len(transformed_batch)} opportunities...")
 
-        # Analyze the batch
-        result = analyzer.analyze_opportunities(transformed_batch, output_format="json")
+        # Analyze the batch with timeout protection
+        import signal
+
+        def timeout_handler(signum, frame):
+            raise TimeoutError("Batch analysis timed out after 6 minutes")
+
+        # Set a 6-minute timeout (slightly longer than OpenAI's 5-minute timeout)
+        signal.signal(signal.SIGALRM, timeout_handler)
+        signal.alarm(360)  # 6 minutes
+
+        try:
+            result = analyzer.analyze_opportunities(transformed_batch, output_format="json")
+        finally:
+            signal.alarm(0)  # Cancel the alarm
 
         # Extract and map results back to database IDs
         analyses = {}
@@ -99,25 +111,50 @@ def analyze_batch(analyzer, batch):
 
         return analyses
 
+    except TimeoutError as e:
+        logger.error(f"Batch analysis timed out: {e}")
+        return {}
     except Exception as e:
         logger.error(f"Error analyzing batch: {e}", exc_info=True)
         return {}
 
 
-def update_opportunity(opp_id, analysis_data):
-    """Update opportunity via backend API"""
-    try:
-        response = requests.patch(
-            f"{BACKEND_API_URL}/api/sam-opportunities/{opp_id}/",
-            json=analysis_data,
-            timeout=30
-        )
-        response.raise_for_status()
-        logger.info(f"Updated opportunity {opp_id} with analysis")
-        return True
-    except Exception as e:
-        logger.error(f"Error updating opportunity {opp_id}: {e}")
-        return False
+def update_opportunity(opp_id, analysis_data, max_retries=3):
+    """Update opportunity via backend API with retry logic"""
+    import time
+
+    for attempt in range(max_retries):
+        try:
+            response = requests.patch(
+                f"{BACKEND_API_URL}/api/sam-opportunities/{opp_id}/",
+                json=analysis_data,
+                timeout=30
+            )
+
+            if response.status_code == 500:
+                # Log server error details
+                logger.error(f"500 Server Error updating opportunity {opp_id} (attempt {attempt + 1}/{max_retries}): {response.text[:200]}")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)  # Exponential backoff: 1s, 2s, 4s
+                    continue
+
+            response.raise_for_status()
+            logger.info(f"Updated opportunity {opp_id} with analysis")
+            return True
+
+        except requests.exceptions.Timeout:
+            logger.warning(f"Timeout updating opportunity {opp_id} (attempt {attempt + 1}/{max_retries})")
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt)
+                continue
+        except Exception as e:
+            logger.error(f"Error updating opportunity {opp_id} (attempt {attempt + 1}/{max_retries}): {e}")
+            if attempt < max_retries - 1:
+                time.sleep(2 ** attempt)
+                continue
+
+    logger.error(f"Failed to update opportunity {opp_id} after {max_retries} attempts")
+    return False
 
 
 def main():
