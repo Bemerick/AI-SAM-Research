@@ -5,8 +5,8 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from typing import List, Optional
 
-from app import crud, schemas
-from app.database import get_db
+from . import crud, schemas
+from ..database import get_db
 
 router = APIRouter(prefix="/sam-opportunities", tags=["SAM Opportunities"])
 
@@ -42,7 +42,7 @@ def list_sam_opportunities(
         opportunities = [opp for opp in opportunities if opp.recommend_bid == recommend_bid]
 
     # Add match_count to each opportunity
-    from app.models import Match
+    from ..models import Match
     for opp in opportunities:
         match_count = db.query(Match).filter(Match.sam_opportunity_id == opp.id).count()
         opp.match_count = match_count
@@ -96,7 +96,7 @@ def get_sam_opportunity(
         raise HTTPException(status_code=404, detail="SAM opportunity not found")
 
     # Add match_count
-    from app.models import Match
+    from ..models import Match
     opportunity.match_count = db.query(Match).filter(Match.sam_opportunity_id == opportunity.id).count()
 
     return opportunity

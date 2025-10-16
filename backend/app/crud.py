@@ -7,7 +7,7 @@ from typing import List, Optional
 from datetime import datetime
 import json
 
-from app import models, schemas
+from . import models, schemas
 
 
 # SAM Opportunity CRUD
