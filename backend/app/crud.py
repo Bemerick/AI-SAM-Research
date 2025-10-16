@@ -7,7 +7,7 @@ from typing import List, Optional
 from datetime import datetime
 import json
 
-from backend.app import models, schemas
+from app import models, schemas
 
 
 # SAM Opportunity CRUD
@@ -40,6 +40,22 @@ def get_sam_opportunities(
         query = query.filter(models.SAMOpportunity.naics_code == naics_code)
 
     return query.order_by(desc(models.SAMOpportunity.fit_score)).offset(skip).limit(limit).all()
+
+
+def get_unscored_sam_opportunities(
+    db: Session,
+    skip: int = 0,
+    limit: int = 100
+) -> List[models.SAMOpportunity]:
+    """Get list of SAM opportunities with fit_score = 0 or NULL (unscored)."""
+    from sqlalchemy import or_
+    query = db.query(models.SAMOpportunity).filter(
+        or_(
+            models.SAMOpportunity.fit_score == None,
+            models.SAMOpportunity.fit_score == 0
+        )
+    )
+    return query.order_by(desc(models.SAMOpportunity.created_at)).offset(skip).limit(limit).all()
 
 
 def create_sam_opportunity(db: Session, opportunity: schemas.SAMOpportunityCreate) -> models.SAMOpportunity:

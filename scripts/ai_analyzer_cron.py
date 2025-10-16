@@ -170,12 +170,12 @@ def main():
         # Initialize analyzer
         analyzer = OpportunityAnalyzer(openai_api_key=OPENAI_API_KEY)
 
-        # Fetch unscored opportunities
-        response = requests.get(f"{BACKEND_API_URL}/api/sam-opportunities/?fit_score=0&limit=100", timeout=30)
+        # Fetch unscored opportunities (fit_score = 0 or NULL)
+        response = requests.get(f"{BACKEND_API_URL}/api/sam-opportunities/unscored?limit=100", timeout=30)
         response.raise_for_status()
         opportunities = response.json()
 
-        logger.info(f"Found {len(opportunities)} unscored opportunities")
+        logger.info(f"Found {len(opportunities)} unscored opportunities (fit_score = 0 or NULL)")
 
         if not opportunities:
             logger.info("No opportunities to analyze")
