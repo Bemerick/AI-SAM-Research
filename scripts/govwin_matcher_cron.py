@@ -319,20 +319,42 @@ def fetch_and_store_contracts(govwin_client: GovWinClient, govwin_id: str, govwi
                 # Extract contract fields
                 import json
 
-                # Extract and convert IDs to strings (schema expects strings)
-                vendor_id = contract.get('vendorId') or contract.get('vendor_id')
+                # Extract vendor information (company object in GovWin API)
+                company = contract.get('company', {})
+                vendor_name = None
+                vendor_id = None
+
+                if isinstance(company, dict):
+                    vendor_name = company.get('name')
+                    vendor_id = company.get('id')
+                else:
+                    # Fallback to direct fields
+                    vendor_name = contract.get('vendorName') or contract.get('vendor_name')
+                    vendor_id = contract.get('vendorId') or contract.get('vendor_id')
+
+                # Extract contract value (estimatedValue in GovWin API)
+                contract_value = (
+                    contract.get('estimatedValue') or
+                    contract.get('contractValue') or
+                    contract.get('contract_value') or
+                    contract.get('value')
+                )
+
+                # Extract expiration date
+                expiration_date = contract.get('expirationDate') or contract.get('endDate') or contract.get('end_date')
 
                 payload = {
                     "govwin_opportunity_id": govwin_db_id,  # Use database ID (int)
                     "contract_id": str(contract_id) if contract_id else None,
                     "contract_number": str(contract_number) if contract_number else None,
                     "title": contract.get('title'),
-                    "vendor_name": contract.get('vendorName') or contract.get('vendor_name'),
+                    "vendor_name": vendor_name,
                     "vendor_id": str(vendor_id) if vendor_id else None,
-                    "contract_value": contract.get('contractValue') or contract.get('contract_value') or contract.get('value'),
+                    "contract_value": contract_value,
                     "award_date": contract.get('awardDate') or contract.get('award_date'),
                     "start_date": contract.get('startDate') or contract.get('start_date'),
-                    "end_date": contract.get('endDate') or contract.get('end_date'),
+                    "end_date": expiration_date,
+                    "status": "Incumbent" if contract.get('incumbent') in [True, 'true', '1', 1] else None,
                     "raw_data": json.dumps(contract)  # Store as JSON string
                 }
 
