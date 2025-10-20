@@ -253,8 +253,11 @@ def fetch_sam_opportunities_by_date(
     ]
     naics_codes = request.naics_codes or default_naics_codes
 
-    # Import SAM client
-    from ...app.sam_client import SAMClient
+    # Import SAM client from root app directory
+    import sys
+    import os
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..'))
+    from app.sam_client import SAMClient
 
     client = SAMClient(api_key=sam_api_key)
 
