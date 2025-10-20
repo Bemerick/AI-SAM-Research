@@ -36,6 +36,12 @@ export default function Layout({ children }: LayoutProps) {
               >
                 High Scoring
               </Link>
+              <Link
+                to="/admin"
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${isActive('/admin')}`}
+              >
+                Admin
+              </Link>
             </div>
           </div>
         </div>

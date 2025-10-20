@@ -34,12 +34,21 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 # NAICS codes to search
 NAICS_CODES = [
+    "519190",  # All Other Information Services
+    "518210",  # Data Processing, Hosting, and Related Services
+    "541430",  # Graphic Design Services
+    "541490",  # Other Specialized Design Services
     "541511",  # Custom Computer Programming Services
     "541512",  # Computer Systems Design Services
-    "541513",  # Computer Facilities Management Services
     "541519",  # Other Computer Related Services
-    "541611",  # Administrative Management Consulting
+    "541611",  # Administrative Management and General Management Consulting Services
     "541618",  # Other Management Consulting Services
+    "541690",  # Other Scientific and Technical Consulting Services
+    "541715",  # Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)
+    "541990",  # All Other Professional, Scientific, and Technical Services
+    "561110",  # Office Administrative Services
+    "611430",  # Professional and Management Development Training
+    "921190",  # Other General Government Support
 ]
 
 # Retry configuration for backend API

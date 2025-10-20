@@ -147,6 +147,29 @@ export const analyticsAPI = {
   },
 };
 
+// Admin API
+export interface FetchByDateResponse {
+  message: string;
+  fetched_count: number;
+  stored_count: number;
+  duplicate_count: number;
+  error_count: number;
+}
+
+export const fetchSAMOpportunitiesByDate = async (
+  postedDate: string,
+  naicsCodes?: string[]
+): Promise<FetchByDateResponse> => {
+  const response = await apiClient.post<FetchByDateResponse>(
+    '/sam-opportunities/fetch-by-date',
+    {
+      posted_date: postedDate,
+      naics_codes: naicsCodes,
+    }
+  );
+  return response.data;
+};
+
 // CRM Integration API
 export const crmAPI = {
   sendToCRM: async (opportunityId: number): Promise<any> => {

@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import OpportunityDetail from './pages/OpportunityDetail';
 import HighScoring from './pages/HighScoring';
+import Admin from './pages/Admin';
 
 // Create a client
 const queryClient = new QueryClient({
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/opportunities/:id" element={<OpportunityDetail />} />
             <Route path="/high-scoring" element={<HighScoring />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </Layout>
       </Router>
