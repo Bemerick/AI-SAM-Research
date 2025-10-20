@@ -26,7 +26,6 @@ def startup_event():
     print("Database tables initialized!")
 
 # CORS configuration for React frontend
-# In production, replace "*" with your actual frontend domain
 origins = [
     "http://localhost:3000",  # React default dev server
     "http://localhost:5173",  # Vite default dev server
@@ -44,6 +43,9 @@ origins = [
 production_origin = os.getenv("FRONTEND_URL")
 if production_origin:
     origins.append(production_origin)
+
+# Add common Render.com frontend URL pattern
+origins.append("https://sam-govwin-frontend.onrender.com")
 
 app.add_middleware(
     CORSMiddleware,
