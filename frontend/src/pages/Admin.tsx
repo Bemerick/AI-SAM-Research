@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { fetchSAMOpportunitiesByDate } from '../services/api';
 
 export default function Admin() {
