@@ -134,6 +134,7 @@ export const OpportunityDataGrid: React.FC<OpportunityDataGridProps> = ({
       sortable: true,
       filter: 'agNumberColumnFilter',
       sort: 'desc',
+      sortIndex: 1,
       pinned: 'left',
     },
     {
@@ -207,6 +208,8 @@ export const OpportunityDataGrid: React.FC<OpportunityDataGridProps> = ({
       width: 120,
       sortable: true,
       filter: 'agDateColumnFilter',
+      sort: 'desc',
+      sortIndex: 0,
       valueFormatter: (params) => formatDate(params.value),
     },
     {
