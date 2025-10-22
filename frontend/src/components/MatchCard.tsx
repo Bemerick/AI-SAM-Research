@@ -14,10 +14,12 @@ export default function MatchCard({ match, onStatusChange }: MatchCardProps) {
   const getGovWinUrl = (govwinId: string) => {
     // Check if ID starts with FBO prefix
     if (/^FBO/i.test(govwinId)) {
+      // Strip FBO prefix to get numeric ID
       const numericId = govwinId.replace(/^FBO/i, '');
       return `https://iq.govwin.com/neo/fbo/view/${numericId}`;
     }
     // Default to opportunity URL (for OPP prefix or no prefix)
+    // Strip OPP prefix if present to get numeric ID
     const numericId = govwinId.replace(/^OPP/i, '');
     return `https://iq.govwin.com/neo/opportunity/view/${numericId}`;
   };

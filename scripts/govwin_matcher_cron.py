@@ -525,16 +525,16 @@ def create_govwin_opportunity_record(govwin_client: GovWinClient, govwin_opp: Di
         Created opportunity record
     """
     try:
-        # Use 'id' field with prefix (e.g., 'FBO4114983') for API calls
-        # Use 'iqOppId' (numeric) for database storage
+        # Use 'id' field with prefix (e.g., 'FBO4114983') for API calls and database storage
+        # Use 'iqOppId' (numeric) as fallback
         govwin_id_prefixed = govwin_opp.get('id')  # e.g., 'FBO4114983'
         govwin_id_numeric = govwin_opp.get('iqOppId')  # e.g., 4114983
 
         if not govwin_id_prefixed and not govwin_id_numeric:
             raise ValueError("GovWin opportunity missing ID")
 
-        # Convert numeric ID to string for database (schema expects string)
-        govwin_id_str = str(govwin_id_numeric) if govwin_id_numeric else govwin_id_prefixed
+        # Store the prefixed ID to preserve FBO/OPP prefix for frontend URL generation
+        govwin_id_str = govwin_id_prefixed if govwin_id_prefixed else str(govwin_id_numeric)
 
         # Check if it already exists
         check_response = make_api_request(
@@ -762,8 +762,8 @@ def main():
                         # Create GovWin opportunity record and fetch related contracts
                         create_govwin_opportunity_record(govwin_client, govwin_opp, fetch_contracts=True)
 
-                        # Create match record using string version of numeric ID
-                        govwin_id_str = str(govwin_id_numeric) if govwin_id_numeric else govwin_id_prefixed
+                        # Create match record using prefixed ID to preserve FBO/OPP prefix
+                        govwin_id_str = govwin_id_prefixed if govwin_id_prefixed else str(govwin_id_numeric)
                         if create_match_record(notice_id, govwin_id_str, evaluation, search_strategy):
                             match_count += 1
                     except Exception as e:
