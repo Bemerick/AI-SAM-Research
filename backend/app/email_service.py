@@ -9,13 +9,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# Microsoft Graph API configuration
-MS_TENANT_ID = os.getenv('MS_TENANT_ID', '')
-MS_CLIENT_ID = os.getenv('MS_CLIENT_ID', '')
-MS_CLIENT_SECRET = os.getenv('MS_CLIENT_SECRET', '')
-EMAIL_FROM_ADDRESS = os.getenv('EMAIL_FROM_ADDRESS', '')
-EMAIL_FROM_NAME = os.getenv('EMAIL_FROM_NAME', 'SAM Opportunity System')
-
 
 class EmailService:
     """Service for sending emails via Microsoft Graph API."""
@@ -28,17 +21,21 @@ class EmailService:
         Returns:
             Access token or None if authentication fails
         """
-        if not all([MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET]):
+        ms_tenant_id = os.getenv('MS_TENANT_ID', '')
+        ms_client_id = os.getenv('MS_CLIENT_ID', '')
+        ms_client_secret = os.getenv('MS_CLIENT_SECRET', '')
+
+        if not all([ms_tenant_id, ms_client_id, ms_client_secret]):
             logger.error("Microsoft Graph credentials not configured. Set MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET")
             return None
 
         try:
-            token_url = f"https://login.microsoftonline.com/{MS_TENANT_ID}/oauth2/v2.0/token"
+            token_url = f"https://login.microsoftonline.com/{ms_tenant_id}/oauth2/v2.0/token"
 
             data = {
                 'grant_type': 'client_credentials',
-                'client_id': MS_CLIENT_ID,
-                'client_secret': MS_CLIENT_SECRET,
+                'client_id': ms_client_id,
+                'client_secret': ms_client_secret,
                 'scope': 'https://graph.microsoft.com/.default'
             }
 
@@ -76,11 +73,16 @@ class EmailService:
             logger.error("No recipient email addresses provided")
             return False
 
-        from_email = from_email or EMAIL_FROM_ADDRESS
-        from_name = from_name or EMAIL_FROM_NAME
+        # Get email config from environment
+        email_from_address = os.getenv('EMAIL_FROM_ADDRESS', '')
+        email_from_name = os.getenv('EMAIL_FROM_NAME', 'SAM Opportunity System')
+
+        from_email = from_email or email_from_address
+        from_name = from_name or email_from_name
 
         if not from_email:
-            logger.error("No sender email configured. Set EMAIL_FROM_ADDRESS")
+            logger.error("No sender email configured. Set EMAIL_FROM_ADDRESS environment variable")
+            logger.error(f"Current EMAIL_FROM_ADDRESS value: '{email_from_address}'")
             return False
 
         # Get access token
