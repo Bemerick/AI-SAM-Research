@@ -78,6 +78,14 @@ export const samOpportunitiesAPI = {
     const response = await apiClient.get<GovWinContract[]>(`/sam-opportunities/${opportunityId}/matches/${matchId}/contracts/`);
     return response.data;
   },
+
+  shareViaEmail: async (id: number, toEmails: string[], senderName?: string): Promise<{ success: boolean; message: string }> => {
+    const response = await apiClient.post(`/sam-opportunities/${id}/share/`, {
+      to_emails: toEmails,
+      sender_name: senderName,
+    });
+    return response.data;
+  },
 };
 
 // GovWin Opportunities API

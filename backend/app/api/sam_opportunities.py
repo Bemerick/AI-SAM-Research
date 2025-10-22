@@ -5,7 +5,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query, BackgroundTasks
 from sqlalchemy.orm import Session
 from typing import List, Optional
 from datetime import datetime, timedelta
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 from .. import crud, schemas
 from ..database import get_db
@@ -26,6 +26,19 @@ class FetchByDateResponse(BaseModel):
     stored_count: int
     duplicate_count: int
     error_count: int
+
+
+class ShareOpportunityRequest(BaseModel):
+    """Request model for sharing an opportunity via email."""
+    to_emails: List[EmailStr]
+    sender_name: Optional[str] = None
+    message: Optional[str] = None
+
+
+class ShareOpportunityResponse(BaseModel):
+    """Response model for share opportunity endpoint."""
+    success: bool
+    message: str
 
 
 @router.get("/", response_model=List[schemas.SAMOpportunity])
@@ -346,4 +359,75 @@ def fetch_sam_opportunities_by_date(
         stored_count=stored_count,
         duplicate_count=duplicate_count,
         error_count=error_count
+    )
+
+
+@router.post("/{opportunity_id}/share", response_model=ShareOpportunityResponse)
+def share_opportunity_via_email(
+    opportunity_id: int,
+    request: ShareOpportunityRequest,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db)
+):
+    """
+    Share an opportunity via email.
+    Sends an HTML-formatted email with opportunity details.
+    """
+    import os
+    from ..email_service import EmailService, format_opportunity_email_html
+
+    # Get the opportunity
+    opportunity = crud.get_sam_opportunity(db, opportunity_id)
+    if not opportunity:
+        raise HTTPException(status_code=404, detail="Opportunity not found")
+
+    # Get frontend URL from environment or construct it
+    frontend_url = os.getenv('FRONTEND_URL', 'http://localhost:5173')
+    detail_url = f"{frontend_url}/opportunities/{opportunity_id}"
+
+    # Convert opportunity to dict for email formatting
+    opp_dict = {
+        "title": opportunity.title,
+        "notice_id": opportunity.notice_id,
+        "fit_score": opportunity.fit_score,
+        "department": opportunity.department,
+        "solicitation_number": opportunity.solicitation_number,
+        "naics_code": opportunity.naics_code,
+        "assigned_practice_area": opportunity.assigned_practice_area,
+        "posted_date": opportunity.posted_date,
+        "response_deadline": opportunity.response_deadline,
+        "set_aside": opportunity.set_aside,
+        "ptype": opportunity.ptype,
+        "place_of_performance_city": opportunity.place_of_performance_city,
+        "place_of_performance_state": opportunity.place_of_performance_state,
+        "summary_description": opportunity.summary_description,
+        "sam_link": opportunity.sam_link,
+    }
+
+    # Format HTML email
+    html_body = format_opportunity_email_html(
+        opportunity=opp_dict,
+        detail_url=detail_url,
+        sender_name=request.sender_name
+    )
+
+    # Email subject
+    subject = f"SAM Opportunity: {opportunity.title}"
+
+    # Send email in background
+    def send_email_task():
+        success = EmailService.send_opportunity_share_email(
+            to_emails=request.to_emails,
+            subject=subject,
+            html_body=html_body
+        )
+        if not success:
+            # Log error but don't raise exception in background task
+            print(f"Failed to send email to {request.to_emails}")
+
+    background_tasks.add_task(send_email_task)
+
+    return ShareOpportunityResponse(
+        success=True,
+        message=f"Email will be sent to {len(request.to_emails)} recipient(s)"
     )
