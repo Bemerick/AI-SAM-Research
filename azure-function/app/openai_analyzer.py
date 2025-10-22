@@ -48,10 +48,9 @@ class BusinessDevelopmentAgent:
         # Please ensure you use YOUR version of _standardize_opportunity if it's more complex.
         opp = opportunity.copy()
 
-        # Ensure notice_id is populated (SAM.gov uses 'noticeId')
-        # The .get() method will return None if 'noticeId' is not in opportunity, 
-        # which is handled by the calling code in OpportunityAnalyzer.
-        opp['notice_id'] = opportunity.get('noticeId')
+        # Ensure notice_id is populated
+        # Handle both SAM.gov's 'noticeId' (camelCase) and database's 'notice_id' (snake_case)
+        opp['notice_id'] = opportunity.get('noticeId') or opportunity.get('notice_id')
     
         # Standardize department (extract from fullParentPathName)
         if 'fullParentPathName' in opp and opp['fullParentPathName']:
@@ -68,7 +67,7 @@ class BusinessDevelopmentAgent:
             opp['department'] = 'N/A'
         
         # Standardize type
-        opp['standardized_type'] = opp.get('type', 'N/A').lower()
+        opp['standardized_type'] = (opp.get('type') or 'N/A').lower()
 
         # NAICS Code
         opp['naics_code'] = opportunity.get('naicsCode', 'N/A')
@@ -83,7 +82,7 @@ class BusinessDevelopmentAgent:
             opp['is_small_business'] = 'small business' in opp['set_aside'].lower()
 
         # Procurement Type (ptype)
-        opp['ptype'] = opportunity.get('type', 'N/A').lower() # Use 'type' from SAM.gov and convert to lowercase
+        opp['ptype'] = (opportunity.get('type') or 'N/A').lower() # Use 'type' from SAM.gov and convert to lowercase
     
         # Dates
         raw_response_deadline = opp.get('responseDeadLine') # Get the raw value from the opportunity copy
@@ -101,14 +100,14 @@ class BusinessDevelopmentAgent:
         # Description
         opp['descriptionText'] = opp.get('descriptionText', opp.get('description', 'No description available'))
         
-        # Link
-        raw_ui_link = opportunity.get('uiLink')
+        # Link - try uiLink first, fallback to sam_link (used by SAMFetcher)
+        raw_ui_link = opportunity.get('uiLink') or opportunity.get('sam_link')
         if not raw_ui_link:
             try:
-                logger.warning(f"Raw opportunity (Title: {opportunity.get('title', 'N/A')}) is missing 'uiLink' or it's empty. Value: '{raw_ui_link}'. Available keys: {list(opportunity.keys())}")
+                logger.warning(f"Raw opportunity (Title: {opportunity.get('title', 'N/A')}) is missing 'uiLink' and 'sam_link'. Available keys: {list(opportunity.keys())}")
             except NameError: # Fallback if logger is not defined
-                print(f"WARNING: Raw opportunity (Title: {opportunity.get('title', 'N/A')}) is missing 'uiLink' or it's empty. Value: '{raw_ui_link}'. Available keys: {list(opportunity.keys())}")
-            
+                print(f"WARNING: Raw opportunity (Title: {opportunity.get('title', 'N/A')}) is missing 'uiLink' and 'sam_link'. Available keys: {list(opportunity.keys())}")
+
         opp['uiLink'] = raw_ui_link if raw_ui_link else 'N/A'
         print(f"DEBUG_STANDARDIZE: notice_id={opp.get('notice_id', 'N/A')}, opp['uiLink'] set to: '{opp['uiLink']}'") # DEBUG
 
@@ -129,7 +128,7 @@ class BusinessDevelopmentAgent:
         rankable_id_counter = 1 # This is used for the 'id' field sent to AI
 
         for opp in standardized_opportunities:
-            notice_id = opp.get('noticeId', f"MISSING_NOTICE_ID_{rankable_id_counter}") # Fallback if noticeId is missing
+            notice_id = opp.get('notice_id') or opp.get('noticeId') or f"MISSING_NOTICE_ID_{rankable_id_counter}" # Handle both snake_case and camelCase
 
             # Skip if this notice_id has already been processed for ranking
             if notice_id in processed_notice_ids_for_ranking and notice_id != f"MISSING_NOTICE_ID_{rankable_id_counter}": # only skip if it's a real ID
@@ -259,7 +258,8 @@ Instructions:
    6. Acquisition Lifecycle Management
    7. Grant Program Management
 5. Provide a brief 'justification' (1-2 sentences) for the score and practice area assignment.
-6. Structure your output as a single JSON object. This object must have a key "ranked_opportunities", whose value is a list of objects. Each object in this list represents an analyzed opportunity and must include:
+6. Generate a concise 'summary_description' (2-4 sentences) that summarizes the key aspects of the opportunity from the 'description_for_ai_processing' field. Focus on the scope of work, key deliverables, and any notable requirements.
+7. Structure your output as a single JSON object. This object must have a key "ranked_opportunities", whose value is a list of objects. Each object in this list represents an analyzed opportunity and must include:
    - 'original_opportunity_id': The 'id' from the input JSON for that opportunity.
    - 'title': The opportunity title (from input).
    - 'notice_id': The notice ID (from input).
@@ -267,12 +267,12 @@ Instructions:
    - 'posted_date': The posted date (from input).
    - 'response_date': The response date (from input).
    - 'set_aside': The set aside description (from input).
-   - 'summary_description': The 'summary_description_for_output' from the input.
+   - 'summary_description': A concise AI-generated summary (2-4 sentences) of the opportunity.
    - 'assigned_practice_area': The practice area you assigned. If no specific practice area clearly fits, assign the value 'Uncategorized'. This field must always be present.
    - 'fit_score': Your calculated fit score (integer 1-10).
    - 'justification': Your brief justification (string).
    - 'link': The opportunity UI link (from input).
-7. **Irrelevant Terms:** The following terms generally indicate a poor fit for our company: *Membership Renewal, Medical Services, Fire Alarm, Trauma, Injury, Expert Witness, Data Entry, Culinary, Geospatial, Heritage Resource, Chemical, Surface Power, Laptops, Hardware, Helpdesk, Geophysical, Subscription, Network Support, Targeting, Commercial Solutions, Indian, Specimen, Sensors, Software Licensing, Licensing, Enterprise License, Battlefield, Warfighter*, Fire Suppression, Fire Alarm. If an opportunity's primary focus clearly revolves around one or more of these terms, assign a 'fit_score' between 1 and 2 and explicitly state the presence of these irrelevant terms as a key reason in your 'justification'.
+8. **Irrelevant Terms:** The following terms generally indicate a poor fit for our company: *Membership Renewal, Medical Services, Fire Alarm, Trauma, Injury, Expert Witness, Data Entry, Culinary, Geospatial, Heritage Resource, Chemical, Surface Power, Laptops, Hardware, Helpdesk, Geophysical, Subscription, Network Support, Targeting, Commercial Solutions, Indian, Specimen, Sensors, Software Licensing, Licensing, Enterprise License, Battlefield, Warfighter*, Fire Suppression, Fire Alarm. If an opportunity's primary focus clearly revolves around one or more of these terms, assign a 'fit_score' between 1 and 2 and explicitly state the presence of these irrelevant terms as a key reason in your 'justification'.
 
 Example of an item in the output 'ranked_opportunities' list:
 {{ "original_opportunity_id": 1, "title": "Example Title", "notice_id": "EX123", "department": "DEPT OF EXAMPLE", "posted_date": "01/01/2024", "response_date": "01/15/2024", "set_aside": "Small Business", "summary_description": "This is a summary...", "assigned_practice_area": "Business & Technology Services", "fit_score": 8, "justification": "Strong alignment with our tech services capabilities.", "link": "http://example.com/opp1" }}

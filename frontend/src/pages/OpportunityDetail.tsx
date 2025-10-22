@@ -262,22 +262,19 @@ export default function OpportunityDetail() {
         )}
       </div>
 
-      {/* Description */}
+      {/* AI-Generated Summary */}
       {currentOpp.summary_description && (
-        <div className="card mb-6">
-          <h3 className="text-lg font-semibold mb-3">Description</h3>
-          <div
-            className="text-gray-700 prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: currentOpp.summary_description }}
-          />
+        <div className="card mb-6 bg-blue-50 border-blue-200">
+          <h3 className="text-lg font-semibold mb-3 text-blue-900">AI Summary</h3>
+          <p className="text-blue-800">{currentOpp.summary_description}</p>
         </div>
       )}
 
       {/* AI Justification */}
       {currentOpp.justification && (
-        <div className="card mb-6 bg-blue-50 border-blue-200">
-          <h3 className="text-lg font-semibold mb-3 text-blue-900">AI Fit Analysis</h3>
-          <p className="text-blue-800">{currentOpp.justification}</p>
+        <div className="card mb-6 bg-green-50 border-green-200">
+          <h3 className="text-lg font-semibold mb-3 text-green-900">AI Fit Analysis</h3>
+          <p className="text-green-800">{currentOpp.justification}</p>
         </div>
       )}
 
