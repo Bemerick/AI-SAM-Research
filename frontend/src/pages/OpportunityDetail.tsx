@@ -130,6 +130,131 @@ export default function OpportunityDetail() {
     }
   };
 
+  const handleShareEmail = () => {
+    const opp = currentOpp;
+    if (!opp) return;
+
+    // Get the current page URL for the detail link
+    const detailUrl = window.location.href;
+
+    // Build HTML email body
+    const emailSubject = `SAM Opportunity: ${opp.title}`;
+
+    const emailBody = `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; }
+    .header { background-color: #2563eb; color: white; padding: 20px; text-align: center; }
+    .header h1 { margin: 0; font-size: 24px; }
+    .card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px; margin: 20px 0; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+    .info-item { margin-bottom: 10px; }
+    .info-label { font-weight: bold; color: #6b7280; font-size: 14px; }
+    .info-value { color: #111827; margin-top: 5px; }
+    .badge { display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 14px; font-weight: 600; }
+    .badge-score { background-color: #dbeafe; color: #1e40af; }
+    .summary { background-color: #eff6ff; border-left: 4px solid #2563eb; padding: 15px; margin: 15px 0; }
+    .btn { display: inline-block; background-color: #2563eb; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin: 10px 10px 10px 0; }
+    .btn:hover { background-color: #1d4ed8; }
+    .footer { text-align: center; color: #6b7280; font-size: 12px; margin-top: 30px; padding: 20px; border-top: 1px solid #e5e7eb; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>SAM.gov Opportunity</h1>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top: 0; color: #111827;">${opp.title}</h2>
+    <p style="color: #6b7280;">Notice ID: ${opp.notice_id}</p>
+
+    ${opp.fit_score ? `<div style="margin: 15px 0;"><span class="badge badge-score">Fit Score: ${opp.fit_score}/10</span></div>` : ''}
+
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-label">Department</div>
+        <div class="info-value">${opp.department || 'N/A'}</div>
+      </div>
+
+      ${opp.solicitation_number ? `
+      <div class="info-item">
+        <div class="info-label">Solicitation Number</div>
+        <div class="info-value">${opp.solicitation_number}</div>
+      </div>
+      ` : ''}
+
+      <div class="info-item">
+        <div class="info-label">NAICS Code</div>
+        <div class="info-value">${opp.naics_code || 'N/A'}</div>
+      </div>
+
+      ${opp.assigned_practice_area ? `
+      <div class="info-item">
+        <div class="info-label">Practice Area</div>
+        <div class="info-value">${opp.assigned_practice_area}</div>
+      </div>
+      ` : ''}
+
+      <div class="info-item">
+        <div class="info-label">Posted Date</div>
+        <div class="info-value">${formatDate(opp.posted_date)}</div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-label">Response Deadline</div>
+        <div class="info-value">${formatDate(opp.response_deadline)}</div>
+      </div>
+
+      ${opp.set_aside ? `
+      <div class="info-item">
+        <div class="info-label">Set Aside</div>
+        <div class="info-value">${opp.set_aside}</div>
+      </div>
+      ` : ''}
+
+      ${opp.ptype ? `
+      <div class="info-item">
+        <div class="info-label">Type</div>
+        <div class="info-value">${opp.ptype}</div>
+      </div>
+      ` : ''}
+
+      ${opp.place_of_performance_city || opp.place_of_performance_state ? `
+      <div class="info-item">
+        <div class="info-label">Place of Performance</div>
+        <div class="info-value">${[opp.place_of_performance_city, opp.place_of_performance_state].filter(Boolean).join(', ')}</div>
+      </div>
+      ` : ''}
+    </div>
+
+    ${opp.summary_description ? `
+    <div class="summary">
+      <strong style="color: #1e40af;">Summary:</strong>
+      <p style="margin: 10px 0 0 0;">${opp.summary_description}</p>
+    </div>
+    ` : ''}
+
+    <div style="margin-top: 25px;">
+      ${opp.sam_link ? `<a href="${opp.sam_link}" class="btn">View on SAM.gov</a>` : ''}
+      <a href="${detailUrl}" class="btn">View Full Details</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>This opportunity was shared from the SAM Opportunity Management System</p>
+  </div>
+</body>
+</html>`.trim();
+
+    // Create mailto link
+    const mailtoLink = `mailto:?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+  };
+
   const currentOpp = localOpportunity || opportunity;
 
   if (isLoading) {
@@ -171,6 +296,13 @@ export default function OpportunityDetail() {
           </div>
           <div className="flex items-center gap-3">
             <FitScoreBadge score={currentOpp.fit_score} showLabel={true} />
+            <button
+              onClick={handleShareEmail}
+              className="btn btn-secondary"
+              title="Share this opportunity via email"
+            >
+              📧 Share
+            </button>
             <button
               onClick={handleSendToCRM}
               disabled={sendToCRMMutation.isPending}
