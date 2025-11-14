@@ -4,7 +4,7 @@ Database models for SAM.gov and GovWin matching system.
 from sqlalchemy import Column, Integer, String, Float, Text, DateTime, ForeignKey, UniqueConstraint, Index
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from app.database import Base
+from .database import Base
 
 
 class SAMOpportunity(Base):
@@ -50,6 +50,7 @@ class SAMOpportunity(Base):
     review_comments = Column(Text)  # User comments/notes
     reviewed_by = Column(String(255))  # User who reviewed
     reviewed_at = Column(DateTime(timezone=True))  # When reviewed
+    is_followed = Column(Integer, default=0, index=True)  # 0 = not followed, 1 = followed
 
     analysis_data = Column(Text)  # JSON string of full SAM data
     created_at = Column(DateTime(timezone=True), server_default=func.now())

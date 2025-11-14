@@ -42,6 +42,7 @@ export interface SAMOpportunity {
   review_comments: string | null;
   reviewed_by: string | null;
   reviewed_at: string | null;
+  is_followed: number | null;
 
   // GovWin matching
   match_count?: number | null;
@@ -172,6 +173,7 @@ export interface SAMOpportunityFilters {
   naics_code?: string;
   review_for_bid?: string;
   recommend_bid?: string;
+  is_followed?: number;
 }
 
 export interface MatchFilters {

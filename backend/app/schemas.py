@@ -41,6 +41,7 @@ class SAMOpportunityBase(BaseModel):
     review_for_bid: Optional[str] = "Pending"
     recommend_bid: Optional[str] = "Pending"
     review_comments: Optional[str] = None
+    is_followed: Optional[int] = 0
 
 
 class SAMOpportunityCreate(SAMOpportunityBase):
@@ -59,6 +60,7 @@ class SAMOpportunityUpdate(BaseModel):
     recommend_bid: Optional[str] = None
     review_comments: Optional[str] = None
     reviewed_by: Optional[str] = None
+    is_followed: Optional[int] = None
 
 
 class SAMOpportunity(SAMOpportunityBase):

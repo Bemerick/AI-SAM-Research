@@ -50,6 +50,7 @@ def list_sam_opportunities(
     naics_code: Optional[str] = Query(None, description="Filter by NAICS code"),
     review_for_bid: Optional[str] = Query(None, description="Filter by review_for_bid status"),
     recommend_bid: Optional[str] = Query(None, description="Filter by recommend_bid status"),
+    is_followed: Optional[int] = Query(None, ge=0, le=1, description="Filter by followed status (0=not followed, 1=followed)"),
     db: Session = Depends(get_db)
 ):
     """
@@ -62,7 +63,8 @@ def list_sam_opportunities(
         limit=limit,
         min_fit_score=min_fit_score,
         department=department,
-        naics_code=naics_code
+        naics_code=naics_code,
+        is_followed=is_followed
     )
 
     # Apply workflow filters in-memory (could optimize with DB query)
@@ -200,6 +202,26 @@ def update_sam_opportunity(
     if not opportunity:
         raise HTTPException(status_code=404, detail="SAM opportunity not found")
     return opportunity
+
+
+@router.post("/{opportunity_id}/toggle-follow", response_model=schemas.SAMOpportunity)
+def toggle_follow_opportunity(
+    opportunity_id: int,
+    db: Session = Depends(get_db)
+):
+    """
+    Toggle the follow status of a SAM opportunity.
+    """
+    opportunity = crud.get_sam_opportunity(db, opportunity_id)
+    if not opportunity:
+        raise HTTPException(status_code=404, detail="SAM opportunity not found")
+
+    # Toggle the follow status
+    new_status = 0 if opportunity.is_followed else 1
+    opportunity_update = schemas.SAMOpportunityUpdate(is_followed=new_status)
+
+    updated_opportunity = crud.update_sam_opportunity(db, opportunity_id, opportunity_update)
+    return updated_opportunity
 
 
 @router.delete("/{opportunity_id}", status_code=204)

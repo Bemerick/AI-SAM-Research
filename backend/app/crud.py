@@ -27,7 +27,8 @@ def get_sam_opportunities(
     limit: int = 100,
     min_fit_score: Optional[float] = None,
     department: Optional[str] = None,
-    naics_code: Optional[str] = None
+    naics_code: Optional[str] = None,
+    is_followed: Optional[int] = None
 ) -> List[models.SAMOpportunity]:
     """Get list of SAM opportunities with optional filters."""
     query = db.query(models.SAMOpportunity)
@@ -38,6 +39,8 @@ def get_sam_opportunities(
         query = query.filter(models.SAMOpportunity.department.ilike(f"%{department}%"))
     if naics_code:
         query = query.filter(models.SAMOpportunity.naics_code == naics_code)
+    if is_followed is not None:
+        query = query.filter(models.SAMOpportunity.is_followed == is_followed)
 
     return query.order_by(desc(models.SAMOpportunity.fit_score)).offset(skip).limit(limit).all()
 

@@ -9,7 +9,7 @@ import FilterBar from '../components/FilterBar';
 // Notice types that should be shown in the Notices tab
 const NOTICE_TYPES = ['Special Notice', 'Justification', 'Award Notice'];
 
-type TabType = 'opportunities' | 'notices';
+type TabType = 'opportunities' | 'notices' | 'followed';
 
 export default function Dashboard() {
   const [filters, setFilters] = useState<SAMOpportunityFilters>({});
@@ -21,16 +21,23 @@ export default function Dashboard() {
     queryFn: () => samOpportunitiesAPI.list(filters),
   });
 
-  // Separate opportunities into active opportunities and notices
-  const { activeOpportunities, notices } = useMemo(() => {
+  // Separate opportunities into active opportunities, notices, and followed
+  const { activeOpportunities, notices, followedOpportunities } = useMemo(() => {
     if (!allOpportunities) {
-      return { activeOpportunities: [], notices: [] };
+      return { activeOpportunities: [], notices: [], followedOpportunities: [] };
     }
 
     const active: SAMOpportunity[] = [];
     const noticeList: SAMOpportunity[] = [];
+    const followed: SAMOpportunity[] = [];
 
     allOpportunities.forEach((opp) => {
+      // Add to followed list if is_followed is true
+      if (opp.is_followed) {
+        followed.push(opp);
+      }
+
+      // Also categorize into opportunities or notices
       if (opp.type && NOTICE_TYPES.includes(opp.type)) {
         noticeList.push(opp);
       } else {
@@ -38,11 +45,13 @@ export default function Dashboard() {
       }
     });
 
-    return { activeOpportunities: active, notices: noticeList };
+    return { activeOpportunities: active, notices: noticeList, followedOpportunities: followed };
   }, [allOpportunities]);
 
   // Get the current data based on active tab
-  const currentData = activeTab === 'opportunities' ? activeOpportunities : notices;
+  const currentData = activeTab === 'opportunities' ? activeOpportunities
+    : activeTab === 'notices' ? notices
+    : followedOpportunities;
 
   const handleRowClick = (opportunity: SAMOpportunity) => {
     navigate(`/opportunities/${opportunity.id}`);
@@ -84,8 +93,8 @@ export default function Dashboard() {
       <div className="px-4 py-3 bg-white border-b">
         <h1 className="text-2xl font-bold text-gray-900">SAM.gov Opportunities</h1>
         <p className="text-gray-600 text-sm mt-1">
-          Showing {currentData.length} {activeTab === 'opportunities' ? 'opportunities' : 'notices'}
-          {' '}({activeOpportunities.length} opportunities, {notices.length} notices)
+          Showing {currentData.length} {activeTab === 'opportunities' ? 'opportunities' : activeTab === 'notices' ? 'notices' : 'followed opportunities'}
+          {' '}({activeOpportunities.length} opportunities, {notices.length} notices, {followedOpportunities.length} followed)
         </p>
       </div>
 
@@ -112,6 +121,16 @@ export default function Dashboard() {
           >
             Notices ({notices.length})
           </button>
+          <button
+            onClick={() => setActiveTab('followed')}
+            className={`px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
+              activeTab === 'followed'
+                ? 'border-primary-600 text-primary-600'
+                : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+            }`}
+          >
+            ⭐ Followed ({followedOpportunities.length})
+          </button>
         </div>
       </div>
 
@@ -124,12 +143,16 @@ export default function Dashboard() {
       {currentData.length === 0 && (
         <div className="flex-1 flex items-center justify-center p-4">
           <div className="bg-white rounded-lg shadow p-12 text-center max-w-md">
-            <div className="text-6xl mb-4">{activeTab === 'opportunities' ? '📋' : '📨'}</div>
+            <div className="text-6xl mb-4">
+              {activeTab === 'opportunities' ? '📋' : activeTab === 'notices' ? '📨' : '⭐'}
+            </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              No {activeTab === 'opportunities' ? 'Opportunities' : 'Notices'} Found
+              No {activeTab === 'opportunities' ? 'Opportunities' : activeTab === 'notices' ? 'Notices' : 'Followed Opportunities'} Found
             </h3>
             <p className="text-gray-600 mb-4">
-              {Object.keys(filters).length > 0
+              {activeTab === 'followed' && Object.keys(filters).length === 0
+                ? 'Click the star icon on any opportunity to follow it and see it here.'
+                : Object.keys(filters).length > 0
                 ? 'Try adjusting your filters to see more results.'
                 : `No ${activeTab} have been added yet.`}
             </p>

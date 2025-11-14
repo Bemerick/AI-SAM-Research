@@ -133,6 +133,20 @@ export default function OpportunityDetail() {
     }
   };
 
+  // Mutation for toggling follow status
+  const toggleFollowMutation = useMutation({
+    mutationFn: () => samOpportunitiesAPI.toggleFollow(opportunityId),
+    onSuccess: (updatedOpp) => {
+      setLocalOpportunity(updatedOpp);
+      queryClient.invalidateQueries({ queryKey: ['sam-opportunity', opportunityId] });
+      queryClient.invalidateQueries({ queryKey: ['sam-opportunities'] });
+    },
+  });
+
+  const handleToggleFollow = () => {
+    toggleFollowMutation.mutate();
+  };
+
   // Mutation for sharing via email
   const shareEmailMutation = useMutation({
     mutationFn: ({ emails, senderName }: { emails: string[]; senderName?: string }) =>
@@ -232,6 +246,13 @@ export default function OpportunityDetail() {
             )}
           </div>
           <div className="flex items-center gap-3">
+            <button
+              onClick={handleToggleFollow}
+              className="text-3xl hover:scale-110 transition-transform"
+              title={currentOpp.is_followed ? "Unfollow opportunity" : "Follow opportunity"}
+            >
+              {currentOpp.is_followed ? '⭐' : '☆'}
+            </button>
             <FitScoreBadge score={currentOpp.fit_score} showLabel={true} />
             <button
               onClick={handleShareEmail}

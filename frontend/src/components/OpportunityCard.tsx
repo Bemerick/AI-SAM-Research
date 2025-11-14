@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import type { SAMOpportunity } from '../types';
 import FitScoreBadge from './FitScoreBadge';
 import { formatDate, truncateText, daysUntilDeadline, getUrgencyClass } from '../utils/formatters';
+import { samOpportunitiesAPI } from '../services/api';
 
 interface OpportunityCardProps {
   opportunity: SAMOpportunity;
@@ -10,6 +12,20 @@ interface OpportunityCardProps {
 export default function OpportunityCard({ opportunity }: OpportunityCardProps) {
   const days = daysUntilDeadline(opportunity.response_deadline);
   const urgencyClass = getUrgencyClass(opportunity.response_deadline);
+  const queryClient = useQueryClient();
+
+  const toggleFollowMutation = useMutation({
+    mutationFn: () => samOpportunitiesAPI.toggleFollow(opportunity.id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['sam-opportunities'] });
+    },
+  });
+
+  const handleToggleFollow = (e: React.MouseEvent) => {
+    e.preventDefault(); // Prevent navigation to detail page
+    e.stopPropagation();
+    toggleFollowMutation.mutate();
+  };
 
   return (
     <Link to={`/opportunities/${opportunity.id}`}>
@@ -21,7 +37,16 @@ export default function OpportunityCard({ opportunity }: OpportunityCardProps) {
             </h3>
             <p className="text-sm text-gray-500">{opportunity.notice_id}</p>
           </div>
-          <FitScoreBadge score={opportunity.fit_score} />
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleToggleFollow}
+              className="text-2xl hover:scale-110 transition-transform"
+              title={opportunity.is_followed ? "Unfollow opportunity" : "Follow opportunity"}
+            >
+              {opportunity.is_followed ? '⭐' : '☆'}
+            </button>
+            <FitScoreBadge score={opportunity.fit_score} />
+          </div>
         </div>
 
         <div className="space-y-2 mb-3">

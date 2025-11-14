@@ -65,6 +65,11 @@ export const samOpportunitiesAPI = {
     return response.data;
   },
 
+  toggleFollow: async (id: number): Promise<SAMOpportunity> => {
+    const response = await apiClient.post<SAMOpportunity>(`/sam-opportunities/${id}/toggle-follow/`);
+    return response.data;
+  },
+
   delete: async (id: number): Promise<void> => {
     await apiClient.delete(`/sam-opportunities/${id}/`);
   },
