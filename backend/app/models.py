@@ -4,7 +4,7 @@ Database models for SAM.gov and GovWin matching system.
 from sqlalchemy import Column, Integer, String, Float, Text, DateTime, ForeignKey, UniqueConstraint, Index
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from backend.app.database import Base
+from app.database import Base
 
 
 class SAMOpportunity(Base):
@@ -38,6 +38,11 @@ class SAMOpportunity(Base):
     sam_link = Column(Text)  # SAM.gov UI link
     assigned_practice_area = Column(String(255))  # Assigned practice area
     justification = Column(Text)  # AI justification for fit score
+
+    # Amendment tracking fields
+    is_amendment = Column(Integer, default=0)  # 0 = original, 1+ = amendment number
+    original_notice_id = Column(String(255), index=True)  # Links to original notice if this is an amendment
+    superseded_by_notice_id = Column(String(255), index=True)  # Notice ID that supersedes this one
 
     # Workflow fields (replacing SharePoint)
     review_for_bid = Column(String(50), default="Pending")  # Pending, Yes, No

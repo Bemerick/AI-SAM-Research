@@ -31,6 +31,11 @@ export interface SAMOpportunity {
   assigned_practice_area: string | null;
   justification: string | null;
 
+  // Amendment tracking fields
+  is_amendment: number | null;
+  original_notice_id: string | null;
+  superseded_by_notice_id: string | null;
+
   // Workflow fields
   review_for_bid: string;
   recommend_bid: string;

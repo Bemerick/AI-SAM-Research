@@ -212,7 +212,24 @@ export default function OpportunityDetail() {
         <div className="flex justify-between items-start mb-4">
           <div className="flex-1">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">{currentOpp.title}</h1>
-            <p className="text-gray-600">Notice ID: {currentOpp.notice_id}</p>
+            <div className="flex items-center gap-2 mb-2">
+              <p className="text-gray-600">Notice ID: {currentOpp.notice_id}</p>
+              {currentOpp.is_amendment !== null && currentOpp.is_amendment > 0 && (
+                <span className="badge badge-primary text-xs" title={`Amendment #${currentOpp.is_amendment}`}>
+                  Updated
+                </span>
+              )}
+              {currentOpp.superseded_by_notice_id && (
+                <span className="badge badge-warning text-xs" title={`Superseded by notice: ${currentOpp.superseded_by_notice_id}`}>
+                  Superseded
+                </span>
+              )}
+            </div>
+            {currentOpp.original_notice_id && currentOpp.is_amendment > 0 && (
+              <p className="text-sm text-gray-500">
+                Amendment of: <span className="font-mono">{currentOpp.original_notice_id}</span>
+              </p>
+            )}
           </div>
           <div className="flex items-center gap-3">
             <FitScoreBadge score={currentOpp.fit_score} showLabel={true} />

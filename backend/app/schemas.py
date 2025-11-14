@@ -35,6 +35,9 @@ class SAMOpportunityBase(BaseModel):
     sam_link: Optional[str] = None
     assigned_practice_area: Optional[str] = None
     justification: Optional[str] = None
+    is_amendment: Optional[int] = 0
+    original_notice_id: Optional[str] = None
+    superseded_by_notice_id: Optional[str] = None
     review_for_bid: Optional[str] = "Pending"
     recommend_bid: Optional[str] = "Pending"
     review_comments: Optional[str] = None

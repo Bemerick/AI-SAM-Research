@@ -67,6 +67,16 @@ export default function OpportunityCard({ opportunity }: OpportunityCardProps) {
         )}
 
         <div className="flex gap-2 flex-wrap">
+          {opportunity.is_amendment !== null && opportunity.is_amendment > 0 && (
+            <span className="badge badge-primary" title={`Amendment #${opportunity.is_amendment}`}>
+              Updated
+            </span>
+          )}
+          {opportunity.superseded_by_notice_id && (
+            <span className="badge badge-warning" title="A newer version of this opportunity is available">
+              Superseded
+            </span>
+          )}
           {opportunity.set_aside && (
             <span className="badge badge-gray">{opportunity.set_aside}</span>
           )}

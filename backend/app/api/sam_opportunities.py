@@ -153,14 +153,36 @@ def create_sam_opportunity(
 ):
     """
     Create a new SAM opportunity.
+    Handles amendment tracking for opportunities with the same solicitation number.
     """
-    # Check if already exists
+    # Check if this exact notice_id already exists (true duplicate)
     existing = crud.get_sam_opportunity_by_notice_id(db, opportunity.notice_id)
     if existing:
         raise HTTPException(
             status_code=400,
             detail=f"SAM opportunity with notice_id '{opportunity.notice_id}' already exists"
         )
+
+    # Check if an opportunity with the same solicitation_number exists (amendment/update)
+    if opportunity.solicitation_number:
+        from ..models import SAMOpportunity
+        related_opps = db.query(SAMOpportunity).filter(
+            SAMOpportunity.solicitation_number == opportunity.solicitation_number
+        ).order_by(SAMOpportunity.created_at).all()
+
+        if related_opps:
+            # This is an amendment
+            # Find the original (first one with is_amendment == 0)
+            original = next((o for o in related_opps if o.is_amendment == 0), related_opps[0])
+
+            # Update opportunity data to mark as amendment
+            opportunity.is_amendment = len(related_opps)
+            opportunity.original_notice_id = original.notice_id
+
+            # Mark the most recent one as superseded
+            most_recent = related_opps[-1]
+            most_recent.superseded_by_notice_id = opportunity.notice_id
+            db.commit()
 
     return crud.create_sam_opportunity(db, opportunity)
 
@@ -301,9 +323,12 @@ def fetch_sam_opportunities_by_date(
                     continue
 
                 try:
-                    # Check if already exists
-                    existing = crud.get_sam_opportunity_by_notice_id(db, opp.get("noticeId"))
-                    if existing:
+                    notice_id = opp.get("noticeId")
+                    solicitation_number = opp.get("solicitationNumber")
+
+                    # Check if this exact notice_id already exists (true duplicate)
+                    existing_notice = crud.get_sam_opportunity_by_notice_id(db, notice_id)
+                    if existing_notice:
                         duplicate_count += 1
                         continue
 
@@ -314,9 +339,34 @@ def fetch_sam_opportunities_by_date(
                     point_of_contact = opp.get("pointOfContact") or []
                     primary_contact = point_of_contact[0] if point_of_contact else {}
 
+                    # Check if an opportunity with the same solicitation_number exists (amendment/update)
+                    is_amendment_num = 0
+                    original_notice_id = None
+
+                    if solicitation_number:
+                        # Find all opportunities with this solicitation number
+                        from ..models import SAMOpportunity
+                        related_opps = db.query(SAMOpportunity).filter(
+                            SAMOpportunity.solicitation_number == solicitation_number
+                        ).order_by(SAMOpportunity.created_at).all()
+
+                        if related_opps:
+                            # This is an amendment
+                            # Find the original (first one with is_amendment == 0)
+                            original = next((o for o in related_opps if o.is_amendment == 0), related_opps[0])
+                            original_notice_id = original.notice_id
+
+                            # Calculate amendment number (how many amendments exist + 1)
+                            is_amendment_num = len(related_opps)
+
+                            # Mark the most recent one as superseded
+                            most_recent = related_opps[-1]
+                            most_recent.superseded_by_notice_id = notice_id
+                            db.commit()
+
                     # Create opportunity data
                     opportunity_data = schemas.SAMOpportunityCreate(
-                        notice_id=opp.get("noticeId"),
+                        notice_id=notice_id,
                         title=opp.get("title"),
                         department=opp.get("fullParentPathName"),
                         standardized_department=opp.get("fullParentPathName"),
@@ -325,7 +375,7 @@ def fetch_sam_opportunities_by_date(
                         fit_score=0.0,
                         posted_date=opp.get("postedDate"),
                         response_deadline=opp.get("responseDeadLine"),
-                        solicitation_number=opp.get("solicitationNumber"),
+                        solicitation_number=solicitation_number,
                         description=opp.get("descriptionText") or opp.get("description", ""),
                         summary_description="",
                         type=opp.get("type"),
@@ -340,6 +390,9 @@ def fetch_sam_opportunities_by_date(
                         sam_link=opp.get("uiLink"),
                         assigned_practice_area=None,
                         justification=None,
+                        is_amendment=is_amendment_num,
+                        original_notice_id=original_notice_id,
+                        superseded_by_notice_id=None,
                     )
 
                     crud.create_sam_opportunity(db, opportunity_data)
