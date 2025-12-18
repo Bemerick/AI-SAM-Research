@@ -269,7 +269,9 @@ def map_sam_opportunity_to_crm(sam_opportunity: Dict[str, Any], customer_id: Opt
     }
 
     # Customer (Account or Contact)
-    if customer_id:
+    # Note: Custom table new_opportunities doesn't support setting account via @odata.bind
+    # Only set for standard opportunities table
+    if customer_id and not is_custom_table:
         crm_data[f'{customer_field}@odata.bind'] = f"/accounts({customer_id})"
 
     # Description
