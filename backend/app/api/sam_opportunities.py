@@ -1,11 +1,13 @@
 """
 API endpoints for SAM.gov opportunities.
 """
-from fastapi import APIRouter, Depends, HTTPException, Query, BackgroundTasks
+from fastapi import APIRouter, Depends, HTTPException, Query, BackgroundTasks, UploadFile, File, Form
 from sqlalchemy.orm import Session
 from typing import List, Optional
 from datetime import datetime, timedelta
 from pydantic import BaseModel, EmailStr
+import json
+import base64
 
 from .. import crud, schemas
 from ..database import get_db
@@ -438,18 +440,26 @@ def fetch_sam_opportunities_by_date(
 
 
 @router.post("/{opportunity_id}/share", response_model=ShareOpportunityResponse)
-def share_opportunity_via_email(
+async def share_opportunity_via_email(
     opportunity_id: int,
-    request: ShareOpportunityRequest,
-    background_tasks: BackgroundTasks,
+    to_emails: str = Form(...),
+    sender_name: Optional[str] = Form(None),
+    message: Optional[str] = Form(None),
+    attachments: List[UploadFile] = File(default=[]),
+    background_tasks: BackgroundTasks = BackgroundTasks(),
     db: Session = Depends(get_db)
 ):
     """
-    Share an opportunity via email.
+    Share an opportunity via email with optional notes and attachments.
     Sends an HTML-formatted email with opportunity details.
     """
     import os
     from ..email_service import EmailService, format_opportunity_email_html
+
+    # Parse comma-separated emails
+    email_list = [e.strip() for e in to_emails.split(',') if e.strip()]
+    if not email_list:
+        raise HTTPException(status_code=400, detail="No recipient email addresses provided")
 
     # Get the opportunity
     opportunity = crud.get_sam_opportunity(db, opportunity_id)
@@ -483,8 +493,22 @@ def share_opportunity_via_email(
     html_body = format_opportunity_email_html(
         opportunity=opp_dict,
         detail_url=detail_url,
-        sender_name=request.sender_name
+        sender_name=sender_name,
+        message=message
     )
+
+    # Process attachments
+    attachment_list = []
+    for file in attachments:
+        try:
+            content = await file.read()
+            attachment_list.append({
+                "name": file.filename,
+                "contentBytes": base64.b64encode(content).decode('utf-8'),
+                "contentType": file.content_type or "application/octet-stream"
+            })
+        except Exception as e:
+            print(f"Error processing attachment {file.filename}: {e}")
 
     # Email subject
     subject = f"SAM Opportunity: {opportunity.title}"
@@ -492,17 +516,18 @@ def share_opportunity_via_email(
     # Send email in background
     def send_email_task():
         success = EmailService.send_opportunity_share_email(
-            to_emails=request.to_emails,
+            to_emails=email_list,
             subject=subject,
-            html_body=html_body
+            html_body=html_body,
+            attachments=attachment_list if attachment_list else None
         )
         if not success:
             # Log error but don't raise exception in background task
-            print(f"Failed to send email to {request.to_emails}")
+            print(f"Failed to send email to {email_list}")
 
     background_tasks.add_task(send_email_task)
 
     return ShareOpportunityResponse(
         success=True,
-        message=f"Email will be sent to {len(request.to_emails)} recipient(s)"
+        message=f"Email will be sent to {len(email_list)} recipient(s)"
     )

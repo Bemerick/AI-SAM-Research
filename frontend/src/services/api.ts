@@ -84,10 +84,27 @@ export const samOpportunitiesAPI = {
     return response.data;
   },
 
-  shareViaEmail: async (id: number, toEmails: string[], senderName?: string): Promise<{ success: boolean; message: string }> => {
-    const response = await apiClient.post(`/sam-opportunities/${id}/share/`, {
-      to_emails: toEmails,
-      sender_name: senderName,
+  shareViaEmail: async (
+    id: number,
+    toEmails: string,
+    senderName?: string,
+    message?: string,
+    attachments?: File[]
+  ): Promise<{ success: boolean; message: string }> => {
+    const formData = new FormData();
+    formData.append('to_emails', toEmails);
+    if (senderName) formData.append('sender_name', senderName);
+    if (message) formData.append('message', message);
+    if (attachments) {
+      attachments.forEach(file => {
+        formData.append('attachments', file);
+      });
+    }
+
+    const response = await apiClient.post(`/sam-opportunities/${id}/share/`, formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
     });
     return response.data;
   },

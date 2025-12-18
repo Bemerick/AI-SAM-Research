@@ -76,6 +76,8 @@ export default function OpportunityDetail() {
   const [showShareModal, setShowShareModal] = useState(false);
   const [shareEmails, setShareEmails] = useState('');
   const [senderName, setSenderName] = useState('');
+  const [shareMessage, setShareMessage] = useState('');
+  const [attachments, setAttachments] = useState<File[]>([]);
 
   const { data: opportunity, isLoading, error } = useQuery({
     queryKey: ['sam-opportunity', opportunityId],
@@ -149,13 +151,20 @@ export default function OpportunityDetail() {
 
   // Mutation for sharing via email
   const shareEmailMutation = useMutation({
-    mutationFn: ({ emails, senderName }: { emails: string[]; senderName?: string }) =>
-      samOpportunitiesAPI.shareViaEmail(opportunityId, emails, senderName),
+    mutationFn: ({ emails, senderName, message, attachments }: {
+      emails: string;
+      senderName?: string;
+      message?: string;
+      attachments?: File[];
+    }) =>
+      samOpportunitiesAPI.shareViaEmail(opportunityId, emails, senderName, message, attachments),
     onSuccess: (data) => {
       alert(data.message);
       setShowShareModal(false);
       setShareEmails('');
       setSenderName('');
+      setShareMessage('');
+      setAttachments([]);
     },
     onError: (error: any) => {
       alert(`Failed to send email: ${error.response?.data?.detail || error.message}`);
@@ -167,26 +176,37 @@ export default function OpportunityDetail() {
   };
 
   const handleSendShare = () => {
-    // Parse comma-separated emails
-    const emails = shareEmails
-      .split(',')
-      .map(e => e.trim())
-      .filter(e => e.length > 0);
-
-    if (emails.length === 0) {
+    // Basic validation
+    if (!shareEmails.trim()) {
       alert('Please enter at least one email address');
       return;
     }
 
     // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emails = shareEmails.split(',').map(e => e.trim()).filter(e => e.length > 0);
     const invalidEmails = emails.filter(e => !emailRegex.test(e));
     if (invalidEmails.length > 0) {
       alert(`Invalid email address(es): ${invalidEmails.join(', ')}`);
       return;
     }
 
-    shareEmailMutation.mutate({ emails, senderName: senderName || undefined });
+    shareEmailMutation.mutate({
+      emails: shareEmails,
+      senderName: senderName || undefined,
+      message: shareMessage || undefined,
+      attachments: attachments.length > 0 ? attachments : undefined
+    });
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setAttachments(Array.from(e.target.files));
+    }
+  };
+
+  const handleRemoveAttachment = (index: number) => {
+    setAttachments(attachments.filter((_, i) => i !== index));
   };
 
   const currentOpp = localOpportunity || opportunity;
@@ -413,7 +433,7 @@ export default function OpportunityDetail() {
       {/* Share via Email Modal */}
       {showShareModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg shadow-xl max-w-md w-full mx-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Share Opportunity via Email</h3>
 
@@ -430,7 +450,7 @@ export default function OpportunityDetail() {
                 />
               </div>
 
-              <div className="mb-6">
+              <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Recipient Email(s) *
                 </label>
@@ -444,12 +464,59 @@ export default function OpportunityDetail() {
                 <p className="text-xs text-gray-500 mt-1">Separate multiple emails with commas</p>
               </div>
 
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message / Notes (Optional)
+                </label>
+                <textarea
+                  value={shareMessage}
+                  onChange={(e) => setShareMessage(e.target.value)}
+                  placeholder="Add a personal message or notes about this opportunity..."
+                  rows={4}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                />
+                <p className="text-xs text-gray-500 mt-1">This message will be included in the email</p>
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Attachments (Optional)
+                </label>
+                <input
+                  type="file"
+                  multiple
+                  onChange={handleFileChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                />
+                <p className="text-xs text-gray-500 mt-1">You can select multiple files</p>
+
+                {attachments.length > 0 && (
+                  <div className="mt-3 space-y-2">
+                    {attachments.map((file, index) => (
+                      <div key={index} className="flex items-center justify-between bg-gray-50 px-3 py-2 rounded-md">
+                        <span className="text-sm text-gray-700 truncate flex-1">
+                          📎 {file.name} ({(file.size / 1024).toFixed(1)} KB)
+                        </span>
+                        <button
+                          onClick={() => handleRemoveAttachment(index)}
+                          className="text-red-600 hover:text-red-700 ml-2 text-sm"
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <div className="flex gap-3 justify-end">
                 <button
                   onClick={() => {
                     setShowShareModal(false);
                     setShareEmails('');
                     setSenderName('');
+                    setShareMessage('');
+                    setAttachments([]);
                   }}
                   className="btn btn-secondary"
                   disabled={shareEmailMutation.isPending}

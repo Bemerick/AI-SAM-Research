@@ -54,7 +54,8 @@ class EmailService:
         subject: str,
         html_body: str,
         from_email: Optional[str] = None,
-        from_name: Optional[str] = None
+        from_name: Optional[str] = None,
+        attachments: Optional[List[dict]] = None
     ) -> bool:
         """
         Send an opportunity sharing email via Microsoft Graph API.
@@ -65,6 +66,10 @@ class EmailService:
             html_body: HTML email body
             from_email: Sender email (defaults to EMAIL_FROM_ADDRESS)
             from_name: Sender name (defaults to EMAIL_FROM_NAME)
+            attachments: Optional list of attachments. Each attachment is a dict with:
+                         - 'name': filename
+                         - 'contentBytes': base64-encoded content
+                         - 'contentType': MIME type
 
         Returns:
             True if email was sent successfully, False otherwise
@@ -110,6 +115,17 @@ class EmailService:
                 "saveToSentItems": "true"
             }
 
+            # Add attachments if provided
+            if attachments:
+                message["message"]["attachments"] = [
+                    {
+                        "@odata.type": "#microsoft.graph.fileAttachment",
+                        "name": att["name"],
+                        "contentBytes": att["contentBytes"],
+                        "contentType": att.get("contentType", "application/octet-stream")
+                    } for att in attachments
+                ]
+
             # Send email via Graph API
             # Using /users/{user-id}/sendMail endpoint
             graph_url = f"https://graph.microsoft.com/v1.0/users/{from_email}/sendMail"
@@ -137,7 +153,8 @@ class EmailService:
 def format_opportunity_email_html(
     opportunity: dict,
     detail_url: str,
-    sender_name: Optional[str] = None
+    sender_name: Optional[str] = None,
+    message: Optional[str] = None
 ) -> str:
     """
     Format opportunity data as HTML email.
@@ -146,6 +163,7 @@ def format_opportunity_email_html(
         opportunity: Opportunity data dictionary
         detail_url: Full URL to the opportunity detail page
         sender_name: Optional name of the person sharing
+        message: Optional message/notes from the sender
 
     Returns:
         HTML email body
@@ -209,6 +227,8 @@ def format_opportunity_email_html(
 
   <div class="container">
     {f'<div class="sender-note"><strong>{sender_name}</strong> shared this opportunity with you.</div>' if sender_name else ''}
+
+    {f'<div class="card" style="background-color: #fef9e7; border-left: 4px solid #f39c12; margin: 15px 0;"><h4 style="margin-top: 0; color: #d68910;">Message from {sender_name or "Sender"}:</h4><p style="color: #7d6608; white-space: pre-wrap;">{message}</p></div>' if message else ''}
 
     <div class="card">
       <h2 style="margin-top: 0; color: #111827;">{title}</h2>
