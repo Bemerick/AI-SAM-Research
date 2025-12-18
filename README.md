@@ -122,7 +122,8 @@ DYNAMICS_TENANT_ID=your_tenant_id
 DYNAMICS_CLIENT_ID=your_client_id
 DYNAMICS_CLIENT_SECRET=your_client_secret
 DYNAMICS_RESOURCE_URL=https://yourorg.crm.dynamics.com
-DYNAMICS_DEFAULT_ACCOUNT_ID=your_account_guid  # Run get_default_account.py to get this
+DYNAMICS_OPPORTUNITY_TABLE=opportunities  # Use 'new_opportunities' for custom table
+DYNAMICS_DEFAULT_ACCOUNT_ID=your_account_guid  # Only for standard table (not needed for custom)
 
 # GovWin API
 GOVWIN_CLIENT_ID=your_client_id
@@ -289,27 +290,42 @@ Scheduled tasks run as Azure Functions:
 
 ### CRM Integration Issues
 
-**Opportunities Created But Not Visible**:
-- **Most Common**: Missing customer (Account) relationship
-- **Local**: Run `cd backend && python get_default_account.py`
-- **Production**: Run `python backend/get_default_account.py` in Render Shell
-- Add `DYNAMICS_DEFAULT_ACCOUNT_ID` to environment variables in Render Dashboard
-- See [CRM_TROUBLESHOOTING.md](CRM_TROUBLESHOOTING.md) for detailed diagnosis
+**Custom vs Standard Opportunity Tables**:
+- System automatically detects table type via `DYNAMICS_OPPORTUNITY_TABLE` environment variable
+- **Standard table** (`opportunities`): Uses fields like `name`, `description`, `customerid_account`
+- **Custom table** (`new_opportunities`): Uses fields like `new_name`, `new_description`, `new_accountname`
+- Field mappings are hardcoded in `dynamics_client.py` - no additional configuration needed
+
+**Custom Table Limitations**:
+- Custom table `new_opportunities` does not support account binding during creation
+- Opportunities will be created without the account/customer linkage
+- Account must be set manually in CRM UI if needed
+- All other fields (name, description, dates, probabilities) work correctly
+
+**Finding Your Opportunity Table**:
+- Run `python backend/test_table_name.py` to test table name variations
+- Run `python backend/inspect_custom_table.py` to view table schema
+- Set `DYNAMICS_OPPORTUNITY_TABLE=new_opportunities` for custom table
 
 **Mock Mode Message**:
 - Verify all `DYNAMICS_*` environment variables are set
 - Check Azure AD app has correct permissions
 - Ensure application user exists in CRM
 
-**Field Mapping Errors**:
-- Run `python backend/test_crm_schema.py` to inspect your CRM schema
-- Update `dynamics_client.py` field mappings to match your CRM
-- Custom fields require publisher prefix (e.g., `cr7f3_fieldname`)
-
 **Testing CRM Integration**:
 - Run `python backend/test_crm_opportunity.py` to create and verify test opportunity
+- Run `python backend/test_account_binding.py` to test account linkage
 - Check backend logs for detailed error messages
 - Use direct CRM link: `https://yourorg.crm.dynamics.com/main.aspx?etn=opportunity&id={GUID}`
+
+**Diagnostic Scripts**:
+- `test_crm_schema.py` - Inspect CRM schema and available fields
+- `test_table_name.py` - Find correct table name
+- `inspect_custom_table.py` - Show customer/account fields
+- `show_all_fields.py` - Show all string/memo fields
+- `show_all_fields_full.py` - Show date/probability fields
+- `test_account_binding.py` - Test account linkage capabilities
+- `get_default_account.py` - Find/create default account (standard table only)
 
 ### Email Sharing Issues
 
@@ -325,7 +341,22 @@ Scheduled tasks run as Azure Functions:
 
 ## Recent Updates
 
-### December 2024 Session
+### December 18, 2024 Session - CRM Custom Table Support
+- ✅ Added support for custom Dynamics CRM opportunity tables
+- ✅ Implemented automatic table type detection (standard vs custom)
+- ✅ Created hardcoded field mappings for `new_opportunities` custom table
+- ✅ Added comprehensive CRM diagnostic scripts:
+  - `test_table_name.py` - Find correct table name
+  - `inspect_custom_table.py` - View table schema and fields
+  - `show_all_fields.py` - Show string/memo fields
+  - `show_all_fields_full.py` - Show date/probability fields
+  - `test_account_binding.py` - Test account linkage capabilities
+- ✅ Fixed custom table field mappings (new_name, new_description, etc.)
+- ✅ Resolved account binding limitation for custom tables
+- ✅ Added `python-dateutil` for robust date parsing
+- ✅ Updated documentation with custom table configuration
+
+### December 2024 Session - Initial CRM Integration
 - ✅ Added notes/comments field to email sharing
 - ✅ Added file attachment support for shared emails
 - ✅ Implemented Microsoft Graph directory search for recipient autocomplete
