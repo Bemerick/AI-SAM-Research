@@ -241,33 +241,48 @@ def map_sam_opportunity_to_crm(sam_opportunity: Dict[str, Any], customer_id: Opt
         Dictionary with CRM-formatted opportunity fields
     """
     # Map SAM fields to Dynamics CRM opportunity fields
-    # Using only standard Dynamics 365 Sales fields
+    # Check if using custom table (new_opportunities) or standard table
+    opportunity_table = os.getenv('DYNAMICS_OPPORTUNITY_TABLE', 'opportunities')
+    is_custom_table = opportunity_table == 'new_opportunities'
 
-    # Required field: name (Topic)
+    # Field mappings: standard vs custom table
+    if is_custom_table:
+        name_field = 'new_name'
+        description_field = 'new_description'
+        customer_field = 'new_accountname'
+        closedate_field = 'new_estimatedclosedate'
+        probability_field = 'new_closeprobability'
+        situation_field = 'new_currentsituation'
+        need_field = 'new_customerneed'
+    else:
+        name_field = 'name'
+        description_field = 'description'
+        customer_field = 'customerid_account'
+        closedate_field = 'estimatedclosedate'
+        probability_field = 'closeprobability'
+        situation_field = 'currentsituation'
+        need_field = 'customerneed'
+
+    # Required field: name/title
     crm_data = {
-        'name': sam_opportunity.get('title', 'Untitled Opportunity')[:300],  # CRM has field length limits
+        name_field: sam_opportunity.get('title', 'Untitled Opportunity')[:300],  # CRM has field length limits
     }
 
-    # Customer (Account or Contact) - Highly recommended, some CRM configs require it
-    # If customer_id is provided, link the opportunity to that account/contact
+    # Customer (Account or Contact)
     if customer_id:
-        # For an Account: use customerid_account@odata.bind
-        # For a Contact: use customerid_contact@odata.bind
-        # The format depends on whether customer_id is an account or contact GUID
-        crm_data['customerid_account@odata.bind'] = f"/accounts({customer_id})"
+        crm_data[f'{customer_field}@odata.bind'] = f"/accounts({customer_id})"
 
-    # Optional standard fields
-    # Description - Include all key information since custom fields don't exist yet
-    crm_data['description'] = _build_description(sam_opportunity)
+    # Description
+    crm_data[description_field] = _build_description(sam_opportunity)
 
     # Estimated close date - Use response deadline
     if sam_opportunity.get('response_deadline'):
-        crm_data['estimatedclosedate'] = _format_date(sam_opportunity['response_deadline'])
+        crm_data[closedate_field] = _format_date(sam_opportunity['response_deadline'])
 
     # Close probability - Map fit score (0-10) to percentage
     if sam_opportunity.get('fit_score'):
         fit_score = sam_opportunity['fit_score']
-        crm_data['closeprobability'] = int(min(fit_score * 10, 100))
+        crm_data[probability_field] = int(min(fit_score * 10, 100))
 
     # Current situation - Add solicitation/NAICS info
     current_situation_parts = []
@@ -281,11 +296,11 @@ def map_sam_opportunity_to_crm(sam_opportunity: Dict[str, Any], customer_id: Opt
         current_situation_parts.append(f"Set-Aside: {sam_opportunity['set_aside']}")
 
     if current_situation_parts:
-        crm_data['currentsituation'] = '\n'.join(current_situation_parts)[:1500]
+        crm_data[situation_field] = '\n'.join(current_situation_parts)[:1500]
 
     # Customer need - Add practice area if available
     if sam_opportunity.get('assigned_practice_area'):
-        crm_data['customerneed'] = f"Practice Area: {sam_opportunity['assigned_practice_area']}"
+        crm_data[need_field] = f"Practice Area: {sam_opportunity['assigned_practice_area']}"
 
     # Budget amount - Not typically available in SAM, leave unset
     # Estimated value - Not typically available in SAM, leave unset
