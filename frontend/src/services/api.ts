@@ -108,6 +108,13 @@ export const samOpportunitiesAPI = {
     });
     return response.data;
   },
+
+  searchPeople: async (query: string, limit = 10): Promise<Array<{ name: string; email: string; title: string }>> => {
+    const response = await apiClient.get('/sam-opportunities/search-people', {
+      params: { query, limit },
+    });
+    return response.data;
+  },
 };
 
 // GovWin Opportunities API

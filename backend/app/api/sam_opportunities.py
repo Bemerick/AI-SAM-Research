@@ -43,6 +43,28 @@ class ShareOpportunityResponse(BaseModel):
     message: str
 
 
+class PersonResult(BaseModel):
+    """Result model for people search."""
+    name: str
+    email: str
+    title: str
+
+
+@router.get("/search-people", response_model=List[PersonResult])
+def search_people(
+    query: str = Query(..., min_length=2, description="Search query for name or email"),
+    limit: int = Query(10, ge=1, le=50, description="Maximum number of results")
+):
+    """
+    Search for people in the organization using Microsoft Graph API.
+    Requires at least 2 characters in the query.
+    """
+    from ..email_service import EmailService
+
+    results = EmailService.search_people(query, limit)
+    return results
+
+
 @router.get("/", response_model=List[schemas.SAMOpportunity])
 def list_sam_opportunities(
     skip: int = Query(0, ge=0, description="Number of records to skip"),

@@ -78,6 +78,9 @@ export default function OpportunityDetail() {
   const [senderName, setSenderName] = useState('');
   const [shareMessage, setShareMessage] = useState('');
   const [attachments, setAttachments] = useState<File[]>([]);
+  const [emailSuggestions, setEmailSuggestions] = useState<Array<{ name: string; email: string; title: string }>>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const { data: opportunity, isLoading, error } = useQuery({
     queryKey: ['sam-opportunity', opportunityId],
@@ -207,6 +210,48 @@ export default function OpportunityDetail() {
 
   const handleRemoveAttachment = (index: number) => {
     setAttachments(attachments.filter((_, i) => i !== index));
+  };
+
+  const handleEmailInputChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setShareEmails(value);
+
+    // Get the current word being typed (after the last comma)
+    const parts = value.split(',');
+    const currentInput = parts[parts.length - 1].trim();
+    setSearchQuery(currentInput);
+
+    // Search for people if we have at least 2 characters
+    if (currentInput.length >= 2) {
+      try {
+        const results = await samOpportunitiesAPI.searchPeople(currentInput);
+        setEmailSuggestions(results);
+        setShowSuggestions(true);
+      } catch (error) {
+        console.error('Failed to search people:', error);
+        setEmailSuggestions([]);
+      }
+    } else {
+      setEmailSuggestions([]);
+      setShowSuggestions(false);
+    }
+  };
+
+  const handleSelectSuggestion = (person: { name: string; email: string; title: string }) => {
+    // Replace the current input with the selected email
+    const parts = shareEmails.split(',').map(e => e.trim()).filter(e => e.length > 0);
+
+    // Remove the last part (current search query) and add the selected email
+    if (parts.length > 0 && searchQuery.length > 0) {
+      parts[parts.length - 1] = person.email;
+    } else {
+      parts.push(person.email);
+    }
+
+    setShareEmails(parts.join(', ') + ', ');
+    setShowSuggestions(false);
+    setEmailSuggestions([]);
+    setSearchQuery('');
   };
 
   const currentOpp = localOpportunity || opportunity;
@@ -450,18 +495,42 @@ export default function OpportunityDetail() {
                 />
               </div>
 
-              <div className="mb-4">
+              <div className="mb-4 relative">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Recipient Email(s) *
                 </label>
                 <input
                   type="text"
                   value={shareEmails}
-                  onChange={(e) => setShareEmails(e.target.value)}
-                  placeholder="email@example.com, another@example.com"
+                  onChange={handleEmailInputChange}
+                  onBlur={() => setTimeout(() => setShowSuggestions(false), 200)}
+                  onFocus={() => {
+                    if (emailSuggestions.length > 0) setShowSuggestions(true);
+                  }}
+                  placeholder="Start typing a name or email..."
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  autoComplete="off"
                 />
-                <p className="text-xs text-gray-500 mt-1">Separate multiple emails with commas</p>
+                <p className="text-xs text-gray-500 mt-1">Start typing to search organization directory. Separate multiple emails with commas.</p>
+
+                {/* Autocomplete Suggestions Dropdown */}
+                {showSuggestions && emailSuggestions.length > 0 && (
+                  <div className="absolute z-50 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-60 overflow-y-auto">
+                    {emailSuggestions.map((person, index) => (
+                      <div
+                        key={index}
+                        onClick={() => handleSelectSuggestion(person)}
+                        className="px-4 py-3 hover:bg-gray-100 cursor-pointer border-b border-gray-100 last:border-b-0"
+                      >
+                        <div className="font-medium text-gray-900">{person.name}</div>
+                        <div className="text-sm text-gray-600">{person.email}</div>
+                        {person.title && (
+                          <div className="text-xs text-gray-500 mt-1">{person.title}</div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="mb-4">

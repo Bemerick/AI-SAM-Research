@@ -1,96 +1,65 @@
-# Microsoft Dynamics CRM Integration Setup Guide
+# Microsoft Dynamics 365 CRM Integration Setup Guide
 
-This guide will help you configure authentication for Microsoft Dynamics CRM integration.
+This guide explains how to configure the SAM Opportunity System to integrate with Microsoft Dynamics 365 CRM.
+
+## Overview
+
+The system can automatically send SAM.gov opportunities to your Dynamics 365 CRM as opportunity records. This requires OAuth 2.0 authentication using Azure AD (Microsoft Entra ID).
 
 ## Prerequisites
 
-1. Access to Microsoft Azure Portal
-2. Access to your Dynamics CRM instance
-3. Admin privileges to create app registrations in Azure AD
+1. Microsoft Dynamics 365 subscription
+2. Azure AD (Entra ID) tenant with admin access
+3. Dynamics 365 environment URL (e.g., `https://yourorg.crm.dynamics.com`)
 
-## Step 1: Install Required Python Package
+## Setup Steps
 
-The MSAL (Microsoft Authentication Library) package is required for OAuth authentication.
+### 1. Register an Application in Azure AD
 
-```bash
-pip install msal
-```
+1. Go to the [Azure Portal](https://portal.azure.com)
+2. Navigate to **Azure Active Directory** > **App registrations**
+3. Click **New registration**
+4. Configure the app:
+   - **Name**: `SAM Opportunity System` (or your preferred name)
+   - **Supported account types**: `Accounts in this organizational directory only`
+   - **Redirect URI**: Leave blank (not needed for service principal authentication)
+5. Click **Register**
 
-## Step 2: Create Azure AD App Registration
+### 2. Get Application Credentials
 
-1. **Go to Azure Portal** (https://portal.azure.com)
+After registration, note the following values (you'll need them later):
 
-2. **Navigate to Azure Active Directory** (or Microsoft Entra ID)
-   - Click on "App registrations"
-   - Click "New registration"
+1. **Application (client) ID**: Found on the app's Overview page
+2. **Directory (tenant) ID**: Found on the app's Overview page
+3. **Client Secret**: 
+   - Go to **Certificates & secrets**
+   - Click **New client secret**
+   - Add a description and choose expiration
+   - **IMPORTANT**: Copy the secret **value** immediately (you won't be able to see it again)
 
-3. **Register Your Application**
-   - Name: `SAM-Opportunity-Manager` (or your preferred name)
-   - Supported account types: "Accounts in this organizational directory only"
-   - Redirect URI: Not needed for service principal (leave blank)
-   - Click "Register"
+### 3. Configure API Permissions
 
-4. **Note Your Application IDs**
-   - After registration, you'll see the **Overview** page
-   - Copy the following values:
-     - **Application (client) ID** - You'll use this as `DYNAMICS_CLIENT_ID`
-     - **Directory (tenant) ID** - You'll use this as `DYNAMICS_TENANT_ID`
+1. In your app registration, go to **API permissions**
+2. Click **Add a permission**
+3. Select **Dynamics CRM** (or **Common Data Service**)
+4. Choose **Application permissions**
+5. Select `user_impersonation` permission
+6. Click **Add permissions**
+7. Click **Grant admin consent** (requires admin rights)
 
-5. **Create a Client Secret**
-   - In the left menu, click "Certificates & secrets"
-   - Click "New client secret"
-   - Description: `CRM Integration Secret`
-   - Expires: Choose appropriate expiration (e.g., 24 months)
-   - Click "Add"
-   - **IMPORTANT**: Copy the secret **Value** immediately - you'll use this as `DYNAMICS_CLIENT_SECRET`
-   - You won't be able to see it again!
+### 4. Create an Application User in Dynamics 365
 
-## Step 3: Grant API Permissions
-
-1. **Add Dynamics CRM Permission**
-   - In your app registration, click "API permissions"
-   - Click "Add a permission"
-   - Click "Dynamics CRM" (or "Dataverse")
-   - Select "Delegated permissions" OR "Application permissions" (recommended)
-   - Check `user_impersonation` (for delegated) or appropriate app permission
-   - Click "Add permissions"
-
-2. **Grant Admin Consent**
-   - Click "Grant admin consent for [Your Organization]"
-   - Click "Yes" to confirm
-   - All permissions should now show a green checkmark
-
-## Step 4: Create Application User in Dynamics CRM
-
-Your service principal needs to be added as an application user in Dynamics CRM.
-
-### Option A: Using Power Platform Admin Center (Recommended)
-
-1. Go to https://admin.powerplatform.microsoft.com/
+1. Log in to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com)
 2. Select your environment
-3. Go to "Settings" → "Users + permissions" → "Application users"
-4. Click "+ New app user"
-5. Click "+ Add an app"
-6. Select your Azure AD app (SAM-Opportunity-Manager)
-7. Select a Business Unit
-8. Assign appropriate security roles (e.g., "System Administrator" or custom role)
-9. Click "Create"
+3. Go to **Settings** > **Users + permissions** > **Application users**
+4. Click **New app user**
+5. Select the Azure AD app you created
+6. Assign security roles (e.g., **Sales Manager** or a custom role with opportunity create/update permissions)
+7. Save
 
-### Option B: Using Dynamics CRM (Classic)
+### 5. Configure Environment Variables
 
-1. Go to **Settings** → **Security** → **Users**
-2. Change view to "Application Users"
-3. Click **New**
-4. Fill in:
-   - Application ID: Your `DYNAMICS_CLIENT_ID`
-   - Full Name: SAM Opportunity Manager
-   - Primary Email: your-email@company.com
-5. Save
-6. Assign security roles
-
-## Step 5: Configure Environment Variables
-
-Add these variables to your `.env` file:
+Add the following environment variables to your backend `.env` file or deployment configuration:
 
 ```bash
 # Microsoft Dynamics CRM Configuration
@@ -100,88 +69,94 @@ DYNAMICS_CLIENT_SECRET=your-client-secret-here
 DYNAMICS_RESOURCE_URL=https://yourorg.crm.dynamics.com
 ```
 
-### How to find your Dynamics URL:
+**Replace the values:**
+- `DYNAMICS_TENANT_ID`: Directory (tenant) ID from step 2
+- `DYNAMICS_CLIENT_ID`: Application (client) ID from step 2
+- `DYNAMICS_CLIENT_SECRET`: Client secret value from step 2
+- `DYNAMICS_RESOURCE_URL`: Your Dynamics 365 environment URL (without trailing slash)
 
-1. Log into your Dynamics CRM
-2. Copy the URL from your browser
-3. It should look like: `https://yourorg.crm.dynamics.com` or `https://yourorg.crm4.dynamics.com`
-4. Use just the base URL (without any path after .com)
+### 6. Restart Backend Service
 
-## Step 6: Customize Field Mapping
+After adding the environment variables, restart your backend service:
 
-Edit `backend/app/dynamics_client.py` in the `map_sam_opportunity_to_crm()` function to match your CRM schema:
+```bash
+# If running locally
+uvicorn app.main:app --reload
 
-```python
-def map_sam_opportunity_to_crm(sam_opportunity: Dict[str, Any]) -> Dict[str, Any]:
-    crm_data = {
-        'name': sam_opportunity.get('title', 'Untitled Opportunity'),
-        'description': sam_opportunity.get('summary_description', ''),
-        # Add your custom fields here based on your CRM schema
-        # Example: 'new_customfield': sam_opportunity.get('field_name')
-    }
-    return crm_data
+# If using Docker
+docker-compose restart backend
 ```
 
-### Finding Your CRM Field Names:
+### 7. Test the Integration
 
-1. Go to **Settings** → **Customizations** → **Customize the System**
-2. Expand **Entities** → **Opportunity**
-3. Click **Fields**
-4. Note the "Schema Name" (starts with `new_` for custom fields)
-5. Use these schema names in your field mapping
+1. Open the SAM Opportunity System frontend
+2. Navigate to an opportunity detail page
+3. Click the **Send to CRM** button
+4. You should see a success message with a CRM ID
+5. Verify the opportunity appears in your Dynamics 365 CRM
 
-## Step 7: Test the Integration
+## Customizing Field Mappings
 
-1. **Restart your backend server** to load the new environment variables
+The default field mappings are defined in `backend/app/dynamics_client.py` in the `map_sam_opportunity_to_crm()` function.
 
-2. **Test via the frontend**:
-   - Navigate to an opportunity detail page
-   - Click "Send to CRM"
-   - Check for success message
+### Standard Fields Mapped:
+- `name` ← Opportunity title
+- `description` ← Summary and fit analysis
+- `estimatedclosedate` ← Response deadline
+- `closeprobability` ← Fit score (converted to percentage)
 
-3. **Verify in CRM**:
-   - Go to your Dynamics CRM
-   - Navigate to Sales → Opportunities
-   - Look for the newly created opportunity
+### Custom Fields (with `new_` prefix):
+- `new_samnoticeid` ← SAM notice ID
+- `new_solicitationnumber` ← Solicitation number
+- `new_naicscode` ← NAICS code
+- `new_department` ← Government department
+- `new_samlink` ← Link to SAM.gov
+- `new_practicearea` ← Assigned practice area
+- `new_setaside` ← Set-aside type
+- `new_procurementtype` ← Procurement type
+
+**To customize:** Edit the `map_sam_opportunity_to_crm()` function to match your CRM schema.
 
 ## Troubleshooting
 
-### Error: "AADSTS7000215: Invalid client secret provided"
-- Your client secret is incorrect or has expired
-- Create a new client secret in Azure AD
+### Mock Mode Message
 
-### Error: "AADSTS50105: The signed in user is not assigned to a role"
-- The application user hasn't been properly created in Dynamics
-- Follow Step 4 again
+If you see "Mock Mode: Opportunity would be sent to CRM (authentication not configured)", one or more environment variables are missing. Check:
 
-### Error: "Principal user is missing prvRead privilege"
-- The application user doesn't have proper security roles
-- Assign appropriate security roles in Dynamics
+```bash
+# Verify all required variables are set
+echo $DYNAMICS_TENANT_ID
+echo $DYNAMICS_CLIENT_ID  
+echo $DYNAMICS_CLIENT_SECRET
+echo $DYNAMICS_RESOURCE_URL
+```
 
-### Authentication works but opportunity creation fails
-- Check the field mapping - you may have invalid field names
-- Check application user has permissions to create opportunities
-- Check the logs for detailed error messages
+### Authentication Errors
+
+**Error**: `AADSTS700016: Application not found`
+- **Solution**: Double-check the `DYNAMICS_CLIENT_ID` matches your Azure AD app
+
+**Error**: `AADSTS7000215: Invalid client secret`
+- **Solution**: Regenerate the client secret in Azure AD and update the environment variable
+
+**Error**: `401 Unauthorized`
+- **Solution**: Verify the application user exists in Dynamics 365 and has proper permissions
+
+### Permission Errors
+
+**Error**: `Principal user is missing prvCreateOpportunity privilege`
+- **Solution**: Assign appropriate security role to the application user in Dynamics 365
 
 ## Security Best Practices
 
-1. **Never commit secrets to git**
-   - Always use `.env` file
-   - Ensure `.env` is in `.gitignore`
-
-2. **Use separate credentials for dev/prod**
-   - Create separate app registrations for each environment
-
-3. **Rotate secrets regularly**
-   - Set expiration dates on client secrets
-   - Update `.env` before expiration
-
-4. **Principle of Least Privilege**
-   - Only grant necessary permissions to the application user
-   - Create a custom security role if needed
+1. **Rotate secrets regularly**: Set client secret expiration and rotate before expiry
+2. **Use key vault**: Store secrets in Azure Key Vault or similar service
+3. **Limit permissions**: Only grant minimum required CRM permissions
+4. **Monitor access**: Review application user activity logs in Dynamics 365
+5. **Environment variables**: Never commit secrets to source control
 
 ## Additional Resources
 
-- [Microsoft Dataverse Web API Reference](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview)
-- [Azure AD App Registration Guide](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
-- [MSAL Python Documentation](https://msal-python.readthedocs.io/)
+- [Microsoft Dynamics 365 Web API Documentation](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview)
+- [Azure AD App Registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
+- [Dataverse Service Principal Authentication](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/use-multi-tenant-server-server-authentication)

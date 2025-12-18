@@ -49,6 +49,63 @@ class EmailService:
             return None
 
     @staticmethod
+    def search_people(query: str, limit: int = 10) -> List[dict]:
+        """
+        Search for people in the organization using Microsoft Graph API.
+
+        Args:
+            query: Search query string (name or email)
+            limit: Maximum number of results to return
+
+        Returns:
+            List of people dictionaries with name, email, and title
+        """
+        if not query or len(query.strip()) < 2:
+            return []
+
+        access_token = EmailService._get_access_token()
+        if not access_token:
+            return []
+
+        try:
+            # Use Microsoft Graph People API to search
+            graph_url = "https://graph.microsoft.com/v1.0/users"
+
+            headers = {
+                'Authorization': f'Bearer {access_token}',
+                'Content-Type': 'application/json'
+            }
+
+            # Search for users by displayName or mail
+            params = {
+                '$filter': f"startswith(displayName,'{query}') or startswith(mail,'{query}') or startswith(userPrincipalName,'{query}')",
+                '$select': 'id,displayName,mail,jobTitle,userPrincipalName',
+                '$top': limit
+            }
+
+            response = requests.get(graph_url, headers=headers, params=params)
+            response.raise_for_status()
+
+            users = response.json().get('value', [])
+
+            # Format results
+            results = []
+            for user in users:
+                email = user.get('mail') or user.get('userPrincipalName')
+                if email:
+                    results.append({
+                        'name': user.get('displayName', ''),
+                        'email': email,
+                        'title': user.get('jobTitle', '')
+                    })
+
+            return results
+
+        except Exception as e:
+            logger.error(f"Failed to search people via Microsoft Graph API: {e}")
+            return []
+
+    @staticmethod
     def send_opportunity_share_email(
         to_emails: List[str],
         subject: str,
