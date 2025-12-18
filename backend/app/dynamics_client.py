@@ -2,6 +2,7 @@
 Microsoft Dynamics 365 CRM Client.
 Provides methods for interacting with Dynamics CRM Dataverse Web API.
 """
+import os
 import logging
 import requests
 from typing import Dict, Any, Optional, List
@@ -13,18 +14,21 @@ logger = logging.getLogger(__name__)
 class DynamicsClient:
     """Client for Microsoft Dynamics 365 CRM Dataverse Web API."""
 
-    def __init__(self, resource_url: str, access_token: Optional[str] = None):
+    def __init__(self, resource_url: str, access_token: Optional[str] = None, opportunity_table: Optional[str] = None):
         """
         Initialize the Dynamics CRM client.
 
         Args:
             resource_url: Base URL for Dynamics CRM (e.g., https://yourorg.crm.dynamics.com)
             access_token: OAuth access token for authentication
+            opportunity_table: Custom opportunity table name (defaults to 'opportunities')
         """
         self.resource_url = resource_url.rstrip('/')
         self.access_token = access_token
         self.api_version = "v9.2"
         self.base_api_url = f"{self.resource_url}/api/data/{self.api_version}"
+        # Support custom opportunity tables
+        self.opportunity_table = opportunity_table or os.getenv('DYNAMICS_OPPORTUNITY_TABLE', 'opportunities')
 
     def _get_headers(self) -> Dict[str, str]:
         """Get HTTP headers for API requests."""
@@ -57,7 +61,7 @@ class DynamicsClient:
         if not self.access_token:
             raise Exception("No access token provided - cannot create opportunity")
 
-        endpoint = f"{self.base_api_url}/opportunities"
+        endpoint = f"{self.base_api_url}/{self.opportunity_table}"
 
         try:
             logger.info(f"Creating opportunity in Dynamics CRM: {opportunity_data.get('name', 'Unknown')}")
@@ -122,7 +126,7 @@ class DynamicsClient:
         if not self.access_token:
             raise Exception("No access token provided - cannot update opportunity")
 
-        endpoint = f"{self.base_api_url}/opportunities({opportunity_id})"
+        endpoint = f"{self.base_api_url}/{self.opportunity_table}({opportunity_id})"
 
         try:
             logger.info(f"Updating opportunity {opportunity_id} in Dynamics CRM")
@@ -164,7 +168,7 @@ class DynamicsClient:
         if not self.access_token:
             raise Exception("No access token provided - cannot retrieve opportunity")
 
-        endpoint = f"{self.base_api_url}/opportunities({opportunity_id})"
+        endpoint = f"{self.base_api_url}/{self.opportunity_table}({opportunity_id})"
 
         try:
             response = requests.get(
@@ -196,7 +200,7 @@ class DynamicsClient:
         if not self.access_token:
             raise Exception("No access token provided - cannot search opportunities")
 
-        endpoint = f"{self.base_api_url}/opportunities"
+        endpoint = f"{self.base_api_url}/{self.opportunity_table}"
 
         # Build OData query parameters
         params = {}
