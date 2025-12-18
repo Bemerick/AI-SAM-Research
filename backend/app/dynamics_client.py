@@ -325,26 +325,41 @@ def _format_date(date_str: str) -> str:
     """
     Format a date string for Dynamics CRM.
 
+    Dynamics CRM expects date fields in YYYY-MM-DD format (Edm.Date type).
+
     Args:
         date_str: Date string in various formats
 
     Returns:
-        ISO 8601 formatted date string
+        Date string formatted as YYYY-MM-DD, or None if parsing fails
     """
     if not date_str:
         return None
 
     try:
-        # Try parsing common formats
-        for fmt in ['%Y-%m-%d', '%Y-%m-%dT%H:%M:%S', '%Y-%m-%dT%H:%M:%SZ']:
+        # If the string contains timezone info, use dateutil parser
+        if '+' in date_str or date_str.endswith('Z') or 'T' in date_str:
+            from dateutil import parser
+            dt = parser.parse(date_str)
+            return dt.strftime('%Y-%m-%d')
+
+        # Try parsing common formats without timezone
+        for fmt in ['%Y-%m-%d', '%Y/%m/%d', '%m/%d/%Y']:
             try:
                 dt = datetime.strptime(date_str, fmt)
                 return dt.strftime('%Y-%m-%d')
             except ValueError:
                 continue
 
-        # If none match, return as-is
-        return date_str
+        # Last resort: extract just the date portion if it's in ISO format
+        if len(date_str) >= 10:
+            date_part = date_str[:10]
+            # Validate it's a proper date
+            datetime.strptime(date_part, '%Y-%m-%d')
+            return date_part
 
-    except Exception:
-        return date_str
+        return None
+
+    except Exception as e:
+        logger.warning(f"Could not parse date '{date_str}': {e}")
+        return None

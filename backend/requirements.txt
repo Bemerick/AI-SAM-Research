@@ -28,4 +28,7 @@ email-validator==2.1.0
 # Microsoft Authentication (for Dynamics CRM)
 msal==1.30.0
 
+# Date parsing
+python-dateutil==2.8.2
+
 # Existing dependencies
