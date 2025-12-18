@@ -122,6 +122,7 @@ DYNAMICS_TENANT_ID=your_tenant_id
 DYNAMICS_CLIENT_ID=your_client_id
 DYNAMICS_CLIENT_SECRET=your_client_secret
 DYNAMICS_RESOURCE_URL=https://yourorg.crm.dynamics.com
+DYNAMICS_DEFAULT_ACCOUNT_ID=your_account_guid  # Run get_default_account.py to get this
 
 # GovWin API
 GOVWIN_CLIENT_ID=your_client_id
@@ -288,6 +289,13 @@ Scheduled tasks run as Azure Functions:
 
 ### CRM Integration Issues
 
+**Opportunities Created But Not Visible**:
+- **Most Common**: Missing customer (Account) relationship
+- **Local**: Run `cd backend && python get_default_account.py`
+- **Production**: Run `python backend/get_default_account.py` in Render Shell
+- Add `DYNAMICS_DEFAULT_ACCOUNT_ID` to environment variables in Render Dashboard
+- See [CRM_TROUBLESHOOTING.md](CRM_TROUBLESHOOTING.md) for detailed diagnosis
+
 **Mock Mode Message**:
 - Verify all `DYNAMICS_*` environment variables are set
 - Check Azure AD app has correct permissions
@@ -297,6 +305,11 @@ Scheduled tasks run as Azure Functions:
 - Run `python backend/test_crm_schema.py` to inspect your CRM schema
 - Update `dynamics_client.py` field mappings to match your CRM
 - Custom fields require publisher prefix (e.g., `cr7f3_fieldname`)
+
+**Testing CRM Integration**:
+- Run `python backend/test_crm_opportunity.py` to create and verify test opportunity
+- Check backend logs for detailed error messages
+- Use direct CRM link: `https://yourorg.crm.dynamics.com/main.aspx?etn=opportunity&id={GUID}`
 
 ### Email Sharing Issues
 

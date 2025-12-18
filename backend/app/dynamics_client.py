@@ -225,12 +225,13 @@ class DynamicsClient:
             raise
 
 
-def map_sam_opportunity_to_crm(sam_opportunity: Dict[str, Any]) -> Dict[str, Any]:
+def map_sam_opportunity_to_crm(sam_opportunity: Dict[str, Any], customer_id: Optional[str] = None) -> Dict[str, Any]:
     """
     Map a SAM.gov opportunity to Dynamics CRM opportunity fields.
 
     Args:
         sam_opportunity: SAM opportunity dictionary
+        customer_id: Optional GUID of the Account or Contact to associate with the opportunity
 
     Returns:
         Dictionary with CRM-formatted opportunity fields
@@ -242,6 +243,14 @@ def map_sam_opportunity_to_crm(sam_opportunity: Dict[str, Any]) -> Dict[str, Any
     crm_data = {
         'name': sam_opportunity.get('title', 'Untitled Opportunity')[:300],  # CRM has field length limits
     }
+
+    # Customer (Account or Contact) - Highly recommended, some CRM configs require it
+    # If customer_id is provided, link the opportunity to that account/contact
+    if customer_id:
+        # For an Account: use customerid_account@odata.bind
+        # For a Contact: use customerid_contact@odata.bind
+        # The format depends on whether customer_id is an account or contact GUID
+        crm_data['customerid_account@odata.bind'] = f"/accounts({customer_id})"
 
     # Optional standard fields
     # Description - Include all key information since custom fields don't exist yet

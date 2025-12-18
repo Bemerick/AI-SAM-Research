@@ -95,8 +95,12 @@ async def send_opportunity_to_crm(
     }
 
     try:
+        # Get default account ID from environment (optional but recommended)
+        import os
+        default_account_id = os.getenv('DYNAMICS_DEFAULT_ACCOUNT_ID')
+
         # Map SAM opportunity to CRM fields
-        crm_data = map_sam_opportunity_to_crm(opportunity_dict)
+        crm_data = map_sam_opportunity_to_crm(opportunity_dict, customer_id=default_account_id)
 
         # Get Dynamics client and create opportunity
         dynamics_client = get_dynamics_client()
