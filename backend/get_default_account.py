@@ -9,6 +9,7 @@ Usage:
 """
 import sys
 import os
+import time
 from dotenv import load_dotenv
 import requests
 
@@ -91,11 +92,41 @@ def find_or_create_default_account():
         )
         response.raise_for_status()
 
-        # Extract account ID
+        # Extract account ID from response
         account_id = None
+
+        # Try to get from OData-EntityId header
         if 'OData-EntityId' in response.headers:
             entity_id_url = response.headers['OData-EntityId']
             account_id = entity_id_url.split('(')[-1].rstrip(')')
+
+        # If not in header, try response body
+        if not account_id and response.content:
+            try:
+                response_data = response.json()
+                account_id = response_data.get('accountid')
+            except:
+                pass
+
+        # If still no ID, search for the account we just created
+        if not account_id:
+            print("\n  Searching for newly created account...")
+            time.sleep(1)  # Brief delay to ensure creation is complete
+
+            search_response = requests.get(
+                endpoint,
+                headers=client._get_headers(),
+                params={
+                    '$filter': f"name eq '{account_name}'",
+                    '$select': 'accountid',
+                    '$top': 1
+                },
+                timeout=30
+            )
+            search_response.raise_for_status()
+            found_accounts = search_response.json().get('value', [])
+            if found_accounts:
+                account_id = found_accounts[0].get('accountid')
 
         print(f"\n✓ Created new account!")
         print(f"  Account ID: {account_id}")
