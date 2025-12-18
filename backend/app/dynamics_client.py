@@ -236,50 +236,59 @@ def map_sam_opportunity_to_crm(sam_opportunity: Dict[str, Any]) -> Dict[str, Any
         Dictionary with CRM-formatted opportunity fields
     """
     # Map SAM fields to Dynamics CRM opportunity fields
-    # Note: You'll need to customize these field mappings based on your CRM schema
+    # Using only standard Dynamics 365 Sales fields
 
+    # Required field: name (Topic)
     crm_data = {
         'name': sam_opportunity.get('title', 'Untitled Opportunity')[:300],  # CRM has field length limits
-        'description': _build_description(sam_opportunity),
     }
 
-    # Add optional fields if they exist
+    # Optional standard fields
+    # Description - Include all key information since custom fields don't exist yet
+    crm_data['description'] = _build_description(sam_opportunity)
+
+    # Estimated close date - Use response deadline
     if sam_opportunity.get('response_deadline'):
         crm_data['estimatedclosedate'] = _format_date(sam_opportunity['response_deadline'])
 
+    # Close probability - Map fit score (0-10) to percentage
     if sam_opportunity.get('fit_score'):
-        # Map fit score to a custom field or probability
-        # Assuming fit_score is 0-10, convert to percentage
         fit_score = sam_opportunity['fit_score']
         crm_data['closeprobability'] = int(min(fit_score * 10, 100))
 
-    # Custom fields - adjust these based on your CRM customizations
-    # These would typically be prefixed with your publisher prefix
-    # Example: new_samnoticeid, new_samlink, etc.
-
-    if sam_opportunity.get('notice_id'):
-        crm_data['new_samnoticeid'] = sam_opportunity['notice_id']
-
+    # Current situation - Add solicitation/NAICS info
+    current_situation_parts = []
     if sam_opportunity.get('solicitation_number'):
-        crm_data['new_solicitationnumber'] = sam_opportunity['solicitation_number']
-
+        current_situation_parts.append(f"Solicitation: {sam_opportunity['solicitation_number']}")
     if sam_opportunity.get('naics_code'):
-        crm_data['new_naicscode'] = sam_opportunity['naics_code']
-
+        current_situation_parts.append(f"NAICS: {sam_opportunity['naics_code']}")
     if sam_opportunity.get('department'):
-        crm_data['new_department'] = sam_opportunity['department'][:100]
-
-    if sam_opportunity.get('sam_link'):
-        crm_data['new_samlink'] = sam_opportunity['sam_link']
-
-    if sam_opportunity.get('assigned_practice_area'):
-        crm_data['new_practicearea'] = sam_opportunity['assigned_practice_area']
-
+        current_situation_parts.append(f"Agency: {sam_opportunity['department']}")
     if sam_opportunity.get('set_aside'):
-        crm_data['new_setaside'] = sam_opportunity['set_aside']
+        current_situation_parts.append(f"Set-Aside: {sam_opportunity['set_aside']}")
 
-    if sam_opportunity.get('ptype'):
-        crm_data['new_procurementtype'] = sam_opportunity['ptype']
+    if current_situation_parts:
+        crm_data['currentsituation'] = '\n'.join(current_situation_parts)[:1500]
+
+    # Customer need - Add practice area if available
+    if sam_opportunity.get('assigned_practice_area'):
+        crm_data['customerneed'] = f"Practice Area: {sam_opportunity['assigned_practice_area']}"
+
+    # Budget amount - Not typically available in SAM, leave unset
+    # Estimated value - Not typically available in SAM, leave unset
+
+    # NOTE: To add custom fields, you need to:
+    # 1. Create custom fields in Dynamics 365 (Settings > Customizations > Customize the System)
+    # 2. Uncomment and adjust the lines below with your actual field names
+    # 3. Custom fields typically have a publisher prefix (e.g., cr7f3_samnoticeid, new_samlink, etc.)
+
+    # Example custom fields (commented out until created in CRM):
+    # if sam_opportunity.get('notice_id'):
+    #     crm_data['cr7f3_samnoticeid'] = sam_opportunity['notice_id']
+    # if sam_opportunity.get('sam_link'):
+    #     crm_data['cr7f3_samlink'] = sam_opportunity['sam_link']
+    # if sam_opportunity.get('ptype'):
+    #     crm_data['cr7f3_procurementtype'] = sam_opportunity['ptype']
 
     return crm_data
 
