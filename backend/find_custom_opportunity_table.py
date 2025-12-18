@@ -145,7 +145,10 @@ def find_opportunity_tables():
             if response.status_code == 200:
                 opp = response.json()
                 print(f"✓✓✓ FOUND in custom table '{table_name}'! ✓✓✓")
-                print(f"  Name: {opp.get('name', opp.get(f'{table_name.rstrip("s")}name'))}")
+                # Try different name field patterns
+                name_field = table_name.rstrip('s') + 'name'
+                record_name = opp.get('name') or opp.get(name_field) or 'N/A'
+                print(f"  Name: {record_name}")
                 print(f"  Created: {opp.get('createdon')}")
                 print("\n" + "=" * 80)
                 print(f"YOUR CUSTOM TABLE IS: {table_name}")
