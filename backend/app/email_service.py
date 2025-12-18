@@ -272,7 +272,7 @@ def format_opportunity_email_html(
     .info-value {{ color: #111827; margin-top: 5px; }}
     .badge {{ display: inline-block; padding: 6px 14px; border-radius: 12px; font-size: 14px; font-weight: 600; background-color: #dbeafe; color: #1e40af; }}
     .summary {{ background-color: #eff6ff; border-left: 4px solid #2563eb; padding: 15px; margin: 15px 0; border-radius: 4px; }}
-    .btn {{ display: inline-block; background-color: #2563eb; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin: 10px 10px 10px 0; }}
+    .btn {{ display: inline-block; background-color: #2563eb; color: #ffffff !important; padding: 12px 24px; text-decoration: none; border-radius: 6px; margin: 10px 10px 10px 0; font-weight: 600; }}
     .footer {{ text-align: center; color: #6b7280; font-size: 12px; margin-top: 30px; padding: 20px; border-top: 1px solid #e5e7eb; }}
     .sender-note {{ background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px; font-size: 14px; }}
   </style>
