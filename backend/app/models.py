@@ -31,7 +31,7 @@ class SAMOpportunity(Base):
     classification_code = Column(String(10))
     set_aside = Column(String(255))
     place_of_performance_city = Column(String(100))
-    place_of_performance_state = Column(String(2))
+    place_of_performance_state = Column(String(10))  # Increased to handle international state codes (e.g., GB-SFK)
     place_of_performance_zip = Column(String(10))
     point_of_contact_email = Column(String(255))
     point_of_contact_name = Column(String(255))

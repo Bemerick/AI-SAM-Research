@@ -52,6 +52,15 @@ def run_migration():
             }
         ]
 
+        # Column alterations
+        columns_to_alter = [
+            {
+                'name': 'place_of_performance_state',
+                'old_definition': 'VARCHAR(2)',
+                'new_definition': 'VARCHAR(10)'
+            }
+        ]
+
         added_columns = []
 
         for col_info in columns_to_add:
@@ -80,6 +89,21 @@ def run_migration():
                     except Exception as e:
                         print(f"  Note: Index creation failed or already exists: {e}")
                         db.rollback()
+
+        # Alter columns
+        for col_info in columns_to_alter:
+            col_name = col_info['name']
+            print(f"\nAltering column '{col_name}' from {col_info['old_definition']} to {col_info['new_definition']}...")
+
+            try:
+                # PostgreSQL syntax for column alteration
+                sql = f"ALTER TABLE sam_opportunities ALTER COLUMN {col_name} TYPE {col_info['new_definition']}"
+                db.execute(text(sql))
+                db.commit()
+                print(f"✓ Column '{col_name}' altered successfully")
+            except Exception as e:
+                print(f"Note: Column alteration failed or already altered: {e}")
+                db.rollback()
 
         # Update NULL values to defaults for new columns
         if added_columns:

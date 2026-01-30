@@ -447,6 +447,8 @@ def fetch_sam_opportunities_by_date(
                 except Exception as e:
                     error_count += 1
                     print(f"Error storing opportunity {opp.get('noticeId')}: {e}")
+                    # Rollback the session to recover from errors
+                    db.rollback()
 
         except Exception as e:
             error_count += 1
