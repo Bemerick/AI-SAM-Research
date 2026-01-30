@@ -4,6 +4,7 @@ SAM.gov API client module.
 This module provides functions to interact with the SAM.gov Get Opportunities Public API.
 """
 import requests
+import time
 from datetime import datetime
 from typing import Dict, List, Optional, Any, Union
 from urllib.parse import urlencode
@@ -51,50 +52,90 @@ class SAMClient:
         url = f"{self.base_url}{endpoint}?{urlencode(params, doseq=True)}"
         return url
     
-    def _make_request(self, endpoint: str, params: Dict[str, Any]) -> Dict[str, Any]:
+    def _make_request(self, endpoint: str, params: Dict[str, Any], max_retries: int = 3, retry_delay: int = 5) -> Dict[str, Any]:
         """
-        Make a request to the SAM.gov API.
-        
+        Make a request to the SAM.gov API with retry logic.
+
         Args:
             endpoint: The API endpoint.
             params: The query parameters.
-            
+            max_retries: Maximum number of retry attempts (default: 3).
+            retry_delay: Initial delay between retries in seconds (default: 5).
+
         Returns:
             The JSON response from the API.
-            
+
         Raises:
-            SAMApiError: If the API returns an error.
+            SAMApiError: If the API returns an error after all retries.
         """
         url = self._build_url(endpoint, params)
-        
-        try:
-            response = requests.get(url)
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.HTTPError as e:
-            status_code = e.response.status_code
-            error_message = f"HTTP Error: {status_code}"
-            
+        last_exception = None
+
+        for attempt in range(max_retries):
             try:
-                error_data = e.response.json()
-                error_detail = error_data.get('error', '')
-                if error_detail:
-                    error_message = f"{error_message} - {error_detail}"
+                response = requests.get(url, timeout=30)
+                response.raise_for_status()
+                return response.json()
+            except requests.exceptions.HTTPError as e:
+                status_code = e.response.status_code
+                error_message = f"HTTP Error: {status_code}"
+
+                try:
+                    error_data = e.response.json()
+                    error_detail = error_data.get('error', '')
+                    if error_detail:
+                        error_message = f"{error_message} - {error_detail}"
+                    else:
+                        # Try to get any available error information
+                        error_message = f"{error_message} - {str(error_data)}"
+
+                    # Check if this is a SUSPENDED endpoint error (code 303001)
+                    is_suspended = (error_data.get('code') == '303001' or
+                                   'SUSPENDED' in error_data.get('description', ''))
+                except ValueError:
+                    # If we can't parse JSON, try to get the text content
+                    error_message = f"{error_message} - {e.response.text}"
+                    is_suspended = 'SUSPENDED' in e.response.text
+
+                # Print the URL that caused the error (for debugging)
+                print(f"Error URL: {url}")
+
+                last_exception = SAMApiError(error_message)
+
+                # Retry on 500 errors or SUSPENDED errors
+                if status_code >= 500 or is_suspended:
+                    if attempt < max_retries - 1:
+                        wait_time = retry_delay * (2 ** attempt)  # Exponential backoff
+                        print(f"SAM.gov API error (attempt {attempt + 1}/{max_retries}): {error_message}")
+                        print(f"Retrying in {wait_time} seconds...")
+                        time.sleep(wait_time)
+                        continue
+
+                raise last_exception from e
+
+            except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
+                last_exception = SAMApiError(f"Request Error: {str(e)}")
+
+                if attempt < max_retries - 1:
+                    wait_time = retry_delay * (2 ** attempt)
+                    print(f"SAM.gov API timeout/connection error (attempt {attempt + 1}/{max_retries})")
+                    print(f"Retrying in {wait_time} seconds...")
+                    time.sleep(wait_time)
+                    continue
                 else:
-                    # Try to get any available error information
-                    error_message = f"{error_message} - {str(error_data)}"
-            except ValueError:
-                # If we can't parse JSON, try to get the text content
-                error_message = f"{error_message} - {e.response.text}"
-            
-            # Print the URL that caused the error (for debugging)
-            print(f"Error URL: {url}")
-            
-            raise SAMApiError(error_message) from e
-        except requests.exceptions.RequestException as e:
-            raise SAMApiError(f"Request Error: {str(e)}") from e
-        except ValueError as e:
-            raise SAMApiError(f"Invalid JSON response: {str(e)}") from e
+                    raise last_exception from e
+
+            except requests.exceptions.RequestException as e:
+                raise SAMApiError(f"Request Error: {str(e)}") from e
+            except ValueError as e:
+                raise SAMApiError(f"Invalid JSON response: {str(e)}") from e
+
+        # If we exhausted all retries, raise the last exception
+        if last_exception:
+            raise last_exception
+
+        # This should never happen, but just in case
+        raise SAMApiError("Request failed after all retries")
     
     def search_opportunities(self, 
                            p_type: Optional[List[str]] = None,
@@ -214,50 +255,89 @@ class SAMClient:
         
         return result
     
-    def get_opportunity_description(self, notice_id: str) -> str:
+    def get_opportunity_description(self, notice_id: str, max_retries: int = 3, retry_delay: int = 5) -> str:
         """
-        Get the description for a specific opportunity by its notice ID.
-        
+        Get the description for a specific opportunity by its notice ID with retry logic.
+
         Args:
             notice_id: The notice ID of the opportunity.
-            
+            max_retries: Maximum number of retry attempts (default: 3).
+            retry_delay: Initial delay between retries in seconds (default: 5).
+
         Returns:
             The description text for the opportunity.
         """
         # The description URL is in the format:
         # https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid={notice_id}
-        description_url = f"https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid={notice_id}"
-        
-        params = {
-            'api_key': self.api_key
-        }
-        
-        try:
-            response = requests.get(f"{description_url}&api_key={self.api_key}")
-            response.raise_for_status()
-            data = response.json()
-            
-            # The description is in the 'description' field of the response
-            return data.get('description', '')
-        except requests.exceptions.HTTPError as e:
-            status_code = e.response.status_code
-            error_message = f"HTTP Error: {status_code}"
-            
+        description_url = f"https://api.sam.gov/prod/opportunities/v1/noticedesc?noticeid={notice_id}&api_key={self.api_key}"
+
+        last_exception = None
+
+        for attempt in range(max_retries):
             try:
-                error_data = e.response.json()
-                error_detail = error_data.get('error', '')
-                if error_detail:
-                    error_message = f"{error_message} - {error_detail}"
+                response = requests.get(description_url, timeout=30)
+                response.raise_for_status()
+                data = response.json()
+
+                # The description is in the 'description' field of the response
+                return data.get('description', '')
+
+            except requests.exceptions.HTTPError as e:
+                status_code = e.response.status_code
+                error_message = f"HTTP Error: {status_code}"
+
+                try:
+                    error_data = e.response.json()
+                    error_detail = error_data.get('error', '')
+                    if error_detail:
+                        error_message = f"{error_message} - {error_detail}"
+                    else:
+                        error_message = f"{error_message} - {str(error_data)}"
+
+                    # Check if this is a SUSPENDED endpoint error
+                    is_suspended = (error_data.get('code') == '303001' or
+                                   'SUSPENDED' in error_data.get('description', ''))
+                except ValueError:
+                    error_message = f"{error_message} - {e.response.text}"
+                    is_suspended = 'SUSPENDED' in e.response.text
+
+                last_exception = SAMApiError(error_message)
+
+                # Retry on 500 errors, SUSPENDED errors, or 404 (description not found)
+                if status_code >= 500 or is_suspended:
+                    if attempt < max_retries - 1:
+                        wait_time = retry_delay * (2 ** attempt)
+                        print(f"Description fetch error for {notice_id} (attempt {attempt + 1}/{max_retries}): {error_message}")
+                        print(f"Retrying in {wait_time} seconds...")
+                        time.sleep(wait_time)
+                        continue
+
+                # Don't retry on 404 (description not found) - that's expected for some opportunities
+                if status_code == 404:
+                    raise last_exception from e
+
+                raise last_exception from e
+
+            except (requests.exceptions.Timeout, requests.exceptions.ConnectionError) as e:
+                last_exception = SAMApiError(f"Request Error: {str(e)}")
+
+                if attempt < max_retries - 1:
+                    wait_time = retry_delay * (2 ** attempt)
+                    print(f"Description fetch timeout/connection error (attempt {attempt + 1}/{max_retries})")
+                    print(f"Retrying in {wait_time} seconds...")
+                    time.sleep(wait_time)
+                    continue
                 else:
-                    # Try to get any available error information
-                    error_message = f"{error_message} - {str(error_data)}"
-            except ValueError:
-                # If we can't parse JSON, try to get the text content
-                error_message = f"{error_message} - {e.response.text}"
-            
-            raise SAMApiError(error_message) from e
-        except Exception as e:
-            raise SAMApiError(f"Error fetching description: {str(e)}") from e
+                    raise last_exception from e
+
+            except Exception as e:
+                raise SAMApiError(f"Error fetching description: {str(e)}") from e
+
+        # If we exhausted all retries, raise the last exception
+        if last_exception:
+            raise last_exception
+
+        raise SAMApiError("Description fetch failed after all retries")
     
     def get_opportunity_by_id(self, notice_id: str, include_description: bool = False) -> Dict[str, Any]:
         """
